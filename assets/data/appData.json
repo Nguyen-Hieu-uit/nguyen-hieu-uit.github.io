@@ -2,101 +2,101 @@
   {
     "id": 1,
     "name": "Genshin Impact",
-    "logoUrl": "https://example.com/logos/genshin.png",
-    "trailerUrl": "https://youtube.com/watch?v=GI-trailer",
+    "logoUrl": "https://play-lh.googleusercontent.com/AAL-aJSzGV_C5XCCsiQX2VRPuMouUK-jLQ6D_3BrBfaYD4D81iQMTJ3u1Ihsw6b5kGM=w240-h480-rw",
+    "trailerHtml": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/w50jW_iEXns?si=N4RT4rZ5AFzP_4Uu&controls=0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
     "publisher": "HoYoverse",
     "costType": "Miễn phí (In-app purchases)",
     "rating": 4.5,
-    "downloads": "100M+"
+    "downloads": "100Tr+"
   },
   {
     "id": 2,
     "name": "Candy Crush Saga",
-    "logoUrl": "https://example.com/logos/candycrush.png",
-    "trailerUrl": "https://youtube.com/watch?v=CC-trailer",
+    "logoUrl": "https://play-lh.googleusercontent.com/AAL-aJSzGV_C5XCCsiQX2VRPuMouUK-jLQ6D_3BrBfaYD4D81iQMTJ3u1Ihsw6b5kGM=w240-h480-rw",
+    "trailerHtml": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/w50jW_iEXns?si=N4RT4rZ5AFzP_4Uu&controls=0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
     "publisher": "King",
     "costType": "Miễn phí (In-app purchases)",
     "rating": 4.6,
-    "downloads": "1B+"
+    "downloads": "1T+"
   },
   {
     "id": 3,
     "name": "YouTube",
-    "logoUrl": "https://example.com/logos/youtube.png",
-    "trailerUrl": null,
+    "logoUrl": "https://play-lh.googleusercontent.com/AAL-aJSzGV_C5XCCsiQX2VRPuMouUK-jLQ6D_3BrBfaYD4D81iQMTJ3u1Ihsw6b5kGM=w240-h480-rw",
+    "trailerHtml": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/w50jW_iEXns?si=N4RT4rZ5AFzP_4Uu&controls=0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
     "publisher": "Google LLC",
     "costType": "Miễn phí (Ads & Subscriptions)",
     "rating": 4.1,
-    "downloads": "5B+"
+    "downloads": "5T+"
   },
   {
     "id": 4,
     "name": "Minecraft",
-    "logoUrl": "https://example.com/logos/minecraft.png",
-    "trailerUrl": "https://youtube.com/watch?v=MC-trailer",
+    "logoUrl": "https://play-lh.googleusercontent.com/AAL-aJSzGV_C5XCCsiQX2VRPuMouUK-jLQ6D_3BrBfaYD4D81iQMTJ3u1Ihsw6b5kGM=w240-h480-rw",
+    "trailerHtml": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/w50jW_iEXns?si=N4RT4rZ5AFzP_4Uu&controls=0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
     "publisher": "Mojang",
     "costType": "Có phí",
     "rating": 4.5,
-    "downloads": "10M+"
+    "downloads": "10Tr+"
   },
   {
     "id": 5,
     "name": "Spotify: Music and Podcasts",
-    "logoUrl": "https://example.com/logos/spotify.png",
-    "trailerUrl": null,
+    "logoUrl": "https://play-lh.googleusercontent.com/AAL-aJSzGV_C5XCCsiQX2VRPuMouUK-jLQ6D_3BrBfaYD4D81iQMTJ3u1Ihsw6b5kGM=w240-h480-rw",
+    "trailerHtml": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/w50jW_iEXns?si=N4RT4rZ5AFzP_4Uu&controls=0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
     "publisher": "Spotify AB",
     "costType": "Miễn phí (Ads & Premium)",
     "rating": 4.4,
-    "downloads": "500M+"
+    "downloads": "500Tr+"
   },
   {
     "id": 6,
     "name": "Call of Duty: Mobile",
-    "logoUrl": "https://example.com/logos/cod.png",
-    "trailerUrl": "https://youtube.com/watch?v=COD-trailer",
+    "logoUrl": "https://play-lh.googleusercontent.com/AAL-aJSzGV_C5XCCsiQX2VRPuMouUK-jLQ6D_3BrBfaYD4D81iQMTJ3u1Ihsw6b5kGM=w240-h480-rw",
+    "trailerHtml": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/w50jW_iEXns?si=N4RT4rZ5AFzP_4Uu&controls=0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
     "publisher": "Activision Publishing, Inc.",
     "costType": "Miễn phí (In-app purchases)",
     "rating": 4.3,
-    "downloads": "300M+"
+    "downloads": "300Tr+"
   },
   {
     "id": 7,
     "name": "Tasker",
-    "logoUrl": "https://example.com/logos/tasker.png",
-    "trailerUrl": "https://youtube.com/watch?v=Tasker-guide",
+    "logoUrl": "https://play-lh.googleusercontent.com/AAL-aJSzGV_C5XCCsiQX2VRPuMouUK-jLQ6D_3BrBfaYD4D81iQMTJ3u1Ihsw6b5kGM=w240-h480-rw",
+    "trailerHtml": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/w50jW_iEXns?si=N4RT4rZ5AFzP_4Uu&controls=0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
     "publisher": "joaomgcd",
     "costType": "Có phí",
     "rating": 4.8,
-    "downloads": "1M+"
+    "downloads": "1Tr+"
   },
   {
     "id": 8,
     "name": "CapCut - Video Editor",
-    "logoUrl": "https://example.com/logos/capcut.png",
-    "trailerUrl": null,
+    "logoUrl": "https://play-lh.googleusercontent.com/AAL-aJSzGV_C5XCCsiQX2VRPuMouUK-jLQ6D_3BrBfaYD4D81iQMTJ3u1Ihsw6b5kGM=w240-h480-rw",
+    "trailerHtml": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/w50jW_iEXns?si=N4RT4rZ5AFzP_4Uu&controls=0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
     "publisher": "Bending Spoons",
     "costType": "Miễn phí",
     "rating": 4.5,
-    "downloads": "500M+"
+    "downloads": "500Tr+"
   },
   {
     "id": 9,
     "name": "Duolingo: Learn Languages",
-    "logoUrl": "https://example.com/logos/duolingo.png",
-    "trailerUrl": null,
+    "logoUrl": "https://play-lh.googleusercontent.com/AAL-aJSzGV_C5XCCsiQX2VRPuMouUK-jLQ6D_3BrBfaYD4D81iQMTJ3u1Ihsw6b5kGM=w240-h480-rw",
+    "trailerHtml": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/w50jW_iEXns?si=N4RT4rZ5AFzP_4Uu&controls=0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
     "publisher": "Duolingo",
     "costType": "Miễn phí (Premium subscription)",
     "rating": 4.7,
-    "downloads": "100M+"
+    "downloads": "100Tr+"
   },
   {
     "id": 10,
     "name": "Pocket Casts",
-    "logoUrl": "https://example.com/logos/pocketcasts.png",
-    "trailerUrl": null,
+    "logoUrl": "https://play-lh.googleusercontent.com/AAL-aJSzGV_C5XCCsiQX2VRPuMouUK-jLQ6D_3BrBfaYD4D81iQMTJ3u1Ihsw6b5kGM=w240-h480-rw",
+    "trailerHtml": "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/w50jW_iEXns?si=N4RT4rZ5AFzP_4Uu&controls=0\" title=\"YouTube video player\" frameborder=\"0\" allow=\"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share\" referrerpolicy=\"strict-origin-when-cross-origin\" allowfullscreen></iframe>",
     "publisher": "Automattic, Inc.",
     "costType": "Miễn phí (Plus subscription)",
     "rating": 4.6,
-    "downloads": "1M+"
+    "downloads": "1Tr+"
   }
 ]

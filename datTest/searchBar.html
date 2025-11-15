@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="searchBar.css" />
+  </head>
+  <body>
+    <div class="search__box" id="search-button">
+      <input
+        class="search__input"
+        id="search-input"
+        type="text"
+        placeholder="Search"
+      />
+      <span
+        class="clear__button"
+        id="clear-button"
+        style="cursor: pointer; display: none"
+      >
+        &times;
+      </span>
+      <div
+        class="suggestions__box"
+        id="suggestions-box"
+        style="display: none"
+      ></div>
+    </div>
+
+    <script src="searchBar.js"></script>
+  </body>
+</html>
