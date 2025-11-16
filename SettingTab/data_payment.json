@@ -1,0 +1,44 @@
+{
+    "payment_methods": [
+        {
+            "icon": "https://play-lh.googleusercontent.com/m_kcv3h4YvWU_o3YaT3johv9ioR_NiQ9dB2XKvZKjbptJawl0IUZN1BfYBAeXoKcGvzYN0UpmA",
+            "name": "MoMo e-wallet",
+            "full_digits": "0838379014",
+            "type": "Ví điện tử"
+        }
+    ],
+    "subscriptions": [
+        {
+            "name": "Google One",
+            "status": "Đang hoạt động",
+            "renewal_date": "20 tháng 12, 2025",
+            "price": "45.000₫/tháng"
+        },
+        {
+            "name": "YouTube Premium",
+            "status": "Đang hoạt động",
+            "renewal_date": "10 tháng 12, 2025",
+            "price": "99.000₫/tháng"
+        }
+    ],
+    "history": [
+        {
+            "date": "15 tháng 11, 2025",
+            "description": "Thanh toán Google One",
+            "amount": "45.000₫",
+            "status": "Hoàn tất"
+        },
+        {
+            "date": "10 tháng 11, 2025",
+            "description": "Gia hạn YouTube Premium",
+            "amount": "99.000₫",
+            "status": "Hoàn tất"
+        },
+        {
+            "date": "05 tháng 11, 2025",
+            "description": "Mua ứng dụng 'Pro Notes'",
+            "amount": "25.000₫",
+            "status": "Hoàn tất"
+        }
+    ]
+}
