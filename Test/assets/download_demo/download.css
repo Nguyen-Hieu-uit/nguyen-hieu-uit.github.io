@@ -1,0 +1,209 @@
+/* Header của container */
+.ranking-header {
+  padding: 20px;
+}
+
+.ranking-header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #222;
+}
+
+/* THAY ĐỔI: Thêm container cuộn */
+.ranking-list-scrollable {
+  max-height: 312px;
+  overflow-y: auto;
+
+  /* Ẩn thanh cuộn */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* Ẩn thanh cuộn cho Webkit (Chrome, Safari) */
+.ranking-list-scrollable::-webkit-scrollbar {
+  display: none;
+}
+
+/* Một item trong danh sách */
+.ranking-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  transition: background-color 0.3s;
+}
+
+.ranking-item:hover {
+  background-color: #f9f9f9;
+}
+
+/* Xóa border cho item cuối cùng */
+.ranking-item:last-child {
+  border-bottom: none;
+}
+
+/* Số thứ hạng */
+.ranking-number {
+  font-size: 18px;
+  font-weight: 600;
+  color: #555;
+  width: 30px; /* Căn lề cho thẳng hàng */
+  flex-shrink: 0;
+}
+
+/* Icon ứng dụng */
+.ranking-item .app-icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 8px; /* Bo góc icon */
+  margin-right: 15px;
+  object-fit: cover;
+  border: 1px solid #f0f0f0;
+}
+
+/* Thông tin ứng dụng (tên, thể loại,...) */
+.ranking-item .app-details {
+  flex-grow: 1;
+  min-width: 0; /* Fix cho flexbox không bị tràn text */
+}
+
+.ranking-item .app-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis; /* Thêm ... nếu tên quá dài */
+}
+
+.ranking-item .app-category {
+  font-size: 14px;
+  color: #888;
+  margin-top: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ranking-item .app-rating {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  color: #555;
+  margin-top: 4px;
+}
+
+.ranking-item .app-rating .material-icons {
+  font-size: 16px; /* Kích thước icon sao */
+  color: #fdc32b; /* Màu vàng */
+  margin-left: 2px;
+}
+
+/* --- THAY ĐỔI MỚI: NÚT MỞ BẢNG XẾP HẠNG --- */
+#openRankingBtn {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  box-shadow: 0 4px 10px rgba(0, 123, 255, 0.3);
+}
+
+#openRankingBtn:hover {
+  background-color: #0056b3;
+  box-shadow: 0 6px 15px rgba(0, 123, 255, 0.4);
+}
+
+/* --- THAY ĐỔI MỚI: LỚP PHỦ CHO MODAL --- */
+.ranking-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Nền mờ */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  z-index: 1;
+
+  /* Ẩn mặc định */
+  display: none;
+
+  /* Thêm hiệu ứng mờ */
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+/* Lớp để BẬT modal */
+.ranking-overlay.visible {
+  display: flex;
+  opacity: 1;
+  visibility: visible;
+}
+
+/* Container lớn hơn */
+.ranking-container {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+
+  /* Thêm */
+  position: relative; /* Để chứa nút X */
+  max-height: 90vh; /* Giới hạn chiều cao trên màn hình nhỏ */
+  display: flex;
+  flex-direction: column;
+
+  /* Thêm hiệu ứng xuất hiện */
+  transform: scale(0.95);
+  transition: transform 0.3s;
+}
+
+.ranking-overlay.visible .ranking-container {
+  transform: scale(1);
+}
+
+/* Header của container */
+.ranking-header {
+  padding: 20px;
+  /* Thêm position relative để định vị nút X */
+  position: relative;
+  flex-shrink: 0; /* Không co lại */
+}
+
+.ranking-header h1 {
+  margin: 0;
+  font-size: 24px;
+  color: #222;
+}
+
+/* --- THAY ĐỔI MỚI: NÚT X (ĐÓNG MODAL) --- */
+.close-btn {
+  position: absolute;
+  top: 15px; /* Điều chỉnh vị trí */
+  right: 15px; /* Điều chỉnh vị trí */
+  background: #f0f0f0;
+  border: none;
+  font-size: 20px;
+  color: #888;
+  cursor: pointer;
+  line-height: 1;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.close-btn:hover {
+  background-color: #e0e0e0;
+  color: #333;
+}

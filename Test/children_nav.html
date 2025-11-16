@@ -1,0 +1,1605 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=help,star"
+    />
+    <link rel="stylesheet" href="../carousel.css" />
+    <link rel="stylesheet" href="./assets/download_demo/download.css" />
+
+    <link rel="stylesheet" href="./assets/download_demo/filter.css" />
+    <link rel="stylesheet" href="./assets/css/carousel-scroll.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav">
+        <a
+          href="/store/games"
+          aria-label="Biểu trưng của Google Play"
+          class="header__logo-link"
+          ><svg
+            class="brand-logo"
+            aria-hidden="true"
+            viewBox="0 0 40 40"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path fill="none" d="M0,0h40v40H0V0z"></path>
+            <g>
+              <path
+                d="M19.7,19.2L4.3,35.3c0,0,0,0,0,0c0.5,1.7,2.1,3,4,3c0.8,0,1.5-0.2,2.1-0.6l0,0l17.4-9.9L19.7,19.2z"
+                fill="#EA4335"
+              ></path>
+              <path
+                d="M35.3,16.4L35.3,16.4l-7.5-4.3l-8.4,7.4l8.5,8.3l7.5-4.2c1.3-0.7,2.2-2.1,2.2-3.6C37.5,18.5,36.6,17.1,35.3,16.4z"
+                fill="#FBBC04"
+              ></path>
+              <path
+                d="M4.3,4.7C4.2,5,4.2,5.4,4.2,5.8v28.5c0,0.4,0,0.7,0.1,1.1l16-15.7L4.3,4.7z"
+                fill="#4285F4"
+              ></path>
+              <path
+                d="M19.8,20l8-7.9L10.5,2.3C9.9,1.9,9.1,1.7,8.3,1.7c-1.9,0-3.6,1.3-4,3c0,0,0,0,0,0L19.8,20z"
+                fill="#34A853"
+              ></path>
+            </g></svg
+          ><span aria-hidden="true">Google Play</span></a
+        >
+
+        <span class="navigation-tabs"
+          ><a
+            role="tab"
+            class="nav-tab nav-tab-selected nav-tab--auto-width nav-tab--styled FEsNhd YmRZ5d"
+            aria-selected="true"
+            tabindex="0"
+            id="11"
+            href="./index.html"
+          >
+            <span class="nav-tab__inner"
+              ><span class="VfPpkd-jY41G-V67aGc">Trò chơi</span
+              ><span
+                class="nav-tab__indicator-wrapper nav-tab__indicator-wrapper-selected nav-tab__indicator-border kte1hc"
+                ><span
+                  class="nav-tab__indicator nav-tab__indicator-format indicator-length"
+                ></span></span
+            ></span>
+            <div class="VfPpkd-wJCpie-LhBDec"></div></a
+          ><a
+            role="tab"
+            class="nav-tab nav-tab--auto-width nav-tab--styled FEsNhd YmRZ5d q2wkXd"
+            aria-selected="true"
+            tabindex="-1"
+            id="1"
+            jscontroller="t1sulf"
+            href="./app_nav.html"
+          >
+            <span class="nav-tab__inner"
+              ><span class="VfPpkd-jY41G-V67aGc">Ứng dụng</span
+              ><span
+                class="nav-tab__indicator-wrapper nav-tab__indicator-border kte1hc"
+                ><span
+                  class="nav-tab__indicator nav-tab__indicator-format indicator-length"
+                ></span></span
+            ></span>
+            <div class="VfPpkd-wJCpie-LhBDec"></div>
+          </a>
+          <a
+            role="tab"
+            class="nav-tab nav-tab--auto-width nav-tab--styled FEsNhd YmRZ5d dUghbc"
+            aria-selected="false"
+            tabindex="-1"
+            id="13"
+            href="./children_nav.html"
+          >
+            <span class="nav-tab__inner"
+              ><span class="VfPpkd-jY41G-V67aGc">Trẻ em</span
+              ><span
+                class="nav-tab__indicator-wrapper nav-tab__indicator-border kte1hc"
+                ><span
+                  class="nav-tab__indicator nav-tab__indicator-format indicator-length"
+                ></span></span
+            ></span>
+            <div class="VfPpkd-wJCpie-LhBDec"></div></a
+        ></span>
+
+        <div class="header-actions">
+          <!-- search icon -->
+          <button class="search__box">
+            <input class="search__input" type="text" placeholder="Search" />
+          </button>
+          <!-- help icon -->
+          <button class="icon-button">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+              <path
+                d="M478-240q21 0 35.5-14.5T528-290q0-21-14.5-35.5T478-340q-21 0-35.5 14.5T428-290q0 21 14.5 35.5T478-240Zm-36-154h74q0-33 7.5-52t42.5-52q26-26 41-49.5t15-56.5q0-56-41-86t-97-30q-57 0-92.5 30T342-618l66 26q5-18 22.5-39t53.5-21q32 0 48 17.5t16 38.5q0 20-12 37.5T506-526q-44 39-54 59t-10 73Zm38 314q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z"
+              />
+            </svg>
+          </button>
+
+          <button class="icon-button icon_container">
+            <img
+              src="https://lh3.googleusercontent.com/a/ACg8ocLy4_GnkIHGe1yeIk6TVmY8FNzNneyNjrQtrPKyFiHhxFSFvg=s32-c-k-cc-mo"
+              class="icon_inner"
+              srcset="
+                https://lh3.googleusercontent.com/a/ACg8ocLy4_GnkIHGe1yeIk6TVmY8FNzNneyNjrQtrPKyFiHhxFSFvg=s32-c-k-cc-mo 1x,
+                https://lh3.googleusercontent.com/a/ACg8ocLy4_GnkIHGe1yeIk6TVmY8FNzNneyNjrQtrPKyFiHhxFSFvg=s64-c-k-cc-mo 2x
+              "
+            />
+          </button>
+        </div>
+      </nav>
+    </header>
+
+    <div class="main-content main-content-spacing">
+      <div class="main-content-inner">
+        <div class="main-page-content">
+          <div class="J00pac">
+            <div class="g1Jhne">
+              <div class="E3lBnf">
+                <img src="./tải xuống.png" alt="" />
+              </div>
+            </div>
+          </div>
+          <div class="UwgeOb">
+            <h1 class="vmrotd">Ứng dụng và trò chơi Giáo viên đã phê duyệt</h1>
+          </div>
+          <div class="filter_format filter_children">
+            <div class="filter-content-wrapper">
+              <div class="element-gap horizontal-scroll">
+                <div class="platform-item">
+                  <a
+                    class="platform-button is-active rounded-full item-selected"
+                    href="/store/games?device=windows"
+                    ><div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-label"
+                        >Tất cả độ tuổi từ 12 trở xuống</span
+                      >
+                    </div></a
+                  >
+                </div>
+
+                <div class="platform-item">
+                  <a
+                    class="platform-button rounded-full item-selected"
+                    href="/store/games?device=phone"
+                    ><div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-label">5 tuổi trở xuống</span>
+                    </div></a
+                  >
+                </div>
+
+                <div class="platform-item">
+                  <a
+                    class="platform-button rounded-full item-selected"
+                    href="/store/games?device=tablet"
+                    ><div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-label">6-8 tuổi</span>
+                    </div></a
+                  >
+                </div>
+
+                <div class="platform-item">
+                  <a
+                    class="platform-button rounded-full item-selected"
+                    href="/store/games?device=tv"
+                    ><div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-label">9-12 tuổi</span>
+                    </div></a
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="main-page-content">
+            <div class="app-section">
+              <div class="app-list-container">
+                <div class="app-list-wrapper ntZncd">
+                  <div class="content-wrapper">
+                    <div class="horizontal-scroll app-row ntZncd">
+                      <div class="platform-item neq64b">
+                        <div
+                          class="VfPpkd-WsjYwc VfPpkd-WsjYwc-OWXEXe-INsAgc KC1dQ Usd1Ac AaN0Dd hHUYDe G17ige"
+                        >
+                          <div class="VfPpkd-aGsRMb">
+                            <div class="card-container jVR3ye">
+                              <a href="#" class="card-link WPfqYc">
+                                <div
+                                  class="Pdcv8e"
+                                  style="background-color: rgb(105, 197, 186)"
+                                >
+                                  <img
+                                    src="https://play-lh.googleusercontent.com/SS4cjt_-IBJbXYrffzu5ej97tKVotqdoHtcJpwWaVc638xU9DR35RMvJSDVEGk8D9zxNXc96SLmP=w648-h364-rw"
+                                    srcset="
+                                      https://play-lh.googleusercontent.com/SS4cjt_-IBJbXYrffzu5ej97tKVotqdoHtcJpwWaVc638xU9DR35RMvJSDVEGk8D9zxNXc96SLmP=w1296-h728-rw 2x
+                                    "
+                                    class="img-contain SzSlNc"
+                                    aria-hidden="true"
+                                    data-iml="37443.70000000112"
+                                  />
+                                  <div class="xovwLb"></div>
+                                  <div
+                                    class="GkwRVc"
+                                    style="
+                                      background-image: linear-gradient(
+                                        transparent 43.83%,
+                                        rgb(105, 197, 186) 79.64%
+                                      );
+                                    "
+                                  ></div>
+                                </div>
+                                <div class="lbNC6b">
+                                  <div class="YLCN0d iEDKhd">
+                                    Thỏa sức vui chơi cùng mèo tại Nhà búp bê
+                                    của Gabby
+                                  </div>
+                                  <div class="gb8Aof iEDKhd">
+                                    Hình dán, màu sắc mới và hơn nữa
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="us8NPb">
+                              <a
+                                href="/store/apps/details?id=com.sagosago.CrayonClub.googleplay"
+                                ><div class="vw3wnd">
+                                  <img
+                                    src="https://play-lh.googleusercontent.com/3gddomRH-G_C-werKpfeBjCZ9r7qWsnbYLRT9JDFhuAjQI3_fzCUbbNbZl4b5CWcp4M=s64-rw"
+                                    srcset="
+                                      https://play-lh.googleusercontent.com/3gddomRH-G_C-werKpfeBjCZ9r7qWsnbYLRT9JDFhuAjQI3_fzCUbbNbZl4b5CWcp4M=s128-rw 2x
+                                    "
+                                    class="T75of nnW2Md"
+                                    aria-hidden="true"
+                                    alt="Hình thu nhỏ"
+                                    loading="lazy"
+                                  />
+                                  <div class="FfpWjf">
+                                    <div class="pNaVI">
+                                      <span class="fkdIre iEDKhd"
+                                        >Crayon Club: Color PAW Patrol</span
+                                      >
+                                    </div>
+                                    <div class="pNaVI">
+                                      <span class="bcLwIe iEDKhd"
+                                        >Play Piknik</span
+                                      ><span
+                                        aria-hidden="true"
+                                        class="VqQw9b iEDKhd"
+                                        >•</span
+                                      ><img
+                                        src="https://play-lh.googleusercontent.com/EbEX3AN4FC4pu3lsElAHCiksluOVU8OgkgtWC43-wmm_aHVq2D65FmEM97bPexilUAvlAY5_4ARH8Tb3RxQ=s16-rw"
+                                        srcset="
+                                          https://play-lh.googleusercontent.com/EbEX3AN4FC4pu3lsElAHCiksluOVU8OgkgtWC43-wmm_aHVq2D65FmEM97bPexilUAvlAY5_4ARH8Tb3RxQ=s32-rw 2x
+                                        "
+                                        class="T75of FRzJkf"
+                                        alt="Mức phân loại nội dung 3 tuổi trở lên"
+                                        loading="lazy"
+                                      />
+                                    </div>
+                                  </div></div
+                              ></a>
+                              <div class="fvMBP">
+                                <div
+                                  jsaction="JIbuQc:MH7vAb"
+                                  jscontroller="chfSwc"
+                                  jsmodel="UfnShf"
+                                  data-item-id='%.@."com.sagosago.CrayonClub.googleplay",7]'
+                                  data-is-free="true"
+                                  jslog="38052; 1:223|qgKjARqgAQgAShMIyvyB77z0kAMV/4DWCB0kZxt0+gEMCgoIABIGCgJ2aRABiAICygIECAIQAboEbQooCiJjb20uc2Fnb3NhZ28uQ3JheW9uQ2x1Yi5nb29nbGVwbGF5EAEYAxo1Ci5tY19vcnBoYW5fYXBwc19raWRzX2hvbWVfZ2FiYnlzX2RvbGxob3VzZV9yZmNjEJkBGAMiCgoAEgY1MDE2Mjk=; track:click,impression"
+                                  jsdata="Ddi83b;CgYKBENBRT0=;$6876"
+                                >
+                                  <div class="u4ICaf">
+                                    <div
+                                      class="VfPpkd-dgl2Hf-ppHlrf-sM5MNb"
+                                      data-is-touch-wrapper="true"
+                                    >
+                                      <button
+                                        class="VfPpkd-LgbsSe VfPpkd-LgbsSe-OWXEXe-k8QpJ VfPpkd-LgbsSe-OWXEXe-dgl2Hf nCP5yc AjY5Oe DuMIQc LQeN7 MjT6xe sOCCfd HNnJkb XzJShf iEDKhd GFmdkb"
+                                        jscontroller="soHxf"
+                                        jsaction="click:cOuCgd; mousedown:UX7yZ; mouseup:lbsD7e; mouseenter:tfO1Yc; mouseleave:JywGue; touchstart:p6p2H; touchmove:FwuNnf; touchend:yfqBxc; touchcancel:JMtRjd; focus:AHmuwe; blur:O22p3e; contextmenu:mg9Pef;mlnRJb:fLiPzd"
+                                        data-disable-idom="true"
+                                        aria-label="Cài đặt"
+                                      >
+                                        <div class="VfPpkd-Jh9lGc"></div>
+                                        <div class="VfPpkd-J1Ukfc-LhBDec"></div>
+                                        <div class="VfPpkd-RLmnJb"></div>
+                                        <span
+                                          jsname="V67aGc"
+                                          class="VfPpkd-vQzf8d"
+                                          ><span
+                                            ><span
+                                              itemprop="offers"
+                                              itemscope=""
+                                              itemtype="https://schema.org/Offer"
+                                              ><meta
+                                                itemprop="url"
+                                                content="https://play.google.com/store/apps/details?id=com.sagosago.CrayonClub.googleplay&amp;rdid=com.sagosago.CrayonClub.googleplay&amp;feature=md&amp;offerId" /><meta
+                                                itemprop="price"
+                                                content="0" /></span></span
+                                          >Cài đặt</span
+                                        >
+                                      </button>
+                                    </div>
+                                  </div>
+                                </div>
+                                <span class="BQ6Nz iEDKhd"
+                                  >Mua trong ứng dụng</span
+                                >
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-section">
+              <div>
+                <section>
+                  <header class="section-header-spacing section-header-margin">
+                    <div class="section-banner-title">
+                      <span>Play your favorites on the big screen</span>
+                    </div>
+                    <div class="section-banner-description">
+                      <span>Google Play Games on PC</span>
+                    </div>
+                  </header>
+
+                  <div class="app-list-container">
+                    <div class="app-list-wrapper ntZncd">
+                      <div class="content-wrapper">
+                        <div class="horizontal-scroll app-row ntZncd">
+                          <div
+                            class="platform-item app-row-spacing"
+                            role="listitem"
+                          >
+                            <div
+                              class="VfPpkd-WsjYwc VfPpkd-WsjYwc--outlined card--elevated card--flat AaN0Dd card--responsive"
+                            >
+                              <div class="card__content">
+                                <div class="card-container card-inner">
+                                  <div class="card-container card-inner">
+                                    <a
+                                      class="card-link card-content"
+                                      href="./apps/candy-crush-saga.html"
+                                      ><div class="app-thumbnail">
+                                        <img
+                                          src="https://i.ytimg.com/vi/QGD-WEqo_bQ/hqdefault.jpg"
+                                          class="img-contain app-thumbnail-img"
+                                        />
+                                      </div>
+                                      <div class="app-info">
+                                        <img
+                                          src="https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s64-rw"
+                                          srcset="
+                                            https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s128-rw 2x
+                                          "
+                                          class="img-contain app-icon"
+                                        />
+                                        <div class="app-details">
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-name"
+                                              >Hades' Star</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-category"
+                                              >Chiến thuật</span
+                                            ><span
+                                              class="app-info__text app-rating-separator"
+                                              >•</span
+                                            ><span
+                                              class="app-info__text app-category"
+                                              >4X</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <div>
+                                              <span
+                                                class="app-info__text app-rating"
+                                                ><span class="app-category"
+                                                  >4,4</span
+                                                ><span class="app-rating-icon"
+                                                  ><svg
+                                                    class="app-rating-icon-detail"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 -960 960 960"
+                                                  >
+                                                    <path
+                                                      d="M480 -940 L375 -640 L60 -620 L300 -420 L210 -100 L480 -280 L750 -100 L660 -420 L900 -620 L585 -640 Z"
+                                                    /></svg></span
+                                              ></span>
+                                            </div>
+                                            <span
+                                              class="app-info__text app-category ePXqnb"
+                                            ></span>
+                                          </div>
+                                        </div></div
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="platform-item app-row-spacing">
+                            <div
+                              class="VfPpkd-WsjYwc VfPpkd-WsjYwc--outlined card--elevated card--flat AaN0Dd card--responsive"
+                            >
+                              <div class="card__content">
+                                <div class="card-container card-inner">
+                                  <div class="card-container card-inner">
+                                    <a
+                                      class="card-link card-content"
+                                      href="/store/apps/details?id=com.ParallelSpace.Cerberus&amp;pcampaignid=merch_published_cluster_promotion_battlestar_browse_all_games"
+                                      ><div class="app-thumbnail">
+                                        <img
+                                          src="https://i.ytimg.com/vi/QGD-WEqo_bQ/hqdefault.jpg"
+                                          class="img-contain app-thumbnail-img"
+                                        />
+                                      </div>
+                                      <div class="app-info">
+                                        <img
+                                          src="https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s64-rw"
+                                          srcset="
+                                            https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s128-rw 2x
+                                          "
+                                          class="img-contain app-icon"
+                                        />
+                                        <div class="app-details">
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-name"
+                                              >Hades' Star</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-category"
+                                              >Chiến thuật</span
+                                            ><span
+                                              class="app-info__text app-rating-separator"
+                                              >•</span
+                                            ><span
+                                              class="app-info__text app-category"
+                                              >4X</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <div>
+                                              <span
+                                                class="app-info__text app-rating"
+                                                ><span class="app-category"
+                                                  >4,4</span
+                                                ><span class="app-rating-icon"
+                                                  ><svg
+                                                    class="app-rating-icon-detail"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 -960 960 960"
+                                                  >
+                                                    <path
+                                                      d="M480 -940 L375 -640 L60 -620 L300 -420 L210 -100 L480 -280 L750 -100 L660 -420 L900 -620 L585 -640 Z"
+                                                    /></svg></span
+                                              ></span>
+                                            </div>
+                                            <span
+                                              class="app-info__text app-category ePXqnb"
+                                            ></span>
+                                          </div>
+                                        </div></div
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="platform-item app-row-spacing">
+                            <div
+                              class="VfPpkd-WsjYwc VfPpkd-WsjYwc--outlined card--elevated card--flat AaN0Dd card--responsive"
+                            >
+                              <div class="card__content">
+                                <div class="card-container card-inner">
+                                  <div class="card-container card-inner">
+                                    <a
+                                      class="card-link card-content"
+                                      href="/store/apps/details?id=com.ParallelSpace.Cerberus&amp;pcampaignid=merch_published_cluster_promotion_battlestar_browse_all_games"
+                                      ><div class="app-thumbnail">
+                                        <img
+                                          src="https://i.ytimg.com/vi/QGD-WEqo_bQ/hqdefault.jpg"
+                                          class="img-contain app-thumbnail-img"
+                                        />
+                                      </div>
+                                      <div class="app-info">
+                                        <img
+                                          src="https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s64-rw"
+                                          srcset="
+                                            https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s128-rw 2x
+                                          "
+                                          class="img-contain app-icon"
+                                        />
+                                        <div class="app-details">
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-name"
+                                              >Hades' Star</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-category"
+                                              >Chiến thuật</span
+                                            ><span
+                                              class="app-info__text app-rating-separator"
+                                              >•</span
+                                            ><span
+                                              class="app-info__text app-category"
+                                              >4X</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <div>
+                                              <span
+                                                class="app-info__text app-rating"
+                                                ><span class="app-category"
+                                                  >4,4</span
+                                                ><span class="app-rating-icon"
+                                                  ><svg
+                                                    class="app-rating-icon-detail"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 -960 960 960"
+                                                  >
+                                                    <path
+                                                      d="M480 -940 L375 -640 L60 -620 L300 -420 L210 -100 L480 -280 L750 -100 L660 -420 L900 -620 L585 -640 Z"
+                                                    /></svg></span
+                                              ></span>
+                                            </div>
+                                            <span
+                                              class="app-info__text app-category ePXqnb"
+                                            ></span>
+                                          </div>
+                                        </div></div
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="platform-item app-row-spacing">
+                            <div
+                              class="VfPpkd-WsjYwc VfPpkd-WsjYwc--outlined card--elevated card--flat AaN0Dd card--responsive"
+                            >
+                              <div class="card__content">
+                                <div class="card-container card-inner">
+                                  <div class="card-container card-inner">
+                                    <a
+                                      class="card-link card-content"
+                                      href="/store/apps/details?id=com.ParallelSpace.Cerberus&amp;pcampaignid=merch_published_cluster_promotion_battlestar_browse_all_games"
+                                      ><div class="app-thumbnail">
+                                        <img
+                                          src="https://i.ytimg.com/vi/QGD-WEqo_bQ/hqdefault.jpg"
+                                          class="img-contain app-thumbnail-img"
+                                        />
+                                      </div>
+                                      <div class="app-info">
+                                        <img
+                                          src="https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s64-rw"
+                                          srcset="
+                                            https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s128-rw 2x
+                                          "
+                                          class="img-contain app-icon"
+                                        />
+                                        <div class="app-details">
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-name"
+                                              >Hades' Star</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-category"
+                                              >Chiến thuật</span
+                                            ><span
+                                              class="app-info__text app-rating-separator"
+                                              >•</span
+                                            ><span
+                                              class="app-info__text app-category"
+                                              >4X</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <div>
+                                              <span
+                                                class="app-info__text app-rating"
+                                                ><span class="app-category"
+                                                  >4,4</span
+                                                ><span class="app-rating-icon"
+                                                  ><svg
+                                                    class="app-rating-icon-detail"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 -960 960 960"
+                                                  >
+                                                    <path
+                                                      d="M480 -940 L375 -640 L60 -620 L300 -420 L210 -100 L480 -280 L750 -100 L660 -420 L900 -620 L585 -640 Z"
+                                                    /></svg></span
+                                              ></span>
+                                            </div>
+                                            <span
+                                              class="app-info__text app-category ePXqnb"
+                                            ></span>
+                                          </div>
+                                        </div></div
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+
+            <div class="app-section">
+              <div class="app-list-container">
+                <div class="app-list-wrapper ntZncd">
+                  <div class="content-wrapper">
+                    <div class="horizontal-scroll app-row ntZncd">
+                      <div class="platform-item neq64b">
+                        <div
+                          class="VfPpkd-WsjYwc VfPpkd-WsjYwc-OWXEXe-INsAgc KC1dQ Usd1Ac AaN0Dd hHUYDe G17ige"
+                        >
+                          <div class="VfPpkd-aGsRMb">
+                            <div class="card-container jVR3ye">
+                              <a href="#" class="card-link WPfqYc">
+                                <div
+                                  class="Pdcv8e"
+                                  style="background-color: rgb(46, 53, 121)"
+                                >
+                                  <img
+                                    src="https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w648-h364-rw"
+                                    srcset="
+                                      https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w1296-h728-rw 2x
+                                    "
+                                    class="img-contain SzSlNc"
+                                    aria-hidden="true"
+                                    data-iml="37443.70000000112"
+                                  />
+                                  <div class="xovwLb"></div>
+                                  <div
+                                    class="GkwRVc"
+                                    style="
+                                      background-image: linear-gradient(
+                                        transparent 48.15%,
+                                        rgb(46, 53, 121) 94.91%
+                                      );
+                                    "
+                                  ></div>
+                                </div>
+                                <div class="lbNC6b">
+                                  <div class="YLCN0d zcimD">
+                                    Thỏa sức vui chơi cùng mèo tại Nhà búp bê
+                                    của Gabby
+                                  </div>
+                                  <div class="gb8Aof zcimD">
+                                    Hình dán, màu sắc mới và hơn nữa
+                                  </div>
+                                </div>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="app-section">
+              <div>
+                <section>
+                  <header class="section-header-spacing section-header-margin">
+                    <div class="section-banner-title">
+                      <span>Play your favorites on the big screen</span>
+                    </div>
+                    <div class="section-banner-description">
+                      <span>Google Play Games on PC</span>
+                    </div>
+                  </header>
+
+                  <div class="app-list-container">
+                    <div class="app-list-wrapper ntZncd">
+                      <div class="content-wrapper">
+                        <div class="horizontal-scroll app-row ntZncd">
+                          <div class="platform-item app-row-spacing">
+                            <div
+                              class="VfPpkd-WsjYwc VfPpkd-WsjYwc--outlined card--elevated card--flat AaN0Dd card--responsive"
+                            >
+                              <div class="card__content">
+                                <div class="card-container card-inner">
+                                  <div class="card-container card-inner">
+                                    <a
+                                      class="card-link card-content"
+                                      href="/store/apps/details?id=com.ParallelSpace.Cerberus&amp;pcampaignid=merch_published_cluster_promotion_battlestar_browse_all_games"
+                                      ><div class="app-thumbnail">
+                                        <img
+                                          src="https://i.ytimg.com/vi/QGD-WEqo_bQ/hqdefault.jpg"
+                                          class="img-contain app-thumbnail-img"
+                                        />
+                                      </div>
+                                      <div class="app-info">
+                                        <img
+                                          src="https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s64-rw"
+                                          srcset="
+                                            https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s128-rw 2x
+                                          "
+                                          class="img-contain app-icon"
+                                        />
+                                        <div class="app-details">
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-name"
+                                              >Hades' Star</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-category"
+                                              >Chiến thuật</span
+                                            ><span
+                                              class="app-info__text app-rating-separator"
+                                              >•</span
+                                            ><span
+                                              class="app-info__text app-category"
+                                              >4X</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <div>
+                                              <span
+                                                class="app-info__text app-rating"
+                                                ><span class="app-category"
+                                                  >4,4</span
+                                                ><span class="app-rating-icon"
+                                                  ><svg
+                                                    class="app-rating-icon-detail"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 -960 960 960"
+                                                  >
+                                                    <path
+                                                      d="M480 -940 L375 -640 L60 -620 L300 -420 L210 -100 L480 -280 L750 -100 L660 -420 L900 -620 L585 -640 Z"
+                                                    /></svg></span
+                                              ></span>
+                                            </div>
+                                            <span
+                                              class="app-info__text app-category ePXqnb"
+                                            ></span>
+                                          </div>
+                                        </div></div
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="platform-item app-row-spacing">
+                            <div
+                              class="VfPpkd-WsjYwc VfPpkd-WsjYwc--outlined card--elevated card--flat AaN0Dd card--responsive"
+                            >
+                              <div class="card__content">
+                                <div class="card-container card-inner">
+                                  <div class="card-container card-inner">
+                                    <a
+                                      class="card-link card-content"
+                                      href="/store/apps/details?id=com.ParallelSpace.Cerberus&amp;pcampaignid=merch_published_cluster_promotion_battlestar_browse_all_games"
+                                      ><div class="app-thumbnail">
+                                        <img
+                                          src="https://i.ytimg.com/vi/QGD-WEqo_bQ/hqdefault.jpg"
+                                          class="img-contain app-thumbnail-img"
+                                        />
+                                      </div>
+                                      <div class="app-info">
+                                        <img
+                                          src="https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s64-rw"
+                                          srcset="
+                                            https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s128-rw 2x
+                                          "
+                                          class="img-contain app-icon"
+                                        />
+                                        <div class="app-details">
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-name"
+                                              >Hades' Star</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-category"
+                                              >Chiến thuật</span
+                                            ><span
+                                              class="app-info__text app-rating-separator"
+                                              >•</span
+                                            ><span
+                                              class="app-info__text app-category"
+                                              >4X</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <div>
+                                              <span
+                                                class="app-info__text app-rating"
+                                                ><span class="app-category"
+                                                  >4,4</span
+                                                ><span class="app-rating-icon"
+                                                  ><svg
+                                                    class="app-rating-icon-detail"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 -960 960 960"
+                                                  >
+                                                    <path
+                                                      d="M480 -940 L375 -640 L60 -620 L300 -420 L210 -100 L480 -280 L750 -100 L660 -420 L900 -620 L585 -640 Z"
+                                                    /></svg></span
+                                              ></span>
+                                            </div>
+                                            <span
+                                              class="app-info__text app-category ePXqnb"
+                                            ></span>
+                                          </div>
+                                        </div></div
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="platform-item app-row-spacing">
+                            <div
+                              class="VfPpkd-WsjYwc VfPpkd-WsjYwc--outlined card--elevated card--flat AaN0Dd card--responsive"
+                            >
+                              <div class="card__content">
+                                <div class="card-container card-inner">
+                                  <div class="card-container card-inner">
+                                    <a
+                                      class="card-link card-content"
+                                      href="/store/apps/details?id=com.ParallelSpace.Cerberus&amp;pcampaignid=merch_published_cluster_promotion_battlestar_browse_all_games"
+                                      ><div class="app-thumbnail">
+                                        <img
+                                          src="https://i.ytimg.com/vi/QGD-WEqo_bQ/hqdefault.jpg"
+                                          class="img-contain app-thumbnail-img"
+                                        />
+                                      </div>
+                                      <div class="app-info">
+                                        <img
+                                          src="https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s64-rw"
+                                          srcset="
+                                            https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s128-rw 2x
+                                          "
+                                          class="img-contain app-icon"
+                                        />
+                                        <div class="app-details">
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-name"
+                                              >Hades' Star</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-category"
+                                              >Chiến thuật</span
+                                            ><span
+                                              class="app-info__text app-rating-separator"
+                                              >•</span
+                                            ><span
+                                              class="app-info__text app-category"
+                                              >4X</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <div>
+                                              <span
+                                                class="app-info__text app-rating"
+                                                ><span class="app-category"
+                                                  >4,4</span
+                                                ><span class="app-rating-icon"
+                                                  ><svg
+                                                    class="app-rating-icon-detail"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 -960 960 960"
+                                                  >
+                                                    <path
+                                                      d="M480 -940 L375 -640 L60 -620 L300 -420 L210 -100 L480 -280 L750 -100 L660 -420 L900 -620 L585 -640 Z"
+                                                    /></svg></span
+                                              ></span>
+                                            </div>
+                                            <span
+                                              class="app-info__text app-category ePXqnb"
+                                            ></span>
+                                          </div>
+                                        </div></div
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+
+                          <div class="platform-item app-row-spacing">
+                            <div
+                              class="VfPpkd-WsjYwc VfPpkd-WsjYwc--outlined card--elevated card--flat AaN0Dd card--responsive"
+                            >
+                              <div class="card__content">
+                                <div class="card-container card-inner">
+                                  <div class="card-container card-inner">
+                                    <a
+                                      class="card-link card-content"
+                                      href="/store/apps/details?id=com.ParallelSpace.Cerberus&amp;pcampaignid=merch_published_cluster_promotion_battlestar_browse_all_games"
+                                      ><div class="app-thumbnail">
+                                        <img
+                                          src="https://i.ytimg.com/vi/QGD-WEqo_bQ/hqdefault.jpg"
+                                          class="img-contain app-thumbnail-img"
+                                        />
+                                      </div>
+                                      <div class="app-info">
+                                        <img
+                                          src="https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s64-rw"
+                                          srcset="
+                                            https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s128-rw 2x
+                                          "
+                                          class="img-contain app-icon"
+                                        />
+                                        <div class="app-details">
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-name"
+                                              >Hades' Star</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <span
+                                              class="app-info__text app-category"
+                                              >Chiến thuật</span
+                                            ><span
+                                              class="app-info__text app-rating-separator"
+                                              >•</span
+                                            ><span
+                                              class="app-info__text app-category"
+                                              >4X</span
+                                            >
+                                          </div>
+                                          <div class="app-detail-row">
+                                            <div>
+                                              <span
+                                                class="app-info__text app-rating"
+                                                ><span class="app-category"
+                                                  >4,4</span
+                                                ><span class="app-rating-icon"
+                                                  ><svg
+                                                    class="app-rating-icon-detail"
+                                                    xmlns="http://www.w3.org/2000/svg"
+                                                    viewBox="0 -960 960 960"
+                                                  >
+                                                    <path
+                                                      d="M480 -940 L375 -640 L60 -620 L300 -420 L210 -100 L480 -280 L750 -100 L660 -420 L900 -620 L585 -640 Z"
+                                                    /></svg></span
+                                              ></span>
+                                            </div>
+                                            <span
+                                              class="app-info__text app-category ePXqnb"
+                                            ></span>
+                                          </div>
+                                        </div></div
+                                    ></a>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer">
+      <div class="footer__divider"></div>
+      <div class="footer__sections">
+        <div ssk="11:Google Play">
+          <section>
+            <span class="footer__section-title">Google Play</span>
+            <div ssk="22:/store/pass/getstarted">
+              <a
+                href="/store/pass/getstarted"
+                target="_blank"
+                jslog="197536; 1:3121|qgIF0gECEAE=; track:click;"
+                class="footer__link"
+                ><p class="footer__link-text">Play Pass</p></a
+              >
+            </div>
+            <div ssk="20:/store/points/enroll">
+              <a
+                href="/store/points/enroll"
+                target="_blank"
+                jslog="197536; 1:3121|qgIF0gECEAI=; track:click;"
+                class="footer__link"
+                ><p class="footer__link-text">Điểm Play</p></a
+              >
+            </div>
+            <div ssk="39:https://play.google.com/about/giftcards">
+              <a
+                href="https://play.google.com/about/giftcards"
+                target="_blank"
+                jslog="197536; 1:3121|qgIF0gECEAM=; track:click;"
+                class="footer__link"
+                ><p class="footer__link-text">Thẻ Google Play</p></a
+              >
+            </div>
+            <div ssk="7:/redeem">
+              <a
+                href="/redeem"
+                target="_blank"
+                jslog="197536; 1:3121|qgIF0gECEAQ=; track:click;"
+                class="footer__link"
+                ><p class="footer__link-text">Đổi phần thưởng</p></a
+              >
+            </div>
+            <div ssk="51:https://support.google.com/googleplay/answer/134336">
+              <a
+                href="https://support.google.com/googleplay/answer/134336"
+                target="_blank"
+                jslog="197536; 1:3121|qgIF0gECEAU=; track:click;"
+                class="footer__link"
+                ><p class="footer__link-text">Chính sách hoàn tiền</p></a
+              >
+            </div>
+          </section>
+        </div>
+        <div ssk="18:Trẻ em và gia đình">
+          <section>
+            <span class="footer__section-title">Trẻ em và gia đình</span>
+            <div
+              ssk="55:https://support.google.com/googleplay?p=pff_parentguide"
+            >
+              <a
+                href="https://support.google.com/googleplay?p=pff_parentguide"
+                target="_blank"
+                jslog="197536; 1:3121|qgIF0gECEAc=; track:click;"
+                class="footer__link"
+                ><p class="footer__link-text">Hướng dẫn dành cho cha mẹ</p></a
+              >
+            </div>
+            <div ssk="52:https://support.google.com/googleplay/answer/7007852">
+              <a
+                href="https://support.google.com/googleplay/answer/7007852"
+                target="_blank"
+                jslog="197536; 1:3121|qgIF0gECEAg=; track:click;"
+                class="footer__link"
+                ><p class="footer__link-text">Chia sẻ với gia đình</p></a
+              >
+            </div>
+          </section>
+        </div>
+      </div>
+      <div class="footer__bottom-links">
+        <div
+          class="footer__bottom-item"
+          ssk="56:https://play.google.com/intl/vi_vn/about/play-terms.html"
+        >
+          <a
+            href="https://play.google.com/intl/vi_vn/about/play-terms.html"
+            target="_blank"
+            jslog="197536; 1:3121; track:click;"
+            class="footer__link"
+            ><p class="footer__bottom-item">Điều khoản dịch vụ</p></a
+          >
+        </div>
+        <div
+          class="footer__bottom-item"
+          ssk="35:https://policies.google.com/privacy"
+        >
+          <a
+            href="https://policies.google.com/privacy"
+            target="_blank"
+            jslog="197536; 1:3121; track:click;"
+            class="footer__link"
+            ><p class="footer__bottom-item">Quyền riêng tư</p></a
+          >
+        </div>
+        <div
+          class="footer__bottom-item"
+          ssk="51:https://support.google.com/googleplay/?p=about_play"
+        >
+          <a
+            href="https://support.google.com/googleplay/?p=about_play"
+            target="_blank"
+            jslog="197536; 1:3121; track:click;"
+            class="footer__link"
+            ><p class="footer__bottom-item">Giới thiệu về Google Play</p></a
+          >
+        </div>
+        <div
+          class="footer__bottom-item"
+          ssk="39:http://developer.android.com/index.html"
+        >
+          <a
+            href="http://developer.android.com/index.html"
+            target="_blank"
+            jslog="197536; 1:3121; track:click;"
+            class="footer__link"
+            ><p class="footer__bottom-item">Nhà phát triển</p></a
+          >
+        </div>
+        <div
+          class="footer__bottom-item"
+          ssk="43:https://store.google.com/?playredirect=true"
+        >
+          <a
+            href="https://store.google.com/?playredirect=true"
+            target="_blank"
+            jslog="197536; 1:3121; track:click;"
+            class="footer__link"
+            ><p class="footer__bottom-item">Google Store</p></a
+          >
+        </div>
+        <div class="footer__bottom-item footer__locale">
+          <div class="footer__locale-switcher">
+            <div class="yVZQTb">Việt Nam (Tiếng Việt)</div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <div class="ranking-overlay" id="rankingOverlay">
+      <div class="ranking-container">
+        <!-- THAY ĐỔI: Tiêu đề mới -->
+        <div class="ranking-header">
+          <h1>Bảng xếp hạng</h1>
+          <!-- NÚT X ĐỂ TẮT -->
+          <button class="close-btn" id="closeRankingBtn">&times;</button>
+        </div>
+        <div
+          style="
+            position: relative;
+            justify-content: center;
+            text-align: center;
+          "
+        >
+          <div class="filter-bar-scroll-container">
+            <div class="platform-item dropdown">
+              <div
+                class="platform-button"
+                data-default="Tính phí"
+                onclick="toggleDropdown(event, 'priceDropdown')"
+              >
+                <div class="ripple-effect"></div>
+                <div class="button-content">
+                  <span class="button-prefix">
+                    <svg
+                      class="button-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 -960 960 960"
+                    >
+                      <path
+                        d="M480-120q-116 0-213-64.5T135-350h82q31 79 97.5 124T480-180q83 0 141.5-58.5T680-420q0-70-42-116.5T520-610q-51-24-81-43t-30-51q0-31 21-51.5T480-780q27 0 52 11.5T573-740h82q-20-41-48.5-63T520-820q-83 0-141.5 58.5T320-680q0 70 42 116.5T480-490q51 24 81 43t30 51q0 31-21 51.5T520-320q-27 0-52-11.5T427-360h-82q20 41 48.5 63T480-280q83 0 141.5-58.5T680-420h80q-50 143-138.5 211.5T480-120Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="button-label">Tính phí</span>
+                </div>
+              </div>
+              <div id="priceDropdown" class="dropdown-content">
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"></span>
+                      <span class="button-label">Miễn phí phổ biến</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"></span>
+                      <span class="button-label">Doanh thu cao nhất</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"></span>
+                      <span class="button-label">Có tính phí phổ biến</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="platform-item dropdown">
+              <div
+                class="platform-button"
+                data-default="Thiết bị"
+                onclick="toggleDropdown(event, 'deviceDropdown')"
+              >
+                <div class="ripple-effect"></div>
+                <div class="button-content">
+                  <span class="button-prefix">
+                    <svg
+                      class="button-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 -960 960 960"
+                    >
+                      <path
+                        d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="button-label">Thiết bị</span>
+                </div>
+              </div>
+              <div id="deviceDropdown" class="dropdown-content">
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"
+                        ><svg
+                          class="button-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 -960 960 960"
+                        >
+                          <path
+                            d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z"
+                          /></svg
+                      ></span>
+                      <span class="button-label">Windows</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"
+                        ><svg
+                          class="button-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 -960 960 960"
+                        >
+                          <path
+                            d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v124q18 7 29 22t11 34v80q0 19-11 34t-29 22v404q0 33-23.5 56.5T680-40H280Zm0-80h400v-720H280v720Zm0 0v-720 720Zm200-40q17 0 28.5-11.5T520-200q0-17-11.5-28.5T480-240q-17 0-28.5 11.5T440-200q0 17 11.5 28.5T480-160Z"
+                          /></svg
+                      ></span>
+                      <span class="button-label">Điện thoại</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"
+                        ><svg
+                          class="button-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 -960 960 960"
+                        >
+                          <path
+                            d="M480-140q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM200-40q-33 0-56.5-23.5T120-120v-720q0-33 23.5-56.5T200-920h560q33 0 56.5 23.5T840-840v720q0 33-23.5 56.5T760-40H200Zm0-200v120h560v-120H200Zm0-80h560v-400H200v400Zm0-480h560v-40H200v40Zm0 0v-40 40Zm0 560v120-120Z"
+                          /></svg
+                      ></span>
+                      <span class="button-label">Máy tính bảng</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"
+                        ><svg
+                          class="button-icon"
+                          xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 -960 960 960"
+                        >
+                          <path
+                            d="M320-120v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z"
+                          /></svg
+                      ></span>
+                      <span class="button-label">Ti vi</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="platform-item dropdown">
+              <div
+                class="platform-button"
+                data-default="Danh mục"
+                onclick="toggleDropdown(event, 'categoryDropdown')"
+              >
+                <div class="ripple-effect"></div>
+                <div class="button-content">
+                  <span class="button-prefix">
+                    <svg
+                      class="button-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 -960 960 960"
+                    >
+                      <path
+                        d="M120-120v-320h320v320H120Zm0-400v-320h320v320H120Zm400 400v-320h320v320H520Zm0-400v-320h320v320H520Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="button-label">Danh mục</span>
+                </div>
+              </div>
+              <div id="categoryDropdown" class="dropdown-content">
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"></span
+                      ><span class="button-label">App</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"></span
+                      ><span class="button-label">Game</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"></span
+                      ><span class="button-label">Tool</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"></span
+                      ><span class="button-label">Education</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"></span
+                      ><span class="button-label">RPG</span>
+                    </div>
+                  </div>
+                </div>
+                <div class="platform-item">
+                  <div class="platform-button">
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-prefix"></span
+                      ><span class="button-label">Action</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="platform-item">
+              <div class="platform-button" id="newFilterBtn">
+                <div class="ripple-effect"></div>
+                <div class="button-content">
+                  <span class="button-prefix">
+                    <svg
+                      class="button-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 -960 960 960"
+                    >
+                      <path
+                        d="M440-200l-48-102-102-48 102-48 48-102 48 102 102 48-102 48-48 102Zm160 120-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Zm-320 0-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="button-label">Mới</span>
+                </div>
+              </div>
+            </div>
+
+            <div class="platform-item">
+              <div class="platform-button" onclick="clearFilters()">
+                <div class="ripple-effect"></div>
+                <div class="button-content">
+                  <span class="button-prefix">
+                    <svg
+                      class="button-icon"
+                      xmlns="http://www.w3.org/2000/svg"
+                      viewBox="0 -960 960 960"
+                    >
+                      <path
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
+                      />
+                    </svg>
+                  </span>
+                  <span class="button-label">Clear filters</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="ranking-list-scrollable">
+          <!-- Item 1 (Có sẵn) -->
+          <div class="ranking-item">
+            <div class="ranking-number">1</div>
+            <img
+              src="https://play-lh.googleusercontent.com/LML01HqsS5NiQ9GDoNxaFMUQndr3osVA2LoVWck58hC9Vxe15GrmbUc2QhwlFOJlfGaR=s96-rw"
+              alt="TFT Icon"
+              class="app-icon"
+            />
+            <div class="app-details">
+              <div class="app-name">Teamfight Tactics</div>
+              <div class="app-category">Chiến thuật</div>
+              <div class="app-rating">
+                <span>4,1</span>
+                <i class="material-icons">star</i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 2 (Mới) -->
+          <div class="ranking-item">
+            <div class="ranking-number">2</div>
+            <img
+              src="https://play-lh.googleusercontent.com/R0qgNDYYHbRhw6JFsdEbDMqONplEvJx0m0W9wzYVvY3eNF1c2rfBWYjQxW0sLEzFe1E=s64-rw"
+              alt="Block Blast! Icon"
+              class="app-icon"
+            />
+            <div class="app-details">
+              <div class="app-name">Block Blast!</div>
+              <div class="app-category">Giải đố • Xếp hình • Phổ thông</div>
+              <div class="app-rating">
+                <span>4,6</span>
+                <i class="material-icons">star</i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 3 (Mới) -->
+          <div class="ranking-item">
+            <div class="ranking-number">3</div>
+            <img
+              src="https://play-lh.googleusercontent.com/TYNTOTufkgDXPlRZ44NxBfd2sCAfXB4qkIooR1jTiCwrJG0lMvJvJI8PAXUrYZDbKw=s64-rw"
+              alt="Nghịch Thủy Hàn Icon"
+              class="app-icon"
+            />
+            <div class="app-details">
+              <div class="app-name">Nghịch Thủy Hàn</div>
+              <div class="app-category">Nhập vai</div>
+              <div class="app-rating">
+                <span>4,5</span>
+                <i class="material-icons">star</i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 4 (Mới) -->
+          <div class="ranking-item">
+            <div class="ranking-number">4</div>
+            <img
+              src="https://play-lh.googleusercontent.com/hkJ5oNiCo6LkLt0HuFk7S8uInQqqnDxAKmFfYURb8qYiY9aYzWoHb4ob3JE_TkUPs1M=s64-rw"
+              alt="Roblox VN Icon"
+              class="app-icon"
+            />
+            <div class="app-details">
+              <div class="app-name">Roblox VN</div>
+              <div class="app-category">Mô phỏng • Phổ thông</div>
+              <div class="app-rating">
+                <span>3,8</span>
+                <i class="material-icons">star</i>
+              </div>
+            </div>
+          </div>
+
+          <!-- Item 5 (Mới) -->
+          <div class="ranking-item">
+            <div class="ranking-number">5</div>
+            <img
+              src="https://play-lh.googleusercontent.com/esn4ChQLU0wnGiVcQ64-RfgcKYN3wvpNqRRuNgik25Z2-H9Rv9G_nayig6krd1GookqEyQxHq0RIaSHExe5W9BU=s64-rw"
+              alt="Chiến Tuyến Hướng Dương Icon"
+              class="app-icon"
+            />
+            <div class="app-details">
+              <div class="app-name">Chiến Tuyến Hướng Dương</div>
+              <div class="app-category">Phổ thông</div>
+              <div class="app-rating">
+                <span>4,6</span>
+                <i class="material-icons">star</i>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- Kết thúc .ranking-list-scrollable -->
+      </div>
+    </div>
+    <script src="./carousel.js"></script>
+    <script src="./assets/download_demo/filter.js"></script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // --- THÊM JS CHO TÍNH NĂNG POPUP ---
+
+        // Lấy các phần tử
+        const openBtn = document.getElementById("openRankingBtn");
+        const closeBtn = document.getElementById("closeRankingBtn");
+        const overlay = document.getElementById("rankingOverlay");
+
+        // Khi bấm nút "Mở Bảng Xếp Hạng"
+        if (openBtn) {
+          openBtn.addEventListener("click", function () {
+            overlay.classList.add("visible");
+          });
+        }
+
+        // Khi bấm nút "X"
+        if (closeBtn) {
+          closeBtn.addEventListener("click", function () {
+            overlay.classList.remove("visible");
+          });
+        }
+
+        // Khi bấm ra ngoài khu vực .ranking-container (trên overlay)
+        if (overlay) {
+          overlay.addEventListener("click", function (event) {
+            // Kiểm tra xem click có phải trực tiếp vào overlay không
+            if (event.target === overlay) {
+              overlay.classList.remove("visible");
+            }
+          });
+        }
+      });
+    </script>
+    <script src="./assets/js/carousel-scroll.js"></script>
+
+    <script src="./assets/js/navigation.js"></script>
+  </body>
+</html>

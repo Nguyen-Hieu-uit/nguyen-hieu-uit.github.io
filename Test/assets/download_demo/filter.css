@@ -1,0 +1,144 @@
+.filter-bar-scroll-container {
+  display: flex;
+  gap: 10px;
+  white-space: nowrap;
+  padding: 10px 4px;
+}
+
+.filter-bar-scroll-container::-webkit-scrollbar {
+  display: none;
+}
+.filter-bar-scroll-container {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.platform-item {
+  flex-shrink: 0;
+  position: relative;
+  display: inline-block;
+}
+
+.platform-button {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 999px; /* .rounded-full */
+  cursor: pointer;
+  font-size: 16px;
+  transition: all 0.2s;
+  padding: 0;
+  display: block;
+  color: #333;
+  text-decoration: none;
+  text-align: left;
+  /* Thêm: Chứa ripple-effect */
+  position: relative;
+  overflow: hidden;
+}
+
+.platform-button:hover {
+  background-color: #f5f5f5;
+}
+
+.platform-button.is-active {
+  background-color: #007bff;
+  color: white;
+  border-color: #007bff;
+}
+
+/* --- CẤU TRÚC NÚT (CSS MỚI NHẤT CỦA BẠN) --- */
+
+.button-content {
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  position: relative; /* Cho ripple-effect */
+  z-index: 1; /* Nằm trên ripple-effect */
+  margin: 0 16px;
+}
+
+.button-prefix {
+  display: inline-flex;
+  flex-shrink: 0;
+  margin: 0 4px 0 0;
+  /* Căn giữa icon bên trong prefix */
+  align-items: center;
+  justify-content: center;
+}
+
+.button-icon {
+  width: 16px;
+  height: 16px;
+  fill: currentColor;
+}
+
+.button-content .button-label {
+  display: inline-block;
+  margin: 6px 4px;
+  line-height: 1.2;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* CSS cho Ripple-effect (Tùy chọn) */
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  z-index: 0;
+}
+
+/* Hiệu ứng (chỉ là giả lập, JS thật sự cần để hoạt động) */
+.platform-button:active .ripple-effect {
+  /* JS sẽ cần để thêm div này vào lúc click */
+}
+
+/* --- DROPDOWN CONTENT (ĐÃ SỬA LỖI TRÀN) --- */
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  border-radius: 16px;
+  padding: 15px;
+  top: 110%;
+  left: 0;
+  z-index: 100;
+  gap: 10px;
+  box-sizing: border-box;
+}
+
+/* Trạng thái HIỆN của dropdown */
+.dropdown-content.show {
+  display: grid;
+  /* SỬA LỖI: 
+      - Xóa 'width'
+      - Định nghĩa cột rõ ràng là '150px' 
+    */
+  grid-template-columns: repeat(3, 150px);
+}
+
+.dropdown-content.show.flex-layout {
+  display: flex;
+  flex-wrap: wrap;
+  width: max-content; /* Dành cho < 4 items */
+  grid-template-columns: none;
+}
+
+/* --- CSS Item BÊN TRONG dropdown --- */
+.dropdown-content .platform-item {
+  width: 150px;
+}
+
+.dropdown-content .platform-button {
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.dropdown-content .button-content {
+  margin: 0 10px;
+}

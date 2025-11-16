@@ -1,0 +1,1018 @@
+/* 1. Wrapper chính */
+.carousel-wrapper {
+  width: 75%;
+  max-width: 1600px; /* Tương đương max-w-6xl */
+  margin: auto;
+  background-color: #202020;
+  border-radius: 1rem; /* 16px */
+  overflow: hidden;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+.carousel-container {
+  display: flex;
+  /* Ban đầu là cột (cho mobile) */
+
+  height: auto; /* Chiều cao tự động cho mobile */
+}
+
+/* 2. Slides Container (Phần hình ảnh) */
+.slides-container {
+  position: relative;
+  overflow: hidden;
+  height: 0;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-basis: calc(100% - (160px + 16px));
+  -ms-flex-preferred-size: calc(100% - (160px + 16px));
+  flex-basis: calc(100% - (160px + 16px));
+  border-radius: 16px;
+  padding-bottom: calc(9 / 16 * 100%);
+}
+
+@media (min-width: 1280px) {
+  .slides-container {
+    -webkit-flex-basis: calc(100% - (176px + 16px));
+    -ms-flex-preferred-size: calc(100% - (176px + 16px));
+    flex-basis: calc(100% - (176px + 16px));
+  }
+}
+
+@media (min-width: 1440px) {
+  .slides-container {
+    -webkit-flex-basis: calc(100% - (180px + 20px));
+    -ms-flex-preferred-size: calc(100% - (180px + 20px));
+    flex-basis: calc(100% - (180px + 20px));
+  }
+}
+
+/* --- CSS tùy chỉnh gốc (Giữ nguyên) --- */
+.carousel-slide {
+  opacity: 0;
+  position: absolute;
+  overflow: hidden;
+  top: 0;
+  left: 0;
+  border-radius: 16px;
+  width: 100%;
+  height: 100%; /* Lấp đầy .slides-container */
+  transition: opacity 0.8s ease-in-out;
+  background-size: cover;
+  background-position: center;
+
+  /* Thêm hiệu ứng này để nội dung xuất hiện mượt mà hơn */
+  transition: opacity 0.8s ease-in-out, transform 0.8s ease-in-out;
+  transform: scale(1.05); /* Hơi zoom vào ban đầu */
+}
+
+.carousel-slide.active {
+  opacity: 1;
+  z-index: 10;
+  transform: scale(1); /* Trở lại bình thường khi active */
+}
+
+.slide-content {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem; /* 32px */
+  z-index: 20;
+  width: 100%;
+  max-width: 450px; /* Giới hạn chiều rộng nội dung */
+}
+
+/* Gradient overlay - Đã được cập nhật */
+.slide-content::before {
+  content: "";
+  position: absolute;
+  bottom: -2rem; /* Cập nhật để khớp padding */
+  left: -2rem; /* Cập nhật để khớp padding */
+  right: 0;
+  height: 200%; /* Tăng chiều cao gradient */
+  width: 150%; /* Tăng chiều rộng gradient */
+  background: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.8) 40%,
+    transparent 100%
+  );
+  z-index: -1; /* Đặt sau văn bản */
+  transition: opacity 0.5s ease-in-out;
+  opacity: 0; /* Ẩn ban đầu */
+}
+
+/* Chỉ hiện gradient khi slide active */
+.carousel-slide.active .slide-content::before {
+  opacity: 1;
+}
+
+/* --- Cập nhật CSS cho nội dung văn bản --- */
+.slide-text-content {
+  /* Thêm hiệu ứng trễ cho văn bản */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out 0.4s, transform 0.5s ease-out 0.4s;
+}
+
+/* Khi slide active, cho văn bản hiện ra */
+.carousel-slide.active .slide-text-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-content h2 {
+  font-size: 2.25rem; /* 36px */
+  font-weight: 700;
+  color: #ffffff;
+  margin-bottom: 0.5rem; /* 8px */
+}
+
+.slide-content p {
+  font-size: 1rem; /* 16px */
+  color: #e5e7eb; /* gray-200 */
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+/* --- (MỚI) CSS cho các nút bấm --- */
+.slide-buttons {
+  display: flex;
+  gap: 1rem; /* 16px */
+  /* Thêm hiệu ứng trễ cho nút, sau văn bản */
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease-out 0.6s, transform 0.5s ease-out 0.6s;
+}
+
+.carousel-slide.active .slide-buttons {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.slide-btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem; /* 12px 24px */
+  border-radius: 0.25rem; /* 4px */
+  font-size: 0.875rem; /* 14px */
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  transition: background-color 0.2s ease, border-color 0.2s ease,
+    color 0.2s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.slide-btn-primary {
+  background-color: #ffffff;
+  color: #121212;
+}
+.slide-btn-primary:hover {
+  background-color: #e0e0e0;
+}
+
+.slide-btn-secondary {
+  background-color: transparent;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+.slide-btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ------------------------------------- */
+
+/* 3. Navigation Container (Phần điều hướng) */
+.nav-container {
+  margin-left: 20px;
+  flex-basis: 180px;
+  background-color: #121212;
+  /* 16px */
+  order: 2; /* Hiển thị sau trên mobile */
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.nav-container::-webkit-scrollbar {
+  display: none;
+}
+
+.nav-container {
+  font-weight: 400;
+  -webkit-flex-basis: 160px;
+  -ms-flex-preferred-size: 160px;
+  flex-basis: 160px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+.nav-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 16.666666666666668%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.carousel-nav-item-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 200ms cubic-bezier(0.17, 0.17, 0.23, 1);
+  transition: background-color 200ms cubic-bezier(0.17, 0.17, 0.23, 1);
+  cursor: pointer;
+}
+
+.carousel-nav-item-content:hover .nav-item-content {
+  background-color: #374151; /* gray-700 */
+}
+
+.nav-item.active .nav-item-content {
+  opacity: 1; /* Rõ nét */
+}
+
+.nav-item img {
+  width: 4rem; /* 64px */
+  height: 3rem; /* 48px */
+  object-fit: cover;
+  border-radius: 0.25rem; /* 4px */
+  margin-right: 0.75rem; /* 12px */
+  flex-shrink: 0;
+  margin: 0 15px;
+}
+
+.nav-item span {
+  color: #ffffff;
+  font-size: 0.875rem; /* 14px */
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* --- Progress Bar Animation (Giữ nguyên) --- */
+.nav-progress-bar {
+  width: 0%;
+  height: 3px;
+  background-color: #ffffff;
+  z-index: 4;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel-nav-item.active .nav-progress-bar {
+  animation: fillProgress 5s linear forwards;
+}
+
+@keyframes fillProgress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* --- Responsive cho Desktop (md: breakpoint) --- */
+@media (min-width: 768px) {
+  #carousel-container {
+    flex-direction: row; /* Chuyển sang hàng ngang */
+    height: 600px; /* Chiều cao cố định */
+  }
+
+  .nav-container {
+    width: 25%; /* Chiếm 1/4 */
+    height: 100%; /* Lấp đầy chiều cao */
+    order: 2; /* Vẫn là 2 */
+    flex-direction: column; /* Chuyển sang cột */
+    overflow-y: auto; /* Cuộn dọc nếu cần */
+    overflow-x: hidden;
+  }
+
+  .nav-item {
+    flex-shrink: 1; /* Cho phép co lại bình thường */
+    width: 100%; /* Chiếm toàn bộ chiều rộng của nav-container */
+    min-width: auto; /* Reset min-width */
+  }
+
+  .slide-content {
+    padding: 3rem; /* Tăng padding trên desktop */
+  }
+  .slide-content h2 {
+    font-size: 2.5rem; /* 40px */
+  }
+  .slide-content p {
+    font-size: 1.125rem; /* 18px */
+  }
+}
+
+/* epic game */
+/* Đổi tên: .css-lai20k -> .page-container (vùng chứa toàn bộ trang) */
+.page-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  max-width: 1600px;
+  padding-top: 90px;
+}
+
+/* Giữ nguyên vì tên đã có ý nghĩa */
+.epic_carousel {
+  position: relative;
+}
+
+/* Đổi tên: .css-2scrzp -> .carousel-section (vùng chứa carousel) */
+.carousel-section {
+  margin-bottom: 64px;
+  position: relative;
+}
+
+/* Đổi tên: .css-1mgolpb -> .carousel-body (thân của carousel) */
+.carousel-body {
+  font-weight: 500;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  border-radius: 4px;
+  overflow: hidden;
+  outline: none;
+}
+
+/* Đổi tên: .css-1kosn1k -> .carousel-main-slide-area (khu vực slide chính) */
+.carousel-main-slide-area {
+  position: relative;
+  overflow: hidden;
+  height: 100%;
+  width: 100%;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  -webkit-flex-basis: calc(100% - (160px + 16px));
+  -ms-flex-preferred-size: calc(100% - (160px + 16px));
+  flex-basis: calc(100% - (160px + 16px));
+  border-radius: 16px;
+}
+
+@media (min-width: 1280px) {
+  .carousel-main-slide-area {
+    -webkit-flex-basis: calc(100% - (176px + 16px));
+    -ms-flex-preferred-size: calc(100% - (176px + 16px));
+    flex-basis: calc(100% - (176px + 16px));
+  }
+}
+
+@media (min-width: 1440px) {
+  .carousel-main-slide-area {
+    -webkit-flex-basis: calc(100% - (180px + 20px));
+    -ms-flex-preferred-size: calc(100% - (180px + 20px));
+    flex-basis: calc(100% - (180px + 20px));
+  }
+}
+
+/* Đổi tên: .css-u421q6 -> .carousel-aspect-box (hộp giữ tỷ lệ 16:9) */
+.carousel-aspect-box {
+  position: relative;
+  padding-bottom: calc(9 / 16 * 100%);
+  height: 0;
+}
+
+.carousel-aspect-box .carousel-slide-fitter {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Đổi tên: .css-rl9sa6 -> .carousel-slide-fitter (căn chỉnh nội dung slide) */
+.carousel-slide-fitter {
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+}
+
+/* Đổi tên: .css-1ldylok -> .slide-content-wrapper */
+.slide-content-wrapper {
+  height: 100%;
+  width: 100%;
+  position: relative;
+  color: rgb(255, 255, 255);
+  cursor: pointer;
+}
+
+/* Đổi tên: .css-4rx3j2 -> .slide-link */
+.slide-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Đổi tên: .css-uwwqev -> .slide-image-wrapper */
+.slide-image-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Đổi tên: .css-rvwbuf -> .slide-gradient-overlay */
+.slide-gradient-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80%;
+  height: 100%;
+  z-index: 0;
+  opacity: 0.6;
+  background: linear-gradient(
+    270deg,
+    rgba(11, 11, 11, 0) 0%,
+    #0b0b0b 100%,
+    #0b0b0b 100%
+  );
+}
+
+/* Đổi tên: .css-1l9qif7 -> .slide-picture */
+.slide-picture {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+/* Đổi tên: .css-1bbjmcj -> .slide-image */
+.slide-image {
+  transition: opacity 125ms ease-in-out 450ms;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+}
+
+/* Đổi tên: .css-79u39p -> .slide-info-box */
+.slide-info-box {
+  z-index: 1;
+  width: 360px;
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: start;
+  -webkit-box-align: start;
+  -ms-flex-align: start;
+  align-items: start;
+  pointer-events: none;
+}
+
+@keyframes logo-animation {
+  0% {
+    transform: translateX(80px);
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.text-sale-tag {
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  line-height: 100%;
+  text-transform: uppercase;
+  font-size: 0.75em;
+}
+
+.text-sale-tag {
+  font-weight: 400;
+  line-height: 165%;
+  font-size: 1rem;
+  color: #fff;
+}
+
+.text-base {
+  margin: 0;
+  padding: 0;
+}
+
+/* Đổi tên: .css-dzggg0 -> .slide-promo-logo */
+.slide-promo-logo {
+  width: 150px;
+  height: 55px;
+  margin-bottom: 20px;
+  opacity: 0;
+  background-image: url(https://cdn2.unrealengine.com/egs-split-fiction-carousel-logo-350x70-177f086c6498.png);
+  -webkit-background-position: bottom left;
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  -webkit-background-size: contain;
+  background-size: contain;
+
+  /* animation: logo-animation 200ms cubic-bezier(0.69, 0, 0.83, 0.83); */
+}
+
+.carousel-slide.active .slide-promo-logo {
+  animation: 300ms cubic-bezier(0.17, 0.17, 0.23, 1) 300ms 1 normal forwards
+    running logo-animation;
+}
+
+@media (min-width: 1024px) {
+  .slide-promo-logo {
+    height: 80px;
+    margin-bottom: 17px;
+  }
+}
+
+/* Đổi tên: .css-180x381 -> .slide-promo-logo--large (class này không có trong HTML, nhưng có trong CSS) */
+@media (min-width: 1280px) {
+  .slide-promo-logo--large {
+    width: 200px;
+    height: 145px;
+    margin-bottom: 25px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .slide-promo-logo {
+    width: 220px;
+    height: 160px;
+    margin-bottom: 40px;
+  }
+}
+
+/* Đổi tên: .css-1xn3edc -> .slide-description-wrapper */
+.slide-description-wrapper {
+  margin-bottom: 30px;
+}
+
+/* Đổi tên: .eds_1ypbntd0 -> .text-base */
+.text-base {
+  color: #fff;
+  margin: 0;
+  padding: 0;
+}
+
+/* Đổi tên: .css-r6z5ec -> .z-index-1 */
+.z-index-1 {
+  z-index: 1;
+}
+
+/* Đổi tên: .eds_1ypbntdk -> .text-color-primary */
+.text-color-primary {
+  color: var(--eds_xd1k8g3q);
+}
+
+/* Đổi tên: .eds_1ypbntdc, .eds_1ypbntdd -> .text-style-small, .text-style-base */
+.text-style-small,
+.text-style-base {
+  font-family: var(--eds_xd1k8g46), sans-serif;
+  font-weight: var(--eds_xd1k8g49);
+  letter-spacing: var(--eds_xd1k8g6l);
+}
+
+/* .eds_1ypbntdc -> .text-style-small (Thêm size/height) */
+.text-style-small {
+  font-size: var(--eds_xd1k8g6v);
+  line-height: var(--eds_xd1k8g6p);
+}
+
+/* Đổi tên: .eds_1ypbntd6, .eds_1ypbntd7 -> .text-font-heading, .text-size-large */
+.text-font-heading,
+.text-size-large {
+  font-family: var(--eds_xd1k8g47), sans-serif;
+  font-weight: var(--eds_xd1k8g4b);
+  letter-spacing: var(--eds_xd1k8g6l);
+  line-height: var(--eds_xd1k8g6o);
+}
+
+.text-size-large {
+  font-size: var(--eds_xd1k8g6w);
+}
+
+/* Đổi tên: .eds_1ypbntdk -> .text-color-primary */
+.text-color-primary {
+  color: #fff;
+}
+
+/* Đổi tên: .css-5ur8x -> .visually-hidden (một class tiêu chuẩn cho trợ năng) */
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+/* Đổi tên: .css-lgj0h8 -> .grid-container */
+.grid-container {
+  display: grid;
+}
+
+/* Đổi tên: .css-1h3di0n -> .text-truncate */
+.text-truncate {
+  display: -webkit-box;
+  line-clamp: 4;
+  overflow: hidden;
+  word-break: break-word;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+}
+
+.discount-badge-text {
+  overflow-wrap: break-word;
+  text-align: start;
+}
+
+.discount-badge-wrapper div {
+  padding: 0 8px;
+  background-color: rgb(38, 187, 255);
+  color: #000000;
+}
+
+.discount-badge--contained {
+  align-items: center;
+  border-radius: 999px;
+  display: inline-flex;
+  font-weight: 500;
+  gap: 0.25rem;
+  max-width: fit-content;
+}
+
+.discount-badge--primary {
+  min-height: 1.25rem;
+  padding-inline-start: 0.75rem;
+  padding-inline-end: 0.75rem;
+  letter-spacing: 0.02em;
+}
+
+/* Đổi tên: .css-13ko30i -> .slide-offer-details */
+.slide-offer-details {
+  width: 375px;
+}
+
+/* Đổi tên: .css-1r2f04i -> .slide-price-block */
+.slide-price-block {
+  margin-bottom: 10px;
+}
+
+/* Đổi tên: .css-140e7ku -> .slide-price-container */
+.slide-price-container {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-flex-flow: row wrap;
+  -webkit-flex-flow: row wrap;
+  -ms-flex-flow: row wrap;
+  flex-flow: row wrap;
+}
+
+/* Đổi tên: .css-l24hbj -> .slide-price-segment */
+.slide-price-segment {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slide-price-segment {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 10px;
+}
+
+/* Đổi tên: .css-1nblg0t -> .price-justify-end (class này không có trong HTML) */
+.price-justify-end {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: end;
+  -ms-flex-pack: end;
+  -webkit-justify-content: flex-end;
+  justify-content: flex-end;
+  -webkit-align-items: baseline;
+  -webkit-box-align: baseline;
+  -ms-flex-align: baseline;
+  align-items: baseline;
+  -webkit-box-flex-wrap: wrap;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+}
+
+.slide-price-segment {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.slide-price-segment + .slide-price-segment {
+  margin-left: 10px;
+}
+
+/* Giữ nguyên các class đã có ý nghĩa */
+.carousel-price-wrapper {
+  display: flex;
+}
+
+.carousel-price-text {
+  color: hsla(0, 0%, 100%, 0.65);
+  margin: 0;
+  padding: 0;
+}
+
+.discount-price {
+  text-decoration: line-through;
+  text-decoration-thickness: 1.2px;
+}
+
+.carousel-price-wrapper + .carousel-price-wrapper {
+  margin-left: 10px;
+}
+
+/* Các class từ .css-1xn3edc và .css-1g3xedu đã được đổi tên ở trên */
+.slide-description-wrapper {
+  margin-bottom: 30px;
+}
+
+/* Đổi tên: .css-1sqpkm6 -> .carousel-nav-sidebar */
+/* Định nghĩa cột chứa nav, có flex-basis (chiều rộng) thay đổi theo viewport */
+.carousel-nav-sidebar {
+  font-weight: 400;
+  -webkit-flex-basis: 160px;
+  -ms-flex-preferred-size: 160px;
+  flex-basis: 160px;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-flex: 0;
+  -webkit-flex-grow: 0;
+  -ms-flex-positive: 0;
+  flex-grow: 0;
+  -webkit-flex-shrink: 1;
+  -ms-flex-negative: 1;
+  flex-shrink: 1;
+}
+
+@media (min-width: 1280px) {
+  .carousel-nav-sidebar {
+    -webkit-flex-basis: 176px;
+    -ms-flex-preferred-size: 176px;
+    flex-basis: 176px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .carousel-nav-sidebar {
+    -webkit-flex-basis: 180px;
+    -ms-flex-preferred-size: 180px;
+    flex-basis: 180px;
+  }
+}
+
+.carousel-nav-sidebar {
+  margin-left: 16px;
+}
+
+@media (min-width: 1440px) {
+  .carousel-nav-sidebar {
+    margin-left: 20px;
+  }
+}
+
+/* Đổi tên: .css-lbqvje -> .carousel-nav-list */
+/* Danh sách (ul) chứa các mục nav, xếp dọc và giãn cách đều */
+.carousel-nav-list {
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  margin: 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  list-style: none;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  justify-content: space-between;
+}
+
+/* Đổi tên: .css-1hwhj63 -> .carousel-nav-item */
+/* Mục (li) đơn, chiếm 1/6 chiều cao (16.666%) */
+.carousel-nav-item {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 16.666666666666668%;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+@media (min-width: 1440px) {
+  .carousel-nav-item {
+    border-radius: 8px;
+  }
+}
+
+.carousel-nav-item + .carousel-nav-item {
+  margin-top: 3px;
+}
+
+/* Đổi tên: .css-uwwqev -> .full-size-wrapper */
+/* Wrapper tiện ích, lấp đầy 100% w/h của thẻ cha (li) */
+.full-size-wrapper {
+  width: 100%;
+  height: 100%;
+}
+
+/* Đổi tên: .css-1e9rse3 -> .carousel-nav-button */
+/* Nút bấm chính, chứa ảnh và chữ, có hiệu ứng transition */
+.carousel-nav-button {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  -webkit-justify-content: flex-start;
+  justify-content: flex-start;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-transition: background-color 200ms cubic-bezier(0.17, 0.17, 0.23, 1);
+  transition: background-color 200ms cubic-bezier(0.17, 0.17, 0.23, 1);
+  cursor: pointer;
+}
+
+.carousel-nav-button {
+  padding-right: 10px;
+}
+
+/* Đổi tên: .css-c9mc7n -> .nav-button-image-wrapper */
+/* Wrapper cho ảnh, định nghĩa kích thước (flex-basis) và lề */
+.nav-button-image-wrapper {
+  border-radius: 4px;
+  overflow: hidden;
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  -webkit-flex-basis: 28px;
+  -ms-flex-preferred-size: 28px;
+  flex-basis: 28px;
+  z-index: 1;
+  margin: 0 10px;
+}
+
+@media (min-width: 1024px) {
+  .nav-button-image-wrapper {
+    -webkit-flex-basis: 25px;
+    -ms-flex-preferred-size: 25px;
+    flex-basis: 25px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .nav-button-image-wrapper {
+    -webkit-flex-basis: 40px;
+    -ms-flex-preferred-size: 40px;
+    flex-basis: 40px;
+    border-radius: 4px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .nav-button-image-wrapper {
+    margin: 0 15px;
+  }
+}
+
+/* Đổi tên: .css-yb58t8 -> .nav-image-aspect-box */
+/* Hộp giữ tỷ lệ 4:3 cho ảnh thumbnail */
+.nav-image-aspect-box {
+  position: relative;
+  padding-bottom: calc(4 / 3 * 100%);
+}
+
+img,
+svg {
+  -webkit-user-drag: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  pointer-events: none;
+}
+
+/* Đổi tên: .css-b4kcmh -> .nav-button-image */
+/* Thẻ <img> thumbnail, lấp đầy 100% w/h thẻ cha */
+.nav-button-image {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+/* Đổi tên: .css-r6z5ec -> .nav-button-text */
+/* Văn bản tiêu đề, đặt z-index để nổi lên trên */
+.nav-button-text {
+  z-index: 1;
+}
+
+/* Đổi tên: .css-1r2g1n6 -> .nav-button-overlay */
+/* Lớp phủ (overlay) nằm sau (z-index: 0), mờ (opacity: 0) */
+.nav-button-overlay {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  -webkit-transition: background-color 350ms cubic-bezier(0.17, 0.17, 0.23, 1);
+  transition: background-color 350ms cubic-bezier(0.17, 0.17, 0.23, 1);
+  z-index: 0;
+}
+
+/* Đổi tên: .css-1f1mql8 -> .nav-button-overlay-fill */
+/* Lớp màu nền thực sự của overlay */
+.nav-button-overlay-fill {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  right: 0;
+  background-color: #28282c;
+}
