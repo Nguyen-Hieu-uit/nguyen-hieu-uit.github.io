@@ -1,0 +1,158 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 400;
+    margin-bottom: 30px;
+    padding-left: 20px;
+    font-size: 32px;
+}
+
+/* --- CONTAINER & GENERAL LAYOUT --- */
+.settings-container-seamless {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+}
+
+/* --- SECTION TITLE (ĐÃ KHẮC PHỤC LỖI THỤT ĐẦU DÒNG VÀ MARGIN) --- */
+.section-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: #333;
+    padding: 15px 0;
+    margin-top: 25px;
+    border-bottom: 2px solid #ddd;
+    /* KHẮC PHỤC LỖI CĂN CHỈNH */
+    margin-left: 0;
+    margin-right: 0;
+}
+
+/* Đảm bảo tiêu đề đầu tiên không có margin top thừa */
+#full-content-area .section-title:first-child {
+    margin-top: 0;
+}
+
+/* --- SEAMLESS ITEM STYLES --- */
+.seamless-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+    border-bottom: 1px dashed #eee;
+    font-size: 15px;
+}
+
+.seamless-item:last-of-type {
+    border-bottom: none;
+}
+
+.label-text {
+    font-weight: 500;
+    color: #333;
+    margin: 0;
+    min-width: 200px;
+}
+
+.value-text {
+    margin: 0;
+    flex-grow: 1;
+    text-align: right;
+    color: #555;
+    padding-right: 10px;
+}
+
+/* Nút Chỉnh sửa */
+.edit-btn {
+    background: none;
+    border: none;
+    color: #777;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 0 5px;
+    line-height: 1;
+}
+
+/* Thẻ Đã xác minh */
+.verified {
+    background: #e6ffec;
+    color: #01875f;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 10px;
+}
+
+/* --- GENDER OPTIONS --- */
+.gender-select {
+    align-items: flex-start;
+}
+
+.gender-select .label-text {
+    padding-top: 8px;
+}
+
+.gender-options {
+    display: flex;
+    gap: 10px;
+}
+
+.gender-btn {
+    background: #fff;
+    color: #555;
+    border: 1px solid #ccc;
+    padding: 8px 15px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    font-weight: 500;
+    min-width: 0px;
+    min-height: 0px;
+}
+
+.gender-btn.active {
+    background-color: #e6f3ff;
+    border-color: #01875f;
+    color: #01875f;
+    font-weight: 600;
+}
+
+/* --- TOGGLE & SELECT CONTROLS --- */
+.select-control {
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+/* Kiểu dáng cho toggle (chế độ tối) */
+.toggle-option {
+    justify-content: flex-start;
+    gap: 15px;
+}
+
+.toggle-option input[type="checkbox"] {
+    transform: scale(1.2);
+}
+
+/* --- HIỆU ỨNG LÁ RỤNG --- */
+.falling-leaf {
+    position: fixed;
+    top: -50px;
+    width: 20px;
+    height: 20px;
+    background: radial-gradient(circle at 70% 30%, #e88c00, #c45900);
+    border-radius: 0 50% 50% 50%;
+    z-index: 9999;
+    pointer-events: none;
+    /* Không chặn click */
+    opacity: 0.8;
+    transform: translate(0, 0) rotate(0deg);
+}

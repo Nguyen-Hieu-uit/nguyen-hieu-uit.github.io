@@ -1,0 +1,13 @@
+{
+    "User": [
+        {
+            "Username": "CGS3010",
+            "Email": "23520203@gm.uit.edu.vn",
+            "Password": "123456789",
+            "FullName": "Nguyễn Hữu Việt Cường",
+            "Age": "20",
+            "Gender": "Nam",
+            "Location": "Việt Nam"
+        }
+    ]
+}

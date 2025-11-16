@@ -1,0 +1,161 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+    padding: 20px;
+}
+
+h1 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+/* --- TABS NAVIGATION --- */
+.tabs {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    gap: 40px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.tabs li {
+    padding: 0;
+    cursor: pointer;
+    padding-bottom: 10px;
+    /* Dùng font-weight 500/600 để nổi bật hơn */
+    font-weight: 500;
+}
+
+.tabs .active {
+    color: #01875f;
+    border-bottom: 3px solid #01875f;
+    font-weight: 600;
+}
+
+/* --- CONTENT SECTION --- */
+.content {
+    padding-top: 40px;
+}
+
+/* --- PAYMENT LIST STYLES (UL/LI) --- */
+.payment-list-ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.payment-item {
+    display: flex;
+    align-items: center;
+    padding: 15px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Kiểu dáng Phương thức Thanh toán */
+.method-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.method-info {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.method-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 4px;
+    object-fit: contain;
+}
+
+.method-title {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* Kiểu dáng Gói Thuê bao */
+.sub-item {
+    line-height: 1.5;
+}
+
+.sub-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.sub-detail {
+    font-size: 14px;
+    color: #555;
+    margin: 3px 0;
+}
+
+/* --- TABLE HISTORY STYLES --- */
+.section-title {
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    margin-top: 0;
+}
+
+.history-table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+}
+
+.history-table th {
+    text-align: left;
+    padding: 10px 15px;
+    color: #555;
+    font-weight: 600;
+    border-bottom: 1px solid #ddd;
+    text-transform: uppercase;
+}
+
+.history-table td {
+    padding: 10px 15px;
+    border-bottom: 1px solid #eee;
+    color: #333;
+}
+
+.history-table .amount {
+    font-weight: 500;
+}
+
+/* --- ACTIONS (Nút thêm/chỉnh sửa) --- */
+.actions {
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+
+.action-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #01875f;
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.action-link:hover {
+    text-decoration: underline;
+}
+
+.no-data {
+    color: #999;
+    font-style: italic;
+    padding: 20px 0;
+}

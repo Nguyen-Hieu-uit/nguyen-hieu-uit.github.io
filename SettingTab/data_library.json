@@ -1,0 +1,48 @@
+{
+    "apps": [
+        {
+            "title": "Dịch vụ của Google Play",
+            "developer": "Google LLC",
+            "icon": "https://play-lh.googleusercontent.com/f6ZSUJrtL5uniwWCTp1OeJj8MdoDaSTqi2XFyy9A0yPv6DpBo2giisRKDpXD9qk66KE=s128-rw"
+        }
+    ],
+    "games": [
+        {
+            "title": "Plague Inc.",
+            "developer": "Ndemic Creations",
+            "icon": "https://play-lh.googleusercontent.com/AhhhI8JGijtKuO8xOP_qUzOvIk7R7xBIKALKW_P7DV7jzWtvo2LrfC0081XMc85NGeBK=s128-rw"
+        }
+    ],
+    "favorites": [
+        {
+            "title": "Dịch vụ của Google Play",
+            "developer": "Google LLC",
+            "icon": "https://play-lh.googleusercontent.com/f6ZSUJrtL5uniwWCTp1OeJj8MdoDaSTqi2XFyy9A0yPv6DpBo2giisRKDpXD9qk66KE=s128-rw"
+        },
+        {
+            "title": "Plague Inc.",
+            "developer": "Ndemic Creations",
+            "icon": "https://play-lh.googleusercontent.com/AhhhI8JGijtKuO8xOP_qUzOvIk7R7xBIKALKW_P7DV7jzWtvo2LrfC0081XMc85NGeBK=s128-rw"
+        }
+    ],
+    "devices": [
+        {
+            "name": "PC1",
+            "visibility": true,
+            "manufacturer": "Google",
+            "model": "HPE device",
+            "carrier": "No carrier",
+            "lastUsed": "14 tháng 3, 2025",
+            "registered": "14 tháng 3, 2025"
+        },
+        {
+            "name": "Android1",
+            "visibility": false,
+            "manufacturer": "Samsung",
+            "model": "SM-N986B",
+            "carrier": "Viettel",
+            "lastUsed": "Hôm nay",
+            "registered": "20 tháng 1, 2024"
+        }
+    ]
+}
