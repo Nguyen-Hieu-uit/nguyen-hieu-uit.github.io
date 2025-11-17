@@ -1026,11 +1026,6 @@ button {
   border-radius: 4px;
 }
 
-/* GFmdkb */
-.spotlight-button--secondary:not(:disabled) {
-  background-color: rgba(32, 33, 36, 0.2);
-}
-
 /* XzJShf */
 .spotlight-button--small:not(:disabled) {
   height: 28px;
@@ -5339,4 +5334,614 @@ svg {
 .footer__section-title,
 .footer__link-text {
   line-height: 32px;
+}
+
+/* children */
+
+/* J00pac */
+.header-banner-wrapper {
+  overflow: hidden;
+  width: 100vw;
+}
+
+/* g1Jhne */
+.header-banner-container {
+  height: 214px;
+  margin-left: 50%;
+  transform: translateX(-50%);
+  width: 1280px;
+}
+
+@media screen and (min-width: 1280px) {
+  .header-banner-container {
+    height: 17vw;
+    width: 100vw;
+  }
+}
+
+/* E3lBnf */
+.image-fit-container {
+  width: 100%;
+  height: 100%;
+}
+
+.image-fit-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* UwgeOb */
+.page-title-area {
+  margin-left: 24px;
+  margin-right: 24px;
+  margin-bottom: 24px;
+  margin-top: 16px;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .page-title-area {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .page-title-area {
+    margin-left: 72px;
+    margin-right: 72px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .page-title-area {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1296px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .page-title-area {
+    margin-top: 32px;
+    margin-bottom: 24px;
+  }
+}
+
+/* vmrotd */
+.main-heading {
+  color: rgb(32, 33, 36);
+  fill: rgb(32, 33, 36);
+  stop-color: rgb(32, 33, 36);
+  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  line-height: 1.75rem;
+  font-size: 1.375rem;
+  letter-spacing: 0;
+  font-weight: 400;
+  display: inline;
+  text-align: center;
+}
+
+@media screen and (min-width: 600px) {
+  .main-heading {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .main-heading {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    line-height: 2.25rem;
+    font-size: 1.75rem;
+    letter-spacing: 0;
+    font-weight: 400;
+  }
+}
+
+.filter_children {
+  margin-left: 24px;
+  margin-right: 24px;
+  display: flex;
+  margin-top: 20px;
+  justify-content: center;
+}
+
+@media screen and (min-width: 600px) {
+  .filter_children {
+    margin-left: 48px;
+    margin-right: 48px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .filter_children {
+    margin-left: 72px;
+    margin-right: 72px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .filter_children {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1296px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .filter_children {
+    margin-bottom: 4px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .filter_children {
+    margin-bottom: 12px;
+  }
+}
+
+/* G17ige */
+@media screen and (min-width: 600px) {
+  .spotlight-app-card {
+    width: calc(133.3333333333vw - 60px);
+    border-radius: 16px;
+  }
+}
+
+@media screen and (min-width: 600px) and (min-width: 600px) {
+  .spotlight-app-card {
+    width: calc(100vw - 96px);
+  }
+}
+
+@media screen and (min-width: 600px) and (min-width: 840px) {
+  .spotlight-app-card {
+    width: calc(80vw - 80px);
+  }
+}
+
+@media screen and (min-width: 600px) and (min-width: 960px) {
+  .spotlight-app-card {
+    width: calc(66.6666666667vw - 69.3333333333px);
+  }
+}
+
+@media screen and (min-width: 600px) and (min-width: 1280px) {
+  .spotlight-app-card {
+    width: calc(66.6666666667vw - 104px);
+  }
+}
+
+@media screen and (min-width: 600px) and (min-width: 1440px) {
+  .spotlight-app-card {
+    width: 856px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card {
+    width: calc(166.6666666667vw - 72px);
+  }
+}
+
+@media screen and (min-width: 840px) and (min-width: 600px) {
+  .spotlight-app-card {
+    width: calc(125vw - 116px);
+  }
+}
+
+@media screen and (min-width: 840px) and (min-width: 840px) {
+  .spotlight-app-card {
+    width: calc(100vw - 96px);
+  }
+}
+
+@media screen and (min-width: 840px) and (min-width: 960px) {
+  .spotlight-app-card {
+    width: calc(83.3333333333vw - 82.6666666667px);
+  }
+}
+
+@media screen and (min-width: 840px) and (min-width: 1280px) {
+  .spotlight-app-card {
+    width: calc(83.3333333333vw - 124px);
+  }
+}
+
+@media screen and (min-width: 840px) and (min-width: 1440px) {
+  .spotlight-app-card {
+    width: 1076px;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .spotlight-app-card,
+  .HocpVc {
+    width: calc(200vw - 84px);
+    border-radius: 16px;
+  }
+}
+
+@media screen and (min-width: 960px) and (min-width: 600px) {
+  .spotlight-app-card,
+  .HocpVc {
+    width: calc(150vw - 136px);
+  }
+}
+
+@media screen and (min-width: 960px) and (min-width: 840px) {
+  .spotlight-app-card,
+  .HocpVc {
+    width: calc(120vw - 112px);
+  }
+}
+
+@media screen and (min-width: 960px) and (min-width: 960px) {
+  .spotlight-app-card,
+  .HocpVc {
+    width: calc(100vw - 96px);
+  }
+}
+
+@media screen and (min-width: 960px) and (min-width: 1280px) {
+  .spotlight-app-card,
+  .HocpVc {
+    width: calc(100vw - 144px);
+  }
+}
+
+@media screen and (min-width: 960px) and (min-width: 1440px) {
+  .spotlight-app-card,
+  .HocpVc {
+    width: 1296px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .spotlight-app-card .spotlight-card {
+    border-radius: 16px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .spotlight-card {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .spotlight-app-card .spotlight-card__image {
+    border-radius: 16px 16px 0 0;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .spotlight-card__image {
+    border-radius: 0 16px 16px 0;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .spotlight-app-card .spotlight-card__footer {
+    border-radius: 0 0 16px 16px;
+    height: 96px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .spotlight-card__footer {
+    border-radius: 16px 0 0 16px;
+    height: unset;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .spotlight-card__image-overlay {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .spotlight-card__content-overlay {
+    align-content: center;
+    bottom: unset;
+    display: grid;
+    height: 80%;
+    top: 0;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .spotlight-app-card .spotlight-card__content-overlay,
+  .spotlight-app-card .Vi9xMe,
+  .HocpVc .spotlight-card__content-overlay,
+  .HocpVc .Vi9xMe {
+    padding: 0 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .spotlight-app-card .spotlight-card__content-overlay,
+  .spotlight-app-card .Vi9xMe,
+  .HocpVc .spotlight-card__content-overlay,
+  .HocpVc .Vi9xMe {
+    padding: 0 32px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .spotlight-app-card .spotlight-card__title {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .spotlight-card__title {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    line-height: 1.75rem;
+    font-size: 1.375rem;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .spotlight-app-card .spotlight-card__title,
+  .HocpVc .spotlight-card__title {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    line-height: 2.25rem;
+    font-size: 1.75rem;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .spotlight-app-card .spotlight-card__title,
+  .HocpVc .spotlight-card__title {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    line-height: 2.75rem;
+    font-size: 2.25rem;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .spotlight-app-card .spotlight-card__title,
+  .HocpVc .spotlight-card__title {
+    font-family: "Google Sans Display", Roboto, Arial, sans-serif;
+    line-height: 3.25rem;
+    font-size: 2.75rem;
+    letter-spacing: 0;
+    font-weight: 400;
+    font-weight: 500;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .spotlight-app-card .spotlight-card__subtitle {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.0125em;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .spotlight-app-card .spotlight-card__subtitle,
+  .HocpVc .spotlight-card__subtitle {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    line-height: 1.5rem;
+    font-size: 1.125rem;
+    letter-spacing: 0;
+    font-weight: 400;
+    margin-top: 10px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .spotlight-app-card .spotlight-card__subtitle,
+  .HocpVc .spotlight-card__subtitle {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    line-height: 2rem;
+    font-size: 1.5rem;
+    letter-spacing: 0;
+    font-weight: 400;
+    margin-top: 12px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .spotlight-app-card .spotlight-card__subtitle,
+  .HocpVc .spotlight-card__subtitle {
+    font-family: "Google Sans", Roboto, Arial, sans-serif;
+    line-height: 2.25rem;
+    font-size: 1.75rem;
+    letter-spacing: 0;
+    font-weight: 400;
+    margin-top: 16px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .spotlight-app-card .spotlight-card__footer-grid {
+    padding: 16px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .spotlight-card__footer-grid {
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 960px) {
+  .spotlight-app-card .spotlight-card__footer-grid,
+  .HocpVc .spotlight-card__footer-grid {
+    padding: 20px 24px;
+    width: 50%;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .spotlight-app-card .spotlight-card__footer-grid,
+  .HocpVc .spotlight-card__footer-grid {
+    padding: 24px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .spotlight-app-card .spotlight-card__footer-grid,
+  .HocpVc .spotlight-card__footer-grid {
+    padding: 32px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .spotlight-app-card .spotlight-card__app-icon {
+    height: 64px;
+    width: 64px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .spotlight-card__app-icon {
+    height: 48px;
+    width: 48px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .spotlight-app-card .spotlight-card__app-icon,
+  .HocpVc .spotlight-card__app-icon {
+    height: 64px;
+    width: 64px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .spotlight-card__app-name {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.00625em;
+    line-height: 1.5rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .spotlight-app-card .spotlight-card__app-name,
+  .HocpVc .spotlight-card__app-name {
+    font-size: 1.125rem;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .spotlight-card__app-category {
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.0142857143em;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .spotlight-app-card .spotlight-card__app-category,
+  .HocpVc .spotlight-card__app-category {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.00625em;
+    line-height: 1.5rem;
+  }
+}
+
+/* BQ6Nz */
+@media screen and (min-width: 600px) {
+  .spotlight-app-card .app-purchase-note {
+    font-size: 0.625rem;
+    margin-top: 4px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .app-purchase-note {
+    font-size: 0.6875rem;
+    line-height: 1rem;
+    margin-top: 2px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .spotlight-app-card .spotlight-button--small:not(:disabled) {
+    min-height: 36px;
+    min-width: 96px;
+  }
+}
+
+@media screen and (min-width: 600px) {
+  .spotlight-app-card .app-purchase-note {
+    font-size: 0.625rem;
+    margin-top: 4px;
+  }
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .app-purchase-note {
+    font-size: 0.6875rem;
+    line-height: 1rem;
+    margin-top: 2px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .spotlight-app-card .app-purchase-note,
+  .HocpVc .app-purchase-note {
+    margin-top: 4px;
+  }
+}
+/* zcimD */
+.text-color-white {
+  color: white;
+}
+
+@media screen and (min-width: 840px) {
+  .spotlight-app-card .spotlight-card__app-category {
+    font-size: 0.875rem;
+    font-weight: 400;
+    letter-spacing: 0.0142857143em;
+    line-height: 1.25rem;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .spotlight-app-card .spotlight-card__app-category,
+  .HocpVc .spotlight-card__app-category {
+    font-size: 1rem;
+    font-weight: 400;
+    letter-spacing: 0.00625em;
+    line-height: 1.5rem;
+  }
+}
+
+/* GFmdkb */
+.spotlight-button--secondary:not(:disabled) {
+  background-color: rgba(32, 33, 36, 0.2);
 }
