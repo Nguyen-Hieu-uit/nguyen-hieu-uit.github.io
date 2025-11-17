@@ -2805,9 +2805,10 @@ applet {
 
 /* KUSTKe */
 /* Atcj9b */
+/* qwPPwf */
 .Vj78Oe,
 .carousel--desktop,
-.qwPPwf,
+.carousel--screenshot,
 .carousel__item-content,
 .IwTLXb {
   height: 100%;
@@ -2834,7 +2835,6 @@ applet {
   height: 204px;
   min-width: 92px;
 }
-/* rating-display__star */
 @media screen and (min-width: 1280px) {
   .carousel__image {
     height: 296px;
@@ -3931,7 +3931,8 @@ applet {
   margin: 0 12px;
 }
 
-.button-prefix.jv2yne {
+/* jv2yne */
+.button-prefix.hidden {
   display: none;
 }
 
