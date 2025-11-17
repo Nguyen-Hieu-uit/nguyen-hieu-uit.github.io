@@ -122,7 +122,7 @@ function handleTabSwitch(event) {
 
 // 6. Load data và thiết lập listener (GIỮ NGUYÊN)
 document.addEventListener('DOMContentLoaded', () => {
-    fetch("data_payment.json")
+    fetch("/assets/json/data_payment.json")
         .then(response => response.json())
         .then(data => {
             paymentData = data;
