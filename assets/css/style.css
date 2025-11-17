@@ -138,6 +138,33 @@ section {
   }
 }
 
+/* Responsive header: dưới 950px, cho navigation-tabs xuống hàng dưới */
+@media screen and (max-width: 950px) {
+  .nav {
+    /* height: 64px; */
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 0px 0px;
+  }
+
+  .header__logo-link {
+    margin-right: 8px;
+  }
+
+  .navigation-tabs {
+    background-color: #fff;
+    order: 2;
+    width: 100%;
+    margin-top: 0px;
+    padding: 0 8px 0;
+    justify-content: flex-start;
+  }
+
+  .nav-tab {
+    flex: 0 0 auto;
+  }
+}
+
 /* VfPpkd-AznF2e-LUERP-bN97Pc */
 .navigation-tabs {
   position: relative;
@@ -345,6 +372,13 @@ section {
   color: rgb(95, 99, 104);
 }
 
+.header__logo-link img {
+  margin-right: 8px;
+  height: 64px;
+  width: auto;
+  display: block;
+}
+
 /* kOqhQd */
 .brand-logo {
   margin-right: 8px;
@@ -444,7 +478,7 @@ button {
 
 /* SSPGKf */
 .main-content {
-  overflow-y: hidden;
+  /* overflow-y: hidden; */
   position: relative;
   bottom: 0;
   left: 0;
@@ -462,6 +496,12 @@ button {
 @media screen and (min-width: 840px) {
   .main-content-spacing {
     margin-top: 88px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .main-content-spacing {
+    margin-top: 132px;
   }
 }
 

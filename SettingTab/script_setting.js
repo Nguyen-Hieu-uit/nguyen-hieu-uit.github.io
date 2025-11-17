@@ -1,3 +1,5 @@
+/* --- script_setting.js (ĐÃ CẬP NHẬT HOÀN CHỈNH) --- */
+
 // --- HÀM XỬ LÝ SỰ KIỆN CHỈNH SỬA ---
 async function handleEditClick(event) {
     const editButton = event.target.closest('.edit-btn');
@@ -15,7 +17,6 @@ async function handleEditClick(event) {
         const fieldName = labelElement.textContent.replace(':', '').trim();
         let currentValue = valueElement.textContent.trim();
 
-        // **ĐÃ LOẠI BỎ logic xử lý thẻ "Đã xác minh" khỏi giá trị hiện tại**
         if (currentValue === '********') {
             currentValue = '';
         }
@@ -27,7 +28,6 @@ async function handleEditClick(event) {
         if (newValue !== null) {
             let updatedValue = newValue.trim();
 
-            // **ĐÃ LOẠI BỎ logic thêm lại thẻ "Đã xác minh" sau khi sửa**
             if (fieldName === 'Mật khẩu') {
                 updatedValue = '********';
             }
@@ -38,7 +38,7 @@ async function handleEditClick(event) {
     }
 }
 
-// --- HÀM XỬ LÝ CHỌN/BỎ CHỌN GIỚI TÍNH (GIỮ NGUYÊN) ---
+// --- HÀM XỬ LÝ CHỌN/BỎ CHỌN GIỚI TÍNH ---
 function handleGenderToggle(event) {
     const clickedButton = event.target.closest('.gender-btn');
     if (!clickedButton) return;
@@ -55,7 +55,7 @@ function handleGenderToggle(event) {
     }
 }
 
-// --- HÀM TẠO CẤU TRÚC MODAL ĐỘNG (GIỮ NGUYÊN) ---
+// --- HÀM TẠO CẤU TRÚC MODAL ĐỘNG ---
 let modalElement;
 let modalInput;
 let modalTitle;
@@ -112,7 +112,7 @@ async function showCustomPrompt(title, currentValue) {
 }
 
 
-// --- HÀM CHÍNH DỰNG HTML (ĐÃ SỬA EMAIL) ---
+// --- HÀM CHÍNH DỰNG HTML ---
 function loadAllSettings(data) {
     const container = document.getElementById("full-content-area");
 
@@ -162,7 +162,7 @@ function loadAllSettings(data) {
             <button class="edit-btn">✎</button>
         </section>
     `;
-    // Email (ĐÃ XÓA SPAN "Đã xác minh")
+    // Email
     finalHtml += `
         <section class="seamless-item">
             <p class="label-text">Email:</p>
@@ -189,7 +189,7 @@ function loadAllSettings(data) {
             <p class="value-text">${fullName}</p>
         </section>
     `;
-    // Nhóm tuổi (SỬ DỤNG GIÁ TRỊ ĐÃ SUY LUẬN)
+    // Nhóm tuổi
     finalHtml += `
         <section class="seamless-item">
             <p class="label-text">Nhóm tuổi:</p>
@@ -236,7 +236,7 @@ function loadAllSettings(data) {
     finalHtml += `
         <section class="seamless-item">
             <p class="label-text">Màu sắc Chủ đề:</p>
-            <select class="select-control">
+            <select class="select-control" id="theme-select">
                 <option>Sáng</option>
                 <option>Tối</option>
                 <option>Mùa</option>
@@ -244,7 +244,38 @@ function loadAllSettings(data) {
         </section>
     `;
 
+    // Gắn HTML vào DOM
     container.innerHTML = finalHtml;
+
+    // =======================================================
+    // !! BẮT ĐẦU LOGIC SỬA LỖI (THÊM MỚI) !!
+    // Gắn listener cho <select> chủ đề NGAY SAU KHI tạo ra nó
+    // =======================================================
+    const themeSelect = document.getElementById('theme-select');
+    if (themeSelect) {
+
+        // 1. Đặt giá trị <select> cho đúng
+        const currentTheme = localStorage.getItem('theme') || 'Sáng';
+        themeSelect.value = currentTheme;
+
+        // 2. Gắn listener 'change'
+        themeSelect.addEventListener('change', (e) => {
+            const newTheme = e.target.value;
+            localStorage.setItem('theme', newTheme);
+
+            // Gọi các hàm global từ file 'theme-manager.js'
+            // (File này phải được tải TRƯỚC file 'script_setting.js')
+            if (typeof applyThemeColors === 'function') {
+                applyThemeColors(newTheme);
+            }
+            if (typeof applyThemeEffects === 'function') {
+                applyThemeEffects(newTheme);
+            }
+        });
+    }
+    // =======================================================
+    // !! KẾT THÚC LOGIC SỬA LỖI !!
+    // =======================================================
 }
 
 // Khởi tạo ứng dụng
@@ -258,8 +289,11 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Thêm listener cho chức năng chỉnh sửa
     document.addEventListener('click', handleEditClick);
 
-    // 3. Tải dữ liệu và hiển thị UI
-    fetch("data_setting.json")
+    // 3. Giả sử bạn lấy được username của người đã đăng nhập
+    const currentUsername = 'CGS3010';
+
+    // 4. Tải dữ liệu và hiển thị UI (dùng username động)
+    fetch(`http://localhost:3000/api/user/${currentUsername}`)
         .then(response => {
             if (!response.ok) {
                 throw new Error(`HTTP error! status: ${response.status}`);
@@ -267,62 +301,11 @@ document.addEventListener('DOMContentLoaded', () => {
             return response.json();
         })
         .then(data => {
+            // Dòng này sẽ gọi hàm loadAllSettings đã được cập nhật ở trên
             loadAllSettings(data);
         })
         .catch(error => {
-            console.error("Lỗi khi tải dữ liệu cài đặt:", error);
-            document.getElementById("full-content-area").innerHTML = `<p style="color: red;">Không thể tải dữ liệu cài đặt. Vui lòng kiểm tra file data_setting.json.</p>`;
+            console.error("Lỗi khi gọi API:", error);
+            document.getElementById("full-content-area").innerHTML = `<p style="color: red;">Không thể tải dữ liệu từ server.</p>`;
         });
 });
-
-// --- HIỆU ỨNG LÁ RỤNG ---
-function createFallingLeaf() {
-    const leaf = document.createElement('section');
-    leaf.className = 'falling-leaf';
-
-    // Kích thước ngẫu nhiên
-    const size = Math.random() * 15 + 15; // 15px -> 30px
-    leaf.style.width = `${size}px`;
-    leaf.style.height = `${size}px`;
-
-    // Vị trí xuất hiện ban đầu
-    let x = Math.random() * window.innerWidth;
-    let y = -50;
-    let sway = Math.random() * 60 - 30; // Biên độ lắc
-    let swaySpeed = Math.random() * 0.02 + 0.01; // Tốc độ lắc
-    let fallSpeed = Math.random() * 2 + 1; // Tốc độ rơi
-    let angle = Math.random() * Math.PI * 2; // Góc ban đầu
-    let rotateSpeed = Math.random() * 0.05; // Tốc độ xoay
-
-    document.body.appendChild(leaf);
-
-    function animateLeaf() {
-        y += fallSpeed;
-        angle += rotateSpeed;
-        x += Math.sin(angle * swaySpeed) * 1.5; // Lắc qua trái phải
-        leaf.style.transform = `translate(${x}px, ${y}px) rotate(${angle}rad)`;
-
-        if (y < window.innerHeight + 50) {
-            requestAnimationFrame(animateLeaf);
-        } else {
-            leaf.remove(); // Khi ra ngoài màn hình thì xóa
-            createFallingLeaf(); // Tạo lá mới liên tục
-        }
-    }
-
-    requestAnimationFrame(animateLeaf);
-}
-
-// Khởi động hiệu ứng
-function startLeafEffect() {
-    const totalLeaves = 20; // Số lượng lá cùng lúc
-    for (let i = 0; i < totalLeaves; i++) {
-        setTimeout(createFallingLeaf, Math.random() * 3000); // Tạo lá ngẫu nhiên
-    }
-}
-
-// Bắt đầu sau khi DOM load
-document.addEventListener('DOMContentLoaded', () => {
-    startLeafEffect();
-});
-

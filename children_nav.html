@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
     <link
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search"
@@ -13,46 +13,23 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=help,star"
     />
-    <link rel="stylesheet" href="../css/carousel.css" />
-    <link rel="stylesheet" href="../css/download.css" />
+    <link rel="stylesheet" href="./assets/css/carousel.css" />
+    <link rel="stylesheet" href="./assets/css/download.css" />
 
-    <link rel="stylesheet" href="../css/filter.css" />
-    <link rel="stylesheet" href="../css/carousel-scroll.css" />
+    <link rel="stylesheet" href="./assets/css/filter.css" />
+    <link rel="stylesheet" href="./assets/css/carousel-scroll.css" />
   </head>
   <body>
     <header class="header">
       <nav class="nav">
         <a
-          href="/store/games"
-          aria-label="Biểu trưng của Google Play"
+          href="./index.html"
+          aria-label="Biểu trưng của App Market"
           class="header__logo-link"
-          ><svg
-            class="brand-logo"
-            aria-hidden="true"
-            viewBox="0 0 40 40"
-            xmlns="http://www.w3.org/2000/svg"
-          >
-            <path fill="none" d="M0,0h40v40H0V0z"></path>
-            <g>
-              <path
-                d="M19.7,19.2L4.3,35.3c0,0,0,0,0,0c0.5,1.7,2.1,3,4,3c0.8,0,1.5-0.2,2.1-0.6l0,0l17.4-9.9L19.7,19.2z"
-                fill="#EA4335"
-              ></path>
-              <path
-                d="M35.3,16.4L35.3,16.4l-7.5-4.3l-8.4,7.4l8.5,8.3l7.5-4.2c1.3-0.7,2.2-2.1,2.2-3.6C37.5,18.5,36.6,17.1,35.3,16.4z"
-                fill="#FBBC04"
-              ></path>
-              <path
-                d="M4.3,4.7C4.2,5,4.2,5.4,4.2,5.8v28.5c0,0.4,0,0.7,0.1,1.1l16-15.7L4.3,4.7z"
-                fill="#4285F4"
-              ></path>
-              <path
-                d="M19.8,20l8-7.9L10.5,2.3C9.9,1.9,9.1,1.7,8.3,1.7c-1.9,0-3.6,1.3-4,3c0,0,0,0,0,0L19.8,20z"
-                fill="#34A853"
-              ></path>
-            </g></svg
-          ><span aria-hidden="true">Google Play</span></a
         >
+          <img src="./assets/logo/logo.png" alt="App Market logo" />
+          <span aria-hidden="true">App Market</span>
+        </a>
 
         <span class="navigation-tabs"
           ><a
@@ -64,7 +41,7 @@
             href="./index.html"
           >
             <span class="nav-tab__inner"
-              ><span class="VfPpkd-jY41G-V67aGc">Trò chơi</span
+              ><span class="nav-tab__label">Trò chơi</span
               ><span
                 class="nav-tab__indicator-wrapper nav-tab__indicator-wrapper-selected nav-tab__indicator-border kte1hc"
                 ><span
@@ -78,11 +55,10 @@
             aria-selected="true"
             tabindex="-1"
             id="1"
-            jscontroller="t1sulf"
             href="./app_nav.html"
           >
             <span class="nav-tab__inner"
-              ><span class="VfPpkd-jY41G-V67aGc">Ứng dụng</span
+              ><span class="nav-tab__label">Ứng dụng</span
               ><span
                 class="nav-tab__indicator-wrapper nav-tab__indicator-border kte1hc"
                 ><span
@@ -100,7 +76,7 @@
             href="./children_nav.html"
           >
             <span class="nav-tab__inner"
-              ><span class="VfPpkd-jY41G-V67aGc">Trẻ em</span
+              ><span class="nav-tab__label">Trẻ em</span
               ><span
                 class="nav-tab__indicator-wrapper nav-tab__indicator-border kte1hc"
                 ><span
@@ -111,10 +87,28 @@
         ></span>
 
         <div class="header-actions">
-          <!-- search icon -->
-          <button class="search__box">
-            <input class="search__input" type="text" placeholder="Search" />
-          </button>
+          <!-- search bar -->
+          <div class="search__box" id="search-button">
+            <input
+              class="search__input"
+              id="search-input"
+              type="text"
+              placeholder="Search"
+            />
+            <span
+              class="clear__button"
+              id="clear-button"
+              style="cursor: pointer; display: none"
+            >
+              &times;
+            </span>
+            <div
+              class="suggestions__box"
+              id="suggestions-box"
+              style="display: none"
+            ></div>
+          </div>
+
           <!-- help icon -->
           <button class="icon-button">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
@@ -1598,8 +1592,8 @@
         }
       });
     </script>
-    <script src="../js/carousel-scroll.js"></script>
+    <script src="./assets/js/carousel-scroll.js"></script>
 
-    <script src="../js/navigation.js"></script>
+    <script src="./assets/js/navigation.js"></script>
   </body>
 </html>

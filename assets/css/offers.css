@@ -1,0 +1,58 @@
+.navigation-tabs {
+  display: none;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fafafa;
+  padding: 20px;
+}
+
+main-content {
+  overflow: none;
+}
+
+h1 {
+  font-weight: 400;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+.offers-list-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.offer-card {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  margin: 0 10px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.offer-card__badge {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: #01875f;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 0 0 20px 0;
+}
+
+.offer-card__image-wrapper {
+  width: 100%;
+}
+
+.offer-card__image {
+  position: absolute;
+  top: -50%;
+  width: 50%;
+  object-fit: cover;
+}

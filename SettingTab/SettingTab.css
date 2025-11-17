@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+}
+
+h1 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.main-content h1 {
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+
+.main-content {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+/* 1. Container chung để định vị menu con */
+.profile-menu-container {
+    position: relative;
+    display: inline-block;
+    /* Giữ nó trên một hàng */
+}
+
+/* 2. Menu thả xuống */
+.profile-dropdown {
+    display: none;
+    /* Ẩn menu mặc định */
+    position: absolute;
+    top: 100%;
+    /* Đặt ngay dưới nút bấm */
+    right: 0;
+    /* Căn lề phải với container */
+    width: 320px;
+    /* Đặt chiều rộng cho menu */
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    border: 1px solid #ddd;
+    margin-top: 8px;
+    /* Khoảng cách nhỏ với nút avatar */
+    z-index: 1000;
+    /* Đảm bảo nó nổi lên trên */
+    padding: 8px 0;
+    box-sizing: border-box;
+}
+
+/* 3. Lớp 'show' (thêm bằng JS) để hiện menu */
+.profile-dropdown.show {
+    display: block;
+    /* Hiện menu lên */
+}
+
+/* 4. Tạo kiểu cho phần header của menu */
+.dropdown-header {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+}
+
+.dropdown-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+}
+
+.user-info {
+    display: flex;
+    flex-direction: column;
+}
+
+.user-name {
+    font-weight: 600;
+    font-size: 16px;
+    color: #202124;
+}
+
+.user-email {
+    font-size: 14px;
+    color: #5f6368;
+}
+
+/* 5. Tạo kiểu cho danh sách link */
+.dropdown-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dropdown-list li a {
+    display: block;
+    padding: 10px 16px;
+    text-decoration: none;
+    color: #3c4043;
+    font-size: 15px;
+    white-space: nowrap;
+    /* Ngăn vỡ dòng */
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.dropdown-list li a:hover {
+    background-color: #f1f3f4;
+}
+
+/* 6. Đường kẻ phân cách */
+.dropdown-divider {
+    height: 1px;
+    background-color: #e0e0e0;
+    margin: 8px 0;
+}
