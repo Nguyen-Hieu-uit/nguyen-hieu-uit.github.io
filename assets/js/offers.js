@@ -53,7 +53,6 @@ function createOfferCard(offer) {
           alt="${offer.title}"
           class="offer-card__image"
         />
-        // <div class="slide-gradient-overlay"></div>
         ${
           offer.badge
             ? `<span class="offer-card__badge">${offer.badge}</span>`
