@@ -1,1463 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=help,star"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <link rel="stylesheet" href="./assets/css/filter.css" />
-    <link rel="stylesheet" href="./assets/css/carousel.css" />
-    <link rel="stylesheet" href="./assets/css/ranking-list.css" />
-    <link rel="stylesheet" href="./assets/css/download-demo.css" />
-    <!-- <link rel="stylesheet" href="./assets/css/auth.css" /> -->
-    <link rel="stylesheet" href="./assets/css/carousel-scroll.css" />
-    <link rel="stylesheet" href="./assets/css/search.css" />
-    <link rel="stylesheet" href="./assets/css/searchBar.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=help,star" />
 
-    <!-- <script src="./assets/js/search.js"></script> -->
-    <script type="module" src="./assets/js/customheader.js"></script>
-    <script type="module" src="./assets/js/customfooter.js"></script>
-  </head>
-  <body>
-    <custom-header></custom-header>
-    <div class="main-content main-content-spacing">
-      <div class="main-content-inner">
-        <div class="filter_format">
-          <div class="filter-content-wrapper">
-            <div class="filter-bar-scroll-container">
-              <div class="platform-item dropdown">
-                <div
-                  class="platform-button"
-                  data-default="Tính phí"
-                  onclick="toggleDropdown(event)"
-                >
-                  <div class="ripple-effect"></div>
-                  <div class="button-content">
-                    <span class="button-prefix">
-                      <svg
-                        class="button-icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 -960 960 960"
-                      >
-                        <path
-                          d="M480-120q-116 0-213-64.5T135-350h82q31 79 97.5 124T480-180q83 0 141.5-58.5T680-420q0-70-42-116.5T520-610q-51-24-81-43t-30-51q0-31 21-51.5T480-780q27 0 52 11.5T573-740h82q-20-41-48.5-63T520-820q-83 0-141.5 58.5T320-680q0 70 42 116.5T480-490q51 24 81 43t30 51q0 31-21 51.5T520-320q-27 0-52-11.5T427-360h-82q20 41 48.5 63T480-280q83 0 141.5-58.5T680-420h80q-50 143-138.5 211.5T480-120Z"
-                        />
-                      </svg>
-                    </span>
-                    <span class="button-label">Tính phí</span>
-                  </div>
-                </div>
-                <div id="priceDropdown" class="dropdown-content">
-                  <div class="platform-item">
-                    <div class="platform-button">
-                      <div class="ripple-effect"></div>
-                      <div class="button-content">
-                        <span class="button-prefix"></span>
-                        <span class="button-label">Miễn phí</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="platform-item">
-                    <div class="platform-button">
-                      <div class="ripple-effect"></div>
-                      <div class="button-content">
-                        <span class="button-prefix"></span>
-                        <span class="button-label">Có tính phí</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <link rel="stylesheet" href="./assets/css/filter.css" />
+  <link rel="stylesheet" href="./assets/css/carousel.css" />
+  <link rel="stylesheet" href="./assets/css/ranking-list.css" />
+  <link rel="stylesheet" href="./assets/css/download-demo.css" />
+  <!-- <link rel="stylesheet" href="./assets/css/auth.css" /> -->
+  <link rel="stylesheet" href="./assets/css/carousel-scroll.css" />
+  <link rel="stylesheet" href="./assets/css/search.css" />
+  <link rel="stylesheet" href="./assets/css/searchBar.css" />
 
-              <div class="platform-item dropdown">
-                <div
-                  class="platform-button"
-                  data-default="Thiết bị"
-                  onclick="toggleDropdown(event)"
-                >
-                  <div class="ripple-effect"></div>
-                  <div class="button-content">
-                    <span class="button-prefix">
-                      <svg
-                        class="button-icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 -960 960 960"
-                      >
-                        <path
-                          d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z"
-                        />
-                      </svg>
-                    </span>
-                    <span class="button-label">Thiết bị</span>
-                  </div>
-                </div>
-                <div id="deviceDropdown" class="dropdown-content">
-                  <div class="platform-item">
-                    <div class="platform-button">
-                      <div class="ripple-effect"></div>
-                      <div class="button-content">
-                        <span class="button-prefix"
-                          ><svg
-                            class="button-icon"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 -960 960 960"
-                          >
-                            <path
-                              d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z"
-                            /></svg
-                        ></span>
-                        <span class="button-label">Windows</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="platform-item">
-                    <div class="platform-button">
-                      <div class="ripple-effect"></div>
-                      <div class="button-content">
-                        <span class="button-prefix"
-                          ><svg
-                            class="button-icon"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 -960 960 960"
-                          >
-                            <path
-                              d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v124q18 7 29 22t11 34v80q0 19-11 34t-29 22v404q0 33-23.5 56.5T680-40H280Zm0-80h400v-720H280v720Zm0 0v-720 720Zm200-40q17 0 28.5-11.5T520-200q0-17-11.5-28.5T480-240q-17 0-28.5 11.5T440-200q0 17 11.5 28.5T480-160Z"
-                            /></svg
-                        ></span>
-                        <span class="button-label">Điện thoại</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="platform-item">
-                    <div class="platform-button">
-                      <div class="ripple-effect"></div>
-                      <div class="button-content">
-                        <span class="button-prefix"
-                          ><svg
-                            class="button-icon"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 -960 960 960"
-                          >
-                            <path
-                              d="M480-140q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM200-40q-33 0-56.5-23.5T120-120v-720q0-33 23.5-56.5T200-920h560q33 0 56.5 23.5T840-840v720q0 33-23.5 56.5T760-40H200Zm0-200v120h560v-120H200Zm0-80h560v-400H200v400Zm0-480h560v-40H200v40Zm0 0v-40 40Zm0 560v120-120Z"
-                            /></svg
-                        ></span>
-                        <span class="button-label">Máy tính bảng</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="platform-item">
-                    <div class="platform-button">
-                      <div class="ripple-effect"></div>
-                      <div class="button-content">
-                        <span class="button-prefix"
-                          ><svg
-                            class="button-icon"
-                            xmlns="http://www.w3.org/2000/svg"
-                            viewBox="0 -960 960 960"
-                          >
-                            <path
-                              d="M320-120v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z"
-                            /></svg
-                        ></span>
-                        <span class="button-label">Ti vi</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+  <!-- <script src="./assets/js/search.js"></script> -->
+  <script type="module" src="./assets/js/customheader.js"></script>
+  <script type="module" src="./assets/js/customfooter.js"></script>
+</head>
 
-              <div class="platform-item dropdown">
-                <div
-                  class="platform-button"
-                  data-default="Danh mục"
-                  onclick="toggleDropdown(event)"
-                >
-                  <div class="ripple-effect"></div>
-                  <div class="button-content">
-                    <span class="button-prefix">
-                      <svg
-                        class="button-icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 -960 960 960"
-                      >
-                        <path
-                          d="M120-120v-320h320v320H120Zm0-400v-320h320v320H120Zm400 400v-320h320v320H520Zm0-400v-320h320v320H520Z"
-                        />
-                      </svg>
-                    </span>
-                    <span class="button-label">Danh mục</span>
-                  </div>
-                </div>
-                <div id="categoryDropdown" class="dropdown-content">
-                  <div class="platform-item">
-                    <div class="platform-button">
-                      <div class="ripple-effect"></div>
-                      <div class="button-content">
-                        <span class="button-prefix"></span
-                        ><span class="button-label">App</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="platform-item">
-                    <div class="platform-button">
-                      <div class="ripple-effect"></div>
-                      <div class="button-content">
-                        <span class="button-prefix"></span
-                        ><span class="button-label">Game</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="platform-item">
-                    <div class="platform-button">
-                      <div class="ripple-effect"></div>
-                      <div class="button-content">
-                        <span class="button-prefix"></span
-                        ><span class="button-label">Tool</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="platform-item">
-                    <div class="platform-button">
-                      <div class="ripple-effect"></div>
-                      <div class="button-content">
-                        <span class="button-prefix"></span
-                        ><span class="button-label">Education</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="platform-item">
-                    <div class="platform-button">
-                      <div class="ripple-effect"></div>
-                      <div class="button-content">
-                        <span class="button-prefix"></span
-                        ><span class="button-label">RPG</span>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="platform-item">
-                    <div class="platform-button">
-                      <div class="ripple-effect"></div>
-                      <div class="button-content">
-                        <span class="button-prefix"></span
-                        ><span class="button-label">Action</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+<body>
+  <link rel="stylesheet" href="/assets/css/theme.css">
 
-              <div class="platform-item">
-                <div class="platform-button new-filter-button">
-                  <div class="ripple-effect"></div>
-                  <div class="button-content">
-                    <span class="button-prefix">
-                      <svg
-                        class="button-icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 -960 960 960"
-                      >
-                        <path
-                          d="M440-200l-48-102-102-48 102-48 48-102 48 102 102 48-102 48-48 102Zm160 120-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Zm-320 0-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Z"
-                        />
-                      </svg>
-                    </span>
-                    <span class="button-label">Mới</span>
-                  </div>
-                </div>
-              </div>
+  <script>
+    (function () {
+      // Lấy chủ đề từ localStorage, mặc định là 'Sáng'
+      const theme = localStorage.getItem('theme') || 'Sáng';
 
-              <div class="platform-item">
-                <div class="platform-button" onclick="clearFilters()">
-                  <div class="ripple-effect"></div>
-                  <div class="button-content">
-                    <span class="button-prefix">
-                      <svg
-                        class="button-icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 -960 960 960"
-                      >
-                        <path
-                          d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                        />
-                      </svg>
-                    </span>
-                    <span class="button-label">Clear filters</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="platform-item">
-                <div class="platform-button" id="openRankingBtn">
-                  <div class="ripple-effect"></div>
-                  <div class="button-content">
-                    <span class="button-prefix">
-                      <svg
-                        class="button-icon"
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 -960 960 960"
-                      >
-                        <path
-                          d="M440-200l-48-102-102-48 102-48 48-102 48 102 102 48-102 48-48 102Zm160 120-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Zm-320 0-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Z"
-                        />
-                      </svg>
-                    </span>
-                    <span class="button-label">Bảng xếp hạng</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="main-page-content">
-          <div class="app-section">
-            <div class="carousel-wrapper">
-              <div class="epic_carousel">
-                <div class="carousel-section">
-                  <div class="carousel-body">
-                    <div class="carousel-main-slide-area">
-                      <div class="carousel-aspect-box">
-                        <div class="carousel-slide-fitter">
-                          <div class="carousel-slide active">
-                            <div class="slide-content-wrapper">
-                              <a
-                                href="https://www.fortnite.com/news/introducing-fortnite-sidekicks"
-                                class="slide-link"
-                                target="_blank"
-                              >
-                                <div class="slide-image-wrapper">
-                                  <div class="slide-image-wrapper">
-                                    <picture class="slide-picture"
-                                      ><source
-                                        media="(min-width: 1280px)"
-                                        srcset="
-                                          https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-desktop-1920x1080-38235212f6fb.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium
-                                        "
-                                        data-image="https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-desktop-1920x1080-38235212f6fb.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium" />
-                                      <source
-                                        media="(min-width: 768px)"
-                                        srcset="
-                                          https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-desktop-1920x1080-38235212f6fb.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium
-                                        "
-                                        data-image="https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-desktop-1920x1080-38235212f6fb.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium" />
-                                      <img
-                                        alt="Play Anno 117: Pax Romana on Epic Games Store"
-                                        src="https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-desktop-1920x1080-38235212f6fb.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
-                                        class="slide-image"
-                                        data-image="https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-desktop-1920x1080-38235212f6fb.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
-                                        data-testid="picture-image"
-                                    /></picture>
-                                  </div>
-                                  <div class="slide-gradient-overlay"></div>
-                                </div>
-                              </a>
-                              <div class="slide-info-box">
-                                <div>
-                                  <div
-                                    class="slide-promo-logo"
-                                    style="
-                                      background-image: url(https://cdn2.unrealengine.com/egs-anno-117-carousel-logo-350x100-e6cec3402b4e.png);
-                                    "
-                                  ></div>
-                                  <div class="slide-description-wrapper">
-                                    <div class="slide-text-content">
-                                      <span
-                                        class="text-base text-sale-tag text-color-primary"
-                                        >Xây dựng Đế Quốc La Mã của bạn!</span
-                                      >
-                                      <span
-                                        class="text-base text-description text-color-primary"
-                                      >
-                                        <div class="grid-container">
-                                          <div class="text-truncate">
-                                            Trải nghiệm trò chơi xây dựng đỉnh
-                                            cao và thiết kế thành phố trong mơ
-                                            vào thời kỳ hoàng kim của Đế Quốc La
-                                            Mã. Hiện đã ra mắt!
-                                          </div>
-                                        </div>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div data-testid="CarouselOffer" tabindex="-1">
-                                  <div class="slide-offer-details">
-                                    <div class="slide-price-block">
-                                      <div class="slide-price-container">
-                                        <div class="slide-price-segment"></div>
-                                        <div
-                                          class="slide-price-segment"
-                                          style="margin: 0"
-                                        >
-                                          <div class="carousel-price-wrapper">
-                                            <div class="carousel-price-wrapper">
-                                              <span class="carousel-price-text"
-                                                >990.000&nbsp;₫</span
-                                              >
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="app-actions slide-buttons">
-                                      <div class="app-actions__install-wrapper">
-                                        <div class="install-button-wrapper">
-                                          <div
-                                            class="install-component-wrapper"
-                                          >
-                                            <div
-                                              class="flex-container layout-col-to-row"
-                                            >
-                                              <div>
-                                                <div class="button-wrapper">
-                                                  <div
-                                                    class="button__touch-wrapper"
-                                                  >
-                                                    <button
-                                                      class="button button--theme-green button--contained button--typography button--padding-x-large focus-visible button--shape-rounded button--text-light button--sizing-responsive button--primary width-full-to-auto"
-                                                    >
-                                                      <div
-                                                        class="ripple--bounded"
-                                                      ></div>
-                                                      <div
-                                                        class="button__focus-ring"
-                                                      ></div>
-                                                      <div
-                                                        class="button__touch-target"
-                                                      ></div>
-                                                      <span
-                                                        class="button__label"
-                                                        >Cài đặt trên thiết bị
-                                                        khác</span
-                                                      >
-                                                    </button>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="btn-container">
-                                        <div>
-                                          <div class="button-wrapper">
-                                            <div class="button__touch-wrapper">
-                                              <button
-                                                class="button button--contained button--secondary focus-visible button--text-green"
-                                                aria-label="Chia sẻ"
-                                              >
-                                                <div
-                                                  class="ripple--bounded"
-                                                ></div>
-                                                <div
-                                                  class="button__focus-ring"
-                                                ></div>
-                                                <div
-                                                  class="button__touch-target"
-                                                ></div>
-                                                <span class="app-actions y0nrBe"
-                                                  ><svg
-                                                    width="24"
-                                                    height="24"
-                                                    viewBox="0 0 24 24"
-                                                    class="button--secondary"
-                                                  >
-                                                    <path
-                                                      d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"
-                                                    ></path></svg
-                                                ></span>
-                                                <span class="button__label"
-                                                  >Chia sẻ</span
-                                                >
-                                              </button>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Slide 2: Đã cập nhật HTML -->
-                          <div class="carousel-slide">
-                            <div class="slide-content-wrapper">
-                              <a
-                                href="https://www.fortnite.com/news/introducing-fortnite-sidekicks"
-                                class="slide-link"
-                                target="_blank"
-                              >
-                                <div class="slide-image-wrapper">
-                                  <div class="slide-image-wrapper">
-                                    <picture class="slide-picture">
-                                      <source
-                                        media="(min-width: 1280px)"
-                                        srcset="
-                                          https://cdn2.unrealengine.com/egs-fortnite-sidekicks-carousel-desktop-1920x1080-ab679c4d991d.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium
-                                        "
-                                        data-image="https://cdn2.unrealengine.com/egs-fortnite-sidekicks-carousel-desktop-1920x1080-ab679c4d991d.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
-                                      />
-                                      <source
-                                        media="(min-width: 768px)"
-                                        srcset="
-                                          https://cdn2.unrealengine.com/egs-fortnite-sidekicks-carousel-desktop-1920x1080-ab679c4d991d.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium
-                                        "
-                                        data-image="https://cdn2.unrealengine.com/egs-fortnite-sidekicks-carousel-desktop-1920x1080-ab679c4d991d.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium"
-                                      />
-                                      <img
-                                        alt="Play Fortnite for FREE on Epic Games Store"
-                                        src="https://cdn2.unrealengine.com/egs-fortnite-sidekicks-carousel-desktop-1920x1080-ab679c4d991d.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
-                                        class="slide-image"
-                                        data-image="https://cdn2.unrealengine.com/egs-fortnite-sidekicks-carousel-desktop-1920x1080-ab679c4d991d.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
-                                      />
-                                    </picture>
-                                  </div>
-                                  <div class="slide-gradient-overlay"></div>
-                                </div>
-                              </a>
-                              <div class="slide-info-box">
-                                <div>
-                                  <div class="slide-promo-logo"></div>
-                                  <div class="slide-description-wrapper">
-                                    <div class="slide-text-content">
-                                      <span
-                                        class="text-base text-sale-tag text-color-primary"
-                                        >Giảm giá 20%</span
-                                      >
-                                      <span
-                                        class="text-base text-description text-color-primary"
-                                      >
-                                        <div class="grid-container">
-                                          <div class="text-truncate">
-                                            Trải nghiệm lối chơi co-op hấp dẫn!
-                                            Tiết kiệm khi mua Split Fiction từ
-                                            05/11ntới 11/11.
-                                          </div>
-                                        </div>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div data-testid="CarouselOffer" tabindex="-1">
-                                  <div class="slide-offer-details">
-                                    <div class="slide-price-block">
-                                      <div class="slide-price-container">
-                                        <div class="slide-price-segment">
-                                          <div class="discount-badge-wrapper">
-                                            <div
-                                              class="discount-badge discount-badge--primary discount-badge--contained"
-                                            >
-                                              <span class="discount-badge-text"
-                                                >-20%</span
-                                              >
-                                            </div>
-                                          </div>
-                                        </div>
-                                        <div class="slide-price-segment">
-                                          <div class="carousel-price-wrapper">
-                                            <div class="carousel-price-wrapper">
-                                              <span class="carousel-price-text"
-                                                ><span class="discount-price"
-                                                  >899.000&nbsp;₫</span
-                                                >*</span
-                                              >
-                                            </div>
-                                            <div class="carousel-price-wrapper">
-                                              <span class="carousel-price-text"
-                                                >719.200&nbsp;₫</span
-                                              >
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="app-actions slide-buttons">
-                                      <div class="app-actions__install-wrapper">
-                                        <div class="install-button-wrapper">
-                                          <div
-                                            class="install-component-wrapper"
-                                          >
-                                            <div
-                                              class="flex-container layout-col-to-row"
-                                            >
-                                              <div>
-                                                <div class="button-wrapper">
-                                                  <div
-                                                    class="button__touch-wrapper"
-                                                  >
-                                                    <button
-                                                      class="button button--theme-green button--contained button--typography button--padding-x-large focus-visible button--shape-rounded button--text-light button--sizing-responsive button--primary width-full-to-auto"
-                                                    >
-                                                      <div
-                                                        class="ripple--bounded"
-                                                      ></div>
-                                                      <div
-                                                        class="button__focus-ring"
-                                                      ></div>
-                                                      <div
-                                                        class="button__touch-target"
-                                                      ></div>
-                                                      <span
-                                                        class="button__label"
-                                                        >Cài đặt trên thiết bị
-                                                        khác</span
-                                                      >
-                                                    </button>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="btn-container">
-                                        <div>
-                                          <div class="button-wrapper">
-                                            <div class="button__touch-wrapper">
-                                              <button
-                                                class="button button--contained button--secondary focus-visible button--text-green"
-                                                aria-label="Chia sẻ"
-                                              >
-                                                <div
-                                                  class="ripple--bounded"
-                                                ></div>
-                                                <div
-                                                  class="button__focus-ring"
-                                                ></div>
-                                                <div
-                                                  class="button__touch-target"
-                                                ></div>
-                                                <span class="app-actions y0nrBe"
-                                                  ><svg
-                                                    width="24"
-                                                    height="24"
-                                                    viewBox="0 0 24 24"
-                                                    class="button--secondary"
-                                                  >
-                                                    <path
-                                                      d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"
-                                                    ></path></svg
-                                                ></span>
-                                                <span class="button__label"
-                                                  >Chia sẻ</span
-                                                >
-                                              </button>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                          <!-- Slide 3: Đã cập nhật HTML -->
-                          <div class="carousel-slide">
-                            <div class="slide-content-wrapper">
-                              <a
-                                href="https://www.fortnite.com/news/introducing-fortnite-sidekicks"
-                                class="slide-link"
-                                target="_blank"
-                              >
-                                <div class="slide-image-wrapper">
-                                  <div class="slide-image-wrapper">
-                                    <picture class="slide-picture"
-                                      ><img
-                                        src="https://cdn2.unrealengine.com/egs-where-winds-meet-carousel-desktop-1920x1080-be985266a2c7.jpg"
-                                        alt="Play Where Winds Meet on Epic Games Store"
-                                        class="slide-image"
-                                    /></picture>
-                                  </div>
-                                  <div class="slide-gradient-overlay"></div>
-                                </div>
-                              </a>
-                              <div class="slide-info-box">
-                                <div>
-                                  <div
-                                    class="slide-promo-logo"
-                                    style="
-                                      background-image: url(https://cdn2.unrealengine.com/egs-where-winds-meet-carousel-logo-350x350-6eff371c9170.png);
-                                    "
-                                  ></div>
-                                  <div class="slide-description-wrapper">
-                                    <div class="slide-text-content">
-                                      <span
-                                        class="text-base text-sale-tag text-color-primary"
-                                        >Hiện đã ra mắt</span
-                                      >
-                                      <span
-                                        class="text-base text-description text-color-primary"
-                                      >
-                                        <div class="grid-container">
-                                          <div class="text-truncate">
-                                            Tự viết nên câu chuyện võ hiệp
-                                            truyền kỳ giữa ngọn gió của một
-                                            triều đại phân ly trong thế giới mở
-                                            nhập vai hoành tráng.
-                                          </div>
-                                        </div>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div data-testid="CarouselOffer" tabindex="-1">
-                                  <div class="slide-offer-details">
-                                    <div class="slide-price-block">
-                                      <div class="slide-price-container">
-                                        <div class="slide-price-segment"></div>
-                                        <div
-                                          class="slide-price-segment"
-                                          style="margin: 0"
-                                        >
-                                          <div class="carousel-price-wrapper">
-                                            <div class="carousel-price-wrapper">
-                                              <span class="carousel-price-text"
-                                                >Miễn phí</span
-                                              >
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="app-actions slide-buttons">
-                                      <div class="app-actions__install-wrapper">
-                                        <div class="install-button-wrapper">
-                                          <div
-                                            class="install-component-wrapper"
-                                          >
-                                            <div
-                                              class="flex-container layout-col-to-row"
-                                            >
-                                              <div>
-                                                <div class="button-wrapper">
-                                                  <div
-                                                    class="button__touch-wrapper"
-                                                  >
-                                                    <button
-                                                      class="button button--theme-green button--contained button--typography button--padding-x-large focus-visible button--shape-rounded button--text-light button--sizing-responsive button--primary width-full-to-auto"
-                                                    >
-                                                      <div
-                                                        class="ripple--bounded"
-                                                      ></div>
-                                                      <div
-                                                        class="button__focus-ring"
-                                                      ></div>
-                                                      <div
-                                                        class="button__touch-target"
-                                                      ></div>
-                                                      <span
-                                                        class="button__label"
-                                                        >Cài đặt trên thiết bị
-                                                        khác</span
-                                                      >
-                                                    </button>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="btn-container">
-                                        <div>
-                                          <div class="button-wrapper">
-                                            <div class="button__touch-wrapper">
-                                              <button
-                                                class="button button--contained button--secondary focus-visible button--text-green"
-                                                aria-label="Chia sẻ"
-                                              >
-                                                <div
-                                                  class="ripple--bounded"
-                                                ></div>
-                                                <div
-                                                  class="button__focus-ring"
-                                                ></div>
-                                                <div
-                                                  class="button__touch-target"
-                                                ></div>
-                                                <span class="app-actions y0nrBe"
-                                                  ><svg
-                                                    width="24"
-                                                    height="24"
-                                                    viewBox="0 0 24 24"
-                                                    class="button--secondary"
-                                                  >
-                                                    <path
-                                                      d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"
-                                                    ></path></svg
-                                                ></span>
-                                                <span class="button__label"
-                                                  >Chia sẻ</span
-                                                >
-                                              </button>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- Slide 4: Đã cập nhật HTML -->
-                          <div class="carousel-slide">
-                            <div class="slide-content-wrapper">
-                              <a
-                                href="https://www.fortnite.com/news/introducing-fortnite-sidekicks"
-                                class="slide-link"
-                                target="_blank"
-                              >
-                                <div class="slide-image-wrapper">
-                                  <div class="slide-image-wrapper">
-                                    <picture class="slide-picture"
-                                      ><source
-                                        media="(min-width: 1280px)"
-                                        srcset="
-                                          https://cdn2.unrealengine.com/egs-ride-6-carousel-desktop-1920x1080-bb57bf821703.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium
-                                        "
-                                        data-image="https://cdn2.unrealengine.com/egs-ride-6-carousel-desktop-1920x1080-bb57bf821703.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium" />
-                                      <source
-                                        media="(min-width: 768px)"
-                                        srcset="
-                                          https://cdn2.unrealengine.com/egs-ride-6-carousel-desktop-1920x1080-bb57bf821703.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium
-                                        "
-                                        data-image="https://cdn2.unrealengine.com/egs-ride-6-carousel-desktop-1920x1080-bb57bf821703.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium" />
-                                      <img
-                                        alt="Pre-Purchase RIDE 6 on Epic Games Store"
-                                        src="https://cdn2.unrealengine.com/egs-ride-6-carousel-desktop-1920x1080-bb57bf821703.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
-                                        class="slide-image"
-                                        data-image="https://cdn2.unrealengine.com/egs-ride-6-carousel-desktop-1920x1080-bb57bf821703.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
-                                        data-testid="picture-image"
-                                    /></picture>
-                                  </div>
-                                  <div class="slide-gradient-overlay"></div>
-                                </div>
-                              </a>
-                              <div class="slide-info-box">
-                                <div>
-                                  <div
-                                    class="slide-promo-logo"
-                                    style="
-                                      background-image: url(https://cdn2.unrealengine.com/egs-ride-6-carousel-logo-350x96-f9979be0d50f.png);
-                                    "
-                                  ></div>
-                                  <div class="slide-description-wrapper">
-                                    <div class="slide-text-content">
-                                      <span
-                                        class="text-base text-sale-tag text-color-primary"
-                                        >Hiện có sẵn để mua trước</span
-                                      >
-                                      <span
-                                        class="text-base text-description text-color-primary"
-                                      >
-                                        <div class="grid-container">
-                                          <div class="text-truncate">
-                                            Nhảy lên yên xe và mua trước RIDE 6
-                                            ngay trên Epic Games Store! Đây
-                                            không chỉ là trải nghiệm tốc độ, mà
-                                            còn là hành trình khám phá bản thân.
-                                          </div>
-                                        </div>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div data-testid="CarouselOffer" tabindex="-1">
-                                  <div class="slide-offer-details">
-                                    <div class="slide-price-block">
-                                      <div class="slide-price-container">
-                                        <div class="slide-price-segment"></div>
-                                        <div
-                                          class="slide-price-segment"
-                                          style="margin: 0"
-                                        >
-                                          <div class="carousel-price-wrapper">
-                                            <div class="carousel-price-wrapper">
-                                              <span class="carousel-price-text"
-                                                >999.000&nbsp;₫</span
-                                              >
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="app-actions slide-buttons">
-                                      <div class="app-actions__install-wrapper">
-                                        <div class="install-button-wrapper">
-                                          <div
-                                            class="install-component-wrapper"
-                                          >
-                                            <div
-                                              class="flex-container layout-col-to-row"
-                                            >
-                                              <div>
-                                                <div class="button-wrapper">
-                                                  <div
-                                                    class="button__touch-wrapper"
-                                                  >
-                                                    <button
-                                                      class="button button--theme-green button--contained button--typography button--padding-x-large focus-visible button--shape-rounded button--text-light button--sizing-responsive button--primary width-full-to-auto"
-                                                    >
-                                                      <div
-                                                        class="ripple--bounded"
-                                                      ></div>
-                                                      <div
-                                                        class="button__focus-ring"
-                                                      ></div>
-                                                      <div
-                                                        class="button__touch-target"
-                                                      ></div>
-                                                      <span
-                                                        class="button__label"
-                                                        >Cài đặt trên thiết bị
-                                                        khác</span
-                                                      >
-                                                    </button>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="btn-container">
-                                        <div>
-                                          <div class="button-wrapper">
-                                            <div class="button__touch-wrapper">
-                                              <button
-                                                class="button button--contained button--secondary focus-visible button--text-green"
-                                                aria-label="Chia sẻ"
-                                              >
-                                                <div
-                                                  class="ripple--bounded"
-                                                ></div>
-                                                <div
-                                                  class="button__focus-ring"
-                                                ></div>
-                                                <div
-                                                  class="button__touch-target"
-                                                ></div>
-                                                <span class="app-actions y0nrBe"
-                                                  ><svg
-                                                    width="24"
-                                                    height="24"
-                                                    viewBox="0 0 24 24"
-                                                    class="button--secondary"
-                                                  >
-                                                    <path
-                                                      d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"
-                                                    ></path></svg
-                                                ></span>
-                                                <span class="button__label"
-                                                  >Chia sẻ</span
-                                                >
-                                              </button>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- Slide 5: Đã cập nhật HTML -->
-                          <div
-                            class="carousel-slide"
-                            style="
-                              background-image: url('https://placehold.co/1200x900/FF9800/white?text=Trò+Chơi+5');
-                            "
-                          >
-                            <div class="slide-content">
-                              <h2>Trò Chơi Nổi Bật 5</h2>
-                              <p>Chơi miễn phí cuối tuần này cùng bạn bè.</p>
-                              <div class="slide-buttons">
-                                <a href="#" class="slide-btn slide-btn-primary"
-                                  >Chơi miễn phí</a
-                                >
-                                <a
-                                  href="#"
-                                  class="slide-btn slide-btn-secondary"
-                                  >+ Thêm vào DS</a
-                                >
-                              </div>
-                            </div>
-                          </div>
-
-                          <!-- Slide 6 -->
-
-                          <div class="carousel-slide">
-                            <div class="slide-content-wrapper">
-                              <a
-                                href="https://www.fortnite.com/news/introducing-fortnite-sidekicks"
-                                class="slide-link"
-                                target="_blank"
-                              >
-                                <div class="slide-image-wrapper">
-                                  <div class="slide-image-wrapper">
-                                    <picture class="slide-picture"
-                                      ><source
-                                        media="(min-width: 1280px)"
-                                        srcset="
-                                          https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-desktop-1920x1080-cf2e84cd55b1.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium
-                                        "
-                                        data-image="https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-desktop-1920x1080-cf2e84cd55b1.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium" />
-                                      <source
-                                        media="(min-width: 768px)"
-                                        srcset="
-                                          https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-desktop-1920x1080-cf2e84cd55b1.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium
-                                        "
-                                        data-image="https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-desktop-1920x1080-cf2e84cd55b1.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium" />
-                                      <img
-                                        alt="Play Marvel Rivals on Epic Games Store"
-                                        src="https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-desktop-1920x1080-cf2e84cd55b1.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
-                                        class="slide-image"
-                                        data-image="https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-desktop-1920x1080-cf2e84cd55b1.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
-                                        data-testid="picture-image"
-                                    /></picture>
-                                  </div>
-                                  <div class="slide-gradient-overlay"></div>
-                                </div>
-                              </a>
-                              <div class="slide-info-box">
-                                <div>
-                                  <div
-                                    class="slide-promo-logo"
-                                    style="
-                                      background-image: url(https://cdn2.unrealengine.com/egs-marvel-rivals-carousel-logo-350x141-d34127eafe14.png);
-                                    "
-                                  ></div>
-                                  <div class="slide-description-wrapper">
-                                    <div class="slide-text-content">
-                                      <span
-                                        class="text-base text-sale-tag text-color-primary"
-                                        >Mùa 5.0 đã ra mắt</span
-                                      >
-                                      <span
-                                        class="text-base text-description text-color-primary"
-                                      >
-                                        <div class="grid-container">
-                                          <div class="text-truncate">
-                                            Mùa mới hiện ra đã mắt! Hãy cùng
-                                            chúng tôi khám phá anh hùng mới:
-                                            Gambit và Rogue, cũng như trải
-                                            nghiệm bản đồ mới: Times Square!
-                                          </div>
-                                        </div>
-                                      </span>
-                                    </div>
-                                  </div>
-                                </div>
-                                <div data-testid="CarouselOffer" tabindex="-1">
-                                  <div class="slide-offer-details">
-                                    <div class="slide-price-block">
-                                      <div class="slide-price-container">
-                                        <div class="slide-price-segment"></div>
-                                        <div
-                                          class="slide-price-segment"
-                                          style="margin: 0"
-                                        >
-                                          <div class="carousel-price-wrapper">
-                                            <div class="carousel-price-wrapper">
-                                              <span class="carousel-price-text"
-                                                >Miễn phí</span
-                                              >
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                    <div class="app-actions slide-buttons">
-                                      <div class="app-actions__install-wrapper">
-                                        <div class="install-button-wrapper">
-                                          <div
-                                            class="install-component-wrapper"
-                                          >
-                                            <div
-                                              class="flex-container layout-col-to-row"
-                                            >
-                                              <div>
-                                                <div class="button-wrapper">
-                                                  <div
-                                                    class="button__touch-wrapper"
-                                                  >
-                                                    <button
-                                                      class="button button--theme-green button--contained button--typography button--padding-x-large focus-visible button--shape-rounded button--text-light button--sizing-responsive button--primary width-full-to-auto"
-                                                    >
-                                                      <div
-                                                        class="ripple--bounded"
-                                                      ></div>
-                                                      <div
-                                                        class="button__focus-ring"
-                                                      ></div>
-                                                      <div
-                                                        class="button__touch-target"
-                                                      ></div>
-                                                      <span
-                                                        class="button__label"
-                                                        >Cài đặt trên thiết bị
-                                                        khác</span
-                                                      >
-                                                    </button>
-                                                  </div>
-                                                </div>
-                                              </div>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                      <div class="btn-container">
-                                        <div>
-                                          <div class="button-wrapper">
-                                            <div class="button__touch-wrapper">
-                                              <button
-                                                class="button button--contained button--secondary focus-visible button--text-green"
-                                                aria-label="Chia sẻ"
-                                              >
-                                                <div
-                                                  class="ripple--bounded"
-                                                ></div>
-                                                <div
-                                                  class="button__focus-ring"
-                                                ></div>
-                                                <div
-                                                  class="button__touch-target"
-                                                ></div>
-                                                <span class="app-actions y0nrBe"
-                                                  ><svg
-                                                    width="24"
-                                                    height="24"
-                                                    viewBox="0 0 24 24"
-                                                    class="button--secondary"
-                                                  >
-                                                    <path
-                                                      d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z"
-                                                    ></path></svg
-                                                ></span>
-                                                <span class="button__label"
-                                                  >Chia sẻ</span
-                                                >
-                                              </button>
-                                            </div>
-                                          </div>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                </div>
-                              </div>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <div class="carousel-nav-sidebar">
-                      <ul class="carousel-nav-list">
-                        <li class="carousel-nav-item">
-                          <div
-                            class="slide-image-wrapper carousel-nav-item-content"
-                          >
-                            <a tabindex="-1" href="/vi/"
-                              ><div
-                                data-testid="CarouselThumbnail-0"
-                                class="carousel-nav-button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                <div class="nav-button-image-wrapper">
-                                  <div class="nav-image-aspect-box">
-                                    <div class="carousel-slide-fitter">
-                                      <img
-                                        class="nav-button-image"
-                                        src="https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-thumb-1200x1600-0394ee05489b.jpg?resize=1&w=96&h=128&quality=medium"
-                                        alt="Play Fortnite for FREE on Epic Games Store"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                                <span
-                                  class="text-base text-style-small text-color-primary z-index-1"
-                                  >Anno 117: Pax Romana</span
-                                >
-                                <div class="nav-progress-bar"></div></div
-                            ></a>
-                          </div>
-                        </li>
-                        <li class="carousel-nav-item">
-                          <div
-                            class="slide-image-wrapper carousel-nav-item-content"
-                          >
-                            <a tabindex="-1" href="/vi/"
-                              ><div
-                                data-testid="CarouselThumbnail-1"
-                                class="carousel-nav-button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                <div class="nav-button-image-wrapper">
-                                  <div class="nav-image-aspect-box">
-                                    <div class="carousel-slide-fitter">
-                                      <img
-                                        class="nav-button-image"
-                                        src="https://cdn2.unrealengine.com/en-egs-honkai-star-rail-3-7-carousel-thumb-1200x1600-32d8a735e9ec.jpg?resize=1&amp;w=96&amp;h=128&amp;quality=medium"
-                                        alt="Play Honkai: Star Rail on Epic Games Store"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                                <span
-                                  class="text-base text-style-small text-color-primary z-index-1"
-                                  >Honkai: Star Rail</span
-                                >
-                                <div class="nav-progress-bar"></div></div
-                            ></a>
-                          </div>
-                        </li>
-                        <li class="carousel-nav-item">
-                          <div
-                            class="slide-image-wrapper carousel-nav-item-content"
-                          >
-                            <a tabindex="-1" href="/vi/"
-                              ><div
-                                data-testid="CarouselThumbnail-2"
-                                class="carousel-nav-button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                <div class="nav-button-image-wrapper">
-                                  <div class="nav-image-aspect-box">
-                                    <div class="carousel-slide-fitter">
-                                      <img
-                                        class="nav-button-image"
-                                        src="https://cdn2.unrealengine.com/egs-where-winds-meet-carousel-thumb-3-1200x1600-b435eb16e45b.jpg?resize=1&amp;w=96&amp;h=128&amp;quality=medium"
-                                        alt="Play Fortnite for FREE on Epic Games Store"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                                <span
-                                  class="text-base text-style-small text-color-primary z-index-1"
-                                  >Where Winds Meet</span
-                                >
-                                <div class="nav-progress-bar"></div></div
-                            ></a>
-                          </div>
-                        </li>
-                        <li class="carousel-nav-item">
-                          <div
-                            class="slide-image-wrapper carousel-nav-item-content"
-                          >
-                            <a tabindex="-1" href="/vi/"
-                              ><div
-                                data-testid="CarouselThumbnail-3"
-                                class="carousel-nav-button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                <div class="nav-button-image-wrapper">
-                                  <div class="nav-image-aspect-box">
-                                    <div class="carousel-slide-fitter">
-                                      <img
-                                        class="nav-button-image"
-                                        src="https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-thumb-1200x1600-49cd70c263ec.jpg?resize=1&w=96&h=128&quality=medium"
-                                        alt="Pre-purchase Resident Evil Requiem on Epic Games Store"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                                <span
-                                  class="text-base text-style-small text-color-primary z-index-1"
-                                  >Marvel Rivals</span
-                                >
-                                <div class="nav-progress-bar"></div></div
-                            ></a>
-                          </div>
-                        </li>
-                        <li class="carousel-nav-item">
-                          <div
-                            class="slide-image-wrapper carousel-nav-item-content"
-                          >
-                            <a tabindex="-1" href="/vi/"
-                              ><div
-                                data-testid="CarouselThumbnail-4"
-                                class="carousel-nav-button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                <div class="nav-button-image-wrapper">
-                                  <div class="nav-image-aspect-box">
-                                    <div class="carousel-slide-fitter">
-                                      <img
-                                        class="nav-button-image"
-                                        src="https://cdn2.unrealengine.com/egs-split-fiction-carousel-thumb-1200x1600-9b5a96bf6479.jpg?resize=1&amp;w=96&amp;h=128&amp;quality=medium"
-                                        alt="Play Split Fiction on Epic Games Store"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-                                <span
-                                  class="text-base text-style-small text-color-primary z-index-1"
-                                  >Split Fiction</span
-                                >
-                                <div class="nav-progress-bar"></div></div
-                            ></a>
-                          </div>
-                        </li>
-                        <li class="carousel-nav-item">
-                          <div
-                            class="slide-image-wrapper carousel-nav-item-content"
-                          >
-                            <a tabindex="-1" href="/vi/"
-                              ><div
-                                data-testid="CarouselThumbnail-5"
-                                class="carousel-nav-button"
-                                tabindex="0"
-                                role="button"
-                              >
-                                <div class="nav-button-image-wrapper">
-                                  <div class="nav-image-aspect-box">
-                                    <div class="carousel-slide-fitter">
-                                      <img
-                                        class="nav-button-image"
-                                        src="https://cdn2.unrealengine.com/egs-ride-6-carousel-thumb-1200x1600-488c39ac0678.jpg?resize=1&w=96&h=128&quality=medium"
-                                        alt="Play Football Manager 2026 on Epic Games Store"
-                                      />
-                                    </div>
-                                  </div>
-                                </div>
-
-                                <span
-                                  class="text-base text-style-small text-color-primary z-index-1"
-                                  >RIDE 6</span
-                                >
-                                <div class="nav-progress-bar"></div></div
-                            ></a>
-                          </div>
-                        </li>
-                      </ul>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="app-list-container">
-            <div class="app-list-wrapper app-list-wrapper--pc">
-              <div class="content-wrapper">
-                <div
-                  class="horizontal-scroll app-row app-list-wrapper--pc"
-                  id="editor-picks-row"
-                ></div>
-              </div>
-            </div>
-          </div>
-
-          <div class="app-section">
-            <div>
-              <section>
-                <header class="section-header-spacing section-header-margin">
-                  <div class="section-banner-title">
-                    <span>Play your favorites on the big screen</span>
-                  </div>
-                  <div class="section-banner-description">
-                    <span>Google Play Games on PC</span>
-                  </div>
-                </header>
-
-                <div class="app-list-container">
-                  <div class="app-list-wrapper app-list-wrapper--pc">
-                    <div class="content-wrapper">
-                      <div
-                        class="horizontal-scroll app-row app-list-wrapper--pc"
-                        id="pc-games-row"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-
-          <div class="app-section">
-            <div>
-              <section>
-                <header class="section-header-spacing section-header-margin">
-                  <div class="section-banner-title">
-                    <span>Play your favorites on the big screen</span>
-                  </div>
-                  <div class="section-banner-description">
-                    <span>Google Play Games on PC</span>
-                  </div>
-                </header>
-
-                <div class="app-list-container">
-                  <div class="app-list-wrapper app-list-wrapper--pc">
-                    <div class="content-wrapper">
-                      <div
-                        class="horizontal-scroll app-row app-list-wrapper--pc"
-                        id="pc-games-row-2"
-                      ></div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <custom-footer></custom-footer>
-    <div class="ranking-overlay" id="rankingOverlay">
-      <div class="ranking-container">
-        <!-- THAY ĐỔI: Tiêu đề mới -->
-        <div class="ranking-header">
-          <h1>Bảng xếp hạng</h1>
-          <!-- NÚT X ĐỂ TẮT -->
-          <button class="close-btn" id="closeRankingBtn">&times;</button>
-        </div>
-        <div
-          style="
-            position: relative;
-            justify-content: center;
-            text-align: center;
-          "
-        >
+      // Áp dụng class Sáng/Tối NGAY LẬP TỨC cho <body>
+      // 'Mùa' cũng dùng 'light-theme'
+      document.body.className = (theme === 'Tối') ? 'dark-theme' : 'light-theme';
+    })();
+  </script>
+  <custom-header></custom-header>
+  <div class="main-content main-content-spacing">
+    <div class="main-content-inner">
+      <div class="filter_format">
+        <div class="filter-content-wrapper">
           <div class="filter-bar-scroll-container">
             <div class="platform-item dropdown">
-              <div
-                class="platform-button"
-                data-default="Tính phí"
-                onclick="toggleDropdown(event)"
-              >
+              <div class="platform-button" data-default="Tính phí" onclick="toggleDropdown(event)">
                 <div class="ripple-effect"></div>
                 <div class="button-content">
                   <span class="button-prefix">
-                    <svg
-                      class="button-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 -960 960 960"
-                    >
+                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                       <path
-                        d="M480-120q-116 0-213-64.5T135-350h82q31 79 97.5 124T480-180q83 0 141.5-58.5T680-420q0-70-42-116.5T520-610q-51-24-81-43t-30-51q0-31 21-51.5T480-780q27 0 52 11.5T573-740h82q-20-41-48.5-63T520-820q-83 0-141.5 58.5T320-680q0 70 42 116.5T480-490q51 24 81 43t30 51q0 31-21 51.5T520-320q-27 0-52-11.5T427-360h-82q20 41 48.5 63T480-280q83 0 141.5-58.5T680-420h80q-50 143-138.5 211.5T480-120Z"
-                      />
+                        d="M480-120q-116 0-213-64.5T135-350h82q31 79 97.5 124T480-180q83 0 141.5-58.5T680-420q0-70-42-116.5T520-610q-51-24-81-43t-30-51q0-31 21-51.5T480-780q27 0 52 11.5T573-740h82q-20-41-48.5-63T520-820q-83 0-141.5 58.5T320-680q0 70 42 116.5T480-490q51 24 81 43t30 51q0 31-21 51.5T520-320q-27 0-52-11.5T427-360h-82q20 41 48.5 63T480-280q83 0 141.5-58.5T680-420h80q-50 143-138.5 211.5T480-120Z" />
                     </svg>
                   </span>
                   <span class="button-label">Tính phí</span>
@@ -1469,7 +64,7 @@
                     <div class="ripple-effect"></div>
                     <div class="button-content">
                       <span class="button-prefix"></span>
-                      <span class="button-label">Miễn phí phổ biến</span>
+                      <span class="button-label">Miễn phí</span>
                     </div>
                   </div>
                 </div>
@@ -1478,16 +73,7 @@
                     <div class="ripple-effect"></div>
                     <div class="button-content">
                       <span class="button-prefix"></span>
-                      <span class="button-label">Doanh thu cao nhất</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"></span>
-                      <span class="button-label">Có tính phí phổ biến</span>
+                      <span class="button-label">Có tính phí</span>
                     </div>
                   </div>
                 </div>
@@ -1495,22 +81,13 @@
             </div>
 
             <div class="platform-item dropdown">
-              <div
-                class="platform-button"
-                data-default="Thiết bị"
-                onclick="toggleDropdown(event)"
-              >
+              <div class="platform-button" data-default="Thiết bị" onclick="toggleDropdown(event)">
                 <div class="ripple-effect"></div>
                 <div class="button-content">
                   <span class="button-prefix">
-                    <svg
-                      class="button-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 -960 960 960"
-                    >
+                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                       <path
-                        d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z"
-                      />
+                        d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z" />
                     </svg>
                   </span>
                   <span class="button-label">Thiết bị</span>
@@ -1521,16 +98,11 @@
                   <div class="platform-button">
                     <div class="ripple-effect"></div>
                     <div class="button-content">
-                      <span class="button-prefix"
-                        ><svg
-                          class="button-icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 -960 960 960"
-                        >
+                      <span class="button-prefix"><svg class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 -960 960 960">
                           <path
-                            d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z"
-                          /></svg
-                      ></span>
+                            d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z" />
+                        </svg></span>
                       <span class="button-label">Windows</span>
                     </div>
                   </div>
@@ -1539,16 +111,11 @@
                   <div class="platform-button">
                     <div class="ripple-effect"></div>
                     <div class="button-content">
-                      <span class="button-prefix"
-                        ><svg
-                          class="button-icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 -960 960 960"
-                        >
+                      <span class="button-prefix"><svg class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 -960 960 960">
                           <path
-                            d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v124q18 7 29 22t11 34v80q0 19-11 34t-29 22v404q0 33-23.5 56.5T680-40H280Zm0-80h400v-720H280v720Zm0 0v-720 720Zm200-40q17 0 28.5-11.5T520-200q0-17-11.5-28.5T480-240q-17 0-28.5 11.5T440-200q0 17 11.5 28.5T480-160Z"
-                          /></svg
-                      ></span>
+                            d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v124q18 7 29 22t11 34v80q0 19-11 34t-29 22v404q0 33-23.5 56.5T680-40H280Zm0-80h400v-720H280v720Zm0 0v-720 720Zm200-40q17 0 28.5-11.5T520-200q0-17-11.5-28.5T480-240q-17 0-28.5 11.5T440-200q0 17 11.5 28.5T480-160Z" />
+                        </svg></span>
                       <span class="button-label">Điện thoại</span>
                     </div>
                   </div>
@@ -1557,16 +124,11 @@
                   <div class="platform-button">
                     <div class="ripple-effect"></div>
                     <div class="button-content">
-                      <span class="button-prefix"
-                        ><svg
-                          class="button-icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 -960 960 960"
-                        >
+                      <span class="button-prefix"><svg class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 -960 960 960">
                           <path
-                            d="M480-140q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM200-40q-33 0-56.5-23.5T120-120v-720q0-33 23.5-56.5T200-920h560q33 0 56.5 23.5T840-840v720q0 33-23.5 56.5T760-40H200Zm0-200v120h560v-120H200Zm0-80h560v-400H200v400Zm0-480h560v-40H200v40Zm0 0v-40 40Zm0 560v120-120Z"
-                          /></svg
-                      ></span>
+                            d="M480-140q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM200-40q-33 0-56.5-23.5T120-120v-720q0-33 23.5-56.5T200-920h560q33 0 56.5 23.5T840-840v720q0 33-23.5 56.5T760-40H200Zm0-200v120h560v-120H200Zm0-80h560v-400H200v400Zm0-480h560v-40H200v40Zm0 0v-40 40Zm0 560v120-120Z" />
+                        </svg></span>
                       <span class="button-label">Máy tính bảng</span>
                     </div>
                   </div>
@@ -1575,16 +137,11 @@
                   <div class="platform-button">
                     <div class="ripple-effect"></div>
                     <div class="button-content">
-                      <span class="button-prefix"
-                        ><svg
-                          class="button-icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 -960 960 960"
-                        >
+                      <span class="button-prefix"><svg class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                          viewBox="0 -960 960 960">
                           <path
-                            d="M320-120v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z"
-                          /></svg
-                      ></span>
+                            d="M320-120v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z" />
+                        </svg></span>
                       <span class="button-label">Ti vi</span>
                     </div>
                   </div>
@@ -1593,22 +150,13 @@
             </div>
 
             <div class="platform-item dropdown">
-              <div
-                class="platform-button"
-                data-default="Danh mục"
-                onclick="toggleDropdown(event)"
-              >
+              <div class="platform-button" data-default="Danh mục" onclick="toggleDropdown(event)">
                 <div class="ripple-effect"></div>
                 <div class="button-content">
                   <span class="button-prefix">
-                    <svg
-                      class="button-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 -960 960 960"
-                    >
+                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                       <path
-                        d="M120-120v-320h320v320H120Zm0-400v-320h320v320H120Zm400 400v-320h320v320H520Zm0-400v-320h320v320H520Z"
-                      />
+                        d="M120-120v-320h320v320H120Zm0-400v-320h320v320H120Zm400 400v-320h320v320H520Zm0-400v-320h320v320H520Z" />
                     </svg>
                   </span>
                   <span class="button-label">Danh mục</span>
@@ -1619,8 +167,7 @@
                   <div class="platform-button">
                     <div class="ripple-effect"></div>
                     <div class="button-content">
-                      <span class="button-prefix"></span
-                      ><span class="button-label">App</span>
+                      <span class="button-prefix"></span><span class="button-label">App</span>
                     </div>
                   </div>
                 </div>
@@ -1628,8 +175,7 @@
                   <div class="platform-button">
                     <div class="ripple-effect"></div>
                     <div class="button-content">
-                      <span class="button-prefix"></span
-                      ><span class="button-label">Game</span>
+                      <span class="button-prefix"></span><span class="button-label">Game</span>
                     </div>
                   </div>
                 </div>
@@ -1637,8 +183,7 @@
                   <div class="platform-button">
                     <div class="ripple-effect"></div>
                     <div class="button-content">
-                      <span class="button-prefix"></span
-                      ><span class="button-label">Tool</span>
+                      <span class="button-prefix"></span><span class="button-label">Tool</span>
                     </div>
                   </div>
                 </div>
@@ -1646,8 +191,7 @@
                   <div class="platform-button">
                     <div class="ripple-effect"></div>
                     <div class="button-content">
-                      <span class="button-prefix"></span
-                      ><span class="button-label">Education</span>
+                      <span class="button-prefix"></span><span class="button-label">Education</span>
                     </div>
                   </div>
                 </div>
@@ -1655,8 +199,7 @@
                   <div class="platform-button">
                     <div class="ripple-effect"></div>
                     <div class="button-content">
-                      <span class="button-prefix"></span
-                      ><span class="button-label">RPG</span>
+                      <span class="button-prefix"></span><span class="button-label">RPG</span>
                     </div>
                   </div>
                 </div>
@@ -1664,8 +207,7 @@
                   <div class="platform-button">
                     <div class="ripple-effect"></div>
                     <div class="button-content">
-                      <span class="button-prefix"></span
-                      ><span class="button-label">Action</span>
+                      <span class="button-prefix"></span><span class="button-label">Action</span>
                     </div>
                   </div>
                 </div>
@@ -1677,14 +219,9 @@
                 <div class="ripple-effect"></div>
                 <div class="button-content">
                   <span class="button-prefix">
-                    <svg
-                      class="button-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 -960 960 960"
-                    >
+                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                       <path
-                        d="M440-200l-48-102-102-48 102-48 48-102 48 102 102 48-102 48-48 102Zm160 120-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Zm-320 0-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Z"
-                      />
+                        d="M440-200l-48-102-102-48 102-48 48-102 48 102 102 48-102 48-48 102Zm160 120-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Zm-320 0-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Z" />
                     </svg>
                   </span>
                   <span class="button-label">Mới</span>
@@ -1697,70 +234,1083 @@
                 <div class="ripple-effect"></div>
                 <div class="button-content">
                   <span class="button-prefix">
-                    <svg
-                      class="button-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 -960 960 960"
-                    >
+                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
                       <path
-                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                      />
+                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
                     </svg>
                   </span>
                   <span class="button-label">Clear filters</span>
                 </div>
               </div>
             </div>
+
+            <div class="platform-item">
+              <div class="platform-button" id="openRankingBtn">
+                <div class="ripple-effect"></div>
+                <div class="button-content">
+                  <span class="button-prefix">
+                    <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                      <path
+                        d="M440-200l-48-102-102-48 102-48 48-102 48 102 102 48-102 48-48 102Zm160 120-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Zm-320 0-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Z" />
+                    </svg>
+                  </span>
+                  <span class="button-label">Bảng xếp hạng</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-page-content">
+        <div class="app-section">
+          <div class="carousel-wrapper">
+            <div class="epic_carousel">
+              <div class="carousel-section">
+                <div class="carousel-body">
+                  <div class="carousel-main-slide-area">
+                    <div class="carousel-aspect-box">
+                      <div class="carousel-slide-fitter">
+                        <div class="carousel-slide active">
+                          <div class="slide-content-wrapper">
+                            <a href="https://www.fortnite.com/news/introducing-fortnite-sidekicks" class="slide-link"
+                              target="_blank">
+                              <div class="slide-image-wrapper">
+                                <div class="slide-image-wrapper">
+                                  <picture class="slide-picture">
+                                    <source media="(min-width: 1280px)" srcset="
+                                          https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-desktop-1920x1080-38235212f6fb.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium
+                                        "
+                                      data-image="https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-desktop-1920x1080-38235212f6fb.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium" />
+                                    <source media="(min-width: 768px)" srcset="
+                                          https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-desktop-1920x1080-38235212f6fb.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium
+                                        "
+                                      data-image="https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-desktop-1920x1080-38235212f6fb.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium" />
+                                    <img alt="Play Anno 117: Pax Romana on Epic Games Store"
+                                      src="https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-desktop-1920x1080-38235212f6fb.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
+                                      class="slide-image"
+                                      data-image="https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-desktop-1920x1080-38235212f6fb.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
+                                      data-testid="picture-image" />
+                                  </picture>
+                                </div>
+                                <div class="slide-gradient-overlay"></div>
+                              </div>
+                            </a>
+                            <div class="slide-info-box">
+                              <div>
+                                <div class="slide-promo-logo" style="
+                                      background-image: url(https://cdn2.unrealengine.com/egs-anno-117-carousel-logo-350x100-e6cec3402b4e.png);
+                                    "></div>
+                                <div class="slide-description-wrapper">
+                                  <div class="slide-text-content">
+                                    <span class="text-base text-sale-tag text-color-primary">Xây dựng Đế Quốc La Mã của
+                                      bạn!</span>
+                                    <span class="text-base text-description text-color-primary">
+                                      <div class="grid-container">
+                                        <div class="text-truncate">
+                                          Trải nghiệm trò chơi xây dựng đỉnh
+                                          cao và thiết kế thành phố trong mơ
+                                          vào thời kỳ hoàng kim của Đế Quốc La
+                                          Mã. Hiện đã ra mắt!
+                                        </div>
+                                      </div>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div data-testid="CarouselOffer" tabindex="-1">
+                                <div class="slide-offer-details">
+                                  <div class="slide-price-block">
+                                    <div class="slide-price-container">
+                                      <div class="slide-price-segment"></div>
+                                      <div class="slide-price-segment" style="margin: 0">
+                                        <div class="carousel-price-wrapper">
+                                          <div class="carousel-price-wrapper">
+                                            <span class="carousel-price-text">990.000&nbsp;₫</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="app-actions slide-buttons">
+                                    <div class="app-actions__install-wrapper">
+                                      <div class="install-button-wrapper">
+                                        <div class="install-component-wrapper">
+                                          <div class="flex-container layout-col-to-row">
+                                            <div>
+                                              <div class="button-wrapper">
+                                                <div class="button__touch-wrapper">
+                                                  <button
+                                                    class="button button--theme-green button--contained button--typography button--padding-x-large focus-visible button--shape-rounded button--text-light button--sizing-responsive button--primary width-full-to-auto">
+                                                    <div class="ripple--bounded"></div>
+                                                    <div class="button__focus-ring"></div>
+                                                    <div class="button__touch-target"></div>
+                                                    <span class="button__label">Cài đặt trên thiết bị
+                                                      khác</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="btn-container">
+                                      <div>
+                                        <div class="button-wrapper">
+                                          <div class="button__touch-wrapper">
+                                            <button
+                                              class="button button--contained button--secondary focus-visible button--text-green"
+                                              aria-label="Chia sẻ">
+                                              <div class="ripple--bounded"></div>
+                                              <div class="button__focus-ring"></div>
+                                              <div class="button__touch-target"></div>
+                                              <span class="app-actions y0nrBe"><svg width="24" height="24"
+                                                  viewBox="0 0 24 24" class="button--secondary">
+                                                  <path
+                                                    d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z">
+                                                  </path>
+                                                </svg></span>
+                                              <span class="button__label">Chia sẻ</span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Slide 2: Đã cập nhật HTML -->
+                        <div class="carousel-slide">
+                          <div class="slide-content-wrapper">
+                            <a href="https://www.fortnite.com/news/introducing-fortnite-sidekicks" class="slide-link"
+                              target="_blank">
+                              <div class="slide-image-wrapper">
+                                <div class="slide-image-wrapper">
+                                  <picture class="slide-picture">
+                                    <source media="(min-width: 1280px)" srcset="
+                                          https://cdn2.unrealengine.com/egs-fortnite-sidekicks-carousel-desktop-1920x1080-ab679c4d991d.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium
+                                        "
+                                      data-image="https://cdn2.unrealengine.com/egs-fortnite-sidekicks-carousel-desktop-1920x1080-ab679c4d991d.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium" />
+                                    <source media="(min-width: 768px)" srcset="
+                                          https://cdn2.unrealengine.com/egs-fortnite-sidekicks-carousel-desktop-1920x1080-ab679c4d991d.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium
+                                        "
+                                      data-image="https://cdn2.unrealengine.com/egs-fortnite-sidekicks-carousel-desktop-1920x1080-ab679c4d991d.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium" />
+                                    <img alt="Play Fortnite for FREE on Epic Games Store"
+                                      src="https://cdn2.unrealengine.com/egs-fortnite-sidekicks-carousel-desktop-1920x1080-ab679c4d991d.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
+                                      class="slide-image"
+                                      data-image="https://cdn2.unrealengine.com/egs-fortnite-sidekicks-carousel-desktop-1920x1080-ab679c4d991d.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium" />
+                                  </picture>
+                                </div>
+                                <div class="slide-gradient-overlay"></div>
+                              </div>
+                            </a>
+                            <div class="slide-info-box">
+                              <div>
+                                <div class="slide-promo-logo"></div>
+                                <div class="slide-description-wrapper">
+                                  <div class="slide-text-content">
+                                    <span class="text-base text-sale-tag text-color-primary">Giảm giá 20%</span>
+                                    <span class="text-base text-description text-color-primary">
+                                      <div class="grid-container">
+                                        <div class="text-truncate">
+                                          Trải nghiệm lối chơi co-op hấp dẫn!
+                                          Tiết kiệm khi mua Split Fiction từ
+                                          05/11ntới 11/11.
+                                        </div>
+                                      </div>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div data-testid="CarouselOffer" tabindex="-1">
+                                <div class="slide-offer-details">
+                                  <div class="slide-price-block">
+                                    <div class="slide-price-container">
+                                      <div class="slide-price-segment">
+                                        <div class="discount-badge-wrapper">
+                                          <div class="discount-badge discount-badge--primary discount-badge--contained">
+                                            <span class="discount-badge-text">-20%</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                      <div class="slide-price-segment">
+                                        <div class="carousel-price-wrapper">
+                                          <div class="carousel-price-wrapper">
+                                            <span class="carousel-price-text"><span
+                                                class="discount-price">899.000&nbsp;₫</span>*</span>
+                                          </div>
+                                          <div class="carousel-price-wrapper">
+                                            <span class="carousel-price-text">719.200&nbsp;₫</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="app-actions slide-buttons">
+                                    <div class="app-actions__install-wrapper">
+                                      <div class="install-button-wrapper">
+                                        <div class="install-component-wrapper">
+                                          <div class="flex-container layout-col-to-row">
+                                            <div>
+                                              <div class="button-wrapper">
+                                                <div class="button__touch-wrapper">
+                                                  <button
+                                                    class="button button--theme-green button--contained button--typography button--padding-x-large focus-visible button--shape-rounded button--text-light button--sizing-responsive button--primary width-full-to-auto">
+                                                    <div class="ripple--bounded"></div>
+                                                    <div class="button__focus-ring"></div>
+                                                    <div class="button__touch-target"></div>
+                                                    <span class="button__label">Cài đặt trên thiết bị
+                                                      khác</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="btn-container">
+                                      <div>
+                                        <div class="button-wrapper">
+                                          <div class="button__touch-wrapper">
+                                            <button
+                                              class="button button--contained button--secondary focus-visible button--text-green"
+                                              aria-label="Chia sẻ">
+                                              <div class="ripple--bounded"></div>
+                                              <div class="button__focus-ring"></div>
+                                              <div class="button__touch-target"></div>
+                                              <span class="app-actions y0nrBe"><svg width="24" height="24"
+                                                  viewBox="0 0 24 24" class="button--secondary">
+                                                  <path
+                                                    d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z">
+                                                  </path>
+                                                </svg></span>
+                                              <span class="button__label">Chia sẻ</span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        <!-- Slide 3: Đã cập nhật HTML -->
+                        <div class="carousel-slide">
+                          <div class="slide-content-wrapper">
+                            <a href="https://www.fortnite.com/news/introducing-fortnite-sidekicks" class="slide-link"
+                              target="_blank">
+                              <div class="slide-image-wrapper">
+                                <div class="slide-image-wrapper">
+                                  <picture class="slide-picture"><img
+                                      src="https://cdn2.unrealengine.com/egs-where-winds-meet-carousel-desktop-1920x1080-be985266a2c7.jpg"
+                                      alt="Play Where Winds Meet on Epic Games Store" class="slide-image" /></picture>
+                                </div>
+                                <div class="slide-gradient-overlay"></div>
+                              </div>
+                            </a>
+                            <div class="slide-info-box">
+                              <div>
+                                <div class="slide-promo-logo" style="
+                                      background-image: url(https://cdn2.unrealengine.com/egs-where-winds-meet-carousel-logo-350x350-6eff371c9170.png);
+                                    "></div>
+                                <div class="slide-description-wrapper">
+                                  <div class="slide-text-content">
+                                    <span class="text-base text-sale-tag text-color-primary">Hiện đã ra mắt</span>
+                                    <span class="text-base text-description text-color-primary">
+                                      <div class="grid-container">
+                                        <div class="text-truncate">
+                                          Tự viết nên câu chuyện võ hiệp
+                                          truyền kỳ giữa ngọn gió của một
+                                          triều đại phân ly trong thế giới mở
+                                          nhập vai hoành tráng.
+                                        </div>
+                                      </div>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div data-testid="CarouselOffer" tabindex="-1">
+                                <div class="slide-offer-details">
+                                  <div class="slide-price-block">
+                                    <div class="slide-price-container">
+                                      <div class="slide-price-segment"></div>
+                                      <div class="slide-price-segment" style="margin: 0">
+                                        <div class="carousel-price-wrapper">
+                                          <div class="carousel-price-wrapper">
+                                            <span class="carousel-price-text">Miễn phí</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="app-actions slide-buttons">
+                                    <div class="app-actions__install-wrapper">
+                                      <div class="install-button-wrapper">
+                                        <div class="install-component-wrapper">
+                                          <div class="flex-container layout-col-to-row">
+                                            <div>
+                                              <div class="button-wrapper">
+                                                <div class="button__touch-wrapper">
+                                                  <button
+                                                    class="button button--theme-green button--contained button--typography button--padding-x-large focus-visible button--shape-rounded button--text-light button--sizing-responsive button--primary width-full-to-auto">
+                                                    <div class="ripple--bounded"></div>
+                                                    <div class="button__focus-ring"></div>
+                                                    <div class="button__touch-target"></div>
+                                                    <span class="button__label">Cài đặt trên thiết bị
+                                                      khác</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="btn-container">
+                                      <div>
+                                        <div class="button-wrapper">
+                                          <div class="button__touch-wrapper">
+                                            <button
+                                              class="button button--contained button--secondary focus-visible button--text-green"
+                                              aria-label="Chia sẻ">
+                                              <div class="ripple--bounded"></div>
+                                              <div class="button__focus-ring"></div>
+                                              <div class="button__touch-target"></div>
+                                              <span class="app-actions y0nrBe"><svg width="24" height="24"
+                                                  viewBox="0 0 24 24" class="button--secondary">
+                                                  <path
+                                                    d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z">
+                                                  </path>
+                                                </svg></span>
+                                              <span class="button__label">Chia sẻ</span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Slide 4: Đã cập nhật HTML -->
+                        <div class="carousel-slide">
+                          <div class="slide-content-wrapper">
+                            <a href="https://www.fortnite.com/news/introducing-fortnite-sidekicks" class="slide-link"
+                              target="_blank">
+                              <div class="slide-image-wrapper">
+                                <div class="slide-image-wrapper">
+                                  <picture class="slide-picture">
+                                    <source media="(min-width: 1280px)" srcset="
+                                          https://cdn2.unrealengine.com/egs-ride-6-carousel-desktop-1920x1080-bb57bf821703.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium
+                                        "
+                                      data-image="https://cdn2.unrealengine.com/egs-ride-6-carousel-desktop-1920x1080-bb57bf821703.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium" />
+                                    <source media="(min-width: 768px)" srcset="
+                                          https://cdn2.unrealengine.com/egs-ride-6-carousel-desktop-1920x1080-bb57bf821703.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium
+                                        "
+                                      data-image="https://cdn2.unrealengine.com/egs-ride-6-carousel-desktop-1920x1080-bb57bf821703.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium" />
+                                    <img alt="Pre-Purchase RIDE 6 on Epic Games Store"
+                                      src="https://cdn2.unrealengine.com/egs-ride-6-carousel-desktop-1920x1080-bb57bf821703.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
+                                      class="slide-image"
+                                      data-image="https://cdn2.unrealengine.com/egs-ride-6-carousel-desktop-1920x1080-bb57bf821703.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
+                                      data-testid="picture-image" />
+                                  </picture>
+                                </div>
+                                <div class="slide-gradient-overlay"></div>
+                              </div>
+                            </a>
+                            <div class="slide-info-box">
+                              <div>
+                                <div class="slide-promo-logo" style="
+                                      background-image: url(https://cdn2.unrealengine.com/egs-ride-6-carousel-logo-350x96-f9979be0d50f.png);
+                                    "></div>
+                                <div class="slide-description-wrapper">
+                                  <div class="slide-text-content">
+                                    <span class="text-base text-sale-tag text-color-primary">Hiện có sẵn để mua
+                                      trước</span>
+                                    <span class="text-base text-description text-color-primary">
+                                      <div class="grid-container">
+                                        <div class="text-truncate">
+                                          Nhảy lên yên xe và mua trước RIDE 6
+                                          ngay trên Epic Games Store! Đây
+                                          không chỉ là trải nghiệm tốc độ, mà
+                                          còn là hành trình khám phá bản thân.
+                                        </div>
+                                      </div>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div data-testid="CarouselOffer" tabindex="-1">
+                                <div class="slide-offer-details">
+                                  <div class="slide-price-block">
+                                    <div class="slide-price-container">
+                                      <div class="slide-price-segment"></div>
+                                      <div class="slide-price-segment" style="margin: 0">
+                                        <div class="carousel-price-wrapper">
+                                          <div class="carousel-price-wrapper">
+                                            <span class="carousel-price-text">999.000&nbsp;₫</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="app-actions slide-buttons">
+                                    <div class="app-actions__install-wrapper">
+                                      <div class="install-button-wrapper">
+                                        <div class="install-component-wrapper">
+                                          <div class="flex-container layout-col-to-row">
+                                            <div>
+                                              <div class="button-wrapper">
+                                                <div class="button__touch-wrapper">
+                                                  <button
+                                                    class="button button--theme-green button--contained button--typography button--padding-x-large focus-visible button--shape-rounded button--text-light button--sizing-responsive button--primary width-full-to-auto">
+                                                    <div class="ripple--bounded"></div>
+                                                    <div class="button__focus-ring"></div>
+                                                    <div class="button__touch-target"></div>
+                                                    <span class="button__label">Cài đặt trên thiết bị
+                                                      khác</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="btn-container">
+                                      <div>
+                                        <div class="button-wrapper">
+                                          <div class="button__touch-wrapper">
+                                            <button
+                                              class="button button--contained button--secondary focus-visible button--text-green"
+                                              aria-label="Chia sẻ">
+                                              <div class="ripple--bounded"></div>
+                                              <div class="button__focus-ring"></div>
+                                              <div class="button__touch-target"></div>
+                                              <span class="app-actions y0nrBe"><svg width="24" height="24"
+                                                  viewBox="0 0 24 24" class="button--secondary">
+                                                  <path
+                                                    d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z">
+                                                  </path>
+                                                </svg></span>
+                                              <span class="button__label">Chia sẻ</span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Slide 5: Đã cập nhật HTML -->
+                        <div class="carousel-slide" style="
+                              background-image: url('https://placehold.co/1200x900/FF9800/white?text=Trò+Chơi+5');
+                            ">
+                          <div class="slide-content">
+                            <h2>Trò Chơi Nổi Bật 5</h2>
+                            <p>Chơi miễn phí cuối tuần này cùng bạn bè.</p>
+                            <div class="slide-buttons">
+                              <a href="#" class="slide-btn slide-btn-primary">Chơi miễn phí</a>
+                              <a href="#" class="slide-btn slide-btn-secondary">+ Thêm vào DS</a>
+                            </div>
+                          </div>
+                        </div>
+
+                        <!-- Slide 6 -->
+
+                        <div class="carousel-slide">
+                          <div class="slide-content-wrapper">
+                            <a href="https://www.fortnite.com/news/introducing-fortnite-sidekicks" class="slide-link"
+                              target="_blank">
+                              <div class="slide-image-wrapper">
+                                <div class="slide-image-wrapper">
+                                  <picture class="slide-picture">
+                                    <source media="(min-width: 1280px)" srcset="
+                                          https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-desktop-1920x1080-cf2e84cd55b1.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium
+                                        "
+                                      data-image="https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-desktop-1920x1080-cf2e84cd55b1.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium" />
+                                    <source media="(min-width: 768px)" srcset="
+                                          https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-desktop-1920x1080-cf2e84cd55b1.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium
+                                        "
+                                      data-image="https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-desktop-1920x1080-cf2e84cd55b1.jpg?resize=1&amp;w=854&amp;h=480&amp;quality=medium" />
+                                    <img alt="Play Marvel Rivals on Epic Games Store"
+                                      src="https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-desktop-1920x1080-cf2e84cd55b1.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
+                                      class="slide-image"
+                                      data-image="https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-desktop-1920x1080-cf2e84cd55b1.jpg?resize=1&amp;w=1280&amp;h=720&amp;quality=medium"
+                                      data-testid="picture-image" />
+                                  </picture>
+                                </div>
+                                <div class="slide-gradient-overlay"></div>
+                              </div>
+                            </a>
+                            <div class="slide-info-box">
+                              <div>
+                                <div class="slide-promo-logo" style="
+                                      background-image: url(https://cdn2.unrealengine.com/egs-marvel-rivals-carousel-logo-350x141-d34127eafe14.png);
+                                    "></div>
+                                <div class="slide-description-wrapper">
+                                  <div class="slide-text-content">
+                                    <span class="text-base text-sale-tag text-color-primary">Mùa 5.0 đã ra mắt</span>
+                                    <span class="text-base text-description text-color-primary">
+                                      <div class="grid-container">
+                                        <div class="text-truncate">
+                                          Mùa mới hiện ra đã mắt! Hãy cùng
+                                          chúng tôi khám phá anh hùng mới:
+                                          Gambit và Rogue, cũng như trải
+                                          nghiệm bản đồ mới: Times Square!
+                                        </div>
+                                      </div>
+                                    </span>
+                                  </div>
+                                </div>
+                              </div>
+                              <div data-testid="CarouselOffer" tabindex="-1">
+                                <div class="slide-offer-details">
+                                  <div class="slide-price-block">
+                                    <div class="slide-price-container">
+                                      <div class="slide-price-segment"></div>
+                                      <div class="slide-price-segment" style="margin: 0">
+                                        <div class="carousel-price-wrapper">
+                                          <div class="carousel-price-wrapper">
+                                            <span class="carousel-price-text">Miễn phí</span>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                  <div class="app-actions slide-buttons">
+                                    <div class="app-actions__install-wrapper">
+                                      <div class="install-button-wrapper">
+                                        <div class="install-component-wrapper">
+                                          <div class="flex-container layout-col-to-row">
+                                            <div>
+                                              <div class="button-wrapper">
+                                                <div class="button__touch-wrapper">
+                                                  <button
+                                                    class="button button--theme-green button--contained button--typography button--padding-x-large focus-visible button--shape-rounded button--text-light button--sizing-responsive button--primary width-full-to-auto">
+                                                    <div class="ripple--bounded"></div>
+                                                    <div class="button__focus-ring"></div>
+                                                    <div class="button__touch-target"></div>
+                                                    <span class="button__label">Cài đặt trên thiết bị
+                                                      khác</span>
+                                                  </button>
+                                                </div>
+                                              </div>
+                                            </div>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                    <div class="btn-container">
+                                      <div>
+                                        <div class="button-wrapper">
+                                          <div class="button__touch-wrapper">
+                                            <button
+                                              class="button button--contained button--secondary focus-visible button--text-green"
+                                              aria-label="Chia sẻ">
+                                              <div class="ripple--bounded"></div>
+                                              <div class="button__focus-ring"></div>
+                                              <div class="button__touch-target"></div>
+                                              <span class="app-actions y0nrBe"><svg width="24" height="24"
+                                                  viewBox="0 0 24 24" class="button--secondary">
+                                                  <path
+                                                    d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92 1.61 0 2.92-1.31 2.92-2.92s-1.31-2.92-2.92-2.92z">
+                                                  </path>
+                                                </svg></span>
+                                              <span class="button__label">Chia sẻ</span>
+                                            </button>
+                                          </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="carousel-nav-sidebar">
+                    <ul class="carousel-nav-list">
+                      <li class="carousel-nav-item">
+                        <div class="slide-image-wrapper carousel-nav-item-content">
+                          <a tabindex="-1" href="/vi/">
+                            <div data-testid="CarouselThumbnail-0" class="carousel-nav-button" tabindex="0"
+                              role="button">
+                              <div class="nav-button-image-wrapper">
+                                <div class="nav-image-aspect-box">
+                                  <div class="carousel-slide-fitter">
+                                    <img class="nav-button-image"
+                                      src="https://cdn2.unrealengine.com/egs-anno-117-pax-romana-carousel-thumb-1200x1600-0394ee05489b.jpg?resize=1&w=96&h=128&quality=medium"
+                                      alt="Play Fortnite for FREE on Epic Games Store" />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="text-base text-style-small text-color-primary z-index-1">Anno 117: Pax
+                                Romana</span>
+                              <div class="nav-progress-bar"></div>
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="carousel-nav-item">
+                        <div class="slide-image-wrapper carousel-nav-item-content">
+                          <a tabindex="-1" href="/vi/">
+                            <div data-testid="CarouselThumbnail-1" class="carousel-nav-button" tabindex="0"
+                              role="button">
+                              <div class="nav-button-image-wrapper">
+                                <div class="nav-image-aspect-box">
+                                  <div class="carousel-slide-fitter">
+                                    <img class="nav-button-image"
+                                      src="https://cdn2.unrealengine.com/en-egs-honkai-star-rail-3-7-carousel-thumb-1200x1600-32d8a735e9ec.jpg?resize=1&amp;w=96&amp;h=128&amp;quality=medium"
+                                      alt="Play Honkai: Star Rail on Epic Games Store" />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="text-base text-style-small text-color-primary z-index-1">Honkai: Star
+                                Rail</span>
+                              <div class="nav-progress-bar"></div>
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="carousel-nav-item">
+                        <div class="slide-image-wrapper carousel-nav-item-content">
+                          <a tabindex="-1" href="/vi/">
+                            <div data-testid="CarouselThumbnail-2" class="carousel-nav-button" tabindex="0"
+                              role="button">
+                              <div class="nav-button-image-wrapper">
+                                <div class="nav-image-aspect-box">
+                                  <div class="carousel-slide-fitter">
+                                    <img class="nav-button-image"
+                                      src="https://cdn2.unrealengine.com/egs-where-winds-meet-carousel-thumb-3-1200x1600-b435eb16e45b.jpg?resize=1&amp;w=96&amp;h=128&amp;quality=medium"
+                                      alt="Play Fortnite for FREE on Epic Games Store" />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="text-base text-style-small text-color-primary z-index-1">Where Winds
+                                Meet</span>
+                              <div class="nav-progress-bar"></div>
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="carousel-nav-item">
+                        <div class="slide-image-wrapper carousel-nav-item-content">
+                          <a tabindex="-1" href="/vi/">
+                            <div data-testid="CarouselThumbnail-3" class="carousel-nav-button" tabindex="0"
+                              role="button">
+                              <div class="nav-button-image-wrapper">
+                                <div class="nav-image-aspect-box">
+                                  <div class="carousel-slide-fitter">
+                                    <img class="nav-button-image"
+                                      src="https://cdn2.unrealengine.com/egs-marvel-rivals-season-5-thumb-1200x1600-49cd70c263ec.jpg?resize=1&w=96&h=128&quality=medium"
+                                      alt="Pre-purchase Resident Evil Requiem on Epic Games Store" />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="text-base text-style-small text-color-primary z-index-1">Marvel Rivals</span>
+                              <div class="nav-progress-bar"></div>
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="carousel-nav-item">
+                        <div class="slide-image-wrapper carousel-nav-item-content">
+                          <a tabindex="-1" href="/vi/">
+                            <div data-testid="CarouselThumbnail-4" class="carousel-nav-button" tabindex="0"
+                              role="button">
+                              <div class="nav-button-image-wrapper">
+                                <div class="nav-image-aspect-box">
+                                  <div class="carousel-slide-fitter">
+                                    <img class="nav-button-image"
+                                      src="https://cdn2.unrealengine.com/egs-split-fiction-carousel-thumb-1200x1600-9b5a96bf6479.jpg?resize=1&amp;w=96&amp;h=128&amp;quality=medium"
+                                      alt="Play Split Fiction on Epic Games Store" />
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="text-base text-style-small text-color-primary z-index-1">Split Fiction</span>
+                              <div class="nav-progress-bar"></div>
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                      <li class="carousel-nav-item">
+                        <div class="slide-image-wrapper carousel-nav-item-content">
+                          <a tabindex="-1" href="/vi/">
+                            <div data-testid="CarouselThumbnail-5" class="carousel-nav-button" tabindex="0"
+                              role="button">
+                              <div class="nav-button-image-wrapper">
+                                <div class="nav-image-aspect-box">
+                                  <div class="carousel-slide-fitter">
+                                    <img class="nav-button-image"
+                                      src="https://cdn2.unrealengine.com/egs-ride-6-carousel-thumb-1200x1600-488c39ac0678.jpg?resize=1&w=96&h=128&quality=medium"
+                                      alt="Play Football Manager 2026 on Epic Games Store" />
+                                  </div>
+                                </div>
+                              </div>
+
+                              <span class="text-base text-style-small text-color-primary z-index-1">RIDE 6</span>
+                              <div class="nav-progress-bar"></div>
+                            </div>
+                          </a>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="app-list-container">
+          <div class="app-list-wrapper app-list-wrapper--pc">
+            <div class="content-wrapper">
+              <div class="horizontal-scroll app-row app-list-wrapper--pc" id="editor-picks-row"></div>
+            </div>
           </div>
         </div>
 
-        <div class="ranking-list-scrollable" id="ranking-list"></div>
-        <!-- Kết thúc .ranking-list-scrollable -->
+        <div class="app-section">
+          <div>
+            <section>
+              <header class="section-header-spacing section-header-margin">
+                <div class="section-banner-title">
+                  <span>Play your favorites on the big screen</span>
+                </div>
+                <div class="section-banner-description">
+                  <span>Google Play Games on PC</span>
+                </div>
+              </header>
+
+              <div class="app-list-container">
+                <div class="app-list-wrapper app-list-wrapper--pc">
+                  <div class="content-wrapper">
+                    <div class="horizontal-scroll app-row app-list-wrapper--pc" id="pc-games-row"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+        <div class="app-section">
+          <div>
+            <section>
+              <header class="section-header-spacing section-header-margin">
+                <div class="section-banner-title">
+                  <span>Play your favorites on the big screen</span>
+                </div>
+                <div class="section-banner-description">
+                  <span>Google Play Games on PC</span>
+                </div>
+              </header>
+
+              <div class="app-list-container">
+                <div class="app-list-wrapper app-list-wrapper--pc">
+                  <div class="content-wrapper">
+                    <div class="horizontal-scroll app-row app-list-wrapper--pc" id="pc-games-row-2"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
       </div>
     </div>
-    <script src="./assets/js/homeData.js"></script>
+  </div>
 
-    <script src="./assets/js/homeRender.js"></script>
-    <script src="./assets/js/carousel.js"></script>
-    <script src="./assets/js/filter.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // --- THÊM JS CHO TÍNH NĂNG POPUP ---
+  <custom-footer></custom-footer>
+  <div class="ranking-overlay" id="rankingOverlay">
+    <div class="ranking-container">
+      <!-- THAY ĐỔI: Tiêu đề mới -->
+      <div class="ranking-header">
+        <h1>Bảng xếp hạng</h1>
+        <!-- NÚT X ĐỂ TẮT -->
+        <button class="close-btn" id="closeRankingBtn">&times;</button>
+      </div>
+      <div style="
+            position: relative;
+            justify-content: center;
+            text-align: center;
+          ">
+        <div class="filter-bar-scroll-container">
+          <div class="platform-item dropdown">
+            <div class="platform-button" data-default="Tính phí" onclick="toggleDropdown(event)">
+              <div class="ripple-effect"></div>
+              <div class="button-content">
+                <span class="button-prefix">
+                  <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path
+                      d="M480-120q-116 0-213-64.5T135-350h82q31 79 97.5 124T480-180q83 0 141.5-58.5T680-420q0-70-42-116.5T520-610q-51-24-81-43t-30-51q0-31 21-51.5T480-780q27 0 52 11.5T573-740h82q-20-41-48.5-63T520-820q-83 0-141.5 58.5T320-680q0 70 42 116.5T480-490q51 24 81 43t30 51q0 31-21 51.5T520-320q-27 0-52-11.5T427-360h-82q20 41 48.5 63T480-280q83 0 141.5-58.5T680-420h80q-50 143-138.5 211.5T480-120Z" />
+                  </svg>
+                </span>
+                <span class="button-label">Tính phí</span>
+              </div>
+            </div>
+            <div id="priceDropdown" class="dropdown-content">
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span>
+                    <span class="button-label">Miễn phí phổ biến</span>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span>
+                    <span class="button-label">Doanh thu cao nhất</span>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span>
+                    <span class="button-label">Có tính phí phổ biến</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        // Lấy các phần tử
-        const openBtn = document.getElementById("openRankingBtn");
-        const closeBtn = document.getElementById("closeRankingBtn");
-        const overlay = document.getElementById("rankingOverlay");
+          <div class="platform-item dropdown">
+            <div class="platform-button" data-default="Thiết bị" onclick="toggleDropdown(event)">
+              <div class="ripple-effect"></div>
+              <div class="button-content">
+                <span class="button-prefix">
+                  <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path
+                      d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z" />
+                  </svg>
+                </span>
+                <span class="button-label">Thiết bị</span>
+              </div>
+            </div>
+            <div id="deviceDropdown" class="dropdown-content">
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"><svg class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 -960 960 960">
+                        <path
+                          d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z" />
+                      </svg></span>
+                    <span class="button-label">Windows</span>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"><svg class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 -960 960 960">
+                        <path
+                          d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v124q18 7 29 22t11 34v80q0 19-11 34t-29 22v404q0 33-23.5 56.5T680-40H280Zm0-80h400v-720H280v720Zm0 0v-720 720Zm200-40q17 0 28.5-11.5T520-200q0-17-11.5-28.5T480-240q-17 0-28.5 11.5T440-200q0 17 11.5 28.5T480-160Z" />
+                      </svg></span>
+                    <span class="button-label">Điện thoại</span>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"><svg class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 -960 960 960">
+                        <path
+                          d="M480-140q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM200-40q-33 0-56.5-23.5T120-120v-720q0-33 23.5-56.5T200-920h560q33 0 56.5 23.5T840-840v720q0 33-23.5 56.5T760-40H200Zm0-200v120h560v-120H200Zm0-80h560v-400H200v400Zm0-480h560v-40H200v40Zm0 0v-40 40Zm0 560v120-120Z" />
+                      </svg></span>
+                    <span class="button-label">Máy tính bảng</span>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"><svg class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 -960 960 960">
+                        <path
+                          d="M320-120v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z" />
+                      </svg></span>
+                    <span class="button-label">Ti vi</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        // Khi bấm nút "Mở Bảng Xếp Hạng"
-        if (openBtn) {
-          openBtn.addEventListener("click", function () {
-            overlay.classList.add("visible");
-          });
-        }
+          <div class="platform-item dropdown">
+            <div class="platform-button" data-default="Danh mục" onclick="toggleDropdown(event)">
+              <div class="ripple-effect"></div>
+              <div class="button-content">
+                <span class="button-prefix">
+                  <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path
+                      d="M120-120v-320h320v320H120Zm0-400v-320h320v320H120Zm400 400v-320h320v320H520Zm0-400v-320h320v320H520Z" />
+                  </svg>
+                </span>
+                <span class="button-label">Danh mục</span>
+              </div>
+            </div>
+            <div id="categoryDropdown" class="dropdown-content">
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span><span class="button-label">App</span>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span><span class="button-label">Game</span>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span><span class="button-label">Tool</span>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span><span class="button-label">Education</span>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span><span class="button-label">RPG</span>
+                  </div>
+                </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span><span class="button-label">Action</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
 
-        // Khi bấm nút "X"
-        if (closeBtn) {
-          closeBtn.addEventListener("click", function () {
+          <div class="platform-item">
+            <div class="platform-button new-filter-button">
+              <div class="ripple-effect"></div>
+              <div class="button-content">
+                <span class="button-prefix">
+                  <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path
+                      d="M440-200l-48-102-102-48 102-48 48-102 48 102 102 48-102 48-48 102Zm160 120-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Zm-320 0-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Z" />
+                  </svg>
+                </span>
+                <span class="button-label">Mới</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="platform-item">
+            <div class="platform-button" onclick="clearFilters()">
+              <div class="ripple-effect"></div>
+              <div class="button-content">
+                <span class="button-prefix">
+                  <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path
+                      d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                  </svg>
+                </span>
+                <span class="button-label">Clear filters</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ranking-list-scrollable" id="ranking-list"></div>
+      <!-- Kết thúc .ranking-list-scrollable -->
+    </div>
+  </div>
+  <script src="./assets/js/homeData.js"></script>
+
+  <script src="./assets/js/homeRender.js"></script>
+  <script src="./assets/js/carousel.js"></script>
+  <script src="./assets/js/filter.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // --- THÊM JS CHO TÍNH NĂNG POPUP ---
+
+      // Lấy các phần tử
+      const openBtn = document.getElementById("openRankingBtn");
+      const closeBtn = document.getElementById("closeRankingBtn");
+      const overlay = document.getElementById("rankingOverlay");
+
+      // Khi bấm nút "Mở Bảng Xếp Hạng"
+      if (openBtn) {
+        openBtn.addEventListener("click", function () {
+          overlay.classList.add("visible");
+        });
+      }
+
+      // Khi bấm nút "X"
+      if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+          overlay.classList.remove("visible");
+        });
+      }
+
+      // Khi bấm ra ngoài khu vực .ranking-container (trên overlay)
+      if (overlay) {
+        overlay.addEventListener("click", function (event) {
+          // Kiểm tra xem click có phải trực tiếp vào overlay không
+          if (event.target === overlay) {
             overlay.classList.remove("visible");
-          });
-        }
+          }
+        });
+      }
+    });
+  </script>
+  <script src="./assets/js/searchBar.js"></script>
+  <script src="./assets/js/login.js"></script>
+  <script src="./assets/js/register.js"></script>
+  <script src="./assets/js/carousel-scroll.js"></script>
+  <script src="./assets/js/navigation.js"></script>
+  <script src="/assets/js/SettingTab.js"></script>
+  <script src="/assets/js/theme-manager.js"></script>
+</body>
 
-        // Khi bấm ra ngoài khu vực .ranking-container (trên overlay)
-        if (overlay) {
-          overlay.addEventListener("click", function (event) {
-            // Kiểm tra xem click có phải trực tiếp vào overlay không
-            if (event.target === overlay) {
-              overlay.classList.remove("visible");
-            }
-          });
-        }
-      });
-    </script>
-    <script src="./assets/js/searchBar.js"></script>
-    <script src="./assets/js/login.js"></script>
-    <script src="./assets/js/register.js"></script>
-    <script src="./assets/js/carousel-scroll.js"></script>
-    <script src="./assets/js/navigation.js"></script>
-  </body>
 </html>
