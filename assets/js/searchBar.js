@@ -3,7 +3,7 @@ const availableKeywords = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   (function loadKeywords() {
-    const jsonFilePath = "./assets/json/appData.json";
+    const jsonFilePath = "/assets/json/appData.json";
     fetch(jsonFilePath)
       .then((response) => {
         if (!response.ok) {
