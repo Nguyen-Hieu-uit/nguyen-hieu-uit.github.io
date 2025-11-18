@@ -8,6 +8,42 @@
     border-radius: 8px;
 }
 
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #fafafa;
+}
+
+h1 {
+    font-weight: 400;
+    margin-bottom: 20px;
+    font-size: 32px;
+}
+
+.main-content h1 {
+    font-size: 32px;
+    padding-bottom: 20px;
+}
+
+.main-content {
+    /* Giữ nguyên padding cũ để giao diện không bị dính sát lề trên mobile */
+    padding-left: 20px;
+    padding-right: 20px;
+
+    /* 2. Canh giữa khối này (Trên dưới = 0, Trái phải = auto) */
+    margin: 0 auto;
+
+    /* 3. Đảm bảo chiếm full chiều rộng trên màn hình nhỏ */
+    width: 100%;
+
+    /* 4. Đảm bảo padding không làm vỡ khung */
+    box-sizing: border-box;
+}
+
+.main-content {
+    max-width: 1100px;
+}
+
 /* --- SECTION TITLE (ĐÃ KHẮC PHỤC LỖI THỤT ĐẦU DÒNG VÀ MARGIN) --- */
 .section-title {
     font-size: 20px;

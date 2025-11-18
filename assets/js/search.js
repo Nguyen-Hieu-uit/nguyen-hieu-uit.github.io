@@ -108,7 +108,7 @@ function createResultItem(app, query, isFeatured) {
   const item = document.createElement("a");
 
   // Đường dẫn chi tiết app (tạm thời fix cứng Candy Crush)
-  item.href = "./html/candy-crush-saga.html";
+  item.href = "/html/candy-crush-saga.html";
 
   // Gán class khác nhau dựa trên tham số isFeatured
   if (isFeatured) {

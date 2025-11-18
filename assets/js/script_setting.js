@@ -289,14 +289,14 @@ document.addEventListener('DOMContentLoaded', () => {
     // 2. Thêm listener cho chức năng chỉnh sửa
     document.addEventListener('click', handleEditClick);
 
-    // 3. Giả sử bạn lấy được username của người đã đăng nhập
-    const currentUsername = 'CGS3010';
-
-    // 4. Tải dữ liệu và hiển thị UI (dùng username động)
-    fetch(`http://localhost:3000/api/user/${currentUsername}`)
+    // =======================================================
+    // !! PHẦN ĐÃ CHỈNH SỬA !!
+    // 3. Tải dữ liệu từ file JSON cục bộ
+    fetch('/assets/json/data_setting.json') // Giả định file data_setting.json nằm cùng cấp với file HTML
         .then(response => {
             if (!response.ok) {
-                throw new Error(`HTTP error! status: ${response.status}`);
+                // Thay đổi thông báo lỗi để phù hợp với việc tải file
+                throw new Error(`Lỗi khi tải file JSON! status: ${response.status}`);
             }
             return response.json();
         })
@@ -305,7 +305,8 @@ document.addEventListener('DOMContentLoaded', () => {
             loadAllSettings(data);
         })
         .catch(error => {
-            console.error("Lỗi khi gọi API:", error);
-            document.getElementById("full-content-area").innerHTML = `<p style="color: red;">Không thể tải dữ liệu từ server.</p>`;
+            console.error("Lỗi khi tải hoặc xử lý file JSON:", error);
+            document.getElementById("full-content-area").innerHTML = `<p style="color: red;">Không thể tải dữ liệu từ file data_setting.json.</p>`;
         });
+    // =======================================================
 });

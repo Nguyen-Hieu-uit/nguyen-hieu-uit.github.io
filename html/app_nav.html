@@ -28,13 +28,50 @@
     <script type="module" src="../assets/js/customheader.js"></script>
     <script type="module" src="../assets/js/customfooter.js"></script>
   </head>
+
   <body>
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+
+    <script>
+      (function () {
+        // Lấy chủ đề từ localStorage, mặc định là 'Sáng'
+        const theme = localStorage.getItem("theme") || "Sáng";
+
+        // Áp dụng class Sáng/Tối NGAY LẬP TỨC cho <body>
+        // 'Mùa' cũng dùng 'light-theme'
+        document.body.className =
+          theme === "Tối" ? "dark-theme" : "light-theme";
+      })();
+    </script>
     <custom-header></custom-header>
     <div class="main-content main-content-spacing">
       <div class="main-content-inner">
         <div class="filter_format">
           <div class="filter-content-wrapper">
             <div class="filter-bar-scroll-container">
+              <button class="carousel-btn left" aria-label="Scroll left">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="#000000"
+                >
+                  <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                </svg>
+              </button>
+
+              <button class="carousel-btn right" aria-label="Scroll right">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  height="24px"
+                  viewBox="0 0 24 24"
+                  width="24px"
+                  fill="#000000"
+                >
+                  <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                </svg>
+              </button>
               <div class="platform-item dropdown">
                 <div
                   class="platform-button"
@@ -327,7 +364,38 @@
                   <div
                     class="horizontal-scroll app-row app-list-wrapper--pc"
                     id="editor-picks-row"
-                  ></div>
+                  >
+                    <button class="carousel-btn left" aria-label="Scroll left">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        fill="#000000"
+                      >
+                        <path
+                          d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                        />
+                      </svg>
+                    </button>
+
+                    <button
+                      class="carousel-btn right"
+                      aria-label="Scroll right"
+                    >
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        fill="#000000"
+                      >
+                        <path
+                          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                        />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>
@@ -338,7 +406,33 @@
                 <div
                   class="horizontal-scroll app-row app-list-wrapper--pc"
                   id="editor-picks-row"
-                ></div>
+                >
+                  <button class="carousel-btn left" aria-label="Scroll left">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      fill="#000000"
+                    >
+                      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                    </svg>
+                  </button>
+
+                  <button class="carousel-btn right" aria-label="Scroll right">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </div>
@@ -361,7 +455,41 @@
                       <div
                         class="horizontal-scroll app-row app-list-wrapper--pc"
                         id="pc-games-row"
-                      ></div>
+                      >
+                        <button
+                          class="carousel-btn left"
+                          aria-label="Scroll left"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="24px"
+                            viewBox="0 0 24 24"
+                            width="24px"
+                            fill="#000000"
+                          >
+                            <path
+                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                            />
+                          </svg>
+                        </button>
+
+                        <button
+                          class="carousel-btn right"
+                          aria-label="Scroll right"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="24px"
+                            viewBox="0 0 24 24"
+                            width="24px"
+                            fill="#000000"
+                          >
+                            <path
+                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                            />
+                          </svg>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -387,7 +515,41 @@
                       <div
                         class="horizontal-scroll app-row app-list-wrapper--pc"
                         id="pc-games-row-2"
-                      ></div>
+                      >
+                        <button
+                          class="carousel-btn left"
+                          aria-label="Scroll left"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="24px"
+                            viewBox="0 0 24 24"
+                            width="24px"
+                            fill="#000000"
+                          >
+                            <path
+                              d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                            />
+                          </svg>
+                        </button>
+
+                        <button
+                          class="carousel-btn right"
+                          aria-label="Scroll right"
+                        >
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            height="24px"
+                            viewBox="0 0 24 24"
+                            width="24px"
+                            fill="#000000"
+                          >
+                            <path
+                              d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                            />
+                          </svg>
+                        </button>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -736,5 +898,7 @@
     <script src="../assets/js/register.js"></script>
     <script src="../assets/js/carousel-scroll.js"></script>
     <script src="../assets/js/navigation.js"></script>
+    <script src="/assets/js/SettingTab.js"></script>
+    <script src="/assets/js/theme-manager.js"></script>
   </body>
 </html>
