@@ -86,6 +86,7 @@ class CustomHeader extends HTMLElement {
                                 <ul class="dropdown-list">
                                     <li><a href="/html/library.html">Thư viện và thiết bị</a></li>
                                     <li><a href="/html/payment.html">Thông tin thanh toán và gói thuê bao</a></li>
+                                    <li><a href="/html/offers.html">Ưu đãi</a></li>
                                     <li><a href="/html/setting.html">Cài đặt</a></li>
                                 </ul>
 

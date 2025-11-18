@@ -1,30 +1,48 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <script type="module" src="/assets/js/customheader.js"></script>
-    <script type="module" src="/assets/js/customfooter.js"></script>
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="/assets/css/header.css" />
-    <link rel="stylesheet" href="/assets/css/offers.css" />
-    <link rel="stylesheet" href="/assets/css/searchBar.css" />
-  </head>
-  <body>
-    <custom-header></custom-header>
-    <main>
-      <div class="main-content">
-        <div class="main-content-inner">
-          <div class="main-content-spacing">
-            <h1>Ưu đãi</h1>
-            <div class="offers-list-container" id="offers-list-container"></div>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+  <script type="module" src="/assets/js/customheader.js"></script>
+  <script type="module" src="/assets/js/customfooter.js"></script>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
+  <link rel="stylesheet" href="/assets/css/offers.css" />
+  <link rel="stylesheet" href="/assets/css/searchBar.css" />
+</head>
+
+<body>
+  <link rel="stylesheet" href="/assets/css/theme.css" />
+
+  <script>
+    (function () {
+      // Lấy chủ đề từ localStorage, mặc định là 'Sáng'
+      const theme = localStorage.getItem("theme") || "Sáng";
+
+      // Áp dụng class Sáng/Tối NGAY LẬP TỨC cho <body>
+      // 'Mùa' cũng dùng 'light-theme'
+      document.body.className =
+        theme === "Tối" ? "dark-theme" : "light-theme";
+    })();
+  </script>
+  <custom-header></custom-header>
+  <main>
+    <div class="main-content">
+      <div class="main-content-inner">
+        <div class="main-content-spacing">
+          <h1>Ưu đãi</h1>
+          <div class="offers-list-container" id="offers-list-container"></div>
         </div>
       </div>
-    </main>
-    <custom-footer></custom-footer>
-    <script src="/assets/js/offers.js"></script>
-    <script src="/assets/js/searchBar.js"></script>
-  </body>
+    </div>
+  </main>
+  <custom-footer></custom-footer>
+  <script src="/assets/js/offers.js"></script>
+  <script src="/assets/js/searchBar.js"></script>
+  <script src="/assets/js/SettingTab.js"></script>
+  <script src="/assets/js/theme-manager.js"></script>
+</body>
+
 </html>
