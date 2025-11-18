@@ -126,13 +126,14 @@ const pcGamesRow = [
     href: "./candy-crush-saga.html",
   },
   {
-    name: "Hades' Star",
+    name: "Real Flight Simulator",
     categoryMain: "Chiến thuật",
     categoryExtra: "4X",
     rating: 4.4,
-    thumb: "https://i.ytimg.com/vi/QGD-WEqo_bQ/hqdefault.jpg",
-    icon: "https://play-lh.googleusercontent.com/_VRSZ4h_Dcadat9mQAC33JhgL3UC1T5eCykBIOAVyPhfD_RhnNK6fXP9_6N09C8YQHg=s64-rw",
-    href: "./candy-crush-saga.html",
+    thumb:
+      "https://play-lh.googleusercontent.com/iiu_Iyy7PA2C8yzyTghBcbmilKKvAk5NABtEhgyiqvkkdSPBr_3WVFu5nH007rvZnr2a=w1052-h592-rw",
+    icon: "https://play-lh.googleusercontent.com/kwlIDGuHPCwW6YVpmfEELagMBuwFYYdYczT_ueJxu-5YX6A5YlQclOnKsgV-ShlSBg=s48-rw",
+    href: "/html/real-flight-simulator.html",
   },
   {
     name: "Hades' Star",

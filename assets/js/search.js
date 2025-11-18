@@ -1,6 +1,6 @@
 // Hàm tải dữ liệu từ file JSON và hiển thị kết quả tìm kiếm
 function loadAppData() {
-  const jsonFilePath = "./assets/json/appData.json";
+  const jsonFilePath = "/assets/json/appData.json";
 
   fetch(jsonFilePath)
     .then((response) => {
@@ -108,7 +108,7 @@ function createResultItem(app, query, isFeatured) {
   const item = document.createElement("a");
 
   // Đường dẫn chi tiết app (tạm thời fix cứng Candy Crush)
-  item.href = "./assets/html/candy-crush-saga.html";
+  item.href = "/html/candy-crush-saga.html";
 
   // Gán class khác nhau dựa trên tham số isFeatured
   if (isFeatured) {
