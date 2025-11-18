@@ -1,221 +1,183 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
 
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search"
-    />
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=help,star"
-    />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
 
-    <link rel="stylesheet" href="../assets/css/style.css" />
-    <link rel="stylesheet" href="../assets/css/filter.css" />
-    <link rel="stylesheet" href="../assets/css/carousel.css" />
-    <link rel="stylesheet" href="../assets/css/ranking-list.css" />
-    <link rel="stylesheet" href="../assets/css/ranking-list.css" />
-    <!-- <link rel="stylesheet" href="./assets/css/auth.css" /> -->
-    <link rel="stylesheet" href="../assets/css/carousel-scroll.css" />
-    <link rel="stylesheet" href="../assets/css/search.css" />
-    <link rel="stylesheet" href="../assets/css/searchBar.css" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=help,star" />
 
-    <!-- <script src="./assets/js/search.js"></script> -->
-    <script type="module" src="../assets/js/customheader.js"></script>
-    <script type="module" src="../assets/js/customfooter.js"></script>
-  </head>
-  <body>
-    <custom-header></custom-header>
+  <link rel="stylesheet" href="../assets/css/style.css" />
+  <link rel="stylesheet" href="../assets/css/filter.css" />
+  <link rel="stylesheet" href="../assets/css/carousel.css" />
+  <link rel="stylesheet" href="../assets/css/ranking-list.css" />
+  <link rel="stylesheet" href="../assets/css/ranking-list.css" />
+  <!-- <link rel="stylesheet" href="./assets/css/auth.css" /> -->
+  <link rel="stylesheet" href="../assets/css/carousel-scroll.css" />
+  <link rel="stylesheet" href="../assets/css/search.css" />
+  <link rel="stylesheet" href="../assets/css/searchBar.css" />
 
-    <div class="main-content main-content-spacing">
-      <div class="main-content-inner">
+  <!-- <script src="./assets/js/search.js"></script> -->
+  <script type="module" src="../assets/js/customheader.js"></script>
+  <script type="module" src="../assets/js/customfooter.js"></script>
+</head>
+
+<body>
+  <link rel="stylesheet" href="/assets/css/theme.css" />
+
+  <script>
+    (function () {
+      // Lấy chủ đề từ localStorage, mặc định là 'Sáng'
+      const theme = localStorage.getItem("theme") || "Sáng";
+
+      // Áp dụng class Sáng/Tối NGAY LẬP TỨC cho <body>
+      // 'Mùa' cũng dùng 'light-theme'
+      document.body.className =
+        theme === "Tối" ? "dark-theme" : "light-theme";
+    })();
+  </script>
+  <custom-header></custom-header>
+
+  <div class="main-content main-content-spacing">
+    <div class="main-content-inner">
+      <div class="main-page-content">
+        <div class="header-banner-wrapper">
+          <div class="header-banner-container">
+            <div class="image-fit-container">
+              <img src="../assets/logo/tải xuống.png" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="page-title-area">
+          <h1 class="main-heading">
+            Ứng dụng và trò chơi Giáo viên đã phê duyệt
+          </h1>
+        </div>
+        <div class="filter_format filter_children">
+          <div class="filter-content-wrapper">
+            <div class="element-gap horizontal-scroll">
+              <div class="platform-item">
+                <a class="platform-button is-active rounded-full item-selected" href="/store/games?device=windows">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-label">Tất cả độ tuổi từ 12 trở xuống</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="platform-item">
+                <a class="platform-button rounded-full item-selected" href="/store/games?device=phone">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-label">5 tuổi trở xuống</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="platform-item">
+                <a class="platform-button rounded-full item-selected" href="/store/games?device=tablet">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-label">6-8 tuổi</span>
+                  </div>
+                </a>
+              </div>
+
+              <div class="platform-item">
+                <a class="platform-button rounded-full item-selected" href="/store/games?device=tv">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-label">9-12 tuổi</span>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
         <div class="main-page-content">
-          <div class="header-banner-wrapper">
-            <div class="header-banner-container">
-              <div class="image-fit-container">
-                <img src="../assets/logo/tải xuống.png" alt="" />
-              </div>
-            </div>
-          </div>
-          <div class="page-title-area">
-            <h1 class="main-heading">
-              Ứng dụng và trò chơi Giáo viên đã phê duyệt
-            </h1>
-          </div>
-          <div class="filter_format filter_children">
-            <div class="filter-content-wrapper">
-              <div class="element-gap horizontal-scroll">
-                <div class="platform-item">
-                  <a
-                    class="platform-button is-active rounded-full item-selected"
-                    href="/store/games?device=windows"
-                    ><div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-label"
-                        >Tất cả độ tuổi từ 12 trở xuống</span
-                      >
-                    </div></a
-                  >
-                </div>
-
-                <div class="platform-item">
-                  <a
-                    class="platform-button rounded-full item-selected"
-                    href="/store/games?device=phone"
-                    ><div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-label">5 tuổi trở xuống</span>
-                    </div></a
-                  >
-                </div>
-
-                <div class="platform-item">
-                  <a
-                    class="platform-button rounded-full item-selected"
-                    href="/store/games?device=tablet"
-                    ><div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-label">6-8 tuổi</span>
-                    </div></a
-                  >
-                </div>
-
-                <div class="platform-item">
-                  <a
-                    class="platform-button rounded-full item-selected"
-                    href="/store/games?device=tv"
-                    ><div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-label">9-12 tuổi</span>
-                    </div></a
-                  >
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="main-page-content">
-            <div class="app-section">
-              <div class="app-list-container">
-                <div class="app-list-wrapper app-list-wrapper--pc">
-                  <div class="content-wrapper">
-                    <div class="horizontal-scroll app-row app-list-wrapper--pc">
-                      <div class="platform-item spotlight-grid__cell-spacing">
-                        <div
-                          class="card card--outlined card--elevated card--flat AaN0Dd spotlight-banner__container spotlight-app-card"
-                        >
-                          <div>
-                            <div
-                              class="card-container spotlight-banner__content-wrapper"
-                            >
-                              <a href="#" class="card-link pos-relative">
-                                <div
-                                  class="spotlight-card"
-                                  style="background-color: rgb(105, 197, 186)"
-                                >
-                                  <img
-                                    src="https://play-lh.googleusercontent.com/SS4cjt_-IBJbXYrffzu5ej97tKVotqdoHtcJpwWaVc638xU9DR35RMvJSDVEGk8D9zxNXc96SLmP=w648-h364-rw"
-                                    srcset="
+          <div class="app-section">
+            <div class="app-list-container">
+              <div class="app-list-wrapper app-list-wrapper--pc">
+                <div class="content-wrapper">
+                  <div class="horizontal-scroll app-row app-list-wrapper--pc">
+                    <div class="platform-item spotlight-grid__cell-spacing">
+                      <div
+                        class="card card--outlined card--elevated card--flat AaN0Dd spotlight-banner__container spotlight-app-card">
+                        <div>
+                          <div class="card-container spotlight-banner__content-wrapper">
+                            <a href="#" class="card-link pos-relative">
+                              <div class="spotlight-card" style="background-color: rgb(105, 197, 186)">
+                                <img
+                                  src="https://play-lh.googleusercontent.com/SS4cjt_-IBJbXYrffzu5ej97tKVotqdoHtcJpwWaVc638xU9DR35RMvJSDVEGk8D9zxNXc96SLmP=w648-h364-rw"
+                                  srcset="
                                       https://play-lh.googleusercontent.com/SS4cjt_-IBJbXYrffzu5ej97tKVotqdoHtcJpwWaVc638xU9DR35RMvJSDVEGk8D9zxNXc96SLmP=w1296-h728-rw 2x
-                                    "
-                                    class="img-contain spotlight-card__image"
-                                    aria-hidden="true"
-                                    data-iml="37443.70000000112"
-                                  />
-                                  <div class="spotlight-card__footer"></div>
-                                  <div
-                                    class="spotlight-card__image-overlay"
-                                    style="
+                                    " class="img-contain spotlight-card__image" aria-hidden="true"
+                                  data-iml="37443.70000000112" />
+                                <div class="spotlight-card__footer"></div>
+                                <div class="spotlight-card__image-overlay" style="
                                       background-image: linear-gradient(
                                         transparent 43.83%,
                                         rgb(105, 197, 186) 79.64%
                                       );
-                                    "
-                                  ></div>
-                                </div>
-                                <div class="spotlight-card__content-overlay">
-                                  <div
-                                    class="spotlight-card__title text-color-black"
-                                  >
-                                    Thỏa sức vui chơi cùng mèo tại Nhà búp bê
-                                    của Gabby
-                                  </div>
-                                  <div
-                                    class="spotlight-card__subtitle text-color-black"
-                                  >
-                                    Hình dán, màu sắc mới và hơn nữa
-                                  </div>
-                                </div>
-                              </a>
-                            </div>
-                            <div class="spotlight-card__footer-grid">
-                              <a
-                                href="/store/apps/details?id=com.sagosago.CrayonClub.googleplay"
-                                ><div class="spotlight-card__app-info-group">
-                                  <img
-                                    src="https://play-lh.googleusercontent.com/3gddomRH-G_C-werKpfeBjCZ9r7qWsnbYLRT9JDFhuAjQI3_fzCUbbNbZl4b5CWcp4M=s64-rw"
-                                    srcset="
-                                      https://play-lh.googleusercontent.com/3gddomRH-G_C-werKpfeBjCZ9r7qWsnbYLRT9JDFhuAjQI3_fzCUbbNbZl4b5CWcp4M=s128-rw 2x
-                                    "
-                                    class="img-contain spotlight-card__app-icon"
-                                    aria-hidden="true"
-                                    alt="Hình thu nhỏ"
-                                    loading="lazy"
-                                  />
-                                  <div class="spotlight-card__app-details">
-                                    <div class="spotlight-card__detail-line">
-                                      <span
-                                        class="spotlight-card__app-name text-color-black"
-                                        >Crayon Club: Color PAW Patrol</span
-                                      >
-                                    </div>
-                                    <div class="spotlight-card__detail-line">
-                                      <span
-                                        class="spotlight-card__app-category text-color-black"
-                                        >Play Piknik</span
-                                      ><span
-                                        aria-hidden="true"
-                                        class="spotlight-card__rating-spacer text-color-black"
-                                        >•</span
-                                      ><img
-                                        src="https://play-lh.googleusercontent.com/EbEX3AN4FC4pu3lsElAHCiksluOVU8OgkgtWC43-wmm_aHVq2D65FmEM97bPexilUAvlAY5_4ARH8Tb3RxQ=s16-rw"
-                                        srcset="
-                                          https://play-lh.googleusercontent.com/EbEX3AN4FC4pu3lsElAHCiksluOVU8OgkgtWC43-wmm_aHVq2D65FmEM97bPexilUAvlAY5_4ARH8Tb3RxQ=s32-rw 2x
-                                        "
-                                        class="img-contain spotlight-card__rating-star-icon"
-                                        alt="Mức phân loại nội dung 3 tuổi trở lên"
-                                        loading="lazy"
-                                      />
-                                    </div>
-                                  </div></div
-                              ></a>
-                              <div class="util-flex-center-column">
-                                <div>
-                                  <div class="button-wrapper">
-                                    <div
-                                      class="button__touch-wrapper"
-                                      data-is-touch-wrapper="true"
-                                    >
-                                      <button
-                                        class="button button--theme-green button--contained button--typography AjY5Oe button--padding-x-large focus-visible button--shape-rounded button--text-light button--min-width-medium spotlight-button--small text-color-black spotlight-button--secondary"
-                                      >
-                                        <div class="ripple--bounded"></div>
-                                        <div class="button__focus-ring"></div>
-                                        <div class="button__touch-target"></div>
-                                        <span class="button__label"
-                                          >Cài đặt</span
-                                        >
-                                      </button>
-                                    </div>
-                                  </div>
-                                </div>
-                                <span class="app-purchase-note text-color-black"
-                                  >Mua trong ứng dụng</span
-                                >
+                                    "></div>
                               </div>
+                              <div class="spotlight-card__content-overlay">
+                                <div class="spotlight-card__title text-color-black">
+                                  Thỏa sức vui chơi cùng mèo tại Nhà búp bê
+                                  của Gabby
+                                </div>
+                                <div class="spotlight-card__subtitle text-color-black">
+                                  Hình dán, màu sắc mới và hơn nữa
+                                </div>
+                              </div>
+                            </a>
+                          </div>
+                          <div class="spotlight-card__footer-grid">
+                            <a href="/store/apps/details?id=com.sagosago.CrayonClub.googleplay">
+                              <div class="spotlight-card__app-info-group">
+                                <img
+                                  src="https://play-lh.googleusercontent.com/3gddomRH-G_C-werKpfeBjCZ9r7qWsnbYLRT9JDFhuAjQI3_fzCUbbNbZl4b5CWcp4M=s64-rw"
+                                  srcset="
+                                      https://play-lh.googleusercontent.com/3gddomRH-G_C-werKpfeBjCZ9r7qWsnbYLRT9JDFhuAjQI3_fzCUbbNbZl4b5CWcp4M=s128-rw 2x
+                                    " class="img-contain spotlight-card__app-icon" aria-hidden="true"
+                                  alt="Hình thu nhỏ" loading="lazy" />
+                                <div class="spotlight-card__app-details">
+                                  <div class="spotlight-card__detail-line">
+                                    <span class="spotlight-card__app-name text-color-black">Crayon Club: Color PAW
+                                      Patrol</span>
+                                  </div>
+                                  <div class="spotlight-card__detail-line">
+                                    <span class="spotlight-card__app-category text-color-black">Play Piknik</span><span
+                                      aria-hidden="true"
+                                      class="spotlight-card__rating-spacer text-color-black">•</span><img
+                                      src="https://play-lh.googleusercontent.com/EbEX3AN4FC4pu3lsElAHCiksluOVU8OgkgtWC43-wmm_aHVq2D65FmEM97bPexilUAvlAY5_4ARH8Tb3RxQ=s16-rw"
+                                      srcset="
+                                          https://play-lh.googleusercontent.com/EbEX3AN4FC4pu3lsElAHCiksluOVU8OgkgtWC43-wmm_aHVq2D65FmEM97bPexilUAvlAY5_4ARH8Tb3RxQ=s32-rw 2x
+                                        " class="img-contain spotlight-card__rating-star-icon"
+                                      alt="Mức phân loại nội dung 3 tuổi trở lên" loading="lazy" />
+                                  </div>
+                                </div>
+                              </div>
+                            </a>
+                            <div class="util-flex-center-column">
+                              <div>
+                                <div class="button-wrapper">
+                                  <div class="button__touch-wrapper" data-is-touch-wrapper="true">
+                                    <button
+                                      class="button button--theme-green button--contained button--typography AjY5Oe button--padding-x-large focus-visible button--shape-rounded button--text-light button--min-width-medium spotlight-button--small text-color-black spotlight-button--secondary">
+                                      <div class="ripple--bounded"></div>
+                                      <div class="button__focus-ring"></div>
+                                      <div class="button__touch-target"></div>
+                                      <span class="button__label">Cài đặt</span>
+                                    </button>
+                                  </div>
+                                </div>
+                              </div>
+                              <span class="app-purchase-note text-color-black">Mua trong ứng dụng</span>
                             </div>
                           </div>
                         </div>
@@ -225,86 +187,67 @@
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="app-section">
-              <div>
-                <section>
-                  <header class="section-header-spacing section-header-margin">
-                    <div class="section-banner-title">
-                      <span>Play your favorites on the big screen</span>
-                    </div>
-                    <div class="section-banner-description">
-                      <span>Google Play Games on PC</span>
-                    </div>
-                  </header>
+          <div class="app-section">
+            <div>
+              <section>
+                <header class="section-header-spacing section-header-margin">
+                  <div class="section-banner-title">
+                    <span>Play your favorites on the big screen</span>
+                  </div>
+                  <div class="section-banner-description">
+                    <span>Google Play Games on PC</span>
+                  </div>
+                </header>
 
-                  <div class="app-list-container">
-                    <div class="app-list-wrapper app-list-wrapper--pc">
-                      <div class="content-wrapper">
-                        <div
-                          class="horizontal-scroll app-row app-list-wrapper--pc"
-                          id="pc-games-row"
-                        ></div>
-                      </div>
+                <div class="app-list-container">
+                  <div class="app-list-wrapper app-list-wrapper--pc">
+                    <div class="content-wrapper">
+                      <div class="horizontal-scroll app-row app-list-wrapper--pc" id="pc-games-row"></div>
                     </div>
                   </div>
-                </section>
-              </div>
+                </div>
+              </section>
             </div>
+          </div>
 
-            <div class="app-section">
-              <div class="app-list-container">
-                <div class="app-list-wrapper app-list-wrapper--pc">
-                  <div class="content-wrapper">
-                    <div class="horizontal-scroll app-row app-list-wrapper--pc">
-                      <div class="platform-item spotlight-grid__cell-spacing">
-                        <div
-                          class="card card--outlined card--elevated card--flat AaN0Dd spotlight-banner__container spotlight-app-card"
-                        >
-                          <div class="card__content">
-                            <div
-                              class="card-container spotlight-banner__content-wrapper"
-                            >
-                              <a href="#" class="card-link pos-relative">
-                                <div
-                                  class="spotlight-card"
-                                  style="background-color: rgb(46, 53, 121)"
-                                >
-                                  <img
-                                    src="https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w648-h364-rw"
-                                    srcset="
+          <div class="app-section">
+            <div class="app-list-container">
+              <div class="app-list-wrapper app-list-wrapper--pc">
+                <div class="content-wrapper">
+                  <div class="horizontal-scroll app-row app-list-wrapper--pc">
+                    <div class="platform-item spotlight-grid__cell-spacing">
+                      <div
+                        class="card card--outlined card--elevated card--flat AaN0Dd spotlight-banner__container spotlight-app-card">
+                        <div class="card__content">
+                          <div class="card-container spotlight-banner__content-wrapper">
+                            <a href="#" class="card-link pos-relative">
+                              <div class="spotlight-card" style="background-color: rgb(46, 53, 121)">
+                                <img
+                                  src="https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w648-h364-rw"
+                                  srcset="
                                       https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w1296-h728-rw 2x
-                                    "
-                                    class="img-contain spotlight-card__image"
-                                    aria-hidden="true"
-                                    data-iml="37443.70000000112"
-                                  />
-                                  <div class="spotlight-card__footer"></div>
-                                  <div
-                                    class="spotlight-card__image-overlay"
-                                    style="
+                                    " class="img-contain spotlight-card__image" aria-hidden="true"
+                                  data-iml="37443.70000000112" />
+                                <div class="spotlight-card__footer"></div>
+                                <div class="spotlight-card__image-overlay" style="
                                       background-image: linear-gradient(
                                         transparent 48.15%,
                                         rgb(46, 53, 121) 94.91%
                                       );
-                                    "
-                                  ></div>
+                                    "></div>
+                              </div>
+                              <div class="spotlight-card__content-overlay">
+                                <div class="spotlight-card__title text-color-white">
+                                  Thỏa sức vui chơi cùng mèo tại Nhà búp bê
+                                  của Gabby
                                 </div>
-                                <div class="spotlight-card__content-overlay">
-                                  <div
-                                    class="spotlight-card__title text-color-white"
-                                  >
-                                    Thỏa sức vui chơi cùng mèo tại Nhà búp bê
-                                    của Gabby
-                                  </div>
-                                  <div
-                                    class="spotlight-card__subtitle text-color-white"
-                                  >
-                                    Hình dán, màu sắc mới và hơn nữa
-                                  </div>
+                                <div class="spotlight-card__subtitle text-color-white">
+                                  Hình dán, màu sắc mới và hơn nữa
                                 </div>
-                              </a>
-                            </div>
+                              </div>
+                            </a>
                           </div>
                         </div>
                       </div>
@@ -313,464 +256,390 @@
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="app-section">
-              <div>
-                <section>
-                  <header class="section-header-spacing section-header-margin">
-                    <div class="section-banner-title">
-                      <span>Play your favorites on the big screen</span>
-                    </div>
-                    <div class="section-banner-description">
-                      <span>Google Play Games on PC</span>
-                    </div>
-                  </header>
+          <div class="app-section">
+            <div>
+              <section>
+                <header class="section-header-spacing section-header-margin">
+                  <div class="section-banner-title">
+                    <span>Play your favorites on the big screen</span>
+                  </div>
+                  <div class="section-banner-description">
+                    <span>Google Play Games on PC</span>
+                  </div>
+                </header>
 
-                  <div class="app-list-container">
-                    <div class="app-list-wrapper app-list-wrapper--pc">
-                      <div class="content-wrapper">
-                        <div
-                          class="horizontal-scroll app-row app-list-wrapper--pc"
-                          id="pc-games-row-2"
-                        ></div>
-                      </div>
+                <div class="app-list-container">
+                  <div class="app-list-wrapper app-list-wrapper--pc">
+                    <div class="content-wrapper">
+                      <div class="horizontal-scroll app-row app-list-wrapper--pc" id="pc-games-row-2"></div>
                     </div>
                   </div>
-                </section>
-              </div>
+                </div>
+              </section>
             </div>
           </div>
         </div>
       </div>
     </div>
+  </div>
 
-    <custom-footer></custom-footer>
-    <div class="ranking-overlay" id="rankingOverlay">
-      <div class="ranking-container">
-        <!-- THAY ĐỔI: Tiêu đề mới -->
-        <div class="ranking-header">
-          <h1>Bảng xếp hạng</h1>
-          <!-- NÚT X ĐỂ TẮT -->
-          <button class="close-btn" id="closeRankingBtn">&times;</button>
-        </div>
-        <div
-          style="
+  <custom-footer></custom-footer>
+  <div class="ranking-overlay" id="rankingOverlay">
+    <div class="ranking-container">
+      <!-- THAY ĐỔI: Tiêu đề mới -->
+      <div class="ranking-header">
+        <h1>Bảng xếp hạng</h1>
+        <!-- NÚT X ĐỂ TẮT -->
+        <button class="close-btn" id="closeRankingBtn">&times;</button>
+      </div>
+      <div style="
             position: relative;
             justify-content: center;
             text-align: center;
-          "
-        >
-          <div class="filter-bar-scroll-container">
-            <div class="platform-item dropdown">
-              <div
-                class="platform-button"
-                data-default="Tính phí"
-                onclick="toggleDropdown(event, 'priceDropdown')"
-              >
-                <div class="ripple-effect"></div>
-                <div class="button-content">
-                  <span class="button-prefix">
-                    <svg
-                      class="button-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 -960 960 960"
-                    >
-                      <path
-                        d="M480-120q-116 0-213-64.5T135-350h82q31 79 97.5 124T480-180q83 0 141.5-58.5T680-420q0-70-42-116.5T520-610q-51-24-81-43t-30-51q0-31 21-51.5T480-780q27 0 52 11.5T573-740h82q-20-41-48.5-63T520-820q-83 0-141.5 58.5T320-680q0 70 42 116.5T480-490q51 24 81 43t30 51q0 31-21 51.5T520-320q-27 0-52-11.5T427-360h-82q20 41 48.5 63T480-280q83 0 141.5-58.5T680-420h80q-50 143-138.5 211.5T480-120Z"
-                      />
-                    </svg>
-                  </span>
-                  <span class="button-label">Tính phí</span>
+          ">
+        <div class="filter-bar-scroll-container">
+          <div class="platform-item dropdown">
+            <div class="platform-button" data-default="Tính phí" onclick="toggleDropdown(event, 'priceDropdown')">
+              <div class="ripple-effect"></div>
+              <div class="button-content">
+                <span class="button-prefix">
+                  <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path
+                      d="M480-120q-116 0-213-64.5T135-350h82q31 79 97.5 124T480-180q83 0 141.5-58.5T680-420q0-70-42-116.5T520-610q-51-24-81-43t-30-51q0-31 21-51.5T480-780q27 0 52 11.5T573-740h82q-20-41-48.5-63T520-820q-83 0-141.5 58.5T320-680q0 70 42 116.5T480-490q51 24 81 43t30 51q0 31-21 51.5T520-320q-27 0-52-11.5T427-360h-82q20 41 48.5 63T480-280q83 0 141.5-58.5T680-420h80q-50 143-138.5 211.5T480-120Z" />
+                  </svg>
+                </span>
+                <span class="button-label">Tính phí</span>
+              </div>
+            </div>
+            <div id="priceDropdown" class="dropdown-content">
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span>
+                    <span class="button-label">Miễn phí phổ biến</span>
+                  </div>
                 </div>
               </div>
-              <div id="priceDropdown" class="dropdown-content">
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"></span>
-                      <span class="button-label">Miễn phí phổ biến</span>
-                    </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span>
+                    <span class="button-label">Doanh thu cao nhất</span>
                   </div>
                 </div>
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"></span>
-                      <span class="button-label">Doanh thu cao nhất</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"></span>
-                      <span class="button-label">Có tính phí phổ biến</span>
-                    </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span>
+                    <span class="button-label">Có tính phí phổ biến</span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="platform-item dropdown">
-              <div
-                class="platform-button"
-                data-default="Thiết bị"
-                onclick="toggleDropdown(event, 'deviceDropdown')"
-              >
-                <div class="ripple-effect"></div>
-                <div class="button-content">
-                  <span class="button-prefix">
-                    <svg
-                      class="button-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 -960 960 960"
-                    >
-                      <path
-                        d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z"
-                      />
-                    </svg>
-                  </span>
-                  <span class="button-label">Thiết bị</span>
+          <div class="platform-item dropdown">
+            <div class="platform-button" data-default="Thiết bị" onclick="toggleDropdown(event, 'deviceDropdown')">
+              <div class="ripple-effect"></div>
+              <div class="button-content">
+                <span class="button-prefix">
+                  <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path
+                      d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z" />
+                  </svg>
+                </span>
+                <span class="button-label">Thiết bị</span>
+              </div>
+            </div>
+            <div id="deviceDropdown" class="dropdown-content">
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"><svg class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 -960 960 960">
+                        <path
+                          d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z" />
+                      </svg></span>
+                    <span class="button-label">Windows</span>
+                  </div>
                 </div>
               </div>
-              <div id="deviceDropdown" class="dropdown-content">
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"
-                        ><svg
-                          class="button-icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 -960 960 960"
-                        >
-                          <path
-                            d="M320-120v-80h80v-80H160q-33 0-56.5-23.5T80-360v-400q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v400q0 33-23.5 56.5T800-280H560v80h80v80H320ZM160-360h640v-400H160v400Zm0 0v-400 400Z"
-                          /></svg
-                      ></span>
-                      <span class="button-label">Windows</span>
-                    </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"><svg class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 -960 960 960">
+                        <path
+                          d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v124q18 7 29 22t11 34v80q0 19-11 34t-29 22v404q0 33-23.5 56.5T680-40H280Zm0-80h400v-720H280v720Zm0 0v-720 720Zm200-40q17 0 28.5-11.5T520-200q0-17-11.5-28.5T480-240q-17 0-28.5 11.5T440-200q0 17 11.5 28.5T480-160Z" />
+                      </svg></span>
+                    <span class="button-label">Điện thoại</span>
                   </div>
                 </div>
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"
-                        ><svg
-                          class="button-icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 -960 960 960"
-                        >
-                          <path
-                            d="M280-40q-33 0-56.5-23.5T200-120v-720q0-33 23.5-56.5T280-920h400q33 0 56.5 23.5T760-840v124q18 7 29 22t11 34v80q0 19-11 34t-29 22v404q0 33-23.5 56.5T680-40H280Zm0-80h400v-720H280v720Zm0 0v-720 720Zm200-40q17 0 28.5-11.5T520-200q0-17-11.5-28.5T480-240q-17 0-28.5 11.5T440-200q0 17 11.5 28.5T480-160Z"
-                          /></svg
-                      ></span>
-                      <span class="button-label">Điện thoại</span>
-                    </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"><svg class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 -960 960 960">
+                        <path
+                          d="M480-140q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM200-40q-33 0-56.5-23.5T120-120v-720q0-33 23.5-56.5T200-920h560q33 0 56.5 23.5T840-840v720q0 33-23.5 56.5T760-40H200Zm0-200v120h560v-120H200Zm0-80h560v-400H200v400Zm0-480h560v-40H200v40Zm0 0v-40 40Zm0 560v120-120Z" />
+                      </svg></span>
+                    <span class="button-label">Máy tính bảng</span>
                   </div>
                 </div>
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"
-                        ><svg
-                          class="button-icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 -960 960 960"
-                        >
-                          <path
-                            d="M480-140q17 0 28.5-11.5T520-180q0-17-11.5-28.5T480-220q-17 0-28.5 11.5T440-180q0 17 11.5 28.5T480-140ZM200-40q-33 0-56.5-23.5T120-120v-720q0-33 23.5-56.5T200-920h560q33 0 56.5 23.5T840-840v720q0 33-23.5 56.5T760-40H200Zm0-200v120h560v-120H200Zm0-80h560v-400H200v400Zm0-480h560v-40H200v40Zm0 0v-40 40Zm0 560v120-120Z"
-                          /></svg
-                      ></span>
-                      <span class="button-label">Máy tính bảng</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"
-                        ><svg
-                          class="button-icon"
-                          xmlns="http://www.w3.org/2000/svg"
-                          viewBox="0 -960 960 960"
-                        >
-                          <path
-                            d="M320-120v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z"
-                          /></svg
-                      ></span>
-                      <span class="button-label">Ti vi</span>
-                    </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"><svg class="button-icon" xmlns="http://www.w3.org/2000/svg"
+                        viewBox="0 -960 960 960">
+                        <path
+                          d="M320-120v-80H160q-33 0-56.5-23.5T80-280v-480q0-33 23.5-56.5T160-840h640q33 0 56.5 23.5T880-760v480q0 33-23.5 56.5T800-200H640v80H320ZM160-280h640v-480H160v480Zm0 0v-480 480Z" />
+                      </svg></span>
+                    <span class="button-label">Ti vi</span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="platform-item dropdown">
-              <div
-                class="platform-button"
-                data-default="Danh mục"
-                onclick="toggleDropdown(event, 'categoryDropdown')"
-              >
-                <div class="ripple-effect"></div>
-                <div class="button-content">
-                  <span class="button-prefix">
-                    <svg
-                      class="button-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 -960 960 960"
-                    >
-                      <path
-                        d="M120-120v-320h320v320H120Zm0-400v-320h320v320H120Zm400 400v-320h320v320H520Zm0-400v-320h320v320H520Z"
-                      />
-                    </svg>
-                  </span>
-                  <span class="button-label">Danh mục</span>
+          <div class="platform-item dropdown">
+            <div class="platform-button" data-default="Danh mục" onclick="toggleDropdown(event, 'categoryDropdown')">
+              <div class="ripple-effect"></div>
+              <div class="button-content">
+                <span class="button-prefix">
+                  <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path
+                      d="M120-120v-320h320v320H120Zm0-400v-320h320v320H120Zm400 400v-320h320v320H520Zm0-400v-320h320v320H520Z" />
+                  </svg>
+                </span>
+                <span class="button-label">Danh mục</span>
+              </div>
+            </div>
+            <div id="categoryDropdown" class="dropdown-content">
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span><span class="button-label">App</span>
+                  </div>
                 </div>
               </div>
-              <div id="categoryDropdown" class="dropdown-content">
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"></span
-                      ><span class="button-label">App</span>
-                    </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span><span class="button-label">Game</span>
                   </div>
                 </div>
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"></span
-                      ><span class="button-label">Game</span>
-                    </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span><span class="button-label">Tool</span>
                   </div>
                 </div>
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"></span
-                      ><span class="button-label">Tool</span>
-                    </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span><span class="button-label">Education</span>
                   </div>
                 </div>
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"></span
-                      ><span class="button-label">Education</span>
-                    </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span><span class="button-label">RPG</span>
                   </div>
                 </div>
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"></span
-                      ><span class="button-label">RPG</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="platform-item">
-                  <div class="platform-button">
-                    <div class="ripple-effect"></div>
-                    <div class="button-content">
-                      <span class="button-prefix"></span
-                      ><span class="button-label">Action</span>
-                    </div>
+              </div>
+              <div class="platform-item">
+                <div class="platform-button">
+                  <div class="ripple-effect"></div>
+                  <div class="button-content">
+                    <span class="button-prefix"></span><span class="button-label">Action</span>
                   </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <div class="platform-item">
-              <div class="platform-button" id="newFilterBtn">
-                <div class="ripple-effect"></div>
-                <div class="button-content">
-                  <span class="button-prefix">
-                    <svg
-                      class="button-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 -960 960 960"
-                    >
-                      <path
-                        d="M440-200l-48-102-102-48 102-48 48-102 48 102 102 48-102 48-48 102Zm160 120-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Zm-320 0-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Z"
-                      />
-                    </svg>
-                  </span>
-                  <span class="button-label">Mới</span>
-                </div>
+          <div class="platform-item">
+            <div class="platform-button" id="newFilterBtn">
+              <div class="ripple-effect"></div>
+              <div class="button-content">
+                <span class="button-prefix">
+                  <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path
+                      d="M440-200l-48-102-102-48 102-48 48-102 48 102 102 48-102 48-48 102Zm160 120-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Zm-320 0-32-68-68-32 68-32 32-68 32 68 68 32-68 32-32 68Z" />
+                  </svg>
+                </span>
+                <span class="button-label">Mới</span>
               </div>
             </div>
+          </div>
 
-            <div class="platform-item">
-              <div class="platform-button" onclick="clearFilters()">
-                <div class="ripple-effect"></div>
-                <div class="button-content">
-                  <span class="button-prefix">
-                    <svg
-                      class="button-icon"
-                      xmlns="http://www.w3.org/2000/svg"
-                      viewBox="0 -960 960 960"
-                    >
-                      <path
-                        d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"
-                      />
-                    </svg>
-                  </span>
-                  <span class="button-label">Clear filters</span>
-                </div>
+          <div class="platform-item">
+            <div class="platform-button" onclick="clearFilters()">
+              <div class="ripple-effect"></div>
+              <div class="button-content">
+                <span class="button-prefix">
+                  <svg class="button-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 -960 960 960">
+                    <path
+                      d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z" />
+                  </svg>
+                </span>
+                <span class="button-label">Clear filters</span>
               </div>
             </div>
           </div>
         </div>
-
-        <div class="ranking-list-scrollable">
-          <!-- Item 1 (Có sẵn) -->
-          <div class="ranking-item">
-            <div class="ranking-number">1</div>
-            <img
-              src="https://play-lh.googleusercontent.com/LML01HqsS5NiQ9GDoNxaFMUQndr3osVA2LoVWck58hC9Vxe15GrmbUc2QhwlFOJlfGaR=s96-rw"
-              alt="TFT Icon"
-              class="app-icon"
-            />
-            <div class="app-details">
-              <div class="app-name">Teamfight Tactics</div>
-              <div class="app-category">Chiến thuật</div>
-              <div class="app-rating">
-                <span>4,1</span>
-                <i class="material-icons">star</i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 2 (Mới) -->
-          <div class="ranking-item">
-            <div class="ranking-number">2</div>
-            <img
-              src="https://play-lh.googleusercontent.com/R0qgNDYYHbRhw6JFsdEbDMqONplEvJx0m0W9wzYVvY3eNF1c2rfBWYjQxW0sLEzFe1E=s64-rw"
-              alt="Block Blast! Icon"
-              class="app-icon"
-            />
-            <div class="app-details">
-              <div class="app-name">Block Blast!</div>
-              <div class="app-category">Giải đố • Xếp hình • Phổ thông</div>
-              <div class="app-rating">
-                <span>4,6</span>
-                <i class="material-icons">star</i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 3 (Mới) -->
-          <div class="ranking-item">
-            <div class="ranking-number">3</div>
-            <img
-              src="https://play-lh.googleusercontent.com/TYNTOTufkgDXPlRZ44NxBfd2sCAfXB4qkIooR1jTiCwrJG0lMvJvJI8PAXUrYZDbKw=s64-rw"
-              alt="Nghịch Thủy Hàn Icon"
-              class="app-icon"
-            />
-            <div class="app-details">
-              <div class="app-name">Nghịch Thủy Hàn</div>
-              <div class="app-category">Nhập vai</div>
-              <div class="app-rating">
-                <span>4,5</span>
-                <i class="material-icons">star</i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 4 (Mới) -->
-          <div class="ranking-item">
-            <div class="ranking-number">4</div>
-            <img
-              src="https://play-lh.googleusercontent.com/hkJ5oNiCo6LkLt0HuFk7S8uInQqqnDxAKmFfYURb8qYiY9aYzWoHb4ob3JE_TkUPs1M=s64-rw"
-              alt="Roblox VN Icon"
-              class="app-icon"
-            />
-            <div class="app-details">
-              <div class="app-name">Roblox VN</div>
-              <div class="app-category">Mô phỏng • Phổ thông</div>
-              <div class="app-rating">
-                <span>3,8</span>
-                <i class="material-icons">star</i>
-              </div>
-            </div>
-          </div>
-
-          <!-- Item 5 (Mới) -->
-          <div class="ranking-item">
-            <div class="ranking-number">5</div>
-            <img
-              src="https://play-lh.googleusercontent.com/esn4ChQLU0wnGiVcQ64-RfgcKYN3wvpNqRRuNgik25Z2-H9Rv9G_nayig6krd1GookqEyQxHq0RIaSHExe5W9BU=s64-rw"
-              alt="Chiến Tuyến Hướng Dương Icon"
-              class="app-icon"
-            />
-            <div class="app-details">
-              <div class="app-name">Chiến Tuyến Hướng Dương</div>
-              <div class="app-category">Phổ thông</div>
-              <div class="app-rating">
-                <span>4,6</span>
-                <i class="material-icons">star</i>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- Kết thúc .ranking-list-scrollable -->
       </div>
+
+      <div class="ranking-list-scrollable">
+        <!-- Item 1 (Có sẵn) -->
+        <div class="ranking-item">
+          <div class="ranking-number">1</div>
+          <img
+            src="https://play-lh.googleusercontent.com/LML01HqsS5NiQ9GDoNxaFMUQndr3osVA2LoVWck58hC9Vxe15GrmbUc2QhwlFOJlfGaR=s96-rw"
+            alt="TFT Icon" class="app-icon" />
+          <div class="app-details">
+            <div class="app-name">Teamfight Tactics</div>
+            <div class="app-category">Chiến thuật</div>
+            <div class="app-rating">
+              <span>4,1</span>
+              <i class="material-icons">star</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 2 (Mới) -->
+        <div class="ranking-item">
+          <div class="ranking-number">2</div>
+          <img
+            src="https://play-lh.googleusercontent.com/R0qgNDYYHbRhw6JFsdEbDMqONplEvJx0m0W9wzYVvY3eNF1c2rfBWYjQxW0sLEzFe1E=s64-rw"
+            alt="Block Blast! Icon" class="app-icon" />
+          <div class="app-details">
+            <div class="app-name">Block Blast!</div>
+            <div class="app-category">Giải đố • Xếp hình • Phổ thông</div>
+            <div class="app-rating">
+              <span>4,6</span>
+              <i class="material-icons">star</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 3 (Mới) -->
+        <div class="ranking-item">
+          <div class="ranking-number">3</div>
+          <img
+            src="https://play-lh.googleusercontent.com/TYNTOTufkgDXPlRZ44NxBfd2sCAfXB4qkIooR1jTiCwrJG0lMvJvJI8PAXUrYZDbKw=s64-rw"
+            alt="Nghịch Thủy Hàn Icon" class="app-icon" />
+          <div class="app-details">
+            <div class="app-name">Nghịch Thủy Hàn</div>
+            <div class="app-category">Nhập vai</div>
+            <div class="app-rating">
+              <span>4,5</span>
+              <i class="material-icons">star</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 4 (Mới) -->
+        <div class="ranking-item">
+          <div class="ranking-number">4</div>
+          <img
+            src="https://play-lh.googleusercontent.com/hkJ5oNiCo6LkLt0HuFk7S8uInQqqnDxAKmFfYURb8qYiY9aYzWoHb4ob3JE_TkUPs1M=s64-rw"
+            alt="Roblox VN Icon" class="app-icon" />
+          <div class="app-details">
+            <div class="app-name">Roblox VN</div>
+            <div class="app-category">Mô phỏng • Phổ thông</div>
+            <div class="app-rating">
+              <span>3,8</span>
+              <i class="material-icons">star</i>
+            </div>
+          </div>
+        </div>
+
+        <!-- Item 5 (Mới) -->
+        <div class="ranking-item">
+          <div class="ranking-number">5</div>
+          <img
+            src="https://play-lh.googleusercontent.com/esn4ChQLU0wnGiVcQ64-RfgcKYN3wvpNqRRuNgik25Z2-H9Rv9G_nayig6krd1GookqEyQxHq0RIaSHExe5W9BU=s64-rw"
+            alt="Chiến Tuyến Hướng Dương Icon" class="app-icon" />
+          <div class="app-details">
+            <div class="app-name">Chiến Tuyến Hướng Dương</div>
+            <div class="app-category">Phổ thông</div>
+            <div class="app-rating">
+              <span>4,6</span>
+              <i class="material-icons">star</i>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Kết thúc .ranking-list-scrollable -->
     </div>
-    <script src="../assets/js/homeData.js"></script>
+  </div>
+  <script src="../assets/js/homeData.js"></script>
 
-    <script src="../assets/js/homeRender.js"></script>
-    <script src="../assets/js/carousel.js"></script>
-    <script src="../assets/js/filter.js"></script>
-    <script>
-      document.addEventListener("DOMContentLoaded", function () {
-        // --- THÊM JS CHO TÍNH NĂNG POPUP ---
+  <script src="../assets/js/homeRender.js"></script>
+  <script src="../assets/js/carousel.js"></script>
+  <script src="../assets/js/filter.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      // --- THÊM JS CHO TÍNH NĂNG POPUP ---
 
-        // Lấy các phần tử
-        const openBtn = document.getElementById("openRankingBtn");
-        const closeBtn = document.getElementById("closeRankingBtn");
-        const overlay = document.getElementById("rankingOverlay");
+      // Lấy các phần tử
+      const openBtn = document.getElementById("openRankingBtn");
+      const closeBtn = document.getElementById("closeRankingBtn");
+      const overlay = document.getElementById("rankingOverlay");
 
-        // Khi bấm nút "Mở Bảng Xếp Hạng"
-        if (openBtn) {
-          openBtn.addEventListener("click", function () {
-            overlay.classList.add("visible");
-          });
-        }
+      // Khi bấm nút "Mở Bảng Xếp Hạng"
+      if (openBtn) {
+        openBtn.addEventListener("click", function () {
+          overlay.classList.add("visible");
+        });
+      }
 
-        // Khi bấm nút "X"
-        if (closeBtn) {
-          closeBtn.addEventListener("click", function () {
+      // Khi bấm nút "X"
+      if (closeBtn) {
+        closeBtn.addEventListener("click", function () {
+          overlay.classList.remove("visible");
+        });
+      }
+
+      // Khi bấm ra ngoài khu vực .ranking-container (trên overlay)
+      if (overlay) {
+        overlay.addEventListener("click", function (event) {
+          // Kiểm tra xem click có phải trực tiếp vào overlay không
+          if (event.target === overlay) {
             overlay.classList.remove("visible");
-          });
-        }
+          }
+        });
+      }
+    });
+  </script>
+  <script src="../assets/js/searchBar.js"></script>
+  <script src="../assets/js/login.js"></script>
+  <script src="../assets/js/register.js"></script>
+  <script src="../assets/js/carousel-scroll.js"></script>
+  <script src="../assets/js/navigation.js"></script>
+  <script src="/assets/js/SettingTab.js"></script>
+  <script src="/assets/js/theme-manager.js"></script>
+</body>
 
-        // Khi bấm ra ngoài khu vực .ranking-container (trên overlay)
-        if (overlay) {
-          overlay.addEventListener("click", function (event) {
-            // Kiểm tra xem click có phải trực tiếp vào overlay không
-            if (event.target === overlay) {
-              overlay.classList.remove("visible");
-            }
-          });
-        }
-      });
-    </script>
-    <script src="../assets/js/searchBar.js"></script>
-    <script src="../assets/js/login.js"></script>
-    <script src="../assets/js/register.js"></script>
-    <script src="../assets/js/carousel-scroll.js"></script>
-    <script src="../assets/js/navigation.js"></script>
-  </body>
 </html>
