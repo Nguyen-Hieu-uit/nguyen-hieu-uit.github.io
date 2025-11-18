@@ -610,7 +610,7 @@ button {
   --gm3-button-outlined-container-min-width: 160px;
 }
 
-.button-label {
+.modal-container .button-label {
   position: relative;
   text-align: center;
   color: var(

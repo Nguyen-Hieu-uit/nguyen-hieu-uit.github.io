@@ -1,16 +1,17 @@
 // CustomHeader.js
 
 class CustomHeader extends HTMLElement {
-    constructor() {
-        super();
+  constructor() {
+    super();
 
-        // Thêm HTML trực tiếp vào component
-        this.innerHTML = `
+    // Thêm HTML trực tiếp vào component
+    this.innerHTML = `
             <link rel="stylesheet" href="/assets/css/style.css">
             <link rel="stylesheet" href="/assets/css/SettingTab.css">
             <link rel="stylesheet" href="/assets/css/header.css">
+            
 
-            <header class="header">
+            <header class="header" id="header">
                 <nav class="nav">
                     <a href="/index.html" aria-label="Biểu trưng của App Market" class="header__logo-link">
                         <img src="/assets/logo/logo.png" alt="App Market logo" />
@@ -96,8 +97,8 @@ class CustomHeader extends HTMLElement {
                 </nav>
             </header>
         `;
-    }
+  }
 }
 
 // Đăng ký component
-customElements.define('custom-header', CustomHeader);
+customElements.define("custom-header", CustomHeader);

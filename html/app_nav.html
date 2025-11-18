@@ -243,7 +243,7 @@
                       <div class="ripple-effect"></div>
                       <div class="button-content">
                         <span class="button-prefix"></span
-                        ><span class="button-label">App</span>
+                        ><span class="button-label">Tiện ích</span>
                       </div>
                     </div>
                   </div>
@@ -252,7 +252,7 @@
                       <div class="ripple-effect"></div>
                       <div class="button-content">
                         <span class="button-prefix"></span
-                        ><span class="button-label">Game</span>
+                        ><span class="button-label">Mạng xã hội</span>
                       </div>
                     </div>
                   </div>
@@ -261,7 +261,7 @@
                       <div class="ripple-effect"></div>
                       <div class="button-content">
                         <span class="button-prefix"></span
-                        ><span class="button-label">Tool</span>
+                        ><span class="button-label">Sức khỏe</span>
                       </div>
                     </div>
                   </div>
@@ -270,7 +270,7 @@
                       <div class="ripple-effect"></div>
                       <div class="button-content">
                         <span class="button-prefix"></span
-                        ><span class="button-label">Education</span>
+                        ><span class="button-label">Giáo dục</span>
                       </div>
                     </div>
                   </div>
@@ -279,7 +279,7 @@
                       <div class="ripple-effect"></div>
                       <div class="button-content">
                         <span class="button-prefix"></span
-                        ><span class="button-label">RPG</span>
+                        ><span class="button-label">Tin tức</span>
                       </div>
                     </div>
                   </div>
@@ -288,7 +288,7 @@
                       <div class="ripple-effect"></div>
                       <div class="button-content">
                         <span class="button-prefix"></span
-                        ><span class="button-label">Action</span>
+                        ><span class="button-label">Hẹn hò</span>
                       </div>
                     </div>
                   </div>
@@ -446,7 +446,7 @@
                     <span>Play your favorites on the big screen</span>
                   </div>
                   <div class="section-banner-description">
-                    <span>Google Play Games on PC</span>
+                    <span>App Market Games on PC</span>
                   </div>
                 </header>
 
@@ -506,7 +506,7 @@
                     <span>Play your favorites on the big screen</span>
                   </div>
                   <div class="section-banner-description">
-                    <span>Google Play Games on PC</span>
+                    <span>App Market Games on PC</span>
                   </div>
                 </header>
 
@@ -757,7 +757,7 @@
                     <div class="ripple-effect"></div>
                     <div class="button-content">
                       <span class="button-prefix"></span
-                      ><span class="button-label">App</span>
+                      ><span class="button-label">Tiện ích</span>
                     </div>
                   </div>
                 </div>
@@ -766,7 +766,7 @@
                     <div class="ripple-effect"></div>
                     <div class="button-content">
                       <span class="button-prefix"></span
-                      ><span class="button-label">Game</span>
+                      ><span class="button-label">Mạng xã hội</span>
                     </div>
                   </div>
                 </div>
@@ -775,7 +775,7 @@
                     <div class="ripple-effect"></div>
                     <div class="button-content">
                       <span class="button-prefix"></span
-                      ><span class="button-label">Tool</span>
+                      ><span class="button-label">Sức khỏe</span>
                     </div>
                   </div>
                 </div>
@@ -784,7 +784,7 @@
                     <div class="ripple-effect"></div>
                     <div class="button-content">
                       <span class="button-prefix"></span
-                      ><span class="button-label">Education</span>
+                      ><span class="button-label">Giáo dục</span>
                     </div>
                   </div>
                 </div>
@@ -793,7 +793,7 @@
                     <div class="ripple-effect"></div>
                     <div class="button-content">
                       <span class="button-prefix"></span
-                      ><span class="button-label">RPG</span>
+                      ><span class="button-label">Hẹn hò</span>
                     </div>
                   </div>
                 </div>
@@ -802,7 +802,7 @@
                     <div class="ripple-effect"></div>
                     <div class="button-content">
                       <span class="button-prefix"></span
-                      ><span class="button-label">Action</span>
+                      ><span class="button-label">Tin tức</span>
                     </div>
                   </div>
                 </div>
@@ -892,6 +892,18 @@
             }
           });
         }
+      });
+    </script>
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.getElementById("header");
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 10) {
+            header.classList.add("scrolled");
+          } else {
+            header.classList.remove("scrolled");
+          }
+        });
       });
     </script>
     <script src="/assets/js/searchBar.js"></script>
