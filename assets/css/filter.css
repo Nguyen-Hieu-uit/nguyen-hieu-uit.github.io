@@ -40,7 +40,7 @@
   background-color: #f5f5f5;
 }
 
-.platform-button.is-active {
+.filter-bar-scroll-container .platform-button.is-active {
   background-color: #007bff;
   color: white;
   border-color: #007bff;
@@ -89,11 +89,6 @@
   transform: scale(0);
   animation: ripple 0.6s linear;
   z-index: 0;
-}
-
-/* Hiệu ứng (chỉ là giả lập, JS thật sự cần để hoạt động) */
-.platform-button:active .ripple-effect {
-  /* JS sẽ cần để thêm div này vào lúc click */
 }
 
 /* --- DROPDOWN CONTENT (ĐÃ SỬA LỖI TRÀN) --- */

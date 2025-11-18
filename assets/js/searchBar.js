@@ -165,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
       // Tạo URL đích và chuyển trang
 
-      window.location.href = `search.html?q=${encodedQuery}`;
+      window.location.assign(`/html/search.html?q=${encodedQuery}`);
     }
   });
 

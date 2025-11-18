@@ -3,10 +3,8 @@
   width: 75%;
   max-width: 1600px; /* Tương đương max-w-6xl */
   margin: auto;
-  background-color: #202020;
   border-radius: 1rem; /* 16px */
   overflow: hidden;
-  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
 }
 
 .carousel-container {
@@ -282,12 +280,14 @@
 /* --- Progress Bar Animation (Giữ nguyên) --- */
 .nav-progress-bar {
   width: 0%;
-  height: 3px;
-  background-color: #ffffff;
+  height: 100%;
+  background-color: #7e3737;
   z-index: 4;
   position: absolute;
   bottom: 0;
   left: 0;
+  opacity: 0.1;
+  border-radius: 8px;
 }
 
 .carousel-nav-item.active .nav-progress-bar {
@@ -540,6 +540,10 @@
   padding: 0;
 }
 
+.carousel-nav-sidebar .text-base {
+  color: #000000;
+}
+
 /* Đổi tên: .css-dzggg0 -> .slide-promo-logo */
 .slide-promo-logo {
   width: 150px;
@@ -603,9 +607,6 @@
 }
 
 /* Đổi tên: .eds_1ypbntdk -> .text-color-primary */
-.text-color-primary {
-  color: var(--eds_xd1k8g3q);
-}
 
 /* Đổi tên: .eds_1ypbntdc, .eds_1ypbntdd -> .text-style-small, .text-style-base */
 .text-style-small,
@@ -635,9 +636,6 @@
 }
 
 /* Đổi tên: .eds_1ypbntdk -> .text-color-primary */
-.text-color-primary {
-  color: #fff;
-}
 
 /* Đổi tên: .css-5ur8x -> .visually-hidden (một class tiêu chuẩn cho trợ năng) */
 .visually-hidden {
