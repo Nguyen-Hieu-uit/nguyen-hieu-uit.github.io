@@ -16,8 +16,23 @@ h1 {
 }
 
 .main-content {
+    /* Giữ nguyên padding cũ để giao diện không bị dính sát lề trên mobile */
     padding-left: 20px;
     padding-right: 20px;
+
+    /* --- THÊM CÁC DÒNG DƯỚI ĐÂY --- */
+
+    /* 1. Đặt giới hạn chiều rộng (Thường là 1100px, 1200px hoặc 960px) */
+    max-width: 1100px;
+
+    /* 2. Canh giữa khối này (Trên dưới = 0, Trái phải = auto) */
+    margin: 0 auto;
+
+    /* 3. Đảm bảo chiếm full chiều rộng trên màn hình nhỏ */
+    width: 100%;
+
+    /* 4. Đảm bảo padding không làm vỡ khung */
+    box-sizing: border-box;
 }
 
 /* 1. Container chung để định vị menu con */
