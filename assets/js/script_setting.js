@@ -264,8 +264,7 @@ function loadAllSettings(data) {
         <section class="seamless-item">
             <p class="label-text">Màu sắc Chủ đề:</p>
             <select class="select-control" id="theme-select">
-                <option>Sáng</option>
-                <option>Tối</option>
+                <option>Thường</option>
                 <option>Mùa</option>
             </select>
         </section>
