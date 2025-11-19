@@ -151,5 +151,6 @@
 .suggestion-item b {
   font-weight: 700;
   background-color: transparent;
-  color: #202124; /* giữ text đậm, dễ đọc */
+  /* color: #202124; giữ text đậm, dễ đọc */
+  padding: 0 1px;
 }
