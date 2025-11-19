@@ -29,8 +29,7 @@
   z-index: -1;
 }
 
-.modal-container .modal-scrim,
-.modal-container .VfPpkd-P5QLlc-GGAcbc {
+.modal-container .modal-scrim {
   background-color: rgba(0, 0, 0, 0.32);
 }
 
@@ -39,8 +38,7 @@
   opacity: 1;
 }
 
-.modal-google .modal-scrim,
-.modal-google .VfPpkd-P5QLlc-GGAcbc {
+.modal-google .modal-scrim {
   background-color: rgba(32, 33, 36, 0.6);
 }
 
@@ -59,12 +57,9 @@
 .modal-container {
   display: none;
   z-index: 7;
-  z-index: var(--mdc-dialog-z-index, 7);
 }
 
-.modal-container--visible,
-.VfPpkd-Sx9Kwc-OWXEXe-uGFO6d,
-.VfPpkd-Sx9Kwc-OWXEXe-FnSee {
+.modal-container--visible {
   display: flex;
 }
 
@@ -105,12 +100,10 @@
 
 .modal-container .modal-content {
   background-color: #fff;
-  background-color: var(--mdc-theme-surface, #fff);
 }
 
 .modal-container .modal-content {
   border-radius: 4px;
-  border-radius: var(--mdc-shape-medium, 4px);
 }
 
 .modal-container .modal-content {
@@ -190,7 +183,6 @@
 }
 
 .modal-google .modal-body {
-  font-family: Roboto, Arial, sans-serif;
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.0142857143em;
@@ -202,17 +194,8 @@
 }
 
 .modal-sticky-header {
-  position: sticky;
   top: 0;
   background: white;
-  z-index: 1;
-}
-
-.modal-sticky-header {
-  position: sticky;
-  top: 0;
-  background: white;
-  z-index: 1;
 }
 
 .modal-body > :first-child {
@@ -278,16 +261,6 @@ button {
 
 .icon-button-zindex {
   z-index: 0;
-}
-
-.icon-button .VfPpkd-Bz112c-Jh9lGc {
-  height: 100%;
-  left: 0;
-  pointer-events: none;
-  position: absolute;
-  top: 0;
-  width: 100%;
-  z-index: -1;
 }
 
 .modal-body > :last-child {
@@ -356,7 +329,7 @@ button {
 }
 
 @media screen and (min-width: 1024px) {
-  .NvSrY .item-title:not(:disabled) {
+  .product-card .item-title:not(:disabled) {
     color: rgb(32, 33, 36);
   }
 }
@@ -368,7 +341,7 @@ button {
 }
 
 @media screen and (min-width: 1024px) {
-  .NvSrY .item-price:not(:disabled) {
+  .product-card .item-price:not(:disabled) {
     color: rgb(32, 33, 36);
   }
 }
@@ -422,7 +395,6 @@ button {
   color: #747775;
   fill: #747775;
   stop-color: #747775;
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.00625rem;
@@ -437,7 +409,6 @@ button {
   color: rgb(95, 99, 104);
   fill: rgb(95, 99, 104);
   stop-color: rgb(95, 99, 104);
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.00625rem;
@@ -467,10 +438,7 @@ button {
   padding-bottom: 2px;
 }
 
-.modal-container.modal-container--with-divider .VfPpkd-k2Wrsb,
-.modal-container.modal-container--with-divider .modal-footer,
-.modal-container.modal-container--with-divider.VfPpkd-Sx9Kwc-XuHpsb-clz4Ic-yePe5c
-  .modal-footer {
+.modal-container.modal-container--with-divider .modal-footer {
   border-color: rgba(0, 0, 0, 0.12);
 }
 
@@ -513,22 +481,7 @@ button {
   align-items: center;
   box-sizing: border-box;
   border: none;
-  border-start-start-radius: min(
-    var(--gm3-button-filled-container-shape-start-start, 9999px),
-    var(--gm3-button-filled-container-height, 40px) / 2
-  );
-  border-start-end-radius: min(
-    var(--gm3-button-filled-container-shape-start-end, 9999px),
-    var(--gm3-button-filled-container-height, 40px) / 2
-  );
-  border-end-start-radius: min(
-    var(--gm3-button-filled-container-shape-end-start, 9999px),
-    var(--gm3-button-filled-container-height, 40px) / 2
-  );
-  border-end-end-radius: min(
-    var(--gm3-button-filled-container-shape-end-end, 9999px),
-    var(--gm3-button-filled-container-height, 40px) / 2
-  );
+  border-radius: 999px;
   outline: none;
   background: transparent;
   -webkit-appearance: none;
@@ -539,94 +492,38 @@ button {
   user-select: none;
   vertical-align: middle;
   cursor: pointer;
-  justify-content: var(--gm3-button-filled-container-justify-content, center);
-  min-inline-size: var(--gm3-button-filled-container-min-width, 64px);
+  justify-content: center;
+  min-inline-size: 64px;
   padding-block: 0;
-  -webkit-padding-start: var(--gm3-button-filled-leading-space, 24px);
-  padding-inline-start: var(--gm3-button-filled-leading-space, 24px);
-  -webkit-padding-end: var(--gm3-button-filled-trailing-space, 24px);
-  padding-inline-end: var(--gm3-button-filled-trailing-space, 24px);
-  block-size: var(--gm3-button-filled-container-height, 40px);
-  --sbadab: var(
-    --gm3-button-filled-hover-state-layer-color,
-    var(--gm3-sys-color-on-primary, #fff)
-  );
-  --hSHBee: var(--gm3-button-filled-hover-state-layer-opacity, 0.08);
-  --F1tVH: var(
-    --gm3-button-filled-hover-state-layer-color,
-    var(--gm3-sys-color-on-primary, #fff)
-  );
-  --kDWEsd: var(--gm3-button-filled-pressed-state-layer-opacity, 0.1);
-  --vTiv8c: min(
-    var(--gm3-button-filled-container-shape-start-start, 9999px),
-    var(--gm3-button-filled-container-height, 40px) / 2
-  );
-  --UtHrue: min(
-    var(--gm3-button-filled-container-shape-start-end, 9999px),
-    var(--gm3-button-filled-container-height, 40px) / 2
-  );
-  --C8LWjb: min(
-    var(--gm3-button-filled-container-shape-end-start, 9999px),
-    var(--gm3-button-filled-container-height, 40px) / 2
-  );
-  --uHecC: min(
-    var(--gm3-button-filled-container-shape-end-end, 9999px),
-    var(--gm3-button-filled-container-height, 40px) / 2
-  );
-  --jF0a9c: var(
-    --gm3-button-filled-focus-indicator-color,
-    var(--gm3-sys-color-secondary, #00639b)
-  );
-  --hK0TOb: var(--gm3-button-filled-focus-indicator-outline-offset, 2px);
-  --SGGi: var(--gm3-button-filled-focus-indicator-thickness, 3px);
+  -webkit-padding-start: 24px;
+  padding-inline-start: 24px;
+  -webkit-padding-end: 24px;
+  padding-inline-end: 24px;
+  block-size: 40px;
 }
 
 .button-filled-v-margin {
-  margin-block: max(
-    (48px - var(--gm3-button-filled-container-height, 40px)) / 2,
-    0px
-  );
+  margin-block: 4px;
 }
 
 .button-filled {
   will-change: transform, opacity;
-  background-color: var(
-    --gm3-button-filled-container-color,
-    var(--gm3-sys-color-primary, #0b57d0)
-  );
-  --yXuigc: var(--gm3-button-filled-container-elevation, 0);
-  --Fe5l0b: var(
-    --gm3-button-filled-container-shadow-color,
-    var(--gm3-sys-color-shadow, #000)
-  );
+  background-color: #0b57d0;
 }
 
 .button-filled-wide {
   min-width: 160px;
 }
 
-.button-filled-wide {
-  --gm3-button-filled-container-min-width: 160px;
-  --gm3-button-outlined-container-min-width: 160px;
-}
-
 .modal-container .button-label {
   position: relative;
   text-align: center;
-  color: var(
-    --gm3-button-filled-label-text-color,
-    var(--gm3-sys-color-on-primary, #fff)
-  );
-  font-size: var(--gm3-button-filled-label-text-size, 0.875rem);
-  font-family: var(--gm3-button-filled-label-text-font);
-  font-weight: var(--gm3-button-filled-label-text-weight, 500);
-  letter-spacing: var(--gm3-button-filled-label-text-tracking, 0);
-  -webkit-text-decoration: var(--gm3-button-filled-label-text-decoration, none);
-  text-decoration: var(--gm3-button-filled-label-text-decoration, none);
-  font-variation-settings: var(
-    --gm3-button-filled-label-text-font-variation-settings,
-    initial
-  );
+  color: #fff;
+  font-size: 0.875rem;
+  font-weight: 500;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  font-variation-settings: initial;
 }
 
 .divider:first-child {
@@ -640,11 +537,10 @@ button {
 }
 
 @media screen and (min-width: 1024px) {
-  .NvSrY .item-title {
+  .product-card .item-title {
     color: rgb(32, 33, 36);
     fill: rgb(32, 33, 36);
     stop-color: rgb(32, 33, 36);
-    font-family: "Google Sans", Roboto, Arial, sans-serif;
     font-size: 1.375rem;
     font-weight: 400;
     letter-spacing: 0;
@@ -653,11 +549,10 @@ button {
 }
 
 @media screen and (min-width: 1024px) {
-  .NvSrY .item-price {
+  .product-card .item-price {
     color: rgb(32, 33, 36);
     fill: rgb(32, 33, 36);
     stop-color: rgb(32, 33, 36);
-    font-family: "Google Sans", Roboto, Arial, sans-serif;
     font-size: 1.375rem;
     font-weight: 400;
     letter-spacing: 0;
@@ -699,13 +594,13 @@ button {
 }
 
 .back-button-container {
-  color: var(--gm3-sys-color-on-surface-variant, #444746);
-  fill: var(--gm3-sys-color-on-surface-variant, #444746);
-  stop-color: var(--gm3-sys-color-on-surface-variant, #444746);
+  color: #444746;
+  fill: #444746;
+  stop-color: #444746;
 }
 
 .back-button-container:not(:disabled) {
-  color: var(--gm3-sys-color-on-surface-variant, #444746);
+  color: #444746;
 }
 
 .header-text-group {
@@ -713,10 +608,9 @@ button {
 }
 
 .modal-title {
-  color: var(--gm3-sys-color-on-surface, #1f1f1f);
-  fill: var(--gm3-sys-color-on-surface, #1f1f1f);
-  stop-color: var(--gm3-sys-color-on-surface, #1f1f1f);
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  color: #1f1f1f;
+  fill: #1f1f1f;
+  stop-color: #1f1f1f;
   font-size: 1.375rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -724,14 +618,13 @@ button {
 }
 
 .modal-title:not(:disabled) {
-  color: var(--gm3-sys-color-on-surface, #1f1f1f);
+  color: #1f1f1f;
 }
 
 .modal-subtitle-email {
-  color: var(--gm3-sys-color-on-surface-variant, #444746);
-  fill: var(--gm3-sys-color-on-surface-variant, #444746);
-  stop-color: var(--gm3-sys-color-on-surface-variant, #444746);
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
+  color: #444746;
+  fill: #444746;
+  stop-color: #444746;
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -742,7 +635,7 @@ button {
 }
 
 .modal-subtitle-email:not(:disabled) {
-  color: var(--gm3-sys-color-on-surface-variant, #444746);
+  color: #444746;
 }
 
 .list-item {
@@ -750,50 +643,13 @@ button {
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
-  border-start-start-radius: var(
-    --gm3-card-filled-container-shape-start-start,
-    12px
-  );
-  border-start-end-radius: var(
-    --gm3-card-filled-container-shape-start-end,
-    12px
-  );
-  border-end-end-radius: var(--gm3-card-filled-container-shape-end-end, 12px);
-  border-end-start-radius: var(
-    --gm3-card-filled-container-shape-end-start,
-    12px
-  );
-  background-color: var(
-    --gm3-card-filled-container-color,
-    var(--gm3-sys-color-surface-container-highest, #dde3ea)
-  );
-  --yXuigc: var(--gm3-card-filled-container-elevation, 0);
-  --Fe5l0b: var(
-    --gm3-card-filled-container-shadow-color,
-    var(--gm3-sys-color-shadow, #000)
-  );
-  --nnZJCc: transparent;
-  --jF0a9c: var(
-    --gm3-card-filled-focus-indicator-color,
-    var(--gm3-sys-color-secondary, #00639b)
-  );
-  --hK0TOb: var(--gm3-card-filled-focus-indicator-outline-offset, 2px);
-  --SGGi: var(--gm3-card-filled-focus-indicator-thickness, 3px);
-  --vTiv8c: var(--gm3-card-filled-container-shape-start-start, 12px);
-  --UtHrue: var(--gm3-card-filled-container-shape-start-end, 12px);
-  --uHecC: var(--gm3-card-filled-container-shape-end-end, 12px);
-  --C8LWjb: var(--gm3-card-filled-container-shape-end-start, 12px);
+  border-radius: 12px;
+  background-color: #dde3ea;
 }
 
 .list-item-transparent {
   border-radius: 0;
   border: none;
-  --gm3-card-filled-container-color: transparent;
-  --gm3-card-filled-focus-indicator-outline-offset: 0px;
-  --gm3-card-filled-container-shape-start-start: 0;
-  --gm3-card-filled-container-shape-start-end: 0;
-  --gm3-card-filled-container-shape-end-end: 0;
-  --gm3-card-filled-container-shape-end-start: 0;
 }
 
 .select-method-button {
@@ -813,24 +669,6 @@ button {
   border-end-end-radius: inherit;
 }
 
-.list-item > .select-method-button,
-.K4vxLd-aGsRMb > .select-method-button {
-  --sbadab: var(
-    --gm3-card-filled-hover-state-layer-color,
-    var(--gm3-sys-color-on-surface, #1f1f1f)
-  );
-  --hSHBee: var(--gm3-card-filled-hover-state-layer-opacity, 0.08);
-  --F1tVH: var(
-    --gm3-card-filled-pressed-state-layer-color,
-    var(--gm3-sys-color-on-surface, #1f1f1f)
-  );
-  --kDWEsd: var(--gm3-card-filled-pressed-state-layer-opacity, 0.1);
-  --QOcx9e: var(--gm3-card-filled-container-shape-start-start, 12px);
-  --vRgHIb: var(--gm3-card-filled-container-shape-start-end, 12px);
-  --xg9FB: var(--gm3-card-filled-container-shape-end-end, 12px);
-  --Pk3PIb: var(--gm3-card-filled-container-shape-end-start, 12px);
-}
-
 .list-item-padding {
   padding: 16px 0;
   padding-left: 24px;
@@ -845,7 +683,6 @@ button {
   color: rgb(32, 33, 36);
   fill: rgb(32, 33, 36);
   stop-color: rgb(32, 33, 36);
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -862,14 +699,13 @@ button {
 }
 
 .icon-primary {
-  color: var(--gm3-sys-color-primary, #0b57d0);
+  color: #0b57d0;
 }
 
 .list-item-subtitle {
   color: rgb(95, 99, 104);
   fill: rgb(95, 99, 104);
   stop-color: rgb(95, 99, 104);
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
   font-size: 0.875rem;
   font-weight: 400;
   letter-spacing: 0;
@@ -885,7 +721,6 @@ button {
   color: rgb(95, 99, 104);
   fill: rgb(95, 99, 104);
   stop-color: rgb(95, 99, 104);
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
   font-size: 1rem;
   font-weight: 400;
   letter-spacing: 0;

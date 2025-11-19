@@ -589,26 +589,20 @@
   }
 }
 
-/* Đổi tên: .css-1xn3edc -> .slide-description-wrapper */
 .slide-description-wrapper {
   margin-bottom: 30px;
 }
 
-/* Đổi tên: .eds_1ypbntd0 -> .text-base */
 .text-base {
   color: #fff;
   margin: 0;
   padding: 0;
 }
 
-/* Đổi tên: .css-r6z5ec -> .z-index-1 */
 .z-index-1 {
   z-index: 1;
 }
 
-/* Đổi tên: .eds_1ypbntdk -> .text-color-primary */
-
-/* Đổi tên: .eds_1ypbntdc, .eds_1ypbntdd -> .text-style-small, .text-style-base */
 .text-style-small,
 .text-style-base {
   font-family: var(--eds_xd1k8g46), sans-serif;
@@ -616,13 +610,11 @@
   letter-spacing: var(--eds_xd1k8g6l);
 }
 
-/* .eds_1ypbntdc -> .text-style-small (Thêm size/height) */
 .text-style-small {
   font-size: var(--eds_xd1k8g6v);
   line-height: var(--eds_xd1k8g6p);
 }
 
-/* Đổi tên: .eds_1ypbntd6, .eds_1ypbntd7 -> .text-font-heading, .text-size-large */
 .text-font-heading,
 .text-size-large {
   font-family: var(--eds_xd1k8g47), sans-serif;
@@ -635,9 +627,6 @@
   font-size: var(--eds_xd1k8g6w);
 }
 
-/* Đổi tên: .eds_1ypbntdk -> .text-color-primary */
-
-/* Đổi tên: .css-5ur8x -> .visually-hidden (một class tiêu chuẩn cho trợ năng) */
 .visually-hidden {
   clip: rect(0 0 0 0);
   -webkit-clip-path: inset(50%);
@@ -649,12 +638,10 @@
   width: 1px;
 }
 
-/* Đổi tên: .css-lgj0h8 -> .grid-container */
 .grid-container {
   display: grid;
 }
 
-/* Đổi tên: .css-1h3di0n -> .text-truncate */
 .text-truncate {
   display: -webkit-box;
   line-clamp: 4;
@@ -691,17 +678,14 @@
   letter-spacing: 0.02em;
 }
 
-/* Đổi tên: .css-13ko30i -> .slide-offer-details */
 .slide-offer-details {
   width: 375px;
 }
 
-/* Đổi tên: .css-1r2f04i -> .slide-price-block */
 .slide-price-block {
   margin-bottom: 10px;
 }
 
-/* Đổi tên: .css-140e7ku -> .slide-price-container */
 .slide-price-container {
   display: -webkit-box;
   display: -webkit-flex;
@@ -720,7 +704,6 @@
   flex-flow: row wrap;
 }
 
-/* Đổi tên: .css-l24hbj -> .slide-price-segment */
 .slide-price-segment {
   display: -webkit-box;
   display: -webkit-flex;
@@ -736,7 +719,6 @@
   margin-left: 10px;
 }
 
-/* Đổi tên: .css-1nblg0t -> .price-justify-end (class này không có trong HTML) */
 .price-justify-end {
   display: -webkit-box;
   display: -webkit-flex;
@@ -770,7 +752,6 @@
   margin-left: 10px;
 }
 
-/* Giữ nguyên các class đã có ý nghĩa */
 .carousel-price-wrapper {
   display: flex;
 }
@@ -790,13 +771,10 @@
   margin-left: 10px;
 }
 
-/* Các class từ .css-1xn3edc và .css-1g3xedu đã được đổi tên ở trên */
 .slide-description-wrapper {
   margin-bottom: 30px;
 }
 
-/* Đổi tên: .css-1sqpkm6 -> .carousel-nav-sidebar */
-/* Định nghĩa cột chứa nav, có flex-basis (chiều rộng) thay đổi theo viewport */
 .carousel-nav-sidebar {
   font-weight: 400;
   -webkit-flex-basis: 160px;
@@ -844,8 +822,6 @@
   }
 }
 
-/* Đổi tên: .css-lbqvje -> .carousel-nav-list */
-/* Danh sách (ul) chứa các mục nav, xếp dọc và giãn cách đều */
 .carousel-nav-list {
   width: 100%;
   height: 100%;
@@ -865,8 +841,6 @@
   justify-content: space-between;
 }
 
-/* Đổi tên: .css-1hwhj63 -> .carousel-nav-item */
-/* Mục (li) đơn, chiếm 1/6 chiều cao (16.666%) */
 .carousel-nav-item {
   display: -webkit-box;
   display: -webkit-flex;
@@ -887,15 +861,11 @@
   margin-top: 3px;
 }
 
-/* Đổi tên: .css-uwwqev -> .full-size-wrapper */
-/* Wrapper tiện ích, lấp đầy 100% w/h của thẻ cha (li) */
 .full-size-wrapper {
   width: 100%;
   height: 100%;
 }
 
-/* Đổi tên: .css-1e9rse3 -> .carousel-nav-button */
-/* Nút bấm chính, chứa ảnh và chữ, có hiệu ứng transition */
 .carousel-nav-button {
   width: 100%;
   height: 100%;
@@ -921,8 +891,6 @@
   padding-right: 10px;
 }
 
-/* Đổi tên: .css-c9mc7n -> .nav-button-image-wrapper */
-/* Wrapper cho ảnh, định nghĩa kích thước (flex-basis) và lề */
 .nav-button-image-wrapper {
   border-radius: 4px;
   overflow: hidden;
@@ -959,8 +927,6 @@
   }
 }
 
-/* Đổi tên: .css-yb58t8 -> .nav-image-aspect-box */
-/* Hộp giữ tỷ lệ 4:3 cho ảnh thumbnail */
 .nav-image-aspect-box {
   position: relative;
   padding-bottom: calc(4 / 3 * 100%);
@@ -976,22 +942,16 @@ svg {
   pointer-events: none;
 }
 
-/* Đổi tên: .css-b4kcmh -> .nav-button-image */
-/* Thẻ <img> thumbnail, lấp đầy 100% w/h thẻ cha */
 .nav-button-image {
   position: absolute;
   width: 100%;
   height: 100%;
 }
 
-/* Đổi tên: .css-r6z5ec -> .nav-button-text */
-/* Văn bản tiêu đề, đặt z-index để nổi lên trên */
 .nav-button-text {
   z-index: 1;
 }
 
-/* Đổi tên: .css-1r2g1n6 -> .nav-button-overlay */
-/* Lớp phủ (overlay) nằm sau (z-index: 0), mờ (opacity: 0) */
 .nav-button-overlay {
   width: 100%;
   height: 100%;
@@ -1004,8 +964,6 @@ svg {
   z-index: 0;
 }
 
-/* Đổi tên: .css-1f1mql8 -> .nav-button-overlay-fill */
-/* Lớp màu nền thực sự của overlay */
 .nav-button-overlay-fill {
   width: 100%;
   height: 100%;
