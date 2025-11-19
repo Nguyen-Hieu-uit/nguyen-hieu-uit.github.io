@@ -756,6 +756,7 @@ section {
   display: flex;
   position: relative;
   margin: 0 16px;
+  height: 100%;
 }
 
 .button-prefix {

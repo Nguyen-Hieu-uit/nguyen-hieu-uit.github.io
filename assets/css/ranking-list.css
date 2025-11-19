@@ -1,3 +1,7 @@
+* {
+  box-sizing: border-box;
+}
+
 /* Header của container */
 .ranking-header {
   padding: 20px;
@@ -93,9 +97,10 @@
   margin-top: 4px;
 }
 
-.ranking-item .app-rating .material-icons {
-  font-size: 16px; /* Kích thước icon sao */
-  color: #fdc32b; /* Màu vàng */
+.ranking-item .app-rating {
+  width: 16px;
+  height: 16px;
+  color: rgb(95, 99, 104);
   margin-left: 2px;
 }
 
@@ -122,12 +127,12 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Nền mờ */
-  display: flex;
+
   justify-content: center;
   align-items: center;
   padding: 20px;
   box-sizing: border-box;
-  z-index: 1;
+  z-index: 110;
 
   /* Ẩn mặc định */
   display: none;
@@ -140,9 +145,9 @@
 
 /* Lớp để BẬT modal */
 .ranking-overlay.visible {
-  display: flex;
   opacity: 1;
   visibility: visible;
+  display: flex;
 }
 
 /* Container lớn hơn */
@@ -152,15 +157,12 @@
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
   width: 100%;
   max-width: 800px;
-  overflow: hidden;
-
-  /* Thêm */
-  position: relative; /* Để chứa nút X */
-  max-height: 90vh; /* Giới hạn chiều cao trên màn hình nhỏ */
+  height: auto;
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
-
-  /* Thêm hiệu ứng xuất hiện */
+  position: relative;
+  overflow: hidden;
   transform: scale(0.95);
   transition: transform 0.3s;
 }
@@ -171,23 +173,34 @@
 
 /* Header của container */
 .ranking-header {
-  padding: 20px;
-  /* Thêm position relative để định vị nút X */
-  position: relative;
-  flex-shrink: 0; /* Không co lại */
+  padding: 12px 16px; /* Giảm padding một chút trên mobile cho gọn */
+  border-bottom: 1px solid #f0f0f0;
+  margin-bottom: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+  background-color: #fff;
+  /* FIX LỖI: Đảm bảo header không bao giờ rộng hơn container */
+  width: 100%;
 }
 
 .ranking-header h1 {
   margin: 0;
   font-size: 24px;
   color: #222;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-right: 10px;
 }
 
 /* --- THAY ĐỔI MỚI: NÚT X (ĐÓNG MODAL) --- */
 .close-btn {
-  position: absolute;
-  top: 15px; /* Điều chỉnh vị trí */
-  right: 15px; /* Điều chỉnh vị trí */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
   background: #f0f0f0;
   border: none;
   font-size: 20px;
@@ -197,13 +210,105 @@
   border-radius: 50%;
   width: 30px;
   height: 30px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   transition: background-color 0.3s, color 0.3s;
 }
 
 .close-btn:hover {
   background-color: #e0e0e0;
   color: #333;
+}
+
+/* WRAPPER FILTER TRONG MODAL */
+.filter-wrapper {
+  padding: 10px 16px;
+  border-bottom: 1px solid #f0f0f0;
+
+  /* FIX LỖI: Cho phép cuộn nếu quá nhiều nút, tránh vỡ layout */
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* LIST */
+.ranking-list-scrollable {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #fff;
+  padding: 0;
+}
+
+/* ITEMS */
+.ranking-item {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  border-bottom: 1px solid #eee;
+}
+
+.ranking-number {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-sub);
+  width: 30px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.ranking-item .app-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  margin-right: 12px;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.ranking-item .app-details {
+  flex-grow: 1;
+  min-width: 0; /* Quan trọng: Để text cắt dòng hoạt động trong Flexbox */
+}
+
+.ranking-item .app-name {
+  font-size: 15px;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: 100%;
+}
+
+.ranking-item .app-category {
+  font-size: 13px;
+  color: var(--text-sub);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* RESPONSIVE CHO MÀN HÌNH NHỎ (< 700px) */
+@media (max-width: 700px) {
+  .ranking-overlay {
+    padding: 0; /* Full màn hình */
+  }
+
+  .ranking-container {
+    width: 100%;
+    height: 100%; /* Chiếm hết chiều cao */
+    max-height: 100%;
+    max-width: 100%;
+    border-radius: 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Header cố định ở trên */
+  .ranking-header {
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+
+  /* Đảm bảo thanh filter bên trong modal cũng wrap nếu muốn */
+  .filter-wrapper .filter-bar-scroll-container {
+    flex-wrap: wrap;
+  }
 }

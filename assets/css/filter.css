@@ -1,8 +1,10 @@
 .filter-bar-scroll-container {
   display: flex;
-  gap: 10px;
-  white-space: nowrap;
+  gap: 16px 12px;
+  flex-wrap: wrap !important;
   padding: 10px 4px;
+  width: 100%;
+  box-sizing: border-box;
 }
 
 .filter-bar-scroll-container::-webkit-scrollbar {
@@ -13,16 +15,18 @@
   scrollbar-width: none;
 }
 
-.platform-item {
+.filter-bar-scroll-container .platform-item {
   flex-shrink: 0;
   position: relative;
   display: inline-block;
+  min-width: auto;
+  margin: 0;
 }
 
 .platform-button {
   background-color: white;
   border: 1px solid #ccc;
-  border-radius: 999px; /* .rounded-full */
+  border-radius: 999px;
   cursor: pointer;
   font-size: 16px;
   transition: all 0.2s;
@@ -31,7 +35,6 @@
   color: #333;
   text-decoration: none;
   text-align: left;
-  /* Thêm: Chứa ripple-effect */
   position: relative;
   overflow: hidden;
 }
@@ -79,6 +82,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  font-size: 14px;
 }
 
 /* CSS cho Ripple-effect (Tùy chọn) */
@@ -100,40 +104,62 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   border-radius: 16px;
   padding: 15px;
-  top: 110%;
+  top: calc(100% + 8px);
   left: 0;
   z-index: 100;
   gap: 10px;
   box-sizing: border-box;
+  min-width: 200px;
+  animation: scaleIn 0.2s ease forwards;
+  transform-origin: top left;
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Trạng thái HIỆN của dropdown */
 .dropdown-content.show {
   display: grid;
-  /* SỬA LỖI: 
-      - Xóa 'width'
-      - Định nghĩa cột rõ ràng là '150px' 
-    */
-  grid-template-columns: repeat(3, 150px);
-}
-
-.dropdown-content.show.flex-layout {
-  display: flex;
-  flex-wrap: wrap;
-  width: max-content; /* Dành cho < 4 items */
-  grid-template-columns: none;
+  grid-template-columns: 1fr;
+  gap: 4px;
 }
 
 /* --- CSS Item BÊN TRONG dropdown --- */
 .dropdown-content .platform-item {
-  width: 150px;
+  width: 100%;
 }
 
 .dropdown-content .platform-button {
   width: 100%;
   box-sizing: border-box;
+  border-radius: 8px;
 }
 
 .dropdown-content .button-content {
   margin: 0 10px;
+}
+
+/* RESPONSIVE CHO DROPDOWN */
+@media (min-width: 768px) {
+  .dropdown-content.show {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    width: max-content;
+    max-width: 90vw; /* Giới hạn chiều rộng dropdown không quá màn hình */
+  }
+}
+
+@media (max-width: 767px) {
+  /* Đảm bảo dropdown không bị tràn màn hình nhỏ */
+  .dropdown-content {
+    min-width: 150px;
+    max-width: 90vw;
+  }
 }
