@@ -1,3 +1,5 @@
+const availableKeywords = [];
+
 document.addEventListener("DOMContentLoaded", () => {
   (function loadKeywords() {
     const primaryPath = "./assets/json/appData.json";
