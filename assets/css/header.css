@@ -322,10 +322,6 @@
   width: 32px;
 }
 
-.header-actions .search__box {
-  flex: 0 1 auto;
-}
-
 @media screen and (max-width: 400px) {
   .header__logo-link span {
     display: none;
