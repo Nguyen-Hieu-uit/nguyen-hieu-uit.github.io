@@ -36,7 +36,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const item = document.createElement("div");
       item.className = "platform-item app-row-spacing";
       item.innerHTML = `
-        <div class="card card--outlined card--elevated card--flat AaN0Dd card--responsive">
+        <div class="card card--flat card--responsive">
           <div class="card__content">
             <div class="card-container card-inner">
               <a class="card-link card-content" href="${g.href}">
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const item = document.createElement("div");
       item.className = "platform-item app-row-spacing";
       item.innerHTML = `
-        <div class="card card--outlined card--elevated card--flat AaN0Dd card--responsive">
+        <div class="card card--flat card--responsive">
           <div class="card__content">
             <div class="card-container card-inner">
               <a class="card-link card-content" href="${g.href}">
@@ -155,7 +155,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const item = document.createElement("div");
       item.className = "platform-item app-row-spacing";
       item.innerHTML = `
-        <div class="card card--outlined card--elevated card--flat AaN0Dd card--responsive">
+        <div class="card card--flat card--responsive">
           <div class="card__content">
             <div class="card-container card-inner">
               <a class="card-link card-content" href="${g.href}">
@@ -217,7 +217,7 @@ document.addEventListener("DOMContentLoaded", () => {
       const item = document.createElement("div");
       item.className = "platform-item spotlight-grid__cell-spacing";
       item.innerHTML = `
-        <div class="card card--outlined card--elevated card--flat AaN0Dd spotlight-banner__container">
+        <div class="card card--flat spotlight-banner__container">
           <div class="card__content">
             <div class="card-container spotlight-banner__content-wrapper">
               <a href="${g.bannerHref}" class="card-link pos-relative">
@@ -295,12 +295,11 @@ document.addEventListener("DOMContentLoaded", () => {
                       <div class="button__touch-wrapper">
                         <button
                           class="button button--theme-green button--contained button--typography button--padding-x-large focus-visible button--shape-rounded button--text-light button--min-width-medium spotlight-button--small text-color-black spotlight-button--secondary"
-                          data-disable-idom="true"
+                      
                           aria-label="${g.buttonAria}"
                         >
                           <div class="ripple--bounded"></div>
-                          <div class="button__focus-ring"></div>
-                          <div class="button__touch-target"></div>
+                         
                           <span class="button__label">${g.buttonLabel}</span>
                         </button>
                       </div>

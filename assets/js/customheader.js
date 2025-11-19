@@ -10,9 +10,9 @@ class CustomHeader extends HTMLElement {
   // HTML ban đầu của component (giữ nguyên cấu trúc)
   getInitialHTML() {
     return `
-            <link rel="stylesheet" href="/assets/css/style.css">
-            <link rel="stylesheet" href="/assets/css/SettingTab.css">
-            <link rel="stylesheet" href="/assets/css/header.css">
+            <link rel="stylesheet" href="./assets/css/style.css">
+            <link rel="stylesheet" href="./assets/css/SettingTab.css">
+            <link rel="stylesheet" href="./assets/css/header.css">
             
 
             <header class="header" id="header">
@@ -31,7 +31,7 @@ class CustomHeader extends HTMLElement {
                                     <span class="nav-tab__indicator nav-tab__indicator-format indicator-length"></span>
                                 </span>
                             </span>
-                            <div class="VfPpkd-wJCpie-LhBDec"></div>
+                            
                         </a>
 
                         <a role="tab" class="nav-tab nav-tab--auto-width nav-tab--styled FEsNhd YmRZ5d q2wkXd" 
@@ -42,7 +42,7 @@ class CustomHeader extends HTMLElement {
                                     <span class="nav-tab__indicator nav-tab__indicator-format indicator-length"></span>
                                 </span>
                             </span>
-                            <div class="VfPpkd-wJCpie-LhBDec"></div>
+                            
                         </a>
 
                         <a role="tab" class="nav-tab nav-tab--auto-width nav-tab--styled FEsNhd YmRZ5d dUghbc" 
@@ -53,7 +53,7 @@ class CustomHeader extends HTMLElement {
                                     <span class="nav-tab__indicator nav-tab__indicator-format indicator-length"></span>
                                 </span>
                             </span>
-                            <div class="VfPpkd-wJCpie-LhBDec"></div>
+                           
                         </a>
                     </span>
 

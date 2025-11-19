@@ -134,16 +134,13 @@
   color: rgb(95, 99, 104);
 }
 
-.active .nav-tab__label {
+.active .nav-tab__label,
+.active:hover .nav-tab__label {
   color: #01875f;
 }
 
-.nav-tab-selected .nav-tab__label {
+.nav-tab__label {
   transition-delay: 0.1s;
-}
-
-.active:nth-child(n):nth-child(n).nav-tab-selected .nav-tab__label {
-  color: #01875f;
 }
 
 .nav-tab__indicator-wrapper {

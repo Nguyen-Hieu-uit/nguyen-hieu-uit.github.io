@@ -7,87 +7,133 @@ class CustomFooter extends HTMLElement {
             <link rel="stylesheet" href="../assets/css/style.css">
 
             <footer class="footer">
-                <div class="footer__divider"></div>
-                <div class="footer__sections">
+      <div class="footer__divider"></div>
+      <div class="footer__sections">
+        <div>
+          <section>
+            <span class="footer__section-title">App Market</span>
 
-                    <div ssk="11:App Market">
-                        <section>
-                            <span class="footer__section-title">App Market</span>
+            <div>
+              <a
+                href="#"
+                class="footer__link"
+              >
+                <p class="footer__link-text">Thẻ App Market</p>
+              </a>
+            </div>
 
-                            <div ssk="39:https://play.google.com/about/giftcards">
-                                <a href="https://play.google.com/about/giftcards" target="_blank" jslog="197536; 1:3121|qgIF0gECEAM=; track:click;" class="footer__link">
-                                    <p class="footer__link-text">Thẻ App Market</p>
-                                </a>
-                            </div>
+            <div>
+              <a
+                href="#"
+                
+                class="footer__link"
+              >
+                <p class="footer__link-text">Đổi phần thưởng</p>
+              </a>
+            </div>
 
-                            <div ssk="7:/redeem">
-                                <a href="/redeem" target="_blank" jslog="197536; 1:3121|qgIF0gECEAQ=; track:click;" class="footer__link">
-                                    <p class="footer__link-text">Đổi phần thưởng</p>
-                                </a>
-                            </div>
+            <div>
+              <a
+                href="#"
+                
+                class="footer__link"
+              >
+                <p class="footer__link-text">Chính sách hoàn tiền</p>
+              </a>
+            </div>
+          </section>
+        </div>
 
-                            <div ssk="51:https://support.google.com/googleplay/answer/134336">
-                                <a href="https://support.google.com/googleplay/answer/134336" target="_blank" jslog="197536; 1:3121|qgIF0gECEAU=; track:click;" class="footer__link">
-                                    <p class="footer__link-text">Chính sách hoàn tiền</p>
-                                </a>
-                            </div>
-                        </section>
-                    </div>
+        <div>
+          <section>
+            <span class="footer__section-title">Trẻ em và gia đình</span>
 
-                    <div ssk="18:Trẻ em và gia đình">
-                        <section>
-                            <span class="footer__section-title">Trẻ em và gia đình</span>
+            <div
+              
+            >
+              <a
+                href="#"
+                
+                class="footer__link"
+              >
+                <p class="footer__link-text">Hướng dẫn dành cho cha mẹ</p>
+              </a>
+            </div>
 
-                            <div ssk="55:https://support.google.com/googleplay?p=pff_parentguide">
-                                <a href="https://support.google.com/googleplay?p=pff_parentguide" target="_blank" jslog="197536; 1:3121|qgIF0gECEAc=; track:click;" class="footer__link">
-                                    <p class="footer__link-text">Hướng dẫn dành cho cha mẹ</p>
-                                </a>
-                            </div>
+            <div">
+              <a
+                href="#"
+                
+                class="footer__link"
+              >
+                <p class="footer__link-text">Chia sẻ với gia đình</p>
+              </a>
+            </div>
+          </section>
+        </div>
+      </div>
 
-                            <div ssk="52:https://support.google.com/googleplay/answer/7007852">
-                                <a href="https://support.google.com/googleplay/answer/7007852" target="_blank" jslog="197536; 1:3121|qgIF0gECEAg=; track:click;" class="footer__link">
-                                    <p class="footer__link-text">Chia sẻ với gia đình</p>
-                                </a>
-                            </div>
-                        </section>
-                    </div>
+      <div class="footer__bottom-links">
+        <div
+          class="footer__bottom-item"
+          
+        >
+          <a
+            href="#"
+           
+            class="footer__link"
+          >
+            <p class="footer__bottom-item">Điều khoản dịch vụ</p>
+          </a>
+        </div>
 
-                </div>
+        <div
+          class="footer__bottom-item"
+          
+        >
+          <a
+            href="#"
+            
+            class="footer__link"
+          >
+            <p class="footer__bottom-item">Quyền riêng tư</p>
+          </a>
+        </div>
 
-                <div class="footer__bottom-links">
+        <div
+          class="footer__bottom-item"
+          
+        >
+          <a
+            href="#"
+           
+            
+            class="footer__link"
+          >
+            <p class="footer__bottom-item">Giới thiệu về App Market</p>
+          </a>
+        </div>
 
-                    <div class="footer__bottom-item" ssk="56:https://play.google.com/intl/vi_vn/about/play-terms.html">
-                        <a href="https://play.google.com/intl/vi_vn/about/play-terms.html" target="_blank" jslog="197536; 1:3121; track:click;" class="footer__link">
-                            <p class="footer__bottom-item">Điều khoản dịch vụ</p>
-                        </a>
-                    </div>
+        <div
+          class="footer__bottom-item"
+          
+        >
+          <a
+            href="#"
+          
+            class="footer__link"
+          >
+            <p class="footer__bottom-item">Nhà phát triển</p>
+          </a>
+        </div>
 
-                    <div class="footer__bottom-item" ssk="35:https://policies.google.com/privacy">
-                        <a href="https://policies.google.com/privacy" target="_blank" jslog="197536; 1:3121; track:click;" class="footer__link">
-                            <p class="footer__bottom-item">Quyền riêng tư</p>
-                        </a>
-                    </div>
-
-                    <div class="footer__bottom-item" ssk="51:https://support.google.com/googleplay/?p=about_play">
-                        <a href="https://support.google.com/googleplay/?p=about_play" target="_blank" jslog="197536; 1:3121; track:click;" class="footer__link">
-                            <p class="footer__bottom-item">Giới thiệu về App Market</p>
-                        </a>
-                    </div>
-
-                    <div class="footer__bottom-item" ssk="39:http://developer.android.com/index.html">
-                        <a href="http://developer.android.com/index.html" target="_blank" jslog="197536; 1:3121; track:click;" class="footer__link">
-                            <p class="footer__bottom-item">Nhà phát triển</p>
-                        </a>
-                    </div>
-
-                    <div class="footer__bottom-item footer__locale">
-                        <div class="footer__locale-switcher">
-                            <div class="yVZQTb">Việt Nam (Tiếng Việt)</div>
-                        </div>
-                    </div>
-
-                </div>
-            </footer>
+        <div class="footer__bottom-item footer__locale">
+          <div class="footer__locale-switcher">
+            <div>Việt Nam (Tiếng Việt)</div>
+          </div>
+        </div>
+      </div>
+    </footer>
         `;
   }
 }
