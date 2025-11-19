@@ -1,20 +1,3 @@
-/* Đảm bảo tên ứng dụng trong kết quả search dùng Roboto */
-.app-name,
-.app-identity__meta,
-.publisher-display,
-.cost-type-display,
-.rating-inline,
-.app-identity__stats-bar,
-.app-identity-stats-bar__content {
-  font-family: Roboto, Arial, sans-serif;
-}
-
-/* Ép toàn bộ text trong footer của trang search dùng Roboto */
-.footer,
-.footer * {
-  font-family: Roboto, Arial, sans-serif;
-}
-
 a:visited {
   color: initial;
 }
@@ -28,9 +11,6 @@ html,
 body {
   overflow-x: hidden;
 }
-
-/* VfPpkd-AznF2e */
-/* (Các style nav/header đã được đưa về header.css để tránh trùng lặp) */
 
 .container {
   width: calc(100% - 48px);
@@ -91,6 +71,7 @@ body {
 
 .result-item-featured {
   display: flex;
+  justify-content: space-between;
   height: 360px;
   grid-column: 1 / span 3;
   border: none;
@@ -254,7 +235,6 @@ body {
   color: rgb(32, 33, 36);
   fill: rgb(32, 33, 36);
   stop-color: rgb(32, 33, 36);
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.0178571429em;
@@ -282,7 +262,6 @@ body {
   color: rgb(95, 99, 104);
   fill: rgb(95, 99, 104);
   stop-color: rgb(95, 99, 104);
-  font-family: Roboto, Arial, sans-serif;
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.025em;
@@ -317,7 +296,6 @@ body {
 /* Responsive trailer iframe sizing */
 .trailer-display {
   width: 100%;
-  /* bỏ hoặc comment max-width nếu muốn luôn ôm theo card */
   /* max-width: 560px; */
   aspect-ratio: 16 / 9;
   margin-top: 12px;
