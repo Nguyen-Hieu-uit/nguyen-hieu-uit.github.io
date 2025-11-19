@@ -142,11 +142,3 @@
 .suggestion-item:hover {
   background-color: #f0f0f0;
 }
-
-@media (min-width: 1440px) {
-  .search__box {
-    -webkit-flex-basis: calc(100% - (180px + 20px));
-    -ms-flex-preferred-size: calc(100% - (180px + 20px));
-    flex-basis: calc(100% - (180px + 20px));
-  }
-}
