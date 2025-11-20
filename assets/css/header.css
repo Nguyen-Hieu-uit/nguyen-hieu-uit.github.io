@@ -29,23 +29,21 @@
 
 /* Responsive header: dưới 950px, cho navigation-tabs xuống hàng dưới */
 @media screen and (max-width: 950px) {
-  #header {
-    height: 120px;
-  }
   .nav {
-    /* height: 64px; */
+    height: 128px;
     flex-wrap: wrap;
     align-items: center;
     padding: 0px 0px;
   }
 
   .header__logo-link {
+    height: 64px;
     margin-right: 8px;
   }
 
   .navigation-tabs {
     background-color: #fff;
-    order: 2;
+    order: 1;
     width: 100%;
     margin-top: 0px;
     padding: 0 8px 0;
@@ -54,6 +52,9 @@
 
   .nav-tab {
     flex: 0 0 auto;
+  }
+  .nav a {
+    height: 64px;
   }
 }
 
