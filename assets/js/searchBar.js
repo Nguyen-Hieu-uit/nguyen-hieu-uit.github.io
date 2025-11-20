@@ -2,8 +2,7 @@ const availableKeywords = [];
 
 document.addEventListener("DOMContentLoaded", () => {
   (function loadKeywords() {
-    const primaryPath = "./assets/json/appData.json";
-    const fallbackPath = "../assets/json/appData.json";
+    const path = "/assets/json/appData.json";
 
     const handleData = (data) => {
       if (Array.isArray(data)) {
@@ -15,7 +14,7 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     };
 
-    fetch(primaryPath)
+    fetch(path)
       .then((response) => {
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
@@ -24,26 +23,7 @@ document.addEventListener("DOMContentLoaded", () => {
       })
       .then(handleData)
       .catch((error) => {
-        console.error("Lỗi khi tải appData.json từ", primaryPath, error);
-
-        // Thử fetch từ đường dẫn fallback nếu đường dẫn chính lỗi
-        return fetch(fallbackPath)
-          .then((response) => {
-            if (!response.ok) {
-              throw new Error(
-                `HTTP error from fallback! status: ${response.status}`
-              );
-            }
-            return response.json();
-          })
-          .then(handleData)
-          .catch((fallbackError) => {
-            console.error(
-              "Lỗi khi tải appData.json từ fallback:",
-              fallbackPath,
-              fallbackError
-            );
-          });
+        console.error("Lỗi khi tải appData.json từ", path, error);
       });
   })();
 
