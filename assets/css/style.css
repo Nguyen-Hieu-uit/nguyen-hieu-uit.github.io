@@ -8,6 +8,7 @@
   src: url("/assets/Fonts/Arial_Regular/Arial-Regular.ttf") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 a:visited {
