@@ -53,7 +53,7 @@
   .nav-tab {
     flex: 0 0 auto;
   }
-  .nav a {
+  .nav .header__logo-link {
     height: 64px;
   }
 }

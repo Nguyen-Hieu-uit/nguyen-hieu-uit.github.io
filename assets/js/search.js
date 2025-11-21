@@ -174,7 +174,6 @@ function createResultItem(app, query, isFeatured) {
           </div>
           <div class="app__stats-bar__item">
             <div class="stat-item__value">
-              <!-- sẽ lấy từ json sau -->
               <img
                 src="https://play-lh.googleusercontent.com/EbEX3AN4FC4pu3lsElAHCiksluOVU8OgkgtWC43-wmm_aHVq2D65FmEM97bPexilUAvlAY5_4ARH8Tb3RxQ=w96-h32-rw"
                 srcset="

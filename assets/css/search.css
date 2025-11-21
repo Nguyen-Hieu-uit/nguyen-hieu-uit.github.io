@@ -33,14 +33,14 @@ body {
   font-size: 100%;
   font-weight: 500;
   color: #333;
-  align-self: flex-end;
-  padding-right: 20px;
+  align-self: flex-start;
+  padding: 0 20px 10px 0;
 }
 
-.result-count,
+/* .result-count,
 .search-title {
   display: none;
-}
+} */
 
 /* Container chứa cả featured + plain, xếp dọc */
 .results-list {
