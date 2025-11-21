@@ -821,14 +821,14 @@ button {
   overflow: hidden; /* Chống tràn văn bản */
 }
 
-/* Tên sách */
+/* Tên app */
 .qr-info-title {
   font-size: 1rem;
   font-weight: 500;
   color: #202124;
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis; /* Thêm "..." nếu tên sách quá dài */
+  text-overflow: ellipsis; /* Thêm "..." nếu tên app quá dài */
 }
 
 /* Giá tiền */
@@ -882,7 +882,6 @@ button {
 }
 
 .success-title {
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
   font-size: 1.5rem; /* 24px */
   font-weight: 500;
   color: #202124;
@@ -890,7 +889,6 @@ button {
 }
 
 .success-message {
-  font-family: Roboto, Arial, sans-serif;
   font-size: 1rem; /* 16px */
   color: #5f6368;
   margin-top: 8px;

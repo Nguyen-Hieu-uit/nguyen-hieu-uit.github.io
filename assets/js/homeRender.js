@@ -134,7 +134,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           </span>
                         </span>
                       </div>
-                      <span class="app-info__text app-category ePXqnb"></span>
+                      <span class="app-info__text app-category"></span>
                     </div>
                   </div>
                 </div>
@@ -196,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
                           </span>
                         </span>
                       </div>
-                      <span class="app-info__text app-category ePXqnb"></span>
+                      <span class="app-info__text app-category"></span>
                     </div>
                   </div>
                 </div>

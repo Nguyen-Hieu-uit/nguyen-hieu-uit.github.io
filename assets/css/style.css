@@ -2000,9 +2000,7 @@ img {
   color: #ce965c;
 }
 
-.hcq9Df,
-.app-actions__install-wrapper,
-.hcq9Df .install-button-wrapper {
+.app-actions__install-wrapper {
   align-items: center;
   display: flex;
 }
@@ -2394,10 +2392,6 @@ img {
   color: rgb(95, 99, 104);
 }
 
-.icon-button--fix-stacking {
-  z-index: 0;
-}
-
 .icon-button--pull-margin {
   margin: -12px;
 }
@@ -2452,11 +2446,6 @@ img {
   background-color: var(--mdc-ripple-color, #000);
 }
 
-.icon-button--fix-stacking .icon-button__ripple::before,
-.icon-button--fix-stacking .icon-button__ripple::after {
-  z-index: -1;
-}
-
 .icon-button:not(.button__ripple) .icon-button__ripple::after {
   transition: opacity 0.15s linear;
 }
@@ -2477,19 +2466,6 @@ img {
   top: 0;
   width: 100%;
   outline: none;
-}
-
-.is-focussed .icon-button__focus-ring {
-  pointer-events: none;
-  border: 2px solid rgb(24, 90, 188);
-  border-radius: 6px;
-  box-sizing: content-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 100%;
-  width: 100%;
 }
 
 .data-safety-promo {
@@ -2646,19 +2622,6 @@ img {
 
 .button .button__label {
   position: relative;
-}
-
-.is-focussed .focus-visible {
-  pointer-events: none;
-  border: 2px solid rgb(24, 90, 188);
-  border-radius: 6px;
-  box-sizing: content-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: calc(100% + 4px);
-  width: calc(100% + 4px);
 }
 
 .media-item:not(:first-child) {
