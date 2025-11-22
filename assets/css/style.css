@@ -3723,6 +3723,13 @@ img {
   }
 }
 
+@media (max-width: 768px) {
+  .filter_children .platform-item {
+    min-width: auto;
+    margin-right: auto;
+  }
+}
+
 .filter_children {
   margin-left: 24px;
   margin-right: 24px;
@@ -3840,43 +3847,38 @@ img {
 
 @media screen and (min-width: 960px) {
   .spotlight-app-card,
-  .HocpVc {
+  . {
     width: calc(200vw - 84px);
     border-radius: 16px;
   }
 }
 
 @media screen and (min-width: 960px) and (min-width: 600px) {
-  .spotlight-app-card,
-  .HocpVc {
+  .spotlight-app-card {
     width: calc(150vw - 136px);
   }
 }
 
 @media screen and (min-width: 960px) and (min-width: 840px) {
-  .spotlight-app-card,
-  .HocpVc {
+  .spotlight-app-card {
     width: calc(120vw - 112px);
   }
 }
 
 @media screen and (min-width: 960px) and (min-width: 960px) {
-  .spotlight-app-card,
-  .HocpVc {
+  .spotlight-app-card {
     width: calc(100vw - 96px);
   }
 }
 
 @media screen and (min-width: 960px) and (min-width: 1280px) {
-  .spotlight-app-card,
-  .HocpVc {
+  .spotlight-app-card {
     width: calc(100vw - 144px);
   }
 }
 
 @media screen and (min-width: 960px) and (min-width: 1440px) {
-  .spotlight-app-card,
-  .HocpVc {
+  .spotlight-app-card {
     width: 1296px;
   }
 }
@@ -3941,19 +3943,13 @@ img {
 }
 
 @media screen and (min-width: 960px) {
-  .spotlight-app-card .spotlight-card__content-overlay,
-  .spotlight-app-card .Vi9xMe,
-  .HocpVc .spotlight-card__content-overlay,
-  .HocpVc .Vi9xMe {
+  .spotlight-app-card .spotlight-card__content-overlay {
     padding: 0 24px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .spotlight-app-card .spotlight-card__content-overlay,
-  .spotlight-app-card .Vi9xMe,
-  .HocpVc .spotlight-card__content-overlay,
-  .HocpVc .Vi9xMe {
+  .spotlight-app-card .spotlight-card__content-overlay {
     padding: 0 32px;
   }
 }
@@ -3979,8 +3975,7 @@ img {
 }
 
 @media screen and (min-width: 960px) {
-  .spotlight-app-card .spotlight-card__title,
-  .HocpVc .spotlight-card__title {
+  .spotlight-app-card .spotlight-card__title {
     line-height: 2.25rem;
     font-size: 1.75rem;
     letter-spacing: 0;
@@ -3990,8 +3985,7 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-  .spotlight-app-card .spotlight-card__title,
-  .HocpVc .spotlight-card__title {
+  .spotlight-app-card .spotlight-card__title {
     line-height: 2.75rem;
     font-size: 2.25rem;
     letter-spacing: 0;
@@ -4001,8 +3995,7 @@ img {
 }
 
 @media screen and (min-width: 1440px) {
-  .spotlight-app-card .spotlight-card__title,
-  .HocpVc .spotlight-card__title {
+  .spotlight-app-card .spotlight-card__title {
     line-height: 3.25rem;
     font-size: 2.75rem;
     letter-spacing: 0;
@@ -4021,8 +4014,7 @@ img {
 }
 
 @media screen and (min-width: 960px) {
-  .spotlight-app-card .spotlight-card__subtitle,
-  .HocpVc .spotlight-card__subtitle {
+  .spotlight-app-card .spotlight-card__subtitle {
     line-height: 1.5rem;
     font-size: 1.125rem;
     letter-spacing: 0;
@@ -4032,8 +4024,7 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-  .spotlight-app-card .spotlight-card__subtitle,
-  .HocpVc .spotlight-card__subtitle {
+  .spotlight-app-card .spotlight-card__subtitle {
     line-height: 2rem;
     font-size: 1.5rem;
     letter-spacing: 0;
@@ -4043,8 +4034,7 @@ img {
 }
 
 @media screen and (min-width: 1440px) {
-  .spotlight-app-card .spotlight-card__subtitle,
-  .HocpVc .spotlight-card__subtitle {
+  .spotlight-app-card .spotlight-card__subtitle {
     line-height: 2.25rem;
     font-size: 1.75rem;
     letter-spacing: 0;
@@ -4066,23 +4056,20 @@ img {
 }
 
 @media screen and (min-width: 960px) {
-  .spotlight-app-card .spotlight-card__footer-grid,
-  .HocpVc .spotlight-card__footer-grid {
+  .spotlight-app-card .spotlight-card__footer-grid {
     padding: 20px 24px;
     width: 50%;
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .spotlight-app-card .spotlight-card__footer-grid,
-  .HocpVc .spotlight-card__footer-grid {
+  .spotlight-app-card .spotlight-card__footer-grid {
     padding: 24px;
   }
 }
 
 @media screen and (min-width: 1440px) {
-  .spotlight-app-card .spotlight-card__footer-grid,
-  .HocpVc .spotlight-card__footer-grid {
+  .spotlight-app-card .spotlight-card__footer-grid {
     padding: 32px;
   }
 }
@@ -4102,8 +4089,7 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-  .spotlight-app-card .spotlight-card__app-icon,
-  .HocpVc .spotlight-card__app-icon {
+  .spotlight-app-card .spotlight-card__app-icon {
     height: 64px;
     width: 64px;
   }
@@ -4119,8 +4105,7 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-  .spotlight-app-card .spotlight-card__app-name,
-  .HocpVc .spotlight-card__app-name {
+  .spotlight-app-card .spotlight-card__app-name {
     font-size: 1.125rem;
   }
 }
@@ -4135,8 +4120,7 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-  .spotlight-app-card .spotlight-card__app-category,
-  .HocpVc .spotlight-card__app-category {
+  .spotlight-app-card .spotlight-card__app-category {
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.00625em;
@@ -4182,8 +4166,7 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-  .spotlight-app-card .app-purchase-note,
-  .HocpVc .app-purchase-note {
+  .spotlight-app-card .app-purchase-note {
     margin-top: 4px;
   }
 }
@@ -4202,8 +4185,7 @@ img {
 }
 
 @media screen and (min-width: 1280px) {
-  .spotlight-app-card .spotlight-card__app-category,
-  .HocpVc .spotlight-card__app-category {
+  .spotlight-app-card .spotlight-card__app-category {
     font-size: 1rem;
     font-weight: 400;
     letter-spacing: 0.00625em;
