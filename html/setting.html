@@ -1,54 +1,51 @@
 <!DOCTYPE html>
 <html lang="vi">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
-    <meta name="description" content="Cài đặt" />
-    <meta
-      name="keywords"
-      content="cài đặt, cài đặt ứng dụng, cài đặt trò chơi"
-    />
-    <meta name="author" content="AppMarket" />
-    <title>Cài đặt</title>
-    <link rel="stylesheet" href="/assets/css/style.css" />
-    <link rel="stylesheet" href="/assets/css/styles_setting.css" />
-    <link rel="stylesheet" href="/assets/css/SettingTab.css" />
-    <link rel="stylesheet" href="/assets/css/searchBar.css" />
-    <script type="module" src="/assets/js/customheader.js"></script>
-    <script type="module" src="/assets/js/customfooter.js"></script>
-  </head>
 
-  <body>
-    <link rel="stylesheet" href="/assets/css/theme.css" />
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+  <title>Cài đặt</title>
+  <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/styles_setting.css" />
+  <link rel="stylesheet" href="/assets/css/SettingTab.css" />
+  <link rel="stylesheet" href="/assets/css/searchBar.css" />
+  <script type="module" src="/assets/js/components/customheader.js"></script>
+  <script type="module" src="/assets/js/components/customfooter.js"></script>
+  <script type="module" src="/assets/js/components/AuthModal.js"></script>
+</head>
 
-    <script>
-      (function () {
-        // Lấy chủ đề từ localStorage, mặc định là 'Sáng'
-        const theme = localStorage.getItem("theme") || "Sáng";
+<body>
+  <link rel="stylesheet" href="/assets/css/theme.css" />
 
-        // Áp dụng class Sáng/Tối NGAY LẬP TỨC cho <body>
-        // 'Mùa' cũng dùng 'light-theme'
-        document.body.className =
-          theme === "Tối" ? "dark-theme" : "light-theme";
-      })();
-    </script>
+  <script>
+    (function () {
+      // Lấy chủ đề từ localStorage, mặc định là 'Sáng'
+      const theme = localStorage.getItem("theme") || "Sáng";
 
-    <custom-header></custom-header>
+      // Áp dụng class Sáng/Tối NGAY LẬP TỨC cho <body>
+      // 'Mùa' cũng dùng 'light-theme'
+      document.body.className =
+        theme === "Tối" ? "dark-theme" : "light-theme";
+    })();
+  </script>
 
-    <div class="main-content main-content-spacing">
-      <h1>Cài đặt</h1>
+  <custom-header></custom-header>
 
-      <main class="settings-container-seamless">
-        <section id="full-content-area"></section>
-      </main>
-    </div>
+  <div class="main-content main-content-spacing">
+    <h1>Cài đặt</h1>
 
-    <custom-footer></custom-footer>
-    <script src="/assets/js/theme-manager.js"></script>
-    <script src="/assets/js/script_setting.js"></script>
-    <script src="/assets/js/SettingTab.js"></script>
-    <script src="/assets/js/searchBar.js"></script>
-    <script src="/assets/js/headerShadow.js"></script>
-  </body>
+    <main class="settings-container-seamless">
+      <section id="full-content-area"></section>
+    </main>
+  </div>
+
+  <script src="/assets/js/theme-manager.js"></script>
+  <script src="/assets/js/script_setting.js"></script>
+  <script src="/assets/js/SettingTab.js"></script>
+  <script src="/assets/js/searchBar.js"></script>
+
+  <custom-footer></custom-footer>
+</body>
+
 </html>

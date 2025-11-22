@@ -4,202 +4,99 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Trẻ em" />
-  <meta name="keywords" content="trẻ em, ứng dụng cho trẻ em, trò chơi cho trẻ em" />
-  <meta name="author" content="AppMarket" />
   <link rel="icon" type="image/png" href="/assets/images/logo.png" />
   <title>Trẻ em</title>
 
   <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=help,star" />
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search,help,star" />
 
   <link rel="stylesheet" href="/assets/css/style.css" />
+  <link rel="stylesheet" href="/assets/css/header.css" />
   <link rel="stylesheet" href="/assets/css/filter.css" />
   <link rel="stylesheet" href="/assets/css/carousel.css" />
-  <link rel="stylesheet" href="/assets/css/ranking-list.css" />
-  <link rel="stylesheet" href="/assets/css/ranking-list.css" />
-  <!-- <link rel="stylesheet" href="/assets/css/auth.css" /> -->
   <link rel="stylesheet" href="/assets/css/carousel-scroll.css" />
   <link rel="stylesheet" href="/assets/css/search.css" />
   <link rel="stylesheet" href="/assets/css/searchBar.css" />
+  <link rel="stylesheet" href="/assets/css/theme.css" />
+  <link rel="stylesheet" href="/assets/css/SettingTab.css" />
 
-  <!-- <script src="/assets/js/search.js"></script> -->
-  <script type="module" src="/assets/js/customheader.js"></script>
-  <script type="module" src="/assets/js/customfooter.js"></script>
+  <script type="module" src="/assets/js/components/customheader.js"></script>
+  <script type="module" src="/assets/js/components/customfooter.js"></script>
+  <script type="module" src="/assets/js/components/ChildrenSpotlight.js"></script>
+  <script type="module" src="/assets/js/components/AuthModal.js"></script>
 </head>
 
 <body>
-  <link rel="stylesheet" href="/assets/css/theme.css" />
-
   <script>
     (function () {
-      // Lấy chủ đề từ localStorage, mặc định là 'Sáng'
       const theme = localStorage.getItem("theme") || "Sáng";
-
-      // Áp dụng class Sáng/Tối NGAY LẬP TỨC cho <body>
-      // 'Mùa' cũng dùng 'light-theme'
-      document.body.className =
-        theme === "Tối" ? "dark-theme" : "light-theme";
+      document.body.className = theme === "Tối" ? "dark-theme" : "light-theme";
     })();
   </script>
+
   <custom-header></custom-header>
 
   <div class="main-content main-content-spacing">
     <div class="main-content-inner">
       <div class="main-page-content">
+
         <div class="header-banner-wrapper">
           <div class="header-banner-container">
             <div class="image-fit-container">
-              <img src="/assets/images/tải xuống.png" alt="" />
+              <img src="/assets/images/tải xuống.png" alt="Banner Trẻ em" style="object-fit: cover;" />
             </div>
           </div>
         </div>
+
         <div class="page-title-area">
-          <h1 class="main-heading">
-            Ứng dụng và trò chơi Giáo viên đã phê duyệt
-          </h1>
+          <h1 class="main-heading">Ứng dụng và trò chơi Giáo viên đã phê duyệt</h1>
         </div>
+
         <div class="filter_format filter_children">
           <div class="filter-content-wrapper">
             <div class="element-gap horizontal-scroll">
               <div class="platform-item">
-                <a class="platform-button is-active rounded-full item-selected" href="/store/games?device=windows">
+                <a class="platform-button is-active rounded-full item-selected" href="#">
                   <div class="ripple-effect"></div>
-                  <div class="button-content">
-                    <span class="button-label">Tất cả độ tuổi từ 12 trở xuống</span>
-                  </div>
+                  <div class="button-content"><span class="button-label">Tất cả độ tuổi</span></div>
                 </a>
               </div>
-
               <div class="platform-item">
-                <a class="platform-button rounded-full item-selected" href="/store/games?device=phone">
+                <a class="platform-button rounded-full item-selected" href="#">
                   <div class="ripple-effect"></div>
-                  <div class="button-content">
-                    <span class="button-label">5 tuổi trở xuống</span>
-                  </div>
+                  <div class="button-content"><span class="button-label">5 tuổi trở xuống</span></div>
                 </a>
               </div>
-
               <div class="platform-item">
-                <a class="platform-button rounded-full item-selected" href="/store/games?device=tablet">
+                <a class="platform-button rounded-full item-selected" href="#">
                   <div class="ripple-effect"></div>
-                  <div class="button-content">
-                    <span class="button-label">6-8 tuổi</span>
-                  </div>
+                  <div class="button-content"><span class="button-label">6-8 tuổi</span></div>
                 </a>
               </div>
-
               <div class="platform-item">
-                <a class="platform-button rounded-full item-selected" href="/store/games?device=tv">
+                <a class="platform-button rounded-full item-selected" href="#">
                   <div class="ripple-effect"></div>
-                  <div class="button-content">
-                    <span class="button-label">9-12 tuổi</span>
-                  </div>
+                  <div class="button-content"><span class="button-label">9-12 tuổi</span></div>
                 </a>
               </div>
             </div>
           </div>
         </div>
+
         <div class="main-page-content">
+
           <div class="app-section">
             <div class="app-list-container">
               <div class="app-list-wrapper app-list-wrapper--pc">
                 <div class="content-wrapper">
                   <div class="horizontal-scroll app-row app-list-wrapper--pc">
-                    <button class="carousel-btn left" aria-label="Scroll left">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                        fill="#000000">
-                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                      </svg>
-                    </button>
-
-                    <button class="carousel-btn right" aria-label="Scroll right">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                        fill="#000000">
-                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                      </svg>
-                    </button>
-                    <div class="platform-item spotlight-grid__cell-spacing">
-                      <div
-                        class="card card--outlined card--elevated card--flat AaN0Dd spotlight-banner__container spotlight-app-card">
-                        <div>
-                          <div class="card-container spotlight-banner__content-wrapper">
-                            <a href="#" class="card-link pos-relative">
-                              <div class="spotlight-card" style="background-color: rgb(105, 197, 186)">
-                                <img
-                                  src="https://play-lh.googleusercontent.com/SS4cjt_-IBJbXYrffzu5ej97tKVotqdoHtcJpwWaVc638xU9DR35RMvJSDVEGk8D9zxNXc96SLmP=w648-h364-rw"
-                                  srcset="
-                                      https://play-lh.googleusercontent.com/SS4cjt_-IBJbXYrffzu5ej97tKVotqdoHtcJpwWaVc638xU9DR35RMvJSDVEGk8D9zxNXc96SLmP=w1296-h728-rw 2x
-                                    " class="img-contain spotlight-card__image" aria-hidden="true"
-                                  data-iml="37443.70000000112" />
-                                <div class="spotlight-card__footer"></div>
-                                <div class="spotlight-card__image-overlay" style="
-                                      background-image: linear-gradient(
-                                        transparent 43.83%,
-                                        rgb(105, 197, 186) 79.64%
-                                      );
-                                    "></div>
-                              </div>
-                              <div class="spotlight-card__content-overlay">
-                                <div class="spotlight-card__title text-color-black">
-                                  Thỏa sức vui chơi cùng mèo tại Nhà búp bê
-                                  của Gabby
-                                </div>
-                                <div class="spotlight-card__subtitle text-color-black">
-                                  Hình dán, màu sắc mới và hơn nữa
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                          <div class="spotlight-card__footer-grid">
-                            <a href="/store/apps/details?id=com.sagosago.CrayonClub.googleplay">
-                              <div class="spotlight-card__app-info-group">
-                                <img
-                                  src="https://play-lh.googleusercontent.com/3gddomRH-G_C-werKpfeBjCZ9r7qWsnbYLRT9JDFhuAjQI3_fzCUbbNbZl4b5CWcp4M=s64-rw"
-                                  srcset="
-                                      https://play-lh.googleusercontent.com/3gddomRH-G_C-werKpfeBjCZ9r7qWsnbYLRT9JDFhuAjQI3_fzCUbbNbZl4b5CWcp4M=s128-rw 2x
-                                    " class="img-contain spotlight-card__app-icon" aria-hidden="true"
-                                  alt="Hình thu nhỏ" loading="lazy" />
-                                <div class="spotlight-card__app-details">
-                                  <div class="spotlight-card__detail-line">
-                                    <span class="spotlight-card__app-name text-color-black">Crayon Club: Color PAW
-                                      Patrol</span>
-                                  </div>
-                                  <div class="spotlight-card__detail-line">
-                                    <span class="spotlight-card__app-category text-color-black">Play Piknik</span><span
-                                      aria-hidden="true"
-                                      class="spotlight-card__rating-spacer text-color-black">•</span><img
-                                      src="https://play-lh.googleusercontent.com/EbEX3AN4FC4pu3lsElAHCiksluOVU8OgkgtWC43-wmm_aHVq2D65FmEM97bPexilUAvlAY5_4ARH8Tb3RxQ=s16-rw"
-                                      srcset="
-                                          https://play-lh.googleusercontent.com/EbEX3AN4FC4pu3lsElAHCiksluOVU8OgkgtWC43-wmm_aHVq2D65FmEM97bPexilUAvlAY5_4ARH8Tb3RxQ=s32-rw 2x
-                                        " class="img-contain spotlight-card__rating-star-icon"
-                                      alt="Mức phân loại nội dung 3 tuổi trở lên" loading="lazy" />
-                                  </div>
-                                </div>
-                              </div>
-                            </a>
-                            <div class="util-flex-center-column">
-                              <div>
-                                <div class="button-wrapper">
-                                  <div class="button__touch-wrapper" data-is-touch-wrapper="true">
-                                    <button
-                                      class="button button--theme-green button--contained button--typography button--padding-x-large focus-visible button--shape-rounded button--text-light button--min-width-medium spotlight-button--small text-color-black spotlight-button--secondary">
-                                      <div class="ripple--bounded"></div>
-                                      <div class="button__focus-ring"></div>
-                                      <div class="button__touch-target"></div>
-                                      <span class="button__label">Cài đặt</span>
-                                    </button>
-                                  </div>
-                                </div>
-                              </div>
-                              <span class="app-purchase-note text-color-black">Mua trong ứng dụng</span>
-                            </div>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                    <children-spotlight bg-color="rgb(105, 197, 186)"
+                      img-main="https://play-lh.googleusercontent.com/SS4cjt_-IBJbXYrffzu5ej97tKVotqdoHtcJpwWaVc638xU9DR35RMvJSDVEGk8D9zxNXc96SLmP=w648-h364-rw"
+                      title="Thỏa sức vui chơi cùng mèo tại Nhà búp bê" subtitle="Hình dán, màu sắc mới và hơn nữa"
+                      icon="https://play-lh.googleusercontent.com/3gddomRH-G_C-werKpfeBjCZ9r7qWsnbYLRT9JDFhuAjQI3_fzCUbbNbZl4b5CWcp4M=s64-rw"
+                      app-name="Crayon Club: Color PAW Patrol" category="Play Piknik"
+                      href="/store/apps/details?id=com.sagosago.CrayonClub">
+                    </children-spotlight>
                   </div>
                 </div>
               </div>
@@ -207,181 +104,96 @@
           </div>
 
           <div class="app-section">
-            <div>
-              <section>
-                <header class="section-header-spacing section-header-margin">
-                  <div class="section-banner-title">
-                    <span>Play your favorites on the big screen</span>
-                  </div>
-                  <div class="section-banner-description">
-                    <span>App Market Games on PC</span>
-                  </div>
-                </header>
-
-                <div class="app-list-container">
-                  <div class="app-list-wrapper app-list-wrapper--pc">
-                    <div class="content-wrapper">
-                      <div class="horizontal-scroll app-row app-list-wrapper--pc" id="pc-games-row">
-                        <div class="horizontal-scroll app-row app-list-wrapper--pc">
-                    <button class="carousel-btn left" aria-label="Scroll left">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                        fill="#000000">
+            <section>
+              <header class="section-header-spacing section-header-margin">
+                <div class="section-banner-title"><span>Play your favorites on the big screen</span></div>
+                <div class="section-banner-description"><span>App Market Games on PC</span></div>
+              </header>
+              <div class="app-list-container">
+                <div class="app-list-wrapper app-list-wrapper--pc">
+                  <div class="content-wrapper">
+                    <button class="carousel-btn left hidden"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 0 24 24" width="24px" fill="#000000">
                         <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                      </svg>
-                    </button>
-
-                    <button class="carousel-btn right" aria-label="Scroll right">
-                      <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                        fill="#000000">
+                      </svg></button>
+                    <button class="carousel-btn right"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 0 24 24" width="24px" fill="#000000">
                         <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                      </svg>
-                    </button>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </section>
-            </div>
-          </div>
-
-          <div class="app-section">
-            <div class="app-list-container">
-              <div class="app-list-wrapper app-list-wrapper--pc">
-                <div class="content-wrapper">
-                  <div class="horizontal-scroll app-row app-list-wrapper--pc">
-                    <div class="platform-item spotlight-grid__cell-spacing">
-                      <div
-                        class="card card--outlined card--elevated card--flat AaN0Dd spotlight-banner__container spotlight-app-card">
-                        <div class="card__content">
-                          <div class="card-container spotlight-banner__content-wrapper">
-                            <a href="#" class="card-link pos-relative">
-                              <div class="spotlight-card" style="background-color: rgb(46, 53, 121)">
-                                <img
-                                  src="https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w648-h364-rw"
-                                  srcset="
-                                      https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w1296-h728-rw 2x
-                                    " class="img-contain spotlight-card__image" aria-hidden="true"
-                                  data-iml="37443.70000000112" />
-                                <div class="spotlight-card__footer"></div>
-                                <div class="spotlight-card__image-overlay" style="
-                                      background-image: linear-gradient(
-                                        transparent 48.15%,
-                                        rgb(46, 53, 121) 94.91%
-                                      );
-                                    "></div>
-                              </div>
-                              <div class="spotlight-card__content-overlay">
-                                <div class="spotlight-card__title text-color-white">
-                                  Thỏa sức vui chơi cùng mèo tại Nhà búp bê
-                                  của Gabby
-                                </div>
-                                <div class="spotlight-card__subtitle text-color-white">
-                                  Hình dán, màu sắc mới và hơn nữa
-                                </div>
-                              </div>
-                            </a>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+                      </svg></button>
+                    <div class="horizontal-scroll app-row app-list-wrapper--pc" id="pc-games-row"></div>
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
-
-          <div class="app-section">
-            <div>
-              <section>
-                <header class="section-header-spacing section-header-margin">
-                  <div class="section-banner-title">
-                    <span>Play your favorites on the big screen</span>
-                  </div>
-                  <div class="section-banner-description">
-                    <span>App Market Games on PC</span>
-                  </div>
-                </header>
-
-                <div class="app-list-container">
-                  <div class="app-list-wrapper app-list-wrapper--pc">
-                    <div class="content-wrapper">
-                      <button class="carousel-btn left" aria-label="Scroll left">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                          fill="#000000">
-                          <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                        </svg>
-                      </button>
-
-                      <button class="carousel-btn right" aria-label="Scroll right">
-                        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px"
-                          fill="#000000">
-                          <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                        </svg>
-                      </button>
-                      <div class="horizontal-scroll app-row app-list-wrapper--pc" id="pc-games-row-2"></div>
-                    </div>
-                  </div>
-                </div>
-            </div>
             </section>
           </div>
+
+          <div class="app-section">
+            <div class="app-list-container">
+              <div class="app-list-wrapper app-list-wrapper--pc">
+                <div class="content-wrapper">
+                  <div class="horizontal-scroll app-row app-list-wrapper--pc">
+                    <children-spotlight bg-color="rgb(46, 53, 121)"
+                      img-main="https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w648-h364-rw"
+                      title="Khám phá thế giới kỳ thú" subtitle="Học tập và vui chơi"
+                      icon="https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w1296-h728-rw"
+                      app-name="Toca Life World" category="Giáo dục" href="#">
+                    </children-spotlight>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="app-section">
+            <section>
+              <header class="section-header-spacing section-header-margin">
+                <div class="section-banner-title"><span>Play your favorites on the big screen</span></div>
+                <div class="section-banner-description"><span>App Market Games on PC</span></div>
+              </header>
+              <div class="app-list-container">
+                <div class="app-list-wrapper app-list-wrapper--pc">
+                  <div class="content-wrapper">
+                    <button class="carousel-btn left hidden"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 0 24 24" width="24px" fill="#000000">
+                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                      </svg></button>
+                    <button class="carousel-btn right"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
+                        viewBox="0 0 24 24" width="24px" fill="#000000">
+                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
+                      </svg></button>
+                    <div class="horizontal-scroll app-row app-list-wrapper--pc" id="pc-games-row-2"></div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+
         </div>
       </div>
     </div>
   </div>
-  </div>
 
   <custom-footer></custom-footer>
-  <script src="/assets/js/homeData.js"></script>
 
+  <script src="/assets/js/homeData.js"></script>
   <script src="/assets/js/homeRender.js"></script>
-  <script src="/assets/js/carousel.js"></script>
-  <script src="/assets/js/filter.js"></script>
+  <script src="/assets/js/carousel-scroll.js"></script>
+  <script src="/assets/js/searchBar.js"></script>
+  <script src="/assets/js/navigation.js"></script>
+  <script src="/assets/js/SettingTab.js"></script>
+  <script src="/assets/js/theme-manager.js"></script>
+
   <script>
     document.addEventListener("DOMContentLoaded", function () {
-      // --- THÊM JS CHO TÍNH NĂNG POPUP ---
-
-      // Lấy các phần tử
-      const openBtn = document.getElementById("openRankingBtn");
-      const closeBtn = document.getElementById("closeRankingBtn");
-      const overlay = document.getElementById("rankingOverlay");
-
-      // Khi bấm nút "Mở Bảng Xếp Hạng"
-      if (openBtn) {
-        openBtn.addEventListener("click", function () {
-          overlay.classList.add("visible");
-        });
-      }
-
-      // Khi bấm nút "X"
-      if (closeBtn) {
-        closeBtn.addEventListener("click", function () {
-          overlay.classList.remove("visible");
-        });
-      }
-
-      // Khi bấm ra ngoài khu vực .ranking-container (trên overlay)
-      if (overlay) {
-        overlay.addEventListener("click", function (event) {
-          // Kiểm tra xem click có phải trực tiếp vào overlay không
-          if (event.target === overlay) {
-            overlay.classList.remove("visible");
-          }
+      const header = document.getElementById("header");
+      if (header) {
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 10) header.classList.add("scrolled");
+          else header.classList.remove("scrolled");
         });
       }
     });
   </script>
-  
-
-  
-  <script src="/assets/js/searchBar.js"></script>
-  <script src="/assets/js/login.js"></script>
-  <script src="/assets/js/register.js"></script>
-  <script src="/assets/js/carousel-scroll.js"></script>
-  <script src="/assets/js/navigation.js"></script>
-  <script src="/assets/js/SettingTab.js"></script>
-  <script src="/assets/js/theme-manager.js"></script>
-  <script src="/assets/js/headerShadow.js"></script>
 </body>
 
 </html>

@@ -10,10 +10,7 @@ class CustomHeader extends HTMLElement {
   // HTML ban đầu của component (giữ nguyên cấu trúc)
   getInitialHTML() {
     return `
-            <link rel="stylesheet" href="/assets/css/style.css">
-            <link rel="stylesheet" href="/assets/css/SettingTab.css">
-            <link rel="stylesheet" href="/assets/css/header.css">
-            
+           
 
             <header class="header" id="header">
                 <nav class="nav">

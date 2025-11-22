@@ -1092,9 +1092,6 @@ section {
   .app-thumbnail-img {
     --media-width: calc(75vw - 76px);
   }
-  .pIJ2De {
-    --media-width: calc(75vw - 76px);
-  }
   .app-thumbnail {
     --media-width: calc(75vw - 76px);
   }
@@ -1102,9 +1099,6 @@ section {
 
 @media screen and (min-width: 840px) {
   .app-thumbnail-img {
-    --media-width: calc(50vw - 56px);
-  }
-  .pIJ2De {
     --media-width: calc(50vw - 56px);
   }
   .app-thumbnail {
@@ -1116,9 +1110,6 @@ section {
   .app-thumbnail-img {
     --media-width: calc(33.3333333333vw - 42.6666666667px);
   }
-  .pIJ2De {
-    --media-width: calc(33.3333333333vw - 42.6666666667px);
-  }
   .app-thumbnail {
     --media-width: calc(33.3333333333vw - 42.6666666667px);
   }
@@ -1128,9 +1119,6 @@ section {
   .app-thumbnail-img {
     --media-width: calc(33.3333333333vw - 64px);
   }
-  .pIJ2De {
-    --media-width: calc(33.3333333333vw - 64px);
-  }
   .app-thumbnail {
     --media-width: calc(33.3333333333vw - 64px);
   }
@@ -1138,9 +1126,6 @@ section {
 
 @media screen and (min-width: 1440px) {
   .app-thumbnail-img {
-    --media-width: 416px;
-  }
-  .pIJ2De {
     --media-width: 416px;
   }
   .app-thumbnail {
@@ -1248,9 +1233,7 @@ section {
 }
 
 .app-rating-separator,
-.app-category,
-.JUF8md,
-.producer-app-name {
+.app-category {
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.025em;
@@ -1260,9 +1243,7 @@ section {
 
 .app-rating-icon .app-rating-icon-detail,
 .app-rating-separator,
-.O9T88b,
-.app-category,
-.JUF8md {
+.app-category {
   color: rgb(95, 99, 104);
   fill: rgb(95, 99, 104);
   stop-color: rgb(95, 99, 104);
@@ -1270,7 +1251,6 @@ section {
 
 @media screen and (min-width: 1280px) {
   .app-category,
-  .JUF8md,
   .producer-app-name {
     font-size: 0.875rem;
     font-weight: 400;
@@ -1282,9 +1262,7 @@ section {
 
 .app-rating-icon .app-rating-icon-detail:not(:disabled),
 .app-rating-separator:not(:disabled),
-.O9T88b:not(:disabled),
-.app-category:not(:disabled),
-.JUF8md:not(:disabled) {
+.app-category:not(:disabled) {
   color: rgb(95, 99, 104);
 }
 
@@ -1855,8 +1833,6 @@ img {
   width: 48px;
 }
 
-.hIGwCc .app-identity__icon,
-.fGct3b .app-identity__stats-bar__icon,
 .app-identity-hide-prop .app-identity__stats-bar__icon {
   display: none;
 }
