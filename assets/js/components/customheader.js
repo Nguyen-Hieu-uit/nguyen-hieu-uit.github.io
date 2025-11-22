@@ -1,36 +1,36 @@
 // CustomHeader.js
 
 class CustomHeader extends HTMLElement {
-    constructor() {
-        super();
-        this.innerHTML = this.getInitialHTML();
+  constructor() {
+    super();
+    this.innerHTML = this.getInitialHTML();
 
-        // Các element quan trọng
-        this.authContainer = this.querySelector('#auth-container');
-        this.dropdownMenu = this.querySelector('#profile-dropdown-menu');
+    // Các element quan trọng
+    this.authContainer = this.querySelector("#auth-container");
+    this.dropdownMenu = this.querySelector("#profile-dropdown-menu");
 
-        // Khởi tạo
-        this.init();
-    }
+    // Khởi tạo
+    this.init();
+  }
 
-    init() {
-        // 1. Kiểm tra trạng thái đăng nhập và render giao diện tương ứng
-        this.renderAuthUI();
+  init() {
+    // 1. Kiểm tra trạng thái đăng nhập và render giao diện tương ứng
+    this.renderAuthUI();
 
-        // 2. Lắng nghe sự kiện 'auth-change' (Sự kiện tùy chỉnh khi đăng nhập/đăng xuất)
-        window.addEventListener('auth-change', () => {
-            this.renderAuthUI();
-        });
+    // 2. Lắng nghe sự kiện 'auth-change' (Sự kiện tùy chỉnh khi đăng nhập/đăng xuất)
+    window.addEventListener("auth-change", () => {
+      this.renderAuthUI();
+    });
 
-        // 3. Lắng nghe sự kiện storage (để đồng bộ giữa các tab trình duyệt)
-        window.addEventListener('storage', () => {
-            this.renderAuthUI();
-        });
-    }
+    // 3. Lắng nghe sự kiện storage (để đồng bộ giữa các tab trình duyệt)
+    window.addEventListener("storage", () => {
+      this.renderAuthUI();
+    });
+  }
 
-    // HTML Khung sườn (Skeleton)
-    getInitialHTML() {
-        return `
+  // HTML Khung sườn (Skeleton)
+  getInitialHTML() {
+    return `
             <link rel="stylesheet" href="/assets/css/style.css">
             <link rel="stylesheet" href="/assets/css/SettingTab.css">
             <link rel="stylesheet" href="/assets/css/header.css">
@@ -90,19 +90,19 @@ class CustomHeader extends HTMLElement {
                 </nav>
             </header>
         `;
-    }
+  }
 
-    // Hàm render UI dựa trên trạng thái đăng nhập
-    renderAuthUI() {
-        const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
-        this.authContainer = this.querySelector('#auth-container');
+  // Hàm render UI dựa trên trạng thái đăng nhập
+  renderAuthUI() {
+    const isLoggedIn = localStorage.getItem("isLoggedIn") === "true";
+    this.authContainer = this.querySelector("#auth-container");
 
-        if (isLoggedIn) {
-            // TRƯỜNG HỢP ĐÃ ĐĂNG NHẬP: Hiển thị Avatar và Dropdown
-            this.authContainer.innerHTML = `
+    if (isLoggedIn) {
+      // TRƯỜNG HỢP ĐÃ ĐĂNG NHẬP: Hiển thị Avatar và Dropdown
+      this.authContainer.innerHTML = `
                 <div class="profile-menu-container">
                     <button class="icon-button" id="avatar-button">
-                        <img src="/assets/images/banhrang.svg" alt="Cài đặt" style="width: 24px; height: 24px; object-fit: contain;">
+                        <img src="/assets/images/user-avatar.svg" alt="Cài đặt" style="width: 36px; height: 36px; object-fit: contain; fill: #222222;">
                     </button>
 
                     <div class="profile-dropdown" id="profile-dropdown-menu">
@@ -129,93 +129,94 @@ class CustomHeader extends HTMLElement {
                 </div>
             `;
 
-            // Setup sự kiện cho Avatar (Toggle Dropdown)
-            this.setupAvatarEvents();
+      // Setup sự kiện cho Avatar (Toggle Dropdown)
+      this.setupAvatarEvents();
 
-            // Tải dữ liệu user
-            this.fetchUserDataAndRender();
+      // Tải dữ liệu user
+      this.fetchUserDataAndRender();
+    } else {
+      // TRƯỜNG HỢP CHƯA ĐĂNG NHẬP: Hiển thị component AuthModal
+      this.authContainer.innerHTML = `<auth-modal></auth-modal>`;
+    }
+  }
+
+  setupAvatarEvents() {
+    const avatarBtn = this.querySelector("#avatar-button");
+    const dropdown = this.querySelector("#profile-dropdown-menu");
+    const logoutBtn = this.querySelector("#logout-btn");
+
+    // 1. Toggle Dropdown khi click avatar
+    if (avatarBtn && dropdown) {
+      avatarBtn.addEventListener("click", (e) => {
+        e.stopPropagation(); // Ngăn chặn click lan ra window
+        dropdown.classList.toggle("show"); // Bạn cần thêm CSS class .show display:block
+
+        // Nếu chưa có class show trong CSS, ta dùng style inline tạm thời
+        if (dropdown.style.display === "block") {
+          dropdown.style.display = "none";
         } else {
-            // TRƯỜNG HỢP CHƯA ĐĂNG NHẬP: Hiển thị component AuthModal
-            this.authContainer.innerHTML = `<auth-modal></auth-modal>`;
+          dropdown.style.display = "block";
         }
+      });
+
+      // Đóng dropdown khi click ra ngoài
+      window.addEventListener("click", () => {
+        if (dropdown) dropdown.style.display = "none";
+      });
+
+      // Ngăn đóng khi click vào bên trong dropdown
+      dropdown.addEventListener("click", (e) => {
+        e.stopPropagation();
+      });
     }
 
-    setupAvatarEvents() {
-        const avatarBtn = this.querySelector('#avatar-button');
-        const dropdown = this.querySelector('#profile-dropdown-menu');
-        const logoutBtn = this.querySelector('#logout-btn');
-
-        // 1. Toggle Dropdown khi click avatar
-        if (avatarBtn && dropdown) {
-            avatarBtn.addEventListener('click', (e) => {
-                e.stopPropagation(); // Ngăn chặn click lan ra window
-                dropdown.classList.toggle('show'); // Bạn cần thêm CSS class .show display:block
-
-                // Nếu chưa có class show trong CSS, ta dùng style inline tạm thời
-                if (dropdown.style.display === 'block') {
-                    dropdown.style.display = 'none';
-                } else {
-                    dropdown.style.display = 'block';
-                }
-            });
-
-            // Đóng dropdown khi click ra ngoài
-            window.addEventListener('click', () => {
-                if (dropdown) dropdown.style.display = 'none';
-            });
-
-            // Ngăn đóng khi click vào bên trong dropdown
-            dropdown.addEventListener('click', (e) => {
-                e.stopPropagation();
-            });
-        }
-
-        // 2. Xử lý Đăng xuất
-        if (logoutBtn) {
-            logoutBtn.addEventListener('click', (e) => {
-                e.preventDefault();
-                this.handleLogout();
-            });
-        }
+    // 2. Xử lý Đăng xuất
+    if (logoutBtn) {
+      logoutBtn.addEventListener("click", (e) => {
+        e.preventDefault();
+        this.handleLogout();
+      });
     }
+  }
 
-    handleLogout() {
-        // Xóa trạng thái đăng nhập
-        localStorage.removeItem("isLoggedIn");
-        localStorage.removeItem("currentUser"); // Nếu có lưu info user
+  handleLogout() {
+    // Xóa trạng thái đăng nhập
+    localStorage.removeItem("isLoggedIn");
+    localStorage.removeItem("currentUser"); // Nếu có lưu info user
 
-        // Phát sự kiện để các component khác biết (nếu cần)
-        window.dispatchEvent(new Event('auth-change'));
-    }
+    // Phát sự kiện để các component khác biết (nếu cần)
+    window.dispatchEvent(new Event("auth-change"));
+  }
 
-    async fetchUserDataAndRender() {
-        // Chỉ fetch nếu đang đăng nhập
-        if (localStorage.getItem("isLoggedIn") !== "true") return;
+  async fetchUserDataAndRender() {
+    // Chỉ fetch nếu đang đăng nhập
+    if (localStorage.getItem("isLoggedIn") !== "true") return;
 
-        // fetchUserData() { <-- Tên hàm mới
-        try {
-            // Lấy chuỗi JSON mà lúc đăng ký/đăng nhập ta đã lưu
-            const storedUser = localStorage.getItem("currentUser"); // <-- ĐÚNG: Gọi Local Storage
+    // fetchUserData() { <-- Tên hàm mới
+    try {
+      // Lấy chuỗi JSON mà lúc đăng ký/đăng nhập ta đã lưu
+      const storedUser = localStorage.getItem("currentUser"); // <-- ĐÚNG: Gọi Local Storage
 
-            if (storedUser) {
-                const currentUser = JSON.parse(storedUser); // <-- ĐÚNG: Parse dữ liệu động
+      if (storedUser) {
+        const currentUser = JSON.parse(storedUser); // <-- ĐÚNG: Parse dữ liệu động
 
-                const nameEl = this.querySelector("#user-name-display");
-                const emailEl = this.querySelector("#user-email-display");
+        const nameEl = this.querySelector("#user-name-display");
+        const emailEl = this.querySelector("#user-email-display");
 
-                if (nameEl) {
-                    // Ưu tiên hiển thị username hoặc fullname
-                    nameEl.textContent = currentUser.username || currentUser.fullName || "Người dùng";
-                }
-                if (emailEl) {
-                    emailEl.textContent = currentUser.email || "";
-                }
-            }
-        } catch (e) {
-            console.error("Lỗi khi đọc dữ liệu người dùng từ Local Storage:", e);
+        if (nameEl) {
+          // Ưu tiên hiển thị username hoặc fullname
+          nameEl.textContent =
+            currentUser.username || currentUser.fullName || "Người dùng";
         }
-        // }
+        if (emailEl) {
+          emailEl.textContent = currentUser.email || "";
+        }
+      }
+    } catch (e) {
+      console.error("Lỗi khi đọc dữ liệu người dùng từ Local Storage:", e);
     }
+    // }
+  }
 }
 
 customElements.define("custom-header", CustomHeader);

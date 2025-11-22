@@ -3846,8 +3846,7 @@ img {
 }
 
 @media screen and (min-width: 960px) {
-  .spotlight-app-card,
-  . {
+  .spotlight-app-card {
     width: calc(200vw - 84px);
     border-radius: 16px;
   }
