@@ -14,6 +14,8 @@ document.addEventListener("DOMContentLoaded", () => {
     // Nếu đường dẫn của link TRÙNG với đường dẫn trang hiện tại
     if (currentPath === linkPath) {
       link.classList.add("active"); // Thêm class "active" cho nó
+    } else if (linkPath === "/index.html" && currentPath === "/") {
+      link.classList.add("active");
     }
   });
 });
