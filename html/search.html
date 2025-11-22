@@ -1,49 +1,47 @@
 <!DOCTYPE html>
 <html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+    <title>Kết Quả Tìm Kiếm</title>
+    <script type="module" src="/assets/js/components/customheader.js"></script>
+    <script type="module" src="/assets/js/components/customfooter.js"></script>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="/assets/images/logo.png" />
-  <title>Kết Quả Tìm Kiếm</title>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" />
-  <script type="module" src="/assets/js/components/customheader.js"></script>
-  <script type="module" src="/assets/js/components/customfooter.js"></script>
+    <!-- <link rel="stylesheet" href="/assets/css/SettingTab.css" /> -->
+    <link rel="stylesheet" href="/assets/css/header.css" />
 
-  <!-- <link rel="stylesheet" href="/assets/css/SettingTab.css" /> -->
-  <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/search.css" />
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+    <link rel="stylesheet" href="/assets/css/searchBar.css" />
+    <script type="module" src="/assets/js/components/AuthModal.js"></script>
+  </head>
 
-  <link rel="stylesheet" href="/assets/css/search.css" />
-  <link rel="stylesheet" href="/assets/css/theme.css" />
-  <link rel="stylesheet" href="/assets/css/searchBar.css" />
-  <script type="module" src="/assets/js/components/AuthModal.js"></script>
-</head>
+  <body>
+    <custom-header></custom-header>
 
-<body>
-  <custom-header></custom-header>
+    <div class="container">
+      <h1 class="search-title">
+        Kết quả cho: "<span id="query-display"></span>"
+      </h1>
 
-  <div class="container">
-    <h1 class="search-title">
-      Kết quả cho: "<span id="query-display"></span>"
-    </h1>
+      <p class="result-count" id="result-count-display"></p>
 
-    <p class="result-count" id="result-count-display"></p>
+      <div class="results-list" id="results-list">
+        <div class="results-list-featured" id="results-list-featured"></div>
+        <div class="results-list-plain" id="results-list-plain"></div>
+      </div>
 
-    <div class="results-list" id="results-list">
-      <div class="results-list-featured" id="results-list-featured"></div>
-      <div class="results-list-plain" id="results-list-plain"></div>
+      <div id="no-results" style="display: none">
+        <p>Không tìm thấy kết quả phù hợp nào. Vui lòng thử từ khóa khác.</p>
+      </div>
     </div>
 
-    <div id="no-results" style="display: none">
-      <p>Không tìm thấy kết quả phù hợp nào. Vui lòng thử từ khóa khác.</p>
-    </div>
-  </div>
-
-  <custom-footer></custom-footer>
-  <script src="/assets/js/search.js"></script>
-  <script src="/assets/js/searchBar.js"></script>
-  <script src="/assets/js/SettingTab.js"></script>
-  <script src="/assets/js/theme-manager.js"></script>
-</body>
-
+    <custom-footer></custom-footer>
+    <script src="/assets/js/search.js"></script>
+    <script src="/assets/js/searchBar.js"></script>
+    <script src="/assets/js/SettingTab.js"></script>
+    <script src="/assets/js/theme-manager.js"></script>
+    <script src="/assets/js/headerShadow.js"></script>
+  </body>
 </html>

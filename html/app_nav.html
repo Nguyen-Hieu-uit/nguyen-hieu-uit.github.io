@@ -1,145 +1,215 @@
 <!DOCTYPE html>
 <html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/logo/logo.png" />
+    <title>Ứng dụng</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="/assets/logo/logo.png" />
-  <title>Ứng dụng</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search,help,star"
+    />
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search,help,star" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/filter.css" />
+    <link rel="stylesheet" href="/assets/css/carousel.css" />
+    <link rel="stylesheet" href="/assets/css/ranking-list.css" />
+    <link rel="stylesheet" href="/assets/css/carousel-scroll.css" />
+    <link rel="stylesheet" href="/assets/css/search.css" />
+    <link rel="stylesheet" href="/assets/css/searchBar.css" />
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+    <link rel="stylesheet" href="/assets/css/SettingTab.css" />
 
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <link rel="stylesheet" href="/assets/css/header.css" />
-  <link rel="stylesheet" href="/assets/css/filter.css" />
-  <link rel="stylesheet" href="/assets/css/carousel.css" />
-  <link rel="stylesheet" href="/assets/css/ranking-list.css" />
-  <link rel="stylesheet" href="/assets/css/carousel-scroll.css" />
-  <link rel="stylesheet" href="/assets/css/search.css" />
-  <link rel="stylesheet" href="/assets/css/searchBar.css" />
-  <link rel="stylesheet" href="/assets/css/theme.css" />
-  <link rel="stylesheet" href="/assets/css/SettingTab.css" />
+    <script type="module" src="/assets/js/components/customheader.js"></script>
+    <script type="module" src="/assets/js/components/customfooter.js"></script>
+    <script type="module" src="/assets/js/components/HomeFilter.js"></script>
+    <script type="module" src="/assets/js/components/MainCarousel.js"></script>
+    <script type="module" src="/assets/js/components/RankingModal.js"></script>
+    <script type="module" src="/assets/js/components/AuthModal.js"></script>
+  </head>
 
-  <script type="module" src="/assets/js/components/customheader.js"></script>
-  <script type="module" src="/assets/js/components/customfooter.js"></script>
-  <script type="module" src="/assets/js/components/HomeFilter.js"></script>
-  <script type="module" src="/assets/js/components/MainCarousel.js"></script>
-  <script type="module" src="/assets/js/components/RankingModal.js"></script>
-  <script type="module" src="/assets/js/components/AuthModal.js"></script>
-</head>
+  <body>
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme") || "Sáng";
+        document.body.className =
+          theme === "Tối" ? "dark-theme" : "light-theme";
+      })();
+    </script>
 
-<body>
-  <script>
-    (function () {
-      const theme = localStorage.getItem("theme") || "Sáng";
-      document.body.className = theme === "Tối" ? "dark-theme" : "light-theme";
-    })();
-  </script>
+    <custom-header></custom-header>
 
-  <custom-header></custom-header>
+    <div class="main-content main-content-spacing">
+      <div class="main-content-inner">
+        <home-filter></home-filter>
 
-  <div class="main-content main-content-spacing">
-    <div class="main-content-inner">
-
-      <home-filter></home-filter>
-
-      <div class="main-page-content">
-
-        <div class="app-section">
-          <div class="app-list-container">
-            <div class="app-list-wrapper app-list-wrapper--pc">
-              <div class="content-wrapper">
-                <button class="carousel-btn left hidden" aria-label="Scroll left">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
-                    <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                  </svg>
-                </button>
-                <button class="carousel-btn right" aria-label="Scroll right">
-                  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#000000">
-                    <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                  </svg>
-                </button>
-                <div class="horizontal-scroll app-row app-list-wrapper--pc" id="editor-picks-row"></div>
+        <div class="main-page-content">
+          <div class="app-section">
+            <div class="app-list-container">
+              <div class="app-list-wrapper app-list-wrapper--pc">
+                <div class="content-wrapper">
+                  <button
+                    class="carousel-btn left hidden"
+                    aria-label="Scroll left"
+                  >
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      fill="#000000"
+                    >
+                      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
+                    </svg>
+                  </button>
+                  <button class="carousel-btn right" aria-label="Scroll right">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="24px"
+                      viewBox="0 0 24 24"
+                      width="24px"
+                      fill="#000000"
+                    >
+                      <path
+                        d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                      />
+                    </svg>
+                  </button>
+                  <div
+                    class="horizontal-scroll app-row app-list-wrapper--pc"
+                    id="editor-picks-row"
+                  ></div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        <div class="app-section">
-          <section>
-            <header class="section-header-spacing section-header-margin">
-              <div class="section-banner-title"><span>Play your favorites on the big screen</span></div>
-              <div class="section-banner-description"><span>App Market Games on PC</span></div>
-            </header>
-            <div class="app-list-container">
-              <div class="app-list-wrapper app-list-wrapper--pc">
-                <div class="content-wrapper">
-                  <button class="carousel-btn left hidden"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                      viewBox="0 0 24 24" width="24px" fill="#000000">
-                      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                    </svg></button>
-                  <button class="carousel-btn right"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                      viewBox="0 0 24 24" width="24px" fill="#000000">
-                      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                    </svg></button>
-                  <div class="horizontal-scroll app-row app-list-wrapper--pc" id="pc-games-row"></div>
+          <div class="app-section">
+            <section>
+              <header class="section-header-spacing section-header-margin">
+                <div class="section-banner-title">
+                  <span>Play your favorites on the big screen</span>
+                </div>
+                <div class="section-banner-description">
+                  <span>App Market Games on PC</span>
+                </div>
+              </header>
+              <div class="app-list-container">
+                <div class="app-list-wrapper app-list-wrapper--pc">
+                  <div class="content-wrapper">
+                    <button class="carousel-btn left hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        fill="#000000"
+                      >
+                        <path
+                          d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                        />
+                      </svg>
+                    </button>
+                    <button class="carousel-btn right">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        fill="#000000"
+                      >
+                        <path
+                          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                        />
+                      </svg>
+                    </button>
+                    <div
+                      class="horizontal-scroll app-row app-list-wrapper--pc"
+                      id="pc-games-row"
+                    ></div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
-        </div>
+            </section>
+          </div>
 
-        <div class="app-section">
-          <section>
-            <header class="section-header-spacing section-header-margin">
-              <div class="section-banner-title"><span>Play your favorites on the big screen</span></div>
-              <div class="section-banner-description"><span>App Market Games on PC</span></div>
-            </header>
-            <div class="app-list-container">
-              <div class="app-list-wrapper app-list-wrapper--pc">
-                <div class="content-wrapper">
-                  <button class="carousel-btn left hidden"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                      viewBox="0 0 24 24" width="24px" fill="#000000">
-                      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                    </svg></button>
-                  <button class="carousel-btn right"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                      viewBox="0 0 24 24" width="24px" fill="#000000">
-                      <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                    </svg></button>
-                  <div class="horizontal-scroll app-row app-list-wrapper--pc" id="pc-games-row-2"></div>
+          <div class="app-section">
+            <section>
+              <header class="section-header-spacing section-header-margin">
+                <div class="section-banner-title">
+                  <span>Play your favorites on the big screen</span>
+                </div>
+                <div class="section-banner-description">
+                  <span>App Market Games on PC</span>
+                </div>
+              </header>
+              <div class="app-list-container">
+                <div class="app-list-wrapper app-list-wrapper--pc">
+                  <div class="content-wrapper">
+                    <button class="carousel-btn left hidden">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        fill="#000000"
+                      >
+                        <path
+                          d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                        />
+                      </svg>
+                    </button>
+                    <button class="carousel-btn right">
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        height="24px"
+                        viewBox="0 0 24 24"
+                        width="24px"
+                        fill="#000000"
+                      >
+                        <path
+                          d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                        />
+                      </svg>
+                    </button>
+                    <div
+                      class="horizontal-scroll app-row app-list-wrapper--pc"
+                      id="pc-games-row-2"
+                    ></div>
+                  </div>
                 </div>
               </div>
-            </div>
-          </section>
+            </section>
+          </div>
         </div>
-
       </div>
     </div>
-  </div>
 
-  <custom-footer></custom-footer>
-  <ranking-modal></ranking-modal>
+    <custom-footer></custom-footer>
+    <ranking-modal></ranking-modal>
 
-  <script src="/assets/js/homeData.js"></script>
-  <script src="/assets/js/homeRender.js"></script>
-  <script src="/assets/js/carousel-scroll.js"></script>
-  <script src="/assets/js/searchBar.js"></script>
-  <script src="/assets/js/navigation.js"></script>
-  <script src="/assets/js/SettingTab.js"></script>
-  <script src="/assets/js/theme-manager.js"></script>
+    <script src="/assets/js/homeData.js"></script>
+    <script src="/assets/js/homeRender.js"></script>
+    <script src="/assets/js/carousel-scroll.js"></script>
+    <script src="/assets/js/searchBar.js"></script>
+    <script src="/assets/js/navigation.js"></script>
+    <script src="/assets/js/SettingTab.js"></script>
+    <script src="/assets/js/theme-manager.js"></script>
+    <script src="/assets/js/headerShadow.js"></script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const header = document.getElementById("header");
-      if (header) {
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 10) header.classList.add("scrolled");
-          else header.classList.remove("scrolled");
-        });
-      }
-    });
-  </script>
-</body>
-
-</html>s
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const header = document.getElementById("header");
+        if (header) {
+          window.addEventListener("scroll", () => {
+            if (window.scrollY > 10) header.classList.add("scrolled");
+            else header.classList.remove("scrolled");
+          });
+        }
+      });
+    </script>
+  </body>
+</html>
+s

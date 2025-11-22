@@ -1,199 +1,275 @@
 <!DOCTYPE html>
 <html lang="vi">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" type="image/png" href="/assets/images/logo.png" />
+    <title>Trẻ em</title>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/png" href="/assets/images/logo.png" />
-  <title>Trẻ em</title>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search,help,star"
+    />
 
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search,help,star" />
+    <link rel="stylesheet" href="/assets/css/style.css" />
+    <link rel="stylesheet" href="/assets/css/header.css" />
+    <link rel="stylesheet" href="/assets/css/filter.css" />
+    <link rel="stylesheet" href="/assets/css/carousel.css" />
+    <link rel="stylesheet" href="/assets/css/carousel-scroll.css" />
+    <link rel="stylesheet" href="/assets/css/search.css" />
+    <link rel="stylesheet" href="/assets/css/searchBar.css" />
+    <link rel="stylesheet" href="/assets/css/theme.css" />
+    <link rel="stylesheet" href="/assets/css/SettingTab.css" />
 
-  <link rel="stylesheet" href="/assets/css/style.css" />
-  <link rel="stylesheet" href="/assets/css/header.css" />
-  <link rel="stylesheet" href="/assets/css/filter.css" />
-  <link rel="stylesheet" href="/assets/css/carousel.css" />
-  <link rel="stylesheet" href="/assets/css/carousel-scroll.css" />
-  <link rel="stylesheet" href="/assets/css/search.css" />
-  <link rel="stylesheet" href="/assets/css/searchBar.css" />
-  <link rel="stylesheet" href="/assets/css/theme.css" />
-  <link rel="stylesheet" href="/assets/css/SettingTab.css" />
+    <script type="module" src="/assets/js/components/customheader.js"></script>
+    <script type="module" src="/assets/js/components/customfooter.js"></script>
+    <script
+      type="module"
+      src="/assets/js/components/ChildrenSpotlight.js"
+    ></script>
+    <script type="module" src="/assets/js/components/AuthModal.js"></script>
+  </head>
 
-  <script type="module" src="/assets/js/components/customheader.js"></script>
-  <script type="module" src="/assets/js/components/customfooter.js"></script>
-  <script type="module" src="/assets/js/components/ChildrenSpotlight.js"></script>
-  <script type="module" src="/assets/js/components/AuthModal.js"></script>
-</head>
+  <body>
+    <script>
+      (function () {
+        const theme = localStorage.getItem("theme") || "Sáng";
+        document.body.className =
+          theme === "Tối" ? "dark-theme" : "light-theme";
+      })();
+    </script>
 
-<body>
-  <script>
-    (function () {
-      const theme = localStorage.getItem("theme") || "Sáng";
-      document.body.className = theme === "Tối" ? "dark-theme" : "light-theme";
-    })();
-  </script>
+    <custom-header></custom-header>
 
-  <custom-header></custom-header>
-
-  <div class="main-content main-content-spacing">
-    <div class="main-content-inner">
-      <div class="main-page-content">
-
-        <div class="header-banner-wrapper">
-          <div class="header-banner-container">
-            <div class="image-fit-container">
-              <img src="/assets/images/Kid_space.png" alt="Banner Trẻ em" style="object-fit: cover;" />
-            </div>
-          </div>
-        </div>
-
-        <div class="page-title-area">
-          <h1 class="main-heading">Ứng dụng và trò chơi Giáo viên đã phê duyệt</h1>
-        </div>
-
-        <div class="filter_format filter_children">
-          <div class="filter-content-wrapper">
-            <div class="element-gap horizontal-scroll">
-              <div class="platform-item">
-                <a class="platform-button is-active rounded-full item-selected" href="#">
-                  <div class="ripple-effect"></div>
-                  <div class="button-content"><span class="button-label">Tất cả độ tuổi</span></div>
-                </a>
-              </div>
-              <div class="platform-item">
-                <a class="platform-button rounded-full item-selected" href="#">
-                  <div class="ripple-effect"></div>
-                  <div class="button-content"><span class="button-label">5 tuổi trở xuống</span></div>
-                </a>
-              </div>
-              <div class="platform-item">
-                <a class="platform-button rounded-full item-selected" href="#">
-                  <div class="ripple-effect"></div>
-                  <div class="button-content"><span class="button-label">6-8 tuổi</span></div>
-                </a>
-              </div>
-              <div class="platform-item">
-                <a class="platform-button rounded-full item-selected" href="#">
-                  <div class="ripple-effect"></div>
-                  <div class="button-content"><span class="button-label">9-12 tuổi</span></div>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
-
+    <div class="main-content main-content-spacing">
+      <div class="main-content-inner">
         <div class="main-page-content">
+          <div class="header-banner-wrapper">
+            <div class="header-banner-container">
+              <div class="image-fit-container">
+                <img
+                  src="/assets/images/Kid_space.png"
+                  alt="Banner Trẻ em"
+                  style="object-fit: cover"
+                />
+              </div>
+            </div>
+          </div>
 
-          <div class="app-section">
-            <div class="app-list-container">
-              <div class="app-list-wrapper app-list-wrapper--pc">
-                <div class="content-wrapper">
-                  <div class="horizontal-scroll app-row app-list-wrapper--pc">
-                    <children-spotlight bg-color="rgb(105, 197, 186)"
-                      img-main="https://play-lh.googleusercontent.com/SS4cjt_-IBJbXYrffzu5ej97tKVotqdoHtcJpwWaVc638xU9DR35RMvJSDVEGk8D9zxNXc96SLmP=w648-h364-rw"
-                      title="Thỏa sức vui chơi cùng mèo tại Nhà búp bê" subtitle="Hình dán, màu sắc mới và hơn nữa"
-                      icon="https://play-lh.googleusercontent.com/3gddomRH-G_C-werKpfeBjCZ9r7qWsnbYLRT9JDFhuAjQI3_fzCUbbNbZl4b5CWcp4M=s64-rw"
-                      app-name="Crayon Club: Color PAW Patrol" category="Play Piknik"
-                      href="/store/apps/details?id=com.sagosago.CrayonClub">
-                    </children-spotlight>
-                  </div>
+          <div class="page-title-area">
+            <h1 class="main-heading">
+              Ứng dụng và trò chơi Giáo viên đã phê duyệt
+            </h1>
+          </div>
+
+          <div class="filter_format filter_children">
+            <div class="filter-content-wrapper">
+              <div class="element-gap horizontal-scroll">
+                <div class="platform-item">
+                  <a
+                    class="platform-button is-active rounded-full item-selected"
+                    href="#"
+                  >
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-label">Tất cả độ tuổi</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="platform-item">
+                  <a
+                    class="platform-button rounded-full item-selected"
+                    href="#"
+                  >
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-label">5 tuổi trở xuống</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="platform-item">
+                  <a
+                    class="platform-button rounded-full item-selected"
+                    href="#"
+                  >
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-label">6-8 tuổi</span>
+                    </div>
+                  </a>
+                </div>
+                <div class="platform-item">
+                  <a
+                    class="platform-button rounded-full item-selected"
+                    href="#"
+                  >
+                    <div class="ripple-effect"></div>
+                    <div class="button-content">
+                      <span class="button-label">9-12 tuổi</span>
+                    </div>
+                  </a>
                 </div>
               </div>
             </div>
           </div>
 
-          <div class="app-section">
-            <section>
-              <header class="section-header-spacing section-header-margin">
-                <div class="section-banner-title"><span>Play your favorites on the big screen</span></div>
-                <div class="section-banner-description"><span>App Market Games on PC</span></div>
-              </header>
+          <div class="main-page-content">
+            <div class="app-section">
               <div class="app-list-container">
                 <div class="app-list-wrapper app-list-wrapper--pc">
                   <div class="content-wrapper">
-                    <button class="carousel-btn left hidden"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                        viewBox="0 0 24 24" width="24px" fill="#000000">
-                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                      </svg></button>
-                    <button class="carousel-btn right"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                        viewBox="0 0 24 24" width="24px" fill="#000000">
-                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                      </svg></button>
-                    <div class="horizontal-scroll app-row app-list-wrapper--pc" id="pc-games-row"></div>
-                  </div>
-                </div>
-              </div>
-            </section>
-          </div>
-
-          <div class="app-section">
-            <div class="app-list-container">
-              <div class="app-list-wrapper app-list-wrapper--pc">
-                <div class="content-wrapper">
-                  <div class="horizontal-scroll app-row app-list-wrapper--pc">
-                    <children-spotlight bg-color="rgb(46, 53, 121)"
-                      img-main="https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w648-h364-rw"
-                      title="Khám phá thế giới kỳ thú" subtitle="Học tập và vui chơi"
-                      icon="https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w1296-h728-rw"
-                      app-name="Toca Life World" category="Giáo dục" href="#">
-                    </children-spotlight>
+                    <div class="horizontal-scroll app-row app-list-wrapper--pc">
+                      <children-spotlight
+                        bg-color="rgb(105, 197, 186)"
+                        img-main="https://play-lh.googleusercontent.com/SS4cjt_-IBJbXYrffzu5ej97tKVotqdoHtcJpwWaVc638xU9DR35RMvJSDVEGk8D9zxNXc96SLmP=w648-h364-rw"
+                        title="Thỏa sức vui chơi cùng mèo tại Nhà búp bê"
+                        subtitle="Hình dán, màu sắc mới và hơn nữa"
+                        icon="https://play-lh.googleusercontent.com/3gddomRH-G_C-werKpfeBjCZ9r7qWsnbYLRT9JDFhuAjQI3_fzCUbbNbZl4b5CWcp4M=s64-rw"
+                        app-name="Crayon Club: Color PAW Patrol"
+                        category="Play Piknik"
+                        href="/store/apps/details?id=com.sagosago.CrayonClub"
+                      >
+                      </children-spotlight>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
 
-          <div class="app-section">
-            <section>
-              <header class="section-header-spacing section-header-margin">
-                <div class="section-banner-title"><span>Play your favorites on the big screen</span></div>
-                <div class="section-banner-description"><span>App Market Games on PC</span></div>
-              </header>
+            <div class="app-section">
+              <section>
+                <header class="section-header-spacing section-header-margin">
+                  <div class="section-banner-title">
+                    <span>Play your favorites on the big screen</span>
+                  </div>
+                  <div class="section-banner-description">
+                    <span>App Market Games on PC</span>
+                  </div>
+                </header>
+                <div class="app-list-container">
+                  <div class="app-list-wrapper app-list-wrapper--pc">
+                    <div class="content-wrapper">
+                      <button class="carousel-btn left hidden">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          fill="#000000"
+                        >
+                          <path
+                            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                          />
+                        </svg>
+                      </button>
+                      <button class="carousel-btn right">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          fill="#000000"
+                        >
+                          <path
+                            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                          />
+                        </svg>
+                      </button>
+                      <div
+                        class="horizontal-scroll app-row app-list-wrapper--pc"
+                        id="pc-games-row"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+
+            <div class="app-section">
               <div class="app-list-container">
                 <div class="app-list-wrapper app-list-wrapper--pc">
                   <div class="content-wrapper">
-                    <button class="carousel-btn left hidden"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                        viewBox="0 0 24 24" width="24px" fill="#000000">
-                        <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z" />
-                      </svg></button>
-                    <button class="carousel-btn right"><svg xmlns="http://www.w3.org/2000/svg" height="24px"
-                        viewBox="0 0 24 24" width="24px" fill="#000000">
-                        <path d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z" />
-                      </svg></button>
-                    <div class="horizontal-scroll app-row app-list-wrapper--pc" id="pc-games-row-2"></div>
+                    <div class="horizontal-scroll app-row app-list-wrapper--pc">
+                      <children-spotlight
+                        bg-color="rgb(46, 53, 121)"
+                        img-main="https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w648-h364-rw"
+                        title="Khám phá thế giới kỳ thú"
+                        subtitle="Học tập và vui chơi"
+                        icon="https://play-lh.googleusercontent.com/gFtGoioYFwmlpynosu4Tq7NUMyqUmfzJO6wioYqaiVHAqDbMKJEQXviBy60txb_d3iVQs0Y-NM0=w1296-h728-rw"
+                        app-name="Toca Life World"
+                        category="Giáo dục"
+                        href="#"
+                      >
+                      </children-spotlight>
+                    </div>
                   </div>
                 </div>
               </div>
-            </section>
-          </div>
+            </div>
 
+            <div class="app-section">
+              <section>
+                <header class="section-header-spacing section-header-margin">
+                  <div class="section-banner-title">
+                    <span>Play your favorites on the big screen</span>
+                  </div>
+                  <div class="section-banner-description">
+                    <span>App Market Games on PC</span>
+                  </div>
+                </header>
+                <div class="app-list-container">
+                  <div class="app-list-wrapper app-list-wrapper--pc">
+                    <div class="content-wrapper">
+                      <button class="carousel-btn left hidden">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          fill="#000000"
+                        >
+                          <path
+                            d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"
+                          />
+                        </svg>
+                      </button>
+                      <button class="carousel-btn right">
+                        <svg
+                          xmlns="http://www.w3.org/2000/svg"
+                          height="24px"
+                          viewBox="0 0 24 24"
+                          width="24px"
+                          fill="#000000"
+                        >
+                          <path
+                            d="M10 6L8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+                          />
+                        </svg>
+                      </button>
+                      <div
+                        class="horizontal-scroll app-row app-list-wrapper--pc"
+                        id="pc-games-row-2"
+                      ></div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <custom-footer></custom-footer>
+    <custom-footer></custom-footer>
 
-  <script src="/assets/js/homeData.js"></script>
-  <script src="/assets/js/homeRender.js"></script>
-  <script src="/assets/js/carousel-scroll.js"></script>
-  <script src="/assets/js/searchBar.js"></script>
-  <script src="/assets/js/navigation.js"></script>
-  <script src="/assets/js/SettingTab.js"></script>
-  <script src="/assets/js/theme-manager.js"></script>
+    <script src="/assets/js/homeData.js"></script>
+    <script src="/assets/js/homeRender.js"></script>
+    <script src="/assets/js/carousel-scroll.js"></script>
+    <script src="/assets/js/searchBar.js"></script>
+    <script src="/assets/js/navigation.js"></script>
+    <script src="/assets/js/SettingTab.js"></script>
+    <script src="/assets/js/theme-manager.js"></script>
 
-  <script>
-    document.addEventListener("DOMContentLoaded", function () {
-      const header = document.getElementById("header");
-      if (header) {
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 10) header.classList.add("scrolled");
-          else header.classList.remove("scrolled");
-        });
-      }
-    });
-  </script>
-</body>
-
+    <script src="/assets/js/headerShadow.js"></script>
+  </body>
 </html>
