@@ -85,7 +85,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Render "Google Play Games on PC" row
+  // Render "Games on PC" row
   const pcGamesContainer = document.getElementById("pc-games-row");
 
   if (pcGamesContainer && Array.isArray(pcGamesRow)) {
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Render second "Google Play Games on PC" row (pc-games-row-2)
+  // Render second "Games on PC" row (pc-games-row-2)
   const pcGamesContainer2 = document.getElementById("pc-games-row-2");
 
   if (pcGamesContainer2 && Array.isArray(pcGamesRow)) {
