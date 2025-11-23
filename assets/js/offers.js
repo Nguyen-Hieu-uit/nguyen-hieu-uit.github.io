@@ -34,7 +34,7 @@ const offersData = [
     description: "Người dùng mới nhận voucher 50.000 ₫ cho đơn hàng đầu tiên.",
     badge: "Người dùng mới",
     image: "https://placehold.co/854x480/0F9D58/FFFFFF?text=Welcome+Offer",
-    link: "/html/register.html",
+    link: "/index.html",
     discountPercent: "-50.000 ₫",
     priceOld: "",
     priceNew: "Áp dụng tự động khi thanh toán",
