@@ -231,7 +231,7 @@ body {
   padding-left: 0;
 }
 
-/* ClM7O */
+/* giá trị thanh hiển thị thông tin cơ bản ứng dụng */
 .app__stats-bar__item .stat-item__value {
   color: rgb(32, 33, 36);
   fill: rgb(32, 33, 36);
@@ -258,7 +258,7 @@ body {
   display: inline-flex;
 }
 
-/* g1rdde */
+/* nhãn thanh thông tin cơ bản ứng dụng */
 .app__stats-bar__item .stat-item__label {
   color: rgb(95, 99, 104);
   fill: rgb(95, 99, 104);

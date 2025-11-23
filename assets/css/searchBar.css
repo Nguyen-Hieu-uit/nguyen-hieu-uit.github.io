@@ -13,7 +13,7 @@
   position: relative;
   /* Desktop/tablet: co dãn theo chiều ngang màn hình */
   width: clamp(100px, 20vw, 400px);
-  /* 1. HIỆU ỨNG CHUYỂN TỪ INPUT SANG BOX */
+  /* HIỆU ỨNG CHUYỂN TỪ INPUT SANG BOX */
   border-radius: 50px; /* Tạo bo góc cho cả khối */
   border: 1px solid #575756; /* Tạo viền cho cả khối */
   transition: all 20ms ease-in-out;
@@ -85,10 +85,6 @@
     transition: all 25ms ease-in-out;
   }
 
-  /* #search-input::placeholder {
-    color: transparent; 
-  } */
-
   #search-input:focus,
   #search-input:hover {
     width: 100%;
@@ -107,10 +103,13 @@
     border-radius: 0;
     transition: all 25ms ease-in-out;
   }
+
+  /* Ẩn nút clear khi chưa có input*/
   .clear__button {
     transform: translateY(-100%);
     display: none;
   }
+  /* Ẩn các nút khác khi search box được focus hoặc hover */
   .header-actions .search__box:focus-within ~ .icon-button,
   .header-actions .search__box:hover ~ .icon-button,
   .header-actions .search__box:focus-within ~ #auth-container,
@@ -160,6 +159,7 @@
   background-color: #f0f0f0;
 }
 
+/* Tạo kiểu in đậm phần text khớp với từ khóa tìm kiếm */
 .suggestion-item b {
   font-weight: 700;
   background-color: transparent;
