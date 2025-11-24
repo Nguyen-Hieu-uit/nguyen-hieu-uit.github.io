@@ -43,29 +43,29 @@ class CustomHeader extends HTMLElement {
                     </a>
 
                     <span class="navigation-tabs">
-                        <a role="tab" class="nav-tab nav-tab-selected nav-tab--auto-width nav-tab--styled FEsNhd YmRZ5d" 
+                        <a role="tab" class="nav-tab nav-tab-selected nav-tab--auto-width nav-tab--styled" 
                            aria-selected="true" tabindex="0" id="11" href="/index.html">
                             <span class="nav-tab__inner">
                                 <span class="nav-tab__label">Trò chơi</span>
-                                <span class="nav-tab__indicator-wrapper nav-tab__indicator-wrapper-selected nav-tab__indicator-border kte1hc">
+                                <span class="nav-tab__indicator-wrapper nav-tab__indicator-wrapper-selected nav-tab__indicator-border">
                                     <span class="nav-tab__indicator nav-tab__indicator-format indicator-length"></span>
                                 </span>
                             </span>
                         </a>
-                        <a role="tab" class="nav-tab nav-tab--auto-width nav-tab--styled FEsNhd YmRZ5d q2wkXd" 
+                        <a role="tab" class="nav-tab nav-tab--auto-width nav-tab--styled" 
                            aria-selected="true" tabindex="-1" id="1" href="/html/app_nav.html">
                             <span class="nav-tab__inner">
                                 <span class="nav-tab__label">Ứng dụng</span>
-                                <span class="nav-tab__indicator-wrapper nav-tab__indicator-border kte1hc">
+                                <span class="nav-tab__indicator-wrapper nav-tab__indicator-border">
                                     <span class="nav-tab__indicator nav-tab__indicator-format indicator-length"></span>
                                 </span>
                             </span>
                         </a>
-                         <a role="tab" class="nav-tab nav-tab--auto-width nav-tab--styled FEsNhd YmRZ5d dUghbc" 
+                         <a role="tab" class="nav-tab nav-tab--auto-width nav-tab--styled" 
                            aria-selected="false" tabindex="-1" id="13" href="/html/children_nav.html">
                             <span class="nav-tab__inner">
                                 <span class="nav-tab__label">Trẻ em</span>
-                                <span class="nav-tab__indicator-wrapper nav-tab__indicator-border kte1hc">
+                                <span class="nav-tab__indicator-wrapper nav-tab__indicator-border">
                                     <span class="nav-tab__indicator nav-tab__indicator-format indicator-length"></span>
                                 </span>
                             </span>
