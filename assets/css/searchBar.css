@@ -101,7 +101,7 @@
     border: 1px solid transparent;
     border-bottom: 1px solid #575756;
     border-radius: 0;
-    transition: all 25ms ease-in-out;
+    transition: all 10ms ease-in-out;
   }
 
   /* Ẩn nút clear khi chưa có input*/
