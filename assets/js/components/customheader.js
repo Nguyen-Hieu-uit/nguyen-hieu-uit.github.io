@@ -43,7 +43,7 @@ class CustomHeader extends HTMLElement {
                     </a>
 
                     <span class="navigation-tabs">
-                        <a role="tab" class="nav-tab nav-tab-selected nav-tab--auto-width nav-tab--styled" 
+                        <a role="tab" class="nav-tab nav-tab--auto-width nav-tab--styled" 
                            aria-selected="true" tabindex="0" id="11" href="/index.html">
                             <span class="nav-tab__inner">
                                 <span class="nav-tab__label">Trò chơi</span>

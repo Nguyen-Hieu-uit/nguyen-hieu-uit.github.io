@@ -1,20 +1,20 @@
 class ChildrenSpotlight extends HTMLElement {
-    connectedCallback() {
-        const bgColor = this.getAttribute("bg-color") || "#69c5ba";
-        const imgMain = this.getAttribute("img-main") || "";
-        const title = this.getAttribute("title") || "";
-        const subtitle = this.getAttribute("subtitle") || "";
-        const icon = this.getAttribute("icon") || "";
-        const appName = this.getAttribute("app-name") || "";
-        const category = this.getAttribute("category") || "";
-        const link = this.getAttribute("href") || "#";
+  connectedCallback() {
+    const bgColor = this.getAttribute("bg-color") || "#69c5ba";
+    const imgMain = this.getAttribute("img-main") || "";
+    const title = this.getAttribute("title") || "";
+    const subtitle = this.getAttribute("subtitle") || "";
+    const icon = this.getAttribute("icon") || "";
+    const appName = this.getAttribute("app-name") || "";
+    const category = this.getAttribute("category") || "";
+    const link = this.getAttribute("href") || "#";
 
-        this.innerHTML = `
+    this.innerHTML = `
       <div class="platform-item spotlight-grid__cell-spacing" style="list-style: none;">
-        <div class="card card--outlined card--elevated card--flat AaN0Dd spotlight-banner__container spotlight-app-card">
+        <div class="card card--outlined card--elevated card--flat spotlight-banner__container spotlight-app-card">
           <div>
             <div class="card-container spotlight-banner__content-wrapper">
-              <a href="${link}" class="card-link pos-relative">
+              <a href="#" class="card-link pos-relative">
                 <div class="spotlight-card" style="background-color: ${bgColor}">
                   <img src="${imgMain}" class="img-contain spotlight-card__image" loading="lazy" />
                   <div class="spotlight-card__footer"></div>
@@ -27,7 +27,7 @@ class ChildrenSpotlight extends HTMLElement {
               </a>
             </div>
             <div class="spotlight-card__footer-grid">
-              <a href="${link}">
+              <a href="#">
                 <div class="spotlight-card__app-info-group">
                   <img src="${icon}" class="img-contain spotlight-card__app-icon" alt="Icon" loading="lazy" />
                   <div class="spotlight-card__app-details">
@@ -44,7 +44,8 @@ class ChildrenSpotlight extends HTMLElement {
                 <div class="button-wrapper">
                   <div class="button__touch-wrapper">
                     <button class="button button--theme-green button--contained button--typography button--padding-x-large button--shape-rounded button--text-light button--min-width-medium spotlight-button--small text-color-black spotlight-button--secondary">
-                      <span class="button__label">Cài đặt</span>
+                    <div class="ripple--bounded"></div>  
+                    <span class="button__label">Cài đặt</span>
                     </button>
                   </div>
                 </div>
@@ -55,6 +56,6 @@ class ChildrenSpotlight extends HTMLElement {
         </div>
       </div>
     `;
-    }
+  }
 }
 customElements.define("children-spotlight", ChildrenSpotlight);

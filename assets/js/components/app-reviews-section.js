@@ -1,26 +1,26 @@
 class AppReviewsSection extends HTMLElement {
-    constructor() {
-        super();
-    }
+  constructor() {
+    super();
+  }
 
-    connectedCallback() {
-        this.render();
-    }
+  connectedCallback() {
+    this.render();
+  }
 
-    getAttr(name, fallback = "") {
-        return this.getAttribute(name) || fallback;
-    }
+  getAttr(name, fallback = "") {
+    return this.getAttribute(name) || fallback;
+  }
 
-    render() {
-        const rating = this.getAttr("rating", "4,6");
-        const totalReviews = this.getAttr("reviews", "36,3 Tr bài đánh giá");
-        const bars = JSON.parse(this.getAttr("bars", "[83, 8, 3, 1, 5]"));
+  render() {
+    const rating = this.getAttr("rating", "4,6");
+    const totalReviews = this.getAttr("reviews", "36,3 Tr bài đánh giá");
+    const bars = JSON.parse(this.getAttr("bars", "[83, 8, 3, 1, 5]"));
 
-        // --- 1. TẠO CÁC THANH BAR (DASHBOARD) ---
-        let barsHtml = '';
-        bars.forEach((percent, index) => {
-            const starNum = 5 - index;
-            barsHtml += `
+    // --- 1. TẠO CÁC THANH BAR (DASHBOARD) ---
+    let barsHtml = "";
+    bars.forEach((percent, index) => {
+      const starNum = 5 - index;
+      barsHtml += `
         <div class="rating-bar" role="img" aria-label="${percent}%">
           <div class="rating-bar__label" aria-hidden="true">${starNum}</div>
           <div class="rating-bar__track" aria-hidden="true">
@@ -28,11 +28,14 @@ class AppReviewsSection extends HTMLElement {
           </div>
         </div>
       `;
-        });
+    });
 
-        // --- 2. TẠO SAO LỚN (DASHBOARD) ---
-        // Lưu ý: Dùng class star-rating__icon--filled để CSS bên ngoài tô màu
-        const bigStarsHtml = Array(5).fill(0).map(() => `
+    // --- 2. TẠO SAO LỚN (DASHBOARD) ---
+    // Lưu ý: Dùng class star-rating__icon--filled để CSS bên ngoài tô màu
+    const bigStarsHtml = Array(5)
+      .fill(0)
+      .map(
+        () => `
         <span class="rating-display__star">
             <span class="star-rating__icon--filled">
                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
@@ -42,9 +45,11 @@ class AppReviewsSection extends HTMLElement {
                 </svg>
             </span>
         </span>
-    `).join('');
+    `
+      )
+      .join("");
 
-        const dashboardHtml = `
+    const dashboardHtml = `
       <div class="padding-bottom--responsive-medium">
         <div class="flex-group-spacing-top-large">
             <div class="grid-layout--auto-fit-column">
@@ -63,10 +68,10 @@ class AppReviewsSection extends HTMLElement {
       </div>
     `;
 
-        // --- 3. TẠO DANH SÁCH REVIEW MẪU ---
-        const reviewsHtml = `
+    // --- 3. TẠO DANH SÁCH REVIEW MẪU ---
+    const reviewsHtml = `
       <div class="review-item">
-        <header class="c1bOId">
+        <header">
           <div class="review-item__header-content">
             <div class="review-user">
               <img src="https://play-lh.googleusercontent.com/a-/ALV-UjXJ2DbKsGGLWiJ4vHaZX1kRxFDjRGYeEwKBrcdKeLUyeOJJqnZL=s32-rw" class="img-contain review-user__avatar" />
@@ -80,7 +85,9 @@ class AppReviewsSection extends HTMLElement {
             </div>
           </div>
           <div class="review-item__meta">
-             <div role="img" class="review-rating__stars">${this.renderSmallStars(1)}</div>
+             <div role="img" class="review-rating__stars">${this.renderSmallStars(
+               1
+             )}</div>
              <span class="review-item__date">29 tháng 10, 2025</span>
           </div>
         </header>
@@ -90,7 +97,7 @@ class AppReviewsSection extends HTMLElement {
       </div>
 
       <div class="review-item">
-        <header class="c1bOId">
+        <header>
           <div class="review-item__header-content">
             <div class="review-user">
               <img src="https://play-lh.googleusercontent.com/a/ACg8ocJCg3SH-LXUqfn-jpuTmSedwTPodWWKmsqXMdlm3rbUgDfJ0A=s32-rw-mo" class="img-contain review-user__avatar" />
@@ -104,7 +111,9 @@ class AppReviewsSection extends HTMLElement {
             </div>
           </div>
           <div class="review-item__meta">
-             <div role="img" class="review-rating__stars">${this.renderSmallStars(5)}</div>
+             <div role="img" class="review-rating__stars">${this.renderSmallStars(
+               5
+             )}</div>
              <span class="review-item__date">30 tháng 10, 2025</span>
           </div>
         </header>
@@ -114,7 +123,7 @@ class AppReviewsSection extends HTMLElement {
       </div>
 
       <div class="review-item">
-        <header class="c1bOId">
+        <header>
           <div class="review-item__header-content">
             <div class="review-user">
               <img src="https://play-lh.googleusercontent.com/a-/ALV-UjVaeKs1kQSNvyX5TSoHh-29pbV5ISHYrzsZqTUfugi788I5i30=s32-rw" class="img-contain review-user__avatar" />
@@ -128,7 +137,9 @@ class AppReviewsSection extends HTMLElement {
             </div>
           </div>
           <div class="review-item__meta">
-             <div role="img" class="review-rating__stars">${this.renderSmallStars(1)}</div>
+             <div role="img" class="review-rating__stars">${this.renderSmallStars(
+               1
+             )}</div>
              <span class="review-item__date">2 tháng 11, 2025</span>
           </div>
         </header>
@@ -138,8 +149,8 @@ class AppReviewsSection extends HTMLElement {
       </div>
     `;
 
-        // --- 4. RENDER CHÍNH (KHÔNG CÓ THẺ STYLE) ---
-        this.innerHTML = `
+    // --- 4. RENDER CHÍNH (KHÔNG CÓ THẺ STYLE) ---
+    this.innerHTML = `
       <section class="content-section">
         <header class="content-section__header">
           <div class="section-header-inner">
@@ -189,25 +200,27 @@ class AppReviewsSection extends HTMLElement {
         </div>
       </section>
     `;
+  }
+
+  // Helper: Tạo 5 sao nhỏ cho review item
+  renderSmallStars(filledCount) {
+    let html = "";
+    // Dùng class star-rating__icon--filled (đã có màu trong CSS của bạn)
+    const filledStar = `<span class="star-rating__icon--filled"><svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>`;
+    // Dùng class star-rating__icon (không màu/xám)
+    const emptyStar = `<span class="star-rating__icon"><svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>`;
+
+    for (let i = 1; i <= 5; i++) {
+      html += `<span class="review-item__star">${
+        i <= filledCount ? filledStar : emptyStar
+      }</span>`;
     }
+    return html;
+  }
 
-    // Helper: Tạo 5 sao nhỏ cho review item
-    renderSmallStars(filledCount) {
-        let html = '';
-        // Dùng class star-rating__icon--filled (đã có màu trong CSS của bạn)
-        const filledStar = `<span class="star-rating__icon--filled"><svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>`;
-        // Dùng class star-rating__icon (không màu/xám)
-        const emptyStar = `<span class="star-rating__icon"><svg class="small-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M0 0h24v24H0z" fill="none"/><path d="M0 0h24v24H0z" fill="none"/><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg></span>`;
-
-        for (let i = 1; i <= 5; i++) {
-            html += `<span class="review-item__star">${(i <= filledCount) ? filledStar : emptyStar}</span>`;
-        }
-        return html;
-    }
-
-    // Helper: Footer Feedback
-    renderFeedbackFooter() {
-        return `
+  // Helper: Footer Feedback
+  renderFeedbackFooter() {
+    return `
         <footer class="review-feedback">
             <div class="review-feedback__prompt">Nội dung này có hữu ích cho bạn không?</div>
             <div class="review-feedback__button-group">
@@ -222,7 +235,7 @@ class AppReviewsSection extends HTMLElement {
             </div>
         </footer>
       `;
-    }
+  }
 }
 
-customElements.define('app-reviews-section', AppReviewsSection);
+customElements.define("app-reviews-section", AppReviewsSection);

@@ -1,3 +1,4 @@
+/* Reset cơ bản cho toàn bộ trang: bỏ margin/padding mặc định, chuẩn hóa box-sizing và tắt highlight khi tap trên mobile */
 * {
   box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
@@ -145,6 +146,7 @@ applet {
   padding: 0;
 }
 
+/* Font mặc định của toàn bộ trang */
 html {
   font-family: "ArialRegular", sans-serif;
 }
@@ -165,6 +167,7 @@ section {
 
 /* Header layout/styles have been moved to header.css to avoid duplication */
 
+/* Khối bao toàn bộ nội dung chính bên dưới header */
 .main-content {
   /* overflow-y: hidden; */
   position: relative;
@@ -185,6 +188,7 @@ section {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
+/* Tạo khoảng trống phía trên nội dung để không bị header che khuất (responsive theo chiều rộng màn hình) */
 .main-content-spacing {
   margin-top: 128px;
 }
@@ -212,6 +216,7 @@ section {
   height: auto;
 }
 
+/* Wrapper chung cho khu vực filter / nội dung chính, tạo padding hai bên */
 .filter-content-wrapper {
   margin-left: 24px;
   margin-right: 24px;
@@ -247,6 +252,7 @@ section {
   gap: 12px;
 }
 
+/* Dòng chứa các item cuộn ngang (carousel đơn giản) */
 .horizontal-scroll {
   display: flex;
   overflow-x: scroll;
@@ -272,6 +278,7 @@ section {
   margin-right: calc(var(--gap-width) / 2 * -1);
 }
 
+/* Card UI chung: khối nội dung dạng thẻ */
 .card {
   display: flex;
   flex-direction: column;
@@ -286,6 +293,7 @@ section {
   box-shadow: none;
 }
 
+/* Container cho banner spotlight ở trang chủ (kích thước thay đổi theo breakpoint) */
 .spotlight-banner__container {
   border-radius: 8px;
   width: calc(100vw - 48px);
@@ -400,6 +408,7 @@ section {
   }
 }
 
+/* Card spotlight hiển thị app nổi bật */
 .spotlight-card {
   position: relative;
   border-radius: 8px;
@@ -453,7 +462,6 @@ section {
 }
 
 @media screen and (min-width: 960px) {
-  .eaFbvd,
   .spotlight-card__content-overlay {
     bottom: 66px;
   }
@@ -467,7 +475,6 @@ section {
 }
 
 @media screen and (min-width: 1440px) {
-  .eaFbvd,
   .spotlight-card__content-overlay {
     bottom: 98px;
   }
@@ -598,7 +605,6 @@ section {
 
 @media screen and (min-width: 1280px) {
   .spotlight-card__app-name {
-    font-family: "Google Sans", Roboto, Arial, sans-serif;
     line-height: 1.5rem;
     font-size: 1.125rem;
     letter-spacing: 0;
@@ -607,12 +613,10 @@ section {
 }
 
 .spotlight-card__app-category {
-  font-family: Roboto, Arial, sans-serif;
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.025em;
   font-weight: 400;
-  font-family: "Google Sans", Helvetica, Arial, sans-serif;
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -649,6 +653,7 @@ section {
   gap: 2px;
 }
 
+/* Base style cho tất cả button trong site */
 .button {
   cursor: pointer;
 }
@@ -656,7 +661,6 @@ section {
 .button--contained {
   margin-top: 6px;
   margin-bottom: 6px;
-  font-family: Roboto, sans-serif;
   font-size: 0.875rem;
   letter-spacing: 0.0892857143em;
   font-weight: 500;
@@ -775,6 +779,7 @@ section {
   height: 16px;
 }
 
+/* Phần nội dung chính của trang chủ (bên dưới header, bên trên footer) */
 .main-page-content {
   padding-top: 40px;
 }
@@ -935,6 +940,7 @@ section {
   position: relative;
 }
 
+/* Một hàng danh sách app (dùng cùng với .card--responsive, .platform-item) */
 .app-row {
   display: flex;
   gap: var(--gap-width);
@@ -1071,6 +1077,7 @@ section {
   flex-direction: column;
 }
 
+/* Ảnh thumbnail app trong danh sách / spotlight (giữ tỉ lệ 16:9, responsive theo viewport) */
 .app-thumbnail-img {
   --media-width: calc(100vw - 48px);
   border-radius: 8px;
@@ -1298,6 +1305,7 @@ section {
   }
 }
 
+/* Khu vực footer cuối trang (căn lề, max-width, chia cột link, locale...) */
 .footer {
   margin-left: 24px;
   margin-right: 24px;
@@ -1437,6 +1445,7 @@ a {
   text-decoration: none;
 }
 
+/* Nội dung chi tiết (body text) trong trang chi tiết app */
 .detail-content__body {
   color: rgb(32, 33, 36);
   fill: rgb(32, 33, 36);
@@ -1447,6 +1456,7 @@ a {
   color: rgb(32, 33, 36);
 }
 
+/* Phần header tổng quan của trang chi tiết app (vùng hero phía trên) */
 .app-header-summary__inner {
   color: rgb(32, 33, 36);
   fill: rgb(32, 33, 36);
@@ -1586,6 +1596,7 @@ body:not(.app-header-summary)
   }
 }
 
+/* Khối thể hiện nhận diện app: icon, tên, developer, tag... */
 .app-identity {
   display: inline-flex;
   flex-direction: column;
@@ -1715,7 +1726,6 @@ img {
 
 @media screen and (min-width: 1280px) {
   .title-lg {
-    font-family: "Google Sans Display", Roboto, Arial, sans-serif;
     line-height: 4.75rem;
     font-size: 4rem;
     letter-spacing: 0;
@@ -1749,7 +1759,6 @@ img {
 }
 
 .app-identity__developer {
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
   line-height: 1.5rem;
   font-size: 1rem;
   letter-spacing: 0.00625em;
@@ -1780,7 +1789,6 @@ img {
   color: rgb(95, 99, 104);
   fill: rgb(95, 99, 104);
   stop-color: rgb(95, 99, 104);
-  font-family: Roboto, Arial, sans-serif;
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.025em;
@@ -1801,6 +1809,7 @@ img {
   color: rgb(154, 160, 166);
 }
 
+/* Thanh thống kê nhanh của app (rating, lượt tải, độ tuổi...) */
 .app-identity__stats-bar {
   height: 64px;
   margin: 16px 0 24px 0;
@@ -2052,7 +2061,6 @@ img {
 }
 
 .button {
-  font-family: Roboto, sans-serif;
   font-size: 0.875rem;
   letter-spacing: 0.0892857143em;
   font-weight: 500;
@@ -2062,7 +2070,6 @@ img {
 }
 
 .button--theme-green {
-  font-family: Roboto, sans-serif;
   font-size: 0.875rem;
   letter-spacing: 0.0892857143em;
   font-weight: 500;
@@ -2072,7 +2079,6 @@ img {
 }
 
 .button--typography {
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
   font-size: 0.875rem;
   letter-spacing: 0.0107142857em;
   font-weight: 500;
@@ -2159,6 +2165,7 @@ img {
   background-color: #ce965c;
 }
 
+/* Dòng thông tin thiết bị / tương thích phía dưới phần header chi tiết app */
 .device-info {
   display: flex;
   flex-wrap: wrap;
@@ -2226,11 +2233,9 @@ img {
   }
 }
 
-.Vj78Oe,
 .carousel--desktop,
 .carousel--screenshot,
-.carousel__item-content,
-.IwTLXb {
+.carousel__item-content {
   height: 100%;
 }
 
@@ -2259,6 +2264,7 @@ img {
   }
 }
 
+/* Khu vực gallery ảnh chụp màn hình ứng dụng ở trang chi tiết */
 .screenshot-gallery {
   margin-top: 40px;
 }
@@ -2282,6 +2288,7 @@ img {
   }
 }
 
+/* Một section nội dung trong phần chi tiết (mô tả, thông tin thêm, metadata...) */
 .content-section {
   container-type: inline-size;
   container-name: section-wrapper;
@@ -2332,7 +2339,6 @@ img {
 
 @media screen and (min-width: 1280px) {
   .section-header-inner {
-    font-family: "Google Sans", Roboto, Arial, sans-serif;
     line-height: 1.75rem;
     font-size: 1.375rem;
     letter-spacing: 0;
@@ -2400,12 +2406,10 @@ img {
 .icon-button .icon-button__ripple::before {
   transition: opacity 15ms linear, background-color 15ms linear;
   z-index: 1;
-  z-index: var(--mdc-ripple-z-index, 1);
 }
 
 .icon-button .icon-button__ripple::after {
   z-index: 0;
-  z-index: var(--mdc-ripple-z-index, 0);
 }
 
 .icon-button .icon-button__ripple::before,
@@ -2419,7 +2423,6 @@ img {
 .icon-button .icon-button__ripple::before,
 .icon-button .icon-button__ripple::after {
   background-color: #000;
-  background-color: var(--mdc-ripple-color, #000);
 }
 
 .icon-button:not(.button__ripple) .icon-button__ripple::after {
@@ -2444,6 +2447,7 @@ img {
   outline: none;
 }
 
+/* Khối thông tin về an toàn dữ liệu / privacy */
 .data-safety-promo {
   border-color: rgb(218, 220, 224);
   border-radius: 8px;
@@ -2522,7 +2526,6 @@ img {
 
 .button--secondary:not(:disabled) {
   color: rgb(26, 115, 232);
-  color: var(--gm-colortextbutton-ink-color, rgb(26, 115, 232));
 }
 
 .ripple--bounded {
@@ -2608,12 +2611,10 @@ img {
   color: rgb(95, 99, 104);
   fill: rgb(95, 99, 104);
   stop-color: rgb(95, 99, 104);
-  font-family: Roboto, Arial, sans-serif;
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.025em;
   font-weight: 400;
-  font-family: Roboto, Helvetica, Arial, sans-serif;
 }
 
 @media screen and (min-width: 1280px) {
@@ -2629,6 +2630,7 @@ img {
   color: rgb(95, 99, 104);
 }
 
+/* Widget đánh giá sao (cho phép user chọn sao và gửi đánh giá) */
 .rating-widget {
   display: flex;
   flex-wrap: wrap;
@@ -2673,6 +2675,7 @@ img {
   text-align: left;
 }
 
+/* Icon sao tương tác trong rating widget (hover/change màu khi chọn) */
 .star-rating__star {
   height: 48px;
   width: 48px;
@@ -2955,7 +2958,6 @@ img {
 }
 
 .rating-bar__label {
-  font-family: Roboto, Arial, sans-serif;
   line-height: 1rem;
   font-size: 0.75rem;
   letter-spacing: 0.025em;
@@ -2997,6 +2999,7 @@ img {
   color: rgb(95, 99, 104);
 }
 
+/* Một review đơn lẻ trong danh sách đánh giá của người dùng */
 .review-item {
   padding: 16px 0;
 }
@@ -3019,22 +3022,7 @@ img {
   justify-content: space-between;
 }
 
-.EGFGHd {
-  padding: 16px 0;
-}
-
-@media screen and (min-width: 960px) {
-  .EGFGHd {
-    padding: 20px 0;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .EGFGHd {
-    padding: 24px 0;
-  }
-}
-
+/* Dòng hiển thị thông tin người dùng để lại review (avatar + tên) */
 .review-user {
   display: grid;
   align-items: center;
@@ -3073,7 +3061,6 @@ img {
   color: rgb(95, 99, 104);
   fill: rgb(95, 99, 104);
   stop-color: rgb(95, 99, 104);
-  font-family: Roboto, Arial, sans-serif;
   font-size: 0.75rem;
   font-weight: 400;
   letter-spacing: 0.025em;
@@ -3177,13 +3164,13 @@ img {
 
 .toggle-button::after {
   z-index: 0;
-  z-index: var(--mdc-ripple-z-index, 0);
 }
 
 .toggle-button:not(.button__ripple)::after {
   transition: opacity 0.15s linear;
 }
 
+/* Mô tả ngắn gọn của app (được giới hạn số dòng, hiển thị dạng text truncate) */
 .app-description {
   font-size: 0.875rem;
   font-weight: 400;
@@ -3198,6 +3185,7 @@ img {
   text-overflow: ellipsis;
 }
 
+/* Lưới hiển thị thông tin metadata của app (dung lượng, phiên bản, cập nhật...) */
 .metadata-grid {
   display: grid;
   grid-gap: 16px;
@@ -3465,7 +3453,6 @@ img {
   color: rgb(32, 33, 36);
   fill: rgb(32, 33, 36);
   stop-color: rgb(32, 33, 36);
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
   line-height: 1.25rem;
   font-size: 0.875rem;
   letter-spacing: 0.0178571429em;
@@ -3519,7 +3506,6 @@ img {
 }
 
 @media screen and (min-width: 960px) {
-  .MuHHW,
   .grid--cols-2-to-1 {
     grid-template-columns: repeat(1, 1fr);
   }
@@ -3623,7 +3609,7 @@ img {
   line-height: 32px;
 }
 
-/* children */
+/* ==== CHILDREN PAGE: Banner & bộ lọc cho trang ứng dụng trẻ em ==== */
 .header-banner-wrapper {
   overflow: hidden;
   width: 100vw;
@@ -3695,7 +3681,6 @@ img {
   color: rgb(32, 33, 36);
   fill: rgb(32, 33, 36);
   stop-color: rgb(32, 33, 36);
-  font-family: "Google Sans", Roboto, Arial, sans-serif;
   line-height: 1.75rem;
   font-size: 1.375rem;
   letter-spacing: 0;
@@ -3729,6 +3714,7 @@ img {
   }
 }
 
+/* Thanh filter cho trang children (lọc theo thẻ, thể loại...) */
 .filter_children {
   margin-left: 24px;
   margin-right: 24px;
@@ -3808,6 +3794,7 @@ img {
   }
 }
 
+/* Card spotlight lớn dùng cho campaign/ứng dụng nổi bật ở trang children/home */
 @media screen and (min-width: 840px) {
   .spotlight-app-card {
     width: calc(166.6666666667vw - 72px);
@@ -4169,6 +4156,7 @@ img {
   }
 }
 
+/* Utility: đổi text sang màu trắng (dùng trên nền tối/ảnh) */
 .text-color-white {
   color: white;
 }
@@ -4195,7 +4183,7 @@ img {
   background-color: rgba(32, 33, 36, 0.2);
 }
 
-/* fix lỗi header và body không ăn khớp trong app detail */
+/* Fix: căn lại width của body ở trang app detail để khớp với header */
 
 @media screen and (min-width: 600px) {
   .app-detail-page {

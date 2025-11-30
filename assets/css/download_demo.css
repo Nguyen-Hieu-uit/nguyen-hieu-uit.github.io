@@ -1,3 +1,4 @@
+/* Nút bấm mở modal tải xuống / mua ứng dụng */
 .download-btn {
   background-color: #4caf50;
   color: white;
@@ -12,6 +13,7 @@
   background-color: #45a049;
 }
 
+/* Lớp phủ toàn màn hình cho modal + nền mờ phía sau */
 .modal-container,
 .modal-scrim {
   position: fixed;
@@ -24,6 +26,7 @@
   height: 100%;
 }
 
+/* Scrim (nền mờ) phía sau modal */
 .modal-scrim {
   opacity: 0;
   z-index: -1;
@@ -54,6 +57,7 @@
   height: 100%;
 }
 
+/* Container chính của modal (ẩn/hiện qua class --visible) */
 .modal-container {
   display: none;
   z-index: 7;
@@ -67,6 +71,7 @@
   z-index: 2001;
 }
 
+/* Vùng đặt modal vào giữa màn hình, canh giữa theo cả hai trục */
 .modal-positioner {
   display: flex;
   flex-direction: row;
@@ -83,6 +88,7 @@
   opacity: 1;
 }
 
+/* Khối nội dung thực tế của modal (hộp trắng) */
 .modal-content {
   position: relative;
   display: flex;
@@ -175,6 +181,7 @@
   pointer-events: none;
 }
 
+/* Thân nội dung scroll được bên trong modal */
 .modal-body {
   flex-grow: 1;
   box-sizing: border-box;
@@ -201,10 +208,12 @@
   font-weight: 400;
 }
 
+/* Biến thể modal cho màn hình mua hàng: bỏ padding mặc định phần body */
 .modal-buy-screen .modal-body {
   padding: 0 0 0 0;
 }
 
+/* Header dính trên cùng bên trong modal (khi nội dung scroll) */
 .modal-sticky-header {
   top: 0;
   background: white;
@@ -218,6 +227,7 @@
   border-bottom: 1px solid rgb(218, 220, 224);
 }
 
+/* Bố cục phần header bên trong modal: logo + nút đóng */
 .header-inner {
   align-items: center;
   display: flex;
@@ -235,6 +245,7 @@ img {
   vertical-align: middle;
 }
 
+/* Reset cơ bản cho button trong modal để tự custom kiểu dáng */
 button {
   box-sizing: initial;
   -webkit-font-smoothing: inherit;
@@ -248,6 +259,7 @@ button {
   text-align: inherit;
 }
 
+/* Nút icon (v.d: nút đóng X ở góc phải) */
 .icon-button {
   font-size: 24px;
   width: 48px;
@@ -279,10 +291,12 @@ button {
   margin-bottom: 0;
 }
 
+/* Phần nội dung chính của màn hình mua hàng bên trong modal */
 .buy-screen-body {
   padding: 0;
 }
 
+/* Section nội dung có thể click (mỗi dòng lựa chọn trong list) */
 .clickable-row .content-section {
   margin: 16px 0;
   overflow-wrap: anywhere;
@@ -290,6 +304,7 @@ button {
   padding-right: 24px;
 }
 
+/* Lưới tổng quát dùng cho item/product trong modal */
 .grid-container {
   display: grid;
 }
@@ -325,6 +340,7 @@ button {
   justify-self: end;
 }
 
+/* Nhóm thông tin chính của item: ảnh + text */
 .item-info {
   display: flex;
   gap: 16px;
@@ -346,6 +362,7 @@ button {
   }
 }
 
+/* Khối căn giá ở cột bên phải, văn bản canh phải */
 .price-container {
   display: flex;
   flex-direction: row;
@@ -358,6 +375,7 @@ button {
   }
 }
 
+/* Mỗi hàng có thể click chọn trong danh sách phương thức mua/thanh toán */
 .clickable-row {
   position: relative;
 }
@@ -368,6 +386,7 @@ button {
   cursor: pointer;
 }
 
+/* Section nội dung cho vùng download/thanh toán (padding hai bên) */
 .content-section-download {
   margin: 16px 0;
   overflow-wrap: anywhere;
@@ -375,6 +394,7 @@ button {
   padding-right: 24px;
 }
 
+/* Ô chứa icon phương thức thanh toán (Visa, Momo, v.v.) */
 .payment-icon-wrapper {
   display: flex;
   justify-content: center;
@@ -397,12 +417,14 @@ button {
   padding-right: 24px;
 }
 
+/* Nhóm các dòng ghi chú (disclaimer) dưới danh sách thanh toán */
 .disclaimer-group {
   display: flex;
   flex-direction: column;
   gap: 8px;
 }
 
+/* Dòng text ghi chú nhỏ (ví dụ điều kiện, lưu ý) */
 .disclaimer-text {
   color: #747775;
   fill: #747775;
@@ -417,6 +439,7 @@ button {
   color: rgb(95, 99, 104);
 }
 
+/* Dòng thông tin thuế, phí (VAT, thuế địa phương, ...) */
 .tax-info {
   color: rgb(95, 99, 104);
   fill: rgb(95, 99, 104);
@@ -431,6 +454,7 @@ button {
   color: rgb(95, 99, 104);
 }
 
+/* Footer của modal: chứa các nút hành động như Hủy / Mua */
 .modal-footer {
   display: flex;
   position: relative;
@@ -454,6 +478,7 @@ button {
   border-color: rgba(0, 0, 0, 0.12);
 }
 
+/* Nhóm các nút ở footer (căn về phía bên phải) */
 .footer-actions {
   display: flex;
   flex-wrap: wrap;
@@ -462,10 +487,12 @@ button {
   padding: 0 16px 16px 16px;
 }
 
+/* Cho phép hiển thị button inline cùng dòng với nội dung khác */
 .button-wrapper-inline {
   display: inline;
 }
 
+/* Overlay trạng thái cho nút (ví dụ loading, ripple overlay) */
 .button-state-overlay {
   position: absolute;
   inline-size: max(48px, 100%);
@@ -476,6 +503,7 @@ button {
   transform: translate(-50%, -50%);
 }
 
+/* Phần tử tạo hiệu ứng ripple khi hover/click list-item hoặc row */
 .ripple-element,
 .ripple-element::before,
 .ripple-element::after {
@@ -503,6 +531,7 @@ button {
   z-index: 10;
 }
 
+/* Nút bo tròn dạng filled (nút chính trong modal, ví dụ Xác nhận / Thanh toán) */
 .button-filled {
   display: inline-flex;
   position: relative;
@@ -530,6 +559,7 @@ button {
   block-size: 40px;
 }
 
+/* Khoảng cách dọc cho nút filled để tách với phần tử khác */
 .button-filled-v-margin {
   margin-block: 4px;
 }
@@ -539,10 +569,12 @@ button {
   background-color: #0b57d0;
 }
 
+/* Biến thể nút filled có chiều ngang lớn hơn (min-width 160px) */
 .button-filled-wide {
   min-width: 160px;
 }
 
+/* Nhãn text bên trong nút trong modal */
 .modal-container .button-label {
   position: relative;
   text-align: center;
@@ -558,6 +590,7 @@ button {
   display: none;
 }
 
+/* Đường kẻ phân cách giữa các section trong modal */
 .divider {
   border-top: 1px solid rgb(218, 220, 224);
   border-bottom: none;
@@ -588,10 +621,12 @@ button {
   }
 }
 
+/* Phần thân cho màn hình chọn phương thức thanh toán */
 .method-screen-body {
   padding: 0;
 }
 
+/* Divider thụt vào hai bên (không full width, dùng trong list phương thức) */
 .divider-indented {
   border-top: 1px solid rgb(218, 220, 224);
   border-bottom: none;
@@ -612,6 +647,7 @@ button {
   display: none;
 }
 
+/* Header của màn hình chọn phương thức: nút quay lại + tiêu đề + email */
 .method-header {
   align-items: start;
   display: flex;
@@ -631,10 +667,12 @@ button {
   color: #444746;
 }
 
+/* Nhóm text tiêu đề + subtitle trong header phương thức thanh toán */
 .header-text-group {
   padding-top: 10px;
 }
 
+/* Tiêu đề chính của modal/màn hình phương thức */
 .modal-title {
   color: #1f1f1f;
   fill: #1f1f1f;
@@ -649,6 +687,7 @@ button {
   color: #1f1f1f;
 }
 
+/* Dòng phụ hiển thị email tài khoản bên dưới tiêu đề */
 .modal-subtitle-email {
   color: #444746;
   fill: #444746;
@@ -666,6 +705,7 @@ button {
   color: #444746;
 }
 
+/* Một item trong danh sách phương thức / sản phẩm (có bo góc) */
 .list-item {
   position: relative;
   display: flex;
@@ -679,6 +719,7 @@ button {
   border: none;
 }
 
+/* Nút/khối bấm chọn phương thức thanh toán (bao bọc toàn bộ list-item) */
 .select-method-button {
   display: flex;
   flex-direction: column;
@@ -696,6 +737,7 @@ button {
   border-end-end-radius: inherit;
 }
 
+/* Padding chuẩn cho nội dung bên trong list-item */
 .list-item-padding {
   padding: 16px 0;
   padding-left: 24px;
@@ -706,6 +748,7 @@ button {
   display: grid;
 }
 
+/* Tiêu đề chính trong mỗi list-item (tên phương thức, tên sản phẩm) */
 .list-item-title {
   color: rgb(32, 33, 36);
   fill: rgb(32, 33, 36);
@@ -725,10 +768,12 @@ button {
   justify-self: end;
 }
 
+/* Icon highlight màu chính (xanh dương của Google) */
 .icon-primary {
   color: #0b57d0;
 }
 
+/* Dòng phụ trong list-item: mô tả ngắn, thông tin thêm */
 .list-item-subtitle {
   color: rgb(95, 99, 104);
   fill: rgb(95, 99, 104);
@@ -744,6 +789,7 @@ button {
   overflow-wrap: anywhere;
 }
 
+/* Tiêu đề section nhỏ trong modal (ví dụ: "Phương thức thanh toán khác") */
 .section-title {
   color: rgb(95, 99, 104);
   fill: rgb(95, 99, 104);
@@ -756,6 +802,7 @@ button {
   padding-right: 24px;
 }
 
+/* Nút thêm phương thức thanh toán mới ở cuối danh sách */
 .add-method-button {
   padding: 16px 0;
   box-sizing: border-box;
