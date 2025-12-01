@@ -1,12 +1,3 @@
-a:visited {
-  color: initial;
-}
-
-a,
-a:visited {
-  color: #333;
-}
-
 html,
 body {
   overflow-x: hidden;
@@ -24,10 +15,11 @@ body {
 
 @media screen and (max-width: 950px) {
   .container {
-    margin-top: 156px;
+    margin-top: 120px;
   }
 }
 
+/* Tiêu đề trang tìm kiếm */
 .no-results,
 .result-count,
 .search-title {
@@ -37,11 +29,6 @@ body {
   align-self: flex-start;
   padding: 0 20px 10px 0;
 }
-
-/* .result-count,
-.search-title {
-  display: none;
-} */
 
 /* Container chứa cả featured + plain, xếp dọc */
 .results-list {
@@ -66,37 +53,21 @@ body {
   gap: 40px 20px;
 }
 
-.app-overview .app-name {
-  line-height: 1.2;
-}
-
-.result-item-featured {
-  display: flex;
-  justify-content: space-between;
-  height: 360px;
-  grid-column: 1 / span 3;
-  border: none;
-  border-bottom: 1px solid #bbbbbb;
-}
-
-.result-item-featured .app-name {
-  font-size: 36px;
-}
-
+/*responsive: thay đổi lưới ứng dụng theo chiều ngang */
 @media screen and (max-width: 950px) {
-  .result-item-featured .app-name {
-    font-size: 24px;
+  .results-list-plain {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+@media screen and (max-width: 650px) {
+  .results-list-plain {
+    grid-template-columns: 1fr;
   }
 }
 
-@media screen and (max-width: 950px) {
-  .result-item-featured {
-    height: auto; /* để card cao theo nội dung, không cắt trailer */
-    flex-direction: column;
-  }
-}
-
+/* == CARD ỨNG DỤNG THƯỜNG == */
 .result-item {
+  position: relative;
   width: 100%;
   padding: 10px;
   border: none;
@@ -105,103 +76,40 @@ body {
   flex-direction: column;
 }
 
-.app-appearance {
-  display: flex;
-  flex-direction: row;
-  gap: 5px;
-}
-
-.app-identity__stats-bar .app-icon {
-  display: none;
-}
-
-@media screen and (min-width: 950px) {
-  .result-item-featured .app-appearance .app-icon {
-    display: none;
-  }
-  .result-item-featured .app-identity__stats-bar .app-icon {
-    display: inline;
-  }
-}
-.result-item-featured .app-identity__meta {
-  margin-top: 5px;
-  font-size: 16px;
-  color: #555555;
-}
-
-.app-identity__meta {
-  margin-top: 5px;
-  font-size: 14px;
-  color: #555555;
-}
-
-.app-identity__stats-bar {
-  height: 64px;
-  margin: 16px 0 24px 24px;
-  padding: 12px 0;
+/* Hiệu ứng hover cho card ứng dụng */
+.result-item::after {
+  position: absolute;
+  border-radius: 50%;
+  opacity: 0;
+  pointer-events: none;
+  content: "";
+  z-index: -1;
+  top: 0;
+  left: 0;
   width: 100%;
+  height: 100%;
+  background-color: #000;
+  border: 1px double transparent;
+  border-radius: 8px;
+}
+.result-item:hover::after {
+  transition: opacity 0.15s linear;
+  opacity: 0.12;
+  z-index: 1;
 }
 
-/* Ẩn hoàn toàn thanh stats cho các ứng dụng thường, chỉ dùng cho featured */
-.result-item .app-identity__stats-bar {
-  display: none;
-}
-
-.result-item .cost-type-display {
-  display: none;
-}
-
-/* Rating inline ngay dưới tên nhà phát hành cho ứng dụng thường */
-.rating-inline {
-  margin-top: 2px;
-  display: inline-flex;
-  align-items: center;
-  gap: 4px;
-  font-size: 0.8125rem;
-  color: #202124;
-}
-
-.rating-inline__value {
-  font-weight: 500;
-}
-
-@media screen and (min-width: 600px) {
-  #app-identity__stats-bar-search {
-    margin-left: 0;
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 1024px) {
-  .app-identity__stats-bar {
-    margin-left: 0;
-    width: 100%;
-  }
-}
-
-.app-overview .app-identity-stats-bar__content {
-  display: flex;
-  width: 100%;
-  overflow: hidden;
-  padding-bottom: 4px;
-  padding-left: 4px;
-}
-
-.result-item-featured .app-overview {
-  width: 48%;
-}
-
-@media screen and (max-width: 950px) {
-  .result-item-featured .app-overview {
-    width: 100%;
-  }
-}
-
+/* Các thành phần chung trong card thường và featured */
 .app-overview {
   width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+.app-appearance {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
 }
 
 .app-icon {
@@ -215,9 +123,121 @@ body {
   height: 48px;
 }
 
-@media screen and (min-width: 960px) {
-  .app-identity-hide-prop .app-identity__stats-bar__icon {
-    display: inline-block;
+.app-appearance .app-name {
+  line-height: 1.2;
+  white-space: wrap;
+}
+
+.app-appearance .app-identity__meta {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #555555;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+/* Xếp hạng sao và số đánh giá theo hàng ngang */
+.rating-inline {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.rating-inline__value {
+  font-weight: 500;
+}
+
+.rating-display__star {
+  width: 14px;
+  height: 14px;
+}
+
+/* == CARD ỨNG DỤNG FEATURED == */
+.result-item-featured {
+  display: flex;
+  justify-content: space-between;
+  height: 360px;
+  border: none;
+  border-bottom: 1px solid #bbbbbb;
+}
+
+@media screen and (max-width: 950px) {
+  .result-item-featured {
+    height: auto; /* để card cao theo nội dung, không cắt trailer */
+    flex-direction: column;
+  }
+}
+
+/* Phần mô tả ứng dụng trong card featured */
+.result-item-featured .app-overview {
+  width: 50%; /* chiếm nửa bên trái, bên phải là trailer */
+}
+
+@media screen and (max-width: 950px) {
+  .result-item-featured .app-overview {
+    width: 100%;
+  }
+}
+
+.result-item-featured .app-identity__meta {
+  font-size: 16px;
+}
+
+/* Container cho các mục trong thanh thông tin cơ bản ứng dụng */
+.app-identity__stats-bar {
+  height: 64px;
+  margin: 16px 0 24px 24px;
+  padding: 12px 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 600px) {
+  .app-identity__stats-bar {
+    margin-left: 0;
+    width: 100%;
+  }
+}
+
+/* Thanh thông tin cơ bản ứng dụng trong card featured */
+.app-identity-stats-bar__content {
+  display: flex;
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: 4px;
+  padding-left: 4px;
+}
+
+/* Tên ứng dụng featured */
+.result-item-featured .app-name {
+  font-size: 36px;
+}
+
+@media screen and (max-width: 950px) {
+  .result-item-featured .app-name {
+    font-size: 24px;
+  }
+}
+
+/* Icon ứng dụng featured */
+.result-item-featured .app-appearance .app-icon {
+  width: 64px;
+  height: 64px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.app-appearance .app-icon {
+  display: none; /* ẩn icon trong thanh hiển thị thông tin cơ bản*/
+}
+
+/* Hiển thị icon ứng dụng trong thanh stats khi màn hình rộng */
+@media screen and (max-width: 950px) {
+  .app-appearance .app-icon {
+    display: inline;
+  }
+  .result-item-featured .app-identity__stats-bar .app-icon {
+    display: none;
   }
 }
 
@@ -247,17 +267,6 @@ body {
   white-space: nowrap;
 }
 
-.app__stats-bar__item .stat-item__value:not(:disabled) {
-  color: rgb(32, 33, 36);
-}
-.result-item .app__stats-bar__item {
-  display: none;
-}
-
-.result-item .app__stats-bar__item:nth-child(-n + 2) {
-  display: inline-flex;
-}
-
 /* nhãn thanh thông tin cơ bản ứng dụng */
 .app__stats-bar__item .stat-item__label {
   color: rgb(95, 99, 104);
@@ -274,20 +283,6 @@ body {
   white-space: nowrap;
 }
 
-.app__stats-bar__item .stat-item__label:not(:disabled) {
-  color: rgb(95, 99, 104);
-}
-
-.app__stats-bar__item .stat-item__label {
-  color: rgb(154, 160, 166);
-  fill: rgb(154, 160, 166);
-  stop-color: rgb(154, 160, 166);
-}
-
-.app__stats-bar__item .stat-item__label:not(:disabled) {
-  color: rgb(154, 160, 166);
-}
-
 .img-contain__age-limit-icon {
   width: 16px;
   height: 16px;
@@ -297,15 +292,14 @@ body {
 /* Responsive trailer iframe sizing */
 .trailer-display {
   width: 100%;
-  /* max-width: 560px; */
   aspect-ratio: 16 / 9;
   margin-top: 12px;
 }
 
 .result-item-featured .trailer-display {
-  width: 53.5%;
+  width: 50%;
   max-width: 560px;
-  /* height: auto; */
+  max-height: 100%;
   aspect-ratio: 16 / 9;
   margin-top: 24px;
   margin-bottom: 24px;
@@ -313,7 +307,7 @@ body {
 
 .trailer-display iframe {
   width: 100%;
-  max-width: 100%; /* thêm dòng này để không tràn */
+  max-width: 100%;
   height: 100%;
   max-height: 100%;
   border: 0;
@@ -336,59 +330,4 @@ body {
   .result-item-featured .trailer-display {
     max-width: 100%;
   }
-}
-.result-item-featured .app-appearance .app-icon {
-  width: 64px;
-  height: 64px;
-  object-fit: cover;
-  border-radius: 8px;
-}
-
-.rating-display__star {
-  width: 14px;
-  height: 14px;
-  align-items: center;
-  display: flex;
-}
-
-@media screen and (max-width: 950px) {
-  .results-list-plain {
-    grid-template-columns: 1fr 1fr;
-  }
-}
-
-@media screen and (max-width: 650px) {
-  .results-list-plain {
-    grid-template-columns: 1fr;
-  }
-}
-
-.result-item {
-  position: relative;
-}
-
-.result-item::after {
-  position: absolute;
-  border-radius: 50%;
-  opacity: 0;
-  pointer-events: none;
-  content: "";
-  z-index: -1;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: #000;
-  border: 1px double transparent;
-  border-radius: 8px;
-}
-
-.result-item:hover::after {
-  transition: opacity 0.15s linear;
-  opacity: 0.12;
-  z-index: 1;
-}
-
-.app-appearance .app-identity__meta {
-  margin-top: 5px;
 }
