@@ -146,11 +146,18 @@ function createResultItem(app, query, isFeatured) {
           <div class="app-identity__meta">
             <div class="publisher-display">${app.publisher}</div>
             ${!isFeatured ? inlineRating : ""}
-            <div class="cost-type-display">${app.costType}</div>
+            ${
+              isFeatured
+                ? `<div class="cost-type-display">${app.costType}</div>`
+                : ""
+            }
           </div>
         </div>
       </div>
-      <div class="app-identity__stats-bar" id="app-identity__stats-bar-search">
+      
+      ${
+        isFeatured
+          ? `<div class="app-identity__stats-bar" id="app-identity__stats-bar-search">
         <div class="app-identity-stats-bar__content">
           <img src="${app.LogoPath}" alt="${appName} Logo" class="app-icon" />
           <div class="app__stats-bar__item">
@@ -186,9 +193,7 @@ function createResultItem(app, query, isFeatured) {
           </div>
         </div>
       </div>
-      ${
-        isFeatured
-          ? `<div class="app-actions">
+          <div class="app-actions">
         <div class="app-actions__install-wrapper">
           <div class="install-button-wrapper">
             <div class="install-component-wrapper">
