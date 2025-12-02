@@ -109,26 +109,24 @@ class AuthModal extends HTMLElement {
 
         /* --- PHẦN ĐÃ SỬA --- */
         /* Nút Submit - Phiên bản chỉnh sửa */
-.submit-btn {
-  background-color: #C98747;
-  color: white;
-  padding: 10px 30px; /* Tăng padding ngang cho đẹp hơn */
-  border: none;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: 700; /* In đậm chữ hơn một chút cho rõ */
-  cursor: pointer;
-  
-  /* CẤU HÌNH CĂN GIỮA */
-  width: auto; /* 1. Để nút tự co giãn theo nội dung, không full 100% */
-  min-width: 150px; /* Đảm bảo nút không quá bé */
-  margin: 10px auto 0; /* 2. margin: auto giúp nút tự động ra giữa form */
-  
-  display: flex; /* Sử dụng flexbox để căn chữ bên trong */
-  justify-content: center; /* Căn giữa ngang */
-  align-items: center; /* Căn giữa dọc (khắc phục lỗi chữ bị lệch lên/xuống) */
-  box-sizing: border-box; /* Đảm bảo padding không làm vỡ khung */
-}
+        .submit-btn {
+          background-color: #C98747;
+          olor: white;
+          padding: 10px 30px; /* Tăng padding ngang cho đẹp hơn */
+          border: none;
+          border-radius: 4px;
+          font-size: 14px;
+          font-weight: 700; /* In đậm chữ hơn một chút cho rõ */
+          cursor: pointer;
+          /* CẤU HÌNH CĂN GIỮA */
+          width: auto; /* 1. Để nút tự co giãn theo nội dung, không full 100% */
+          min-width: 150px; /* Đảm bảo nút không quá bé */
+          margin: 10px auto 0; /* 2. margin: auto giúp nút tự động ra giữa form */
+          display: flex; /* Sử dụng flexbox để căn chữ bên trong */
+          justify-content: center; /* Căn giữa ngang */
+          align-items: center; /* Căn giữa dọc (khắc phục lỗi chữ bị lệch lên/xuống) */
+          box-sizing: border-box; /* Đảm bảo padding không làm vỡ khung */
+          }
         /* ------------------- */
         
         .submit-btn:hover { background-color: #a36e3a; }
